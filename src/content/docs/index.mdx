@@ -28,3 +28,84 @@ hero:
     #   icon: external
     #   variant: secondary
 ---
+
+---
+
+## Daftar Menu
+
+import {
+  Icon,
+  FileTree,
+  Card,
+  CardGrid,
+  LinkCard,
+} from "@astrojs/starlight/components";
+
+<CardGrid>
+  <LinkCard
+    title="Menu Data Master"
+    href="menu-data-master"
+    description="Configure Starlight to support multiple languages."
+  />
+  <LinkCard
+    title="Menu Pegawai"
+    href="menu-pegawai"
+    description="Configure Starlight to support multiple languages."
+  />
+  <LinkCard
+    title="Menu Siswa"
+    href="menu-siswa"
+    description="Configure Starlight to support multiple languages."
+  />
+  <LinkCard
+    title="Menu Kartu Presensi"
+    href="menu-kartu-presensi"
+    description="Configure Starlight to support multiple languages."
+  />
+</CardGrid>
+
+---
+
+## Struktur Folder
+
+<FileTree>
+
+- public
+  - favicon.svg
+- src
+  - assets
+    - banner.svg
+    - brand-darkmode.png
+    - brand-lightmode.png
+    - pengajuan-kartu.svg
+  - content
+    - docs
+      - menu-data-master
+        - **index.mdx**
+        - informasi.mdx
+        - pengguna.mdx
+        - peran.mdx
+      - menu-kartu-presensi
+        - **index.mdx**
+        - pengajuan-kartu-presensi.mdx
+      - menu-pegawai
+        - **index.mdx**
+        - pegawai.mdx
+        - presensi-pegawai.mdx
+      - menu-siswa
+        - **index.mdx**
+        - presensi-siswa.mdx
+        - siswa.mdx
+      - **index.mdx**
+      - **memulai.mdx**
+  - styles
+    - custom.css
+    - global.css
+  - content.config.ts
+- README.md
+- astro.config.mjs
+- package.json
+- tsconfig.json
+- yarn.lock
+
+</FileTree>
