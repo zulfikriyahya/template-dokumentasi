@@ -2,12 +2,12 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightThemeRapide from "starlight-theme-rapide";
-import expressiveCode from "astro-expressive-code";
+// import expressiveCode from "astro-expressive-code";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://docs.zedlabs.id",
+  site: "https://docs.zedlabs.id/presensi",
 
   integrations: [
     starlight({
@@ -53,7 +53,14 @@ export default defineConfig({
           },
         },
       },
-
+      credits: false,
+      favicon: "/favicon.svg",
+      logo: {
+        // src: "./src/assets/logo.png",
+        replacesTitle: true,
+        dark: "./src/assets/brand-darkmode.png",
+        light: "./src/assets/brand-lightmode.png",
+      },
       title: "Dokumentasi Aplikasi Madrasah",
 
       customCss: [
@@ -71,13 +78,6 @@ export default defineConfig({
 
       tableOfContents: true,
       // tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
-
-      logo: {
-        // src: "./src/assets/logo.png",
-        replacesTitle: true,
-        dark: "./src/assets/brand-darkmode.png",
-        light: "./src/assets/brand-lightmode.png",
-      },
 
       social: [
         {
@@ -114,15 +114,20 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
-          ],
+          label: "Data Master",
+          autogenerate: { directory: "data-master" },
         },
         {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "Data Pegawai",
+          autogenerate: { directory: "data-pegawai" },
+        },
+        {
+          label: "Data Siswa",
+          autogenerate: { directory: "data-siswa" },
+        },
+        {
+          label: "Kartu Presensi",
+          autogenerate: { directory: "kartu-presensi" },
         },
       ],
     }),
