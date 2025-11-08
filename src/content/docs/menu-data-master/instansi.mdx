@@ -33,23 +33,19 @@ import {
 ### Pentingnya Data Instansi
 
 <CardGrid>
-  <Card title="🏫 Identitas Resmi" icon="home">
+  <Card title="Identitas Resmi" icon="home">
     Menjadi identitas institusi di semua dokumen dan laporan resmi
   </Card>
 
-{" "}
-
-<Card title="⏰ Jadwal Operasional" icon="clock">
+<Card title="Jadwal Operasional" icon="clock">
   Menentukan hari kerja dan jadwal presensi otomatis berdasarkan status
 </Card>
 
-{" "}
-
-<Card title="📊 Laporan Profesional" icon="document">
+<Card title="Laporan Profesional" icon="document">
   Data lengkap untuk header laporan, surat, dan dokumen resmi
 </Card>
 
-  <Card title="🎨 Branding Konsisten" icon="star">
+  <Card title=" Branding Konsisten" icon="star">
     Logo dan identitas visual yang konsisten di seluruh sistem
   </Card>
 </CardGrid>
@@ -129,7 +125,7 @@ import {
 
 ### Data Wajib
 
-<Card title="✅ Field Required" icon="approve-check">
+<Card title="Field Required" icon="approve-check">
   Field yang wajib diisi: - **Nama Instansi** - Nama resmi sekolah/madrasah -
   **NSS/NPSN** - Nomor Statistik Sekolah/Nomor Pokok Sekolah Nasional -
   **Status** - Negeri atau Swasta (sangat penting!) - **Alamat Lengkap** -
@@ -194,7 +190,7 @@ import {
     resolution untuk print quality
   </Card>
 
-  <Card title="🎨 Design Guidelines" icon="star">
+  <Card title=" Design Guidelines" icon="star">
     **Rekomendasi:** - Simple dan recognizable - Scalable (jelas di ukuran
     kecil) - Consistent dengan brand identity - Hindari detail terlalu rumit
     **Warna:** - Max 3 warna utama - Kontras yang baik - Readable di background
@@ -212,14 +208,10 @@ Logo instansi akan muncul di:
     page
   </TabItem>
 
-{" "}
-
 <TabItem label="Dokumen & Laporan">
   - Header laporan presensi - Surat keterangan - Rekap bulanan - Export
   PDF/Excel - Sertifikat (jika ada)
 </TabItem>
-
-{" "}
 
 <TabItem label="Kartu & Fisik">
   - Kartu RFID presensi - ID Card pegawai/siswa - Banner sistem (di sekolah) -
@@ -242,22 +234,22 @@ Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
 
 <Card title="🏛️ Instansi Negeri" icon="home">
   **Karakteristik:** - Hari kerja: **Senin - Jumat** - Weekend: Sabtu & Minggu
-  libur - Mengikuti kalender pemerintah **Otomatis di Sistem:** - ✅ Jadwal
-  presensi Senin-Jumat - ✅ Laporan presensi 5 hari kerja - ✅ Sabtu-Minggu
-  otomatis libur - ✅ Statistik berdasarkan 5 hari - ✅ Hari libur nasional
-  berlaku **Contoh Perhitungan:** ``` 1 Bulan = ±20-22 hari kerja 1 Semester =
-  ±100 hari kerja Persentase = (Hadir / Total Hari Kerja) × 100% ```
+  libur - Mengikuti kalender pemerintah **Otomatis di Sistem:** - Jadwal
+  presensi Senin-Jumat - Laporan presensi 5 hari kerja - Sabtu-Minggu otomatis
+  libur - Statistik berdasarkan 5 hari - Hari libur nasional berlaku **Contoh
+  Perhitungan:** ``` 1 Bulan = ±20-22 hari kerja 1 Semester = ±100 hari kerja
+  Persentase = (Hadir / Total Hari Kerja) × 100% ```
 </Card>
 
 ### Status: Swasta
 
 <Card title="🏢 Instansi Swasta" icon="briefcase">
   **Karakteristik:** - Hari kerja: **Senin - Sabtu** - Weekend: Hanya Minggu
-  libur - Bisa custom libur mingguan **Otomatis di Sistem:** - ✅ Jadwal
-  presensi Senin-Sabtu - ✅ Laporan presensi 6 hari kerja - ✅ Hanya Minggu
-  otomatis libur - ✅ Statistik berdasarkan 6 hari - ✅ Hari libur nasional
-  tetap berlaku **Contoh Perhitungan:** ``` 1 Bulan = ±26 hari kerja 1 Semester
-  = ±120 hari kerja Persentase = (Hadir / Total Hari Kerja) × 100% ```
+  libur - Bisa custom libur mingguan **Otomatis di Sistem:** - Jadwal presensi
+  Senin-Sabtu - Laporan presensi 6 hari kerja - Hanya Minggu otomatis libur -
+  Statistik berdasarkan 6 hari - Hari libur nasional tetap berlaku **Contoh
+  Perhitungan:** ``` 1 Bulan = ±26 hari kerja 1 Semester = ±120 hari kerja
+  Persentase = (Hadir / Total Hari Kerja) × 100% ```
 </Card>
 
 ### Perbandingan Detail
@@ -269,8 +261,8 @@ Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
 | **Hari Kerja/Bulan**  | ±20-22 hari   | ±26 hari     |
 | **Hari Kerja/Tahun**  | ±240 hari     | ±288 hari    |
 | **Jam Kerja**         | Sesuai aturan | Bisa berbeda |
-| **Libur Nasional**    | ✅ Berlaku    | ✅ Berlaku   |
-| **Cuti Bersama**      | ✅ Berlaku    | ⚠️ Opsional  |
+| **Libur Nasional**    | Berlaku       | Berlaku      |
+| **Cuti Bersama**      | Berlaku       | Opsional     |
 
 <Aside type="caution" title="Penting!">
   **Perubahan status instansi akan langsung mempengaruhi:** - Jadwal presensi
@@ -288,15 +280,13 @@ Meskipun status menentukan default jadwal, Anda bisa override dengan custom jadw
 ### Skenario Custom
 
 <CardGrid>
-  <Card title="🎯 Institusi Negeri dengan Sabtu Aktif" icon="calendar">
+  <Card title="Institusi Negeri dengan Sabtu Aktif" icon="calendar">
     Beberapa sekolah negeri ada kegiatan Sabtu (ekstrakurikuler, dll) **Setup:**
     1. Status tetap "Negeri" 2. Di menu Jadwal Presensi, tambah jadwal Sabtu 3.
     Set jenis: "Kegiatan Khusus" 4. Tandai sebagai opsional
   </Card>
 
-{" "}
-
-<Card title="🏫 Institusi Swasta dengan 5 Hari" icon="briefcase">
+<Card title="Institusi Swasta dengan 5 Hari" icon="briefcase">
   Beberapa sekolah swasta modern menerapkan 5 hari kerja **Setup:** 1. Status
   tetap "Swasta" (untuk administrasi) 2. Di menu Jadwal Presensi, nonaktifkan
   Sabtu 3. Atau set Sabtu sebagai "Libur Tetap"
@@ -317,7 +307,7 @@ Sistem mendukung multi-instansi untuk yayasan dengan beberapa sekolah:
 
 ### Use Case
 
-<Card title="🏫 Yayasan dengan Beberapa Unit" icon="home">
+<Card title="Yayasan dengan Beberapa Unit" icon="home">
   **Contoh:** - MTs Negeri 1 Pandeglang - MA Negeri 1 Pandeglang - MI Negeri 1
   Pandeglang **Keuntungan:** - Database terpusat - Laporan konsolidasi - User
   management terpadu - Cost-effective **Setup:** - Setiap instansi punya data
@@ -378,16 +368,14 @@ Tambahkan narasi singkat tentang:
     Detail terlalu rumit
   </Card>
 
-{" "}
-
-<Card title="📝 Data Akurat" icon="approve-check">
+<Card title="Data Akurat" icon="approve-check">
   **Verifikasi:** - NSS/NPSN valid (cek di Dapodik) - Alamat sesuai Google Maps
   - Kontak aktif dan responsif - Email bukan personal - Website accessible
   **Update Berkala:** - Review setiap awal semester - Update saat ada perubahan
   - Backup data lama
 </Card>
 
-  <Card title="🔐 Keamanan Data" icon="lock">
+  <Card title="Keamanan Data" icon="lock">
     **Proteksi:** - Hanya Super Admin yang edit - Log semua perubahan - Backup
     sebelum update - Verifikasi setelah update **Sensitive Info:** - Jangan
     share password sistem - Email admin harus aman - Telepon verified
@@ -454,7 +442,7 @@ Tambahkan narasi singkat tentang:
 
 ## Checklist Setup Instansi
 
-<Card title="✅ Checklist Lengkap" icon="approve-check">
+<Card title="Checklist Lengkap" icon="approve-check">
   Gunakan checklist ini untuk memastikan data instansi lengkap: **Identitas
   Dasar:** - [ ] Nama instansi lengkap - [ ] NSS/NPSN valid - [ ] Akreditasi
   (jika ada) - [ ] Status Negeri/Swasta (pastikan benar!) **Alamat & Kontak:** -
@@ -475,18 +463,14 @@ Tambahkan narasi singkat tentang:
 Data instansi terintegrasi dengan:
 
 <CardGrid>
-  <Card title="📊 Laporan" icon="document">
+  <Card title="Laporan" icon="document">
     - Header semua laporan - Footer dengan kontak - Metadata dokumen - Digital
     signature
   </Card>
 
-{" "}
-
-<Card title="💳 Kartu RFID" icon="approve-check">
+<Card title=" Kartu RFID" icon="approve-check">
   - Logo di kartu - Nama institusi - Alamat singkat - Kontak support
 </Card>
-
-{" "}
 
 <Card title="📧 Notifikasi" icon="bell">
   - Email sender name - Signature email - WhatsApp template - SMS sender ID
@@ -502,18 +486,16 @@ Data instansi terintegrasi dengan:
 ## Langkah Selanjutnya
 
 <CardGrid>
-  <Card title="📅 Setup Tahun Pelajaran" icon="calendar">
+  <Card title="Setup Tahun Pelajaran" icon="calendar">
     Tentukan periode akademik aktif [Panduan Tahun Pelajaran
     →](/menu-data-master/tahun-pelajaran/)
   </Card>
 
-{" "}
-
-<Card title="👔 Tambah Jabatan" icon="briefcase">
+<Card title="Tambah Jabatan" icon="briefcase">
   Setup jabatan untuk pegawai [Panduan Jabatan →](/menu-data-master/jabatan/)
 </Card>
 
-  <Card title="🔙 Kembali ke Data Master" icon="left-arrow">
+  <Card title=" Kembali ke Data Master" icon="left-arrow">
     Lihat overview data master [Data Master →](/menu-data-master/)
   </Card>
 </CardGrid>

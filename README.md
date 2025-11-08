@@ -6,9 +6,9 @@
 yarn create astro@latest -- --template starlight
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍**Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
 
@@ -35,9 +35,9 @@ Static assets, like favicons, can be placed in the `public/` directory.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `yarn install`         | Installs dependencies                            |
 | `yarn dev`             | Starts local dev server at `localhost:4321`      |
 | `yarn build`           | Build your production site to `./dist/`          |
 | `yarn preview`         | Preview your build locally, before deploying     |

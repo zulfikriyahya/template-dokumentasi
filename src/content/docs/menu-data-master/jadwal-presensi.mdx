@@ -57,16 +57,16 @@ Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa se
   <TabItem label="Presensi Masuk">
     **Waktu Tap Masuk** - Batas awal presensi masuk (contoh: 06:00) - Batas
     akhir presensi tepat waktu (contoh: 07:00) - Batas maksimal presensi masuk
-    (contoh: 12:00) **Status**: - ✅ **Tepat Waktu**: Tap sebelum batas akhir -
-    ⚠️ **Terlambat**: Tap setelah batas akhir tapi sebelum batas maksimal - ❌
+    (contoh: 12:00) **Status**: - **Tepat Waktu**: Tap sebelum batas akhir -
+    **Terlambat**: Tap setelah batas akhir tapi sebelum batas maksimal - 
     **Alpha**: Tidak tap sama sekali
   </TabItem>
 
   <TabItem label="Presensi Pulang">
     **Waktu Tap Pulang** - Batas awal presensi pulang (contoh: 15:00) - Batas
     normal pulang (contoh: 16:00) - Batas maksimal tap pulang (contoh: 20:00)
-    **Status**: - ✅ **Normal**: Tap sesuai jadwal - ⏰ **Pulang Cepat**: Tap
-    sebelum batas awal - ⚠️ **Lembur**: Tap setelah batas normal
+    **Status**: - **Normal**: Tap sesuai jadwal -  **Pulang Cepat**: Tap
+    sebelum batas awal - **Lembur**: Tap setelah batas normal
   </TabItem>
 </Tabs>
 
@@ -77,13 +77,9 @@ Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa se
     **Senin - Kamis** Jadwal normal sekolah Masuk: 07:00 | Pulang: 15:30
   </Card>
 
-{" "}
-
 <Card title="Hari Jumat" icon="star">
   **Jumat** Jadwal khusus hari Jumat Masuk: 07:00 | Pulang: 11:30
 </Card>
-
-{" "}
 
 <Card title="Hari Sabtu" icon="information">
   **Sabtu (Swasta)** Untuk madrasah swasta Masuk: 07:00 | Pulang: 13:00
@@ -107,22 +103,22 @@ Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa se
 
 **Hari Kerja**: Senin - Jumat (5 hari)
 
-| Hari          | Status Presensi                | Laporan           |
-| ------------- | ------------------------------ | ----------------- |
-| Senin - Kamis | ✅ Wajib Presensi              | Masuk rekap       |
-| Jumat         | ✅ Wajib Presensi (Jam Khusus) | Masuk rekap       |
-| Sabtu         | 🏖️ Libur                       | Tidak masuk rekap |
-| Ahad          | 🏖️ Libur                       | Tidak masuk rekap |
+| Hari          | Status Presensi             | Laporan           |
+| ------------- | --------------------------- | ----------------- |
+| Senin - Kamis | Wajib Presensi              | Masuk rekap       |
+| Jumat         | Wajib Presensi (Jam Khusus) | Masuk rekap       |
+| Sabtu         | Libur                       | Tidak masuk rekap |
+| Ahad          | Libur                       | Tidak masuk rekap |
 
 ### Status Instansi Swasta
 
 **Hari Kerja**: Senin - Sabtu (6 hari)
 
-| Hari          | Status Presensi   | Laporan           |
-| ------------- | ----------------- | ----------------- |
-| Senin - Jumat | ✅ Wajib Presensi | Masuk rekap       |
-| Sabtu         | ✅ Wajib Presensi | Masuk rekap       |
-| Ahad          | 🏖️ Libur          | Tidak masuk rekap |
+| Hari          | Status Presensi | Laporan           |
+| ------------- | --------------- | ----------------- |
+| Senin - Jumat | Wajib Presensi  | Masuk rekap       |
+| Sabtu         | Wajib Presensi  | Masuk rekap       |
+| Ahad          | Libur           | Tidak masuk rekap |
 
 <Aside type="tip">
   Pengaturan status instansi (Negeri/Swasta) dilakukan di menu **Data Master →
@@ -181,14 +177,14 @@ Sistem dapat mengakomodasi toleransi keterlambatan untuk menghindari sanksi yang
 **Jadwal Masuk**: 07:00 WIB  
 **Toleransi**: 15 menit
 
-| Waktu Tap | Status         | Keterangan            |
-| --------- | -------------- | --------------------- |
-| 06:45     | ✅ Tepat Waktu | Masuk lebih awal      |
-| 07:00     | ✅ Tepat Waktu | Tepat waktu           |
-| 07:10     | ✅ Tepat Waktu | Masih dalam toleransi |
-| 07:15     | ✅ Tepat Waktu | Batas toleransi       |
-| 07:16     | ⚠️ Terlambat   | Melebihi toleransi    |
-| 07:30     | ⚠️ Terlambat   | Terlambat 30 menit    |
+| Waktu Tap | Status      | Keterangan            |
+| --------- | ----------- | --------------------- |
+| 06:45     | Tepat Waktu | Masuk lebih awal      |
+| 07:00     | Tepat Waktu | Tepat waktu           |
+| 07:10     | Tepat Waktu | Masih dalam toleransi |
+| 07:15     | Tepat Waktu | Batas toleransi       |
+| 07:16     | Terlambat   | Melebihi toleransi    |
+| 07:30     | Terlambat   | Terlambat 30 menit    |
 
 <Aside type="caution">
   Toleransi keterlambatan dapat diatur berbeda untuk: - Siswa: 0-15 menit (lebih
@@ -209,8 +205,6 @@ Hari Jumat biasanya memiliki jadwal yang lebih pendek karena ada Sholat Jumat.
     **Jadwal Siswa Hari Jumat** - Masuk: 07:00 - Pulang: 11:30 - Tidak ada KBM
     siang
   </TabItem>
-
-{" "}
 
 <TabItem label="Guru">
   **Jadwal Guru Hari Jumat** - Masuk: 07:00 - Pulang: 12:00 - Waktu untuk Sholat
@@ -257,15 +251,15 @@ Selama bulan Ramadan, jadwal dapat disesuaikan:
 
 **Yang Terpengaruh**:
 
-- ✅ Presensi hari berikutnya
-- ✅ Deteksi keterlambatan baru
-- ✅ Laporan yang belum di-generate
+- Presensi hari berikutnya
+- Deteksi keterlambatan baru
+- Laporan yang belum di-generate
 
 **Yang TIDAK Terpengaruh**:
 
-- ❌ Data presensi historis
-- ❌ Laporan yang sudah di-export
-- ❌ Statistik bulan sebelumnya
+- Data presensi historis
+- Laporan yang sudah di-export
+- Statistik bulan sebelumnya
 
 ---
 
@@ -295,13 +289,9 @@ Jadwal nonaktif tidak akan digunakan untuk validasi presensi, tapi tetap tersimp
     **Status**: Otomatis libur
   </Card>
 
-{" "}
-
 <Card title="Libur Madrasah" icon="document">
   Libur khusus madrasah (study tour, acara internal) **Status**: Diatur manual
 </Card>
-
-{" "}
 
 <Card title="Cuti Bersama" icon="information">
   Cuti bersama yang diatur pemerintah **Status**: Otomatis libur
@@ -357,13 +347,9 @@ graph TD
     setiap tahun
   </Card>
 
-{" "}
-
 <Card title="Review Berkala" icon="star">
   Evaluasi jadwal setiap semester untuk menyesuaikan dengan kebijakan baru
 </Card>
-
-{" "}
 
 <Card title="Toleransi Wajar" icon="approve-check">
   Berikan toleransi yang realistis (10-15 menit) untuk menghindari sistem yang
@@ -443,7 +429,7 @@ PRESENSI PULANG:
 
 ## Troubleshooting
 
-### ❓ Presensi siswa tidak tercatat padahal sudah tap
+### Presensi siswa tidak tercatat padahal sudah tap
 
 **Penyebab**: Tidak ada jadwal aktif untuk hari tersebut
 
@@ -453,7 +439,7 @@ PRESENSI PULANG:
 2. Pastikan hari tersebut tercentang di pengaturan **"Hari Berlaku"**
 3. Verifikasi status instansi (Negeri/Swasta) sudah sesuai
 
-### ❓ Semua siswa tercatat terlambat padahal tepat waktu
+### Semua siswa tercatat terlambat padahal tepat waktu
 
 **Penyebab**: Batas tepat waktu di jadwal terlalu awal
 
@@ -463,7 +449,7 @@ PRESENSI PULANG:
 2. Sesuaikan **Batas Tepat Waktu** dan **Toleransi**
 3. Atau lakukan koreksi manual di menu Riwayat Presensi
 
-### ❓ Pegawai tidak bisa presensi di hari Sabtu
+### Pegawai tidak bisa presensi di hari Sabtu
 
 **Penyebab**: Status instansi adalah **Negeri** (Sabtu libur)
 

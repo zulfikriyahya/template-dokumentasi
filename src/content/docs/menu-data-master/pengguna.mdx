@@ -37,16 +37,12 @@ import {
     - Nama Lengkap - Email - Username - Nomor Telepon - Foto Profil
   </Card>
 
-{" "}
-
-<Card title="🔐 Keamanan" icon="lock">
+<Card title="Keamanan" icon="lock">
   - Password (encrypted) - Status Aktif/Nonaktif - 2FA Settings - Last Login -
   Failed Login Attempts
 </Card>
 
-{" "}
-
-<Card title="👔 Peran & Akses" icon="star">
+<Card title="Peran & Akses" icon="star">
   - Role Assignment - Permission Override - Department/Class - Employment Status
 </Card>
 
@@ -136,15 +132,11 @@ import {
     operator)
   </TabItem>
 
-{" "}
-
 <TabItem label="Wali Kelas">
   **Field Wajib:** - Nama Lengkap - Email - Password - Role: Wali Kelas - Kelas
   yang Diampu - Status Aktif **Field Opsional:** - NIP/NUPTK - Nomor Telepon -
   Foto - Mata Pelajaran (jika mengajar)
 </TabItem>
-
-{" "}
 
 <TabItem label="Pegawai">
   **Field Wajib:** - Nama Lengkap - Email - Password - Role: Pegawai - Jabatan -
@@ -176,7 +168,7 @@ Role dapat di-assign langsung saat membuat user baru (lihat langkah 6 di atas).
 
 2. **Klik Tombol Edit**
 
-   Klik icon ✏️ pada baris user tersebut
+   Klik icon pada baris user tersebut
 
 3. **Ubah Role di Dropdown**
 
@@ -227,7 +219,7 @@ Jika user butuh akses khusus, gunakan **Permission Override** daripada multiple 
 
 2. **Klik Tombol Edit**
 
-   Klik icon ✏️ atau tombol "Edit"
+   Klik icon atau tombol "Edit"
 
 3. **Ubah Data yang Diperlukan**
 
@@ -336,19 +328,15 @@ Menonaktifkan user (bukan menghapus) adalah cara yang disarankan untuk user yang
 ### Kapan Nonaktifkan User?
 
 <CardGrid>
-  <Card title="📚 Siswa Lulus/Pindah" icon="graduation">
+  <Card title="Siswa Lulus/Pindah" icon="graduation">
     Nonaktifkan akun siswa yang sudah lulus atau pindah sekolah
   </Card>
 
-{" "}
-
-<Card title="👔 Pegawai Resign/Pensiun" icon="user">
+<Card title="Pegawai Resign/Pensiun" icon="user">
   Nonaktifkan pegawai yang sudah tidak bekerja
 </Card>
 
-{" "}
-
-<Card title="🔐 Security Breach" icon="warning">
+<Card title="Security Breach" icon="warning">
   Nonaktifkan sementara jika ada kecurigaan akun di-hack
 </Card>
 
@@ -381,12 +369,12 @@ Menonaktifkan user (bukan menghapus) adalah cara yang disarankan untuk user yang
 
 ### Efek Menonaktifkan User
 
-- ❌ Tidak bisa login
-- ❌ Session langsung terminated
-- ❌ Tidak muncul di daftar user aktif
-- ✅ Data tetap tersimpan
-- ✅ History presensi tetap ada
-- ✅ Bisa diaktifkan kembali kapan saja
+- Tidak bisa login
+- Session langsung terminated
+- Tidak muncul di daftar user aktif
+- Data tetap tersimpan
+- History presensi tetap ada
+- Bisa diaktifkan kembali kapan saja
 
 ---
 
@@ -449,28 +437,24 @@ Alih-alih menghapus, pertimbangkan untuk **archive** user:
 ### Untuk Administrator
 
 <CardGrid>
-  <Card title="🔐 Password Policy" icon="lock">
+  <Card title="Password Policy" icon="lock">
     Terapkan kebijakan password yang kuat: - Minimal 8 karakter - Kombinasi
     huruf, angka, simbol - Tidak boleh password umum - Harus ganti password
     setiap 6 bulan - Tidak boleh reuse 5 password terakhir
   </Card>
 
-{" "}
-
-<Card title="🚨 Monitoring" icon="warning">
+<Card title=" Monitoring" icon="warning">
   Monitor aktivitas user secara berkala: - Failed login attempts - Login dari
   lokasi tidak biasa - Akses data sensitif - Perubahan settings penting -
   Multiple concurrent sessions
 </Card>
 
-{" "}
-
-<Card title="✅ 2FA Mandatory" icon="approve-check">
+<Card title="2FA Mandatory" icon="approve-check">
   Wajibkan 2FA untuk role sensitif: - Super Admin: WAJIB - Operator: WAJIB -
   Wali Kelas: Direkomendasikan - Pegawai/Siswa: Opsional
 </Card>
 
-  <Card title="📋 Regular Audit" icon="list-format">
+  <Card title=" Regular Audit" icon="list-format">
     Audit user secara berkala: - Review daftar user aktif setiap bulan -
     Hapus/nonaktifkan user tidak terpakai - Cek user dengan multiple failed
     login - Review permission yang diberikan
@@ -574,9 +558,9 @@ Untuk sekolah dengan banyak user, gunakan fitur import Excel:
 
    Sistem validasi semua data:
 
-   - ✅ Valid: Siap import
-   - ⚠️ Warning: Bisa import tapi ada catatan
-   - ❌ Error: Harus diperbaiki dulu
+   - Valid: Siap import
+   - Warning: Bisa import tapi ada catatan
+   - Error: Harus diperbaiki dulu
 
 6. **Konfirmasi & Import**
 
@@ -613,8 +597,6 @@ Export data user untuk backup atau reporting:
     yang di-export:** - ID, Nama, Email, Username, Role, Status, Created Date,
     Last Login
   </TabItem>
-
-{" "}
 
 <TabItem label="CSV (.csv)">
   **Cocok untuk:** - Import ke sistem lain - Data processing - Lightweight
@@ -660,14 +642,12 @@ Export data user untuk backup atau reporting:
 
 <Tabs>
   <TabItem label="User Tidak Bisa Login">
-    **Kemungkinan Penyebab:** - ❌ Password salah - ❌ Account nonaktif - ❌
-    Email belum diverifikasi - ❌ Account di-block (terlalu banyak failed login)
+    **Kemungkinan Penyebab:** - Password salah - Account nonaktif - 
+    Email belum diverifikasi - Account di-block (terlalu banyak failed login)
     **Solusi:** 1. Cek status account (aktif/nonaktif) 2. Reset password user 3.
     Kirim ulang email verifikasi 4. Unblock account jika ter-block 5. Clear
     failed login attempts
   </TabItem>
-
-{" "}
 
 <TabItem label="Email Duplicate">
   **Gejala:** Error "Email sudah terdaftar" saat tambah user baru **Penyebab:**
@@ -730,19 +710,17 @@ User bisa login menggunakan email. Atau hubungi admin untuk cek username di sist
 ## Langkah Selanjutnya
 
 <CardGrid>
-  <Card title="🏫 Setup Instansi" icon="home">
+  <Card title="Setup Instansi" icon="home">
     Lengkapi data instansi/sekolah [Panduan Instansi
     →](/menu-data-master/instansi/)
   </Card>
 
-{" "}
-
-<Card title="📅 Tahun Pelajaran" icon="calendar">
+<Card title="Tahun Pelajaran" icon="calendar">
   Atur periode akademik aktif [Panduan Tahun Pelajaran
   →](/menu-data-master/tahun-pelajaran/)
 </Card>
 
-  <Card title="🔙 Data Master" icon="left-arrow">
+  <Card title=" Data Master" icon="left-arrow">
     Kembali ke overview data master [Data Master →](/menu-data-master/)
   </Card>
 </CardGrid>

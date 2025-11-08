@@ -1,339 +1,549 @@
 ---
-title: Informasi Sekolah
-description: Panduan lengkap mengelola profil dan informasi sekolah termasuk identitas, logo, alamat, kontak, dan data institusi lainnya dalam sistem presensi
+title: "Informasi & Pengumuman"
+description: "Kelola pengumuman dan broadcast informasi ke seluruh pengguna sistem"
+# template: splash
+# hero:
+#   image:
+#     file: "../../../assets/informasi.svg"
+#   tagline: "Broadcast informasi penting ke seluruh civitas madrasah secara real-time"
+#   actions:
+#     - text: "Buat Pengumuman"
+#       link: "#membuat-informasi"
+#       icon: "add-circle"
+#       variant: primary
+#     - text: "Notifikasi WhatsApp"
+#       link: "#notifikasi-whatsapp"
+#       icon: "external"
+#       variant: secondary
 ---
 
 import {
   Card,
   CardGrid,
   Steps,
-  Aside,
   Tabs,
   TabItem,
+  Aside,
 } from "@astrojs/starlight/components";
 
-## 📋 Tentang Menu Informasi
+## Pengertian Informasi & Pengumuman
 
-Menu **Informasi Sekolah** adalah pusat pengelolaan profil dan identitas institusi yang akan ditampilkan di seluruh sistem presensi. Data yang dikelola di sini akan muncul pada dashboard, laporan, dan berbagai output sistem lainnya.
-
-<Aside type="tip" title="Akses Menu">
-  Menu ini hanya dapat diakses oleh **Super Admin** dan **Administrator** dengan
-  hak akses penuh untuk melakukan perubahan data sekolah.
-</Aside>
-
----
-
-## 🎯 Fungsi Menu Informasi
+Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau informasi penting kepada seluruh pengguna sistem. Informasi yang dipublikasikan dapat dilihat di dashboard dan otomatis dikirimkan melalui notifikasi WhatsApp.
 
 <CardGrid>
-  <Card title="🏫 Profil Sekolah" icon="document">
-    Kelola nama lengkap, nama singkat, dan identitas resmi sekolah yang
-    terdaftar.
+  <Card title="Broadcast Otomatis" icon="rocket">
+    Informasi yang dipublish otomatis tersebar ke seluruh pengguna sistem
   </Card>
-
-{" "}
-
-<Card title="🖼️ Logo & Branding" icon="star">
-  Upload dan atur logo sekolah untuk tampilan sistem dan dokumen output.
-</Card>
-
-{" "}
-
-<Card title="📍 Alamat & Kontak" icon="map">
-  Atur alamat lengkap, nomor telepon, email, dan informasi kontak lainnya.
-</Card>
-
-  <Card title="🔢 Data Administratif" icon="information">
-    Kelola NPSN, NSM, kode sekolah, dan data administratif resmi lainnya.
+  <Card title="Notifikasi WhatsApp" icon="external">
+    Pengumuman penting langsung dikirim ke WhatsApp pengguna terdaftar
+  </Card>
+  <Card title="Target Audience" icon="star">
+    Pilih penerima: Semua, Guru, Siswa, Kelas Tertentu, atau Custom
+  </Card>
+  <Card title="Status Publikasi" icon="document">
+    Kelola dengan status: Draft, Published, Archived
   </Card>
 </CardGrid>
 
 ---
 
-## 📝 Data yang Dapat Dikelola
+## Jenis Informasi
 
-### Informasi Dasar
+### Berdasarkan Konten
 
 <Tabs>
-  <TabItem label="Identitas">
-    - **Nama Sekolah Lengkap** - Nama resmi sekolah sesuai SK pendirian - **Nama
-    Singkat** - Akronim atau nama pendek untuk tampilan ringkas - **Jenjang
-    Pendidikan** - MTs, MA, SD, SMP, SMA, dll. - **Status Sekolah** - Negeri
-    atau Swasta - **Tahun Berdiri** - Tahun pendirian sekolah
+  <TabItem label="Pengumuman Umum">
+    **Informasi untuk Semua** - Libur madrasah - Acara besar (porseni, study
+    tour) - Perubahan jadwal - Update kebijakan madrasah **Target**: Seluruh
+    pengguna sistem
   </TabItem>
 
-{" "}
-
-<TabItem label="Data Administratif">
-  - **NPSN** (Nomor Pokok Sekolah Nasional) - **NSM** (Nomor Statistik Madrasah)
-  - **NIS/NISS** (Nomor Induk Sekolah) - **Kode Sekolah** - Kode unik untuk
-  identifikasi - **Akreditasi** - Status dan nilai akreditasi
+<TabItem label="Pengumuman Akademik">
+  **Informasi Pembelajaran** - Jadwal ujian/ulangan - Pengumpulan tugas -
+  Perubahan jadwal pelajaran - Rapat guru **Target**: Guru dan/atau siswa
+  tertentu
 </TabItem>
 
-{" "}
-
-<TabItem label="Kontak & Lokasi">
-  - **Alamat Lengkap** - Jalan, RT/RW, Desa/Kelurahan - **Kecamatan** - Wilayah
-  kecamatan - **Kabupaten/Kota** - Wilayah kabupaten atau kota - **Provinsi** -
-  Provinsi lokasi sekolah - **Kode Pos** - Kode pos wilayah - **Nomor Telepon**
-  - Telepon kantor - **Email** - Email resmi sekolah - **Website** - URL website
-  sekolah (opsional)
+<TabItem label="Pengumuman Administratif">
+  **Informasi Administrasi** - Pembayaran SPP - Pengambilan rapor - Verifikasi
+  data siswa - Update kartu presensi **Target**: Siswa/orang tua dan staff TU
 </TabItem>
 
-  <TabItem label="Logo & Media">
-    - **Logo Sekolah** - Format PNG/JPG/SVG (max 2MB) - **Logo Dark Mode** -
-    Versi logo untuk tampilan gelap - **Logo Light Mode** - Versi logo untuk
-    tampilan terang - **Favicon** - Icon untuk browser tab - **Kop Surat** -
-    Header untuk dokumen resmi
+  <TabItem label="Pengumuman Darurat">
+    **Informasi Mendesak** - Bencana alam - Perubahan mendadak - Keadaan darurat
+    - Protokol keamanan **Target**: Semua, prioritas tinggi
+  </TabItem>
+</Tabs>
+
+### Berdasarkan Prioritas
+
+| Prioritas  | Icon | Keterangan                  | Contoh                    |
+| ---------- | ---- | --------------------------- | ------------------------- |
+| **Urgent** |      | Sangat penting dan mendesak | Libur mendadak, darurat   |
+| **High**   |      | Penting dan perlu perhatian | Jadwal ujian, acara besar |
+| **Medium** |      | Informasi standar           | Pengumuman biasa          |
+| **Low**    |      | Informasi ringan            | Tips, reminder            |
+
+---
+
+## Membuat Informasi Baru
+
+<Steps>
+
+1. **Buka Menu Informasi**
+
+   Navigasi ke **Data Master → Informasi** dari sidebar
+
+2. **Klik Tombol Tambah**
+
+   Klik **"+ Buat Pengumuman"** di pojok kanan atas
+
+3. **Isi Detail Informasi**
+
+   Lengkapi form dengan informasi berikut:
+
+   - **Judul** (wajib) - Judul pengumuman yang menarik
+   - **Konten** (wajib) - Isi pengumuman lengkap (mendukung rich text)
+   - **Kategori** (wajib) - Pilih: Umum / Akademik / Administratif / Darurat
+   - **Prioritas** (wajib) - Pilih: Urgent / High / Medium / Low
+   - **Target Audience** (wajib) - Pilih penerima informasi
+   - **Tanggal Mulai** (wajib) - Kapan informasi ditampilkan
+   - **Tanggal Berakhir** (opsional) - Kapan informasi tidak ditampilkan lagi
+   - **Lampiran** (opsional) - Upload file pendukung (PDF, gambar)
+
+4. **Pilih Target Audience**
+
+   Tentukan siapa yang akan menerima informasi:
+
+   - Semua Pengguna
+   - Guru/Pegawai
+   - Siswa (semua atau kelas tertentu)
+   - Staff TU
+   - Wali Kelas
+   - Custom (pilih manual)
+
+5. **Tentukan Status Publikasi**
+
+   - **Draft**: Belum dipublikasikan, hanya terlihat oleh pembuat
+   - **Published**: Langsung dipublikasikan dan dikirim notifikasi WhatsApp
+   - **Scheduled**: Dijadwalkan untuk dipublikasikan di waktu tertentu
+
+6. **Simpan atau Publish**
+
+   - Klik **"Simpan sebagai Draft"** untuk menyimpan tanpa publish
+   - Klik **"Publish Sekarang"** untuk langsung mempublikasikan
+
+</Steps>
+
+<Aside type="caution" title="Perhatian!">
+  Setelah klik **"Publish"**, informasi akan **langsung dikirim ke WhatsApp**
+  semua pengguna yang menjadi target. Pastikan konten sudah benar sebelum
+  publish!
+</Aside>
+
+---
+
+## Status Publikasi
+
+### Draft
+
+**Informasi belum dipublikasikan**
+
+- Hanya terlihat oleh pembuat dan admin
+- Dapat diedit kapan saja
+- Tidak muncul di dashboard pengguna
+- Tidak terkirim notifikasi WhatsApp
+
+**Gunakan untuk**:
+
+- Menyusun pengumuman yang belum final
+- Review oleh atasan sebelum dipublikasikan
+- Menjadwalkan publikasi di masa depan
+
+### Published
+
+**Informasi sudah dipublikasikan**
+
+- Terlihat oleh semua target audience
+- Muncul di dashboard pengguna
+- **Otomatis terkirim notifikasi WhatsApp**
+- Dapat diarsipkan jika sudah tidak relevan
+- Edit dengan hati-hati (perubahan tidak ternotifikasi ulang)
+
+**Otomatis terjadi saat**:
+
+- Klik "Publish Sekarang"
+- Jadwal publikasi tercapai (untuk scheduled)
+
+### Archived
+
+**Informasi yang sudah tidak aktif**
+
+- Tidak muncul di dashboard pengguna
+- Tetap tersimpan untuk histori
+- Dapat di-restore jika diperlukan
+- Tidak dapat diedit
+
+**Gunakan untuk**:
+
+- Informasi yang sudah kadaluarsa
+- Pengumuman yang sudah selesai
+- Membersihkan dashboard dari informasi lama
+
+---
+
+## Notifikasi WhatsApp
+
+<Aside type="tip" title="Fitur Unggulan!">
+  Setiap informasi yang statusnya diubah menjadi **Published** akan **otomatis
+  dikirimkan** ke WhatsApp pengguna yang menjadi target audience.
+</Aside>
+
+### Cara Kerja Notifikasi WhatsApp
+
+```mermaid
+graph LR
+    A[Admin Buat Informasi] --> B[Klik Publish]
+    B --> C{Validasi Data}
+    C -->|Valid| D[Update Status: Published]
+    C -->|Invalid| E[Tampilkan Error]
+    D --> F[Tampilkan di Dashboard]
+    D --> G[Kirim ke WhatsApp]
+    G --> H[Target: Semua Pengguna]
+    G --> I[Target: Guru]
+    G --> J[Target: Siswa Kelas X]
+    G --> K[Target: Custom]
+```
+
+### Format Pesan WhatsApp
+
+**Template Notifikasi**:
+
+```
+*PENGUMUMAN MADRASAH*
+
+*[Judul Pengumuman]*
+
+[Isi konten pengumuman...]
+
+ Tanggal: [DD/MM/YYYY]
+ Waktu: [HH:MM WIB]
+
+---
+Dikirim otomatis dari Sistem Presensi RFID
+MTs Negeri 1 Pandeglang
+```
+
+**Contoh Nyata**:
+
+```
+*PENGUMUMAN MADRASAH*
+
+*Libur Hari Raya Idul Fitri 1446 H*
+
+Assalamu'alaikum Wr. Wb.
+
+Dengan ini kami informasikan bahwa:
+- Libur Idul Fitri: 29 Maret - 7 April 2025
+- Masuk kembali: Senin, 8 April 2025
+- Harap persiapkan diri untuk KBM normal
+
+Selamat merayakan Idul Fitri.
+Mohon maaf lahir dan batin.
+
+ Tanggal: 20 Maret 2025
+ Waktu: 10:30 WIB
+
+---
+Dikirim otomatis dari Sistem Presensi RFID
+MTs Negeri 1 Pandeglang
+```
+
+### Syarat Notifikasi WhatsApp Terkirim
+
+<CardGrid>
+  <Card title="Nomor Terdaftar" icon="approve-check">
+    Pengguna harus memiliki nomor WhatsApp terdaftar di profil
+  </Card>
+
+<Card title="Status Published" icon="rocket">
+  Informasi harus berstatus **Published** (bukan Draft)
+</Card>
+
+<Card title="Target Valid" icon="star">
+  Pengguna termasuk dalam target audience yang dipilih
+</Card>
+
+  <Card title="Koneksi Aktif" icon="setting">
+    Sistem WhatsApp Gateway dalam kondisi online dan aktif
+  </Card>
+</CardGrid>
+
+---
+
+## Target Audience
+
+Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke penerima yang tepat.
+
+### Pilihan Target
+
+<Tabs>
+  <TabItem label="Semua Pengguna">
+    **Broadcast ke Seluruh Civitas** Cocok untuk: - Pengumuman libur madrasah -
+    Perubahan kebijakan umum - Acara besar yang melibatkan semua **Penerima**:
+    Guru, Staff, Siswa, Wali Kelas, semua role
+  </TabItem>
+
+<TabItem label="Per Role">
+  **Filter Berdasarkan Peran** - **Guru/Pegawai**: Rapat guru, update mengajar -
+  **Siswa**: Jadwal ujian, tugas - **Staff TU**: Administrasi, pembayaran -
+  **Wali Kelas**: Koordinasi kelas - **Orang Tua** (jika ada): Info kesiswaan
+</TabItem>
+
+<TabItem label="Per Kelas">
+  **Target Kelas Tertentu** Cocok untuk: - Pengumuman khusus kelas XII
+  (kelulusan) - Info jurusan tertentu - Acara kelas **Contoh**: Hanya siswa X
+  IPA 1, 2, 3
+</TabItem>
+
+  <TabItem label="Custom">
+    **Pilih Manual** Cocok untuk: - Grup kecil - Panitia acara - Tim khusus
+    **Cara**: Centang nama pengguna satu per satu
   </TabItem>
 </Tabs>
 
 ---
 
-## 🚀 Cara Mengelola Informasi Sekolah
+## Mengedit Informasi
 
 <Steps>
 
-1. **Akses Menu Informasi**
-
-   Login sebagai Administrator, kemudian navigasi ke:
-
-   ```
-   Dashboard → Data Master → Informasi
-   ```
-
-2. **Lihat Data Saat Ini**
-
-   Sistem akan menampilkan informasi sekolah yang tersimpan saat ini. Periksa data yang perlu diperbarui.
-
-3. **Edit Informasi**
-
-   Klik tombol **"Edit"** atau **"Ubah"** pada bagian atas halaman untuk masuk ke mode editing.
-
-4. **Isi Form Data**
-
-   Lengkapi atau perbarui field yang diperlukan:
-
-   - Isi semua field **wajib** yang ditandai dengan tanda bintang (\*)
-   - Pastikan data sesuai dengan dokumen resmi
-   - Gunakan format yang benar untuk setiap field
-
-5. **Upload Logo**
-
-   Untuk mengunggah atau mengubah logo:
-
-   - Klik area upload atau tombol **"Pilih File"**
-   - Pilih file gambar (PNG/JPG/SVG)
-   - Pastikan ukuran file tidak melebihi 2MB
-   - Preview akan muncul setelah file dipilih
-
-   <Aside type="note">
-     Disarankan menggunakan logo dengan rasio 1:1 (square) untuk hasil terbaik
-     di berbagai tampilan.
-   </Aside>
-
-6. **Validasi Data**
-
-   Periksa kembali seluruh data yang telah diisi:
-
-   - ✅ Tidak ada typo atau kesalahan ketik
-   - ✅ Format nomor telepon dan email sudah benar
-   - ✅ Alamat lengkap dan akurat
-   - ✅ Logo tampil dengan jelas
-
-7. **Simpan Perubahan**
-
-   Klik tombol **"Simpan"** atau **"Update"** di bagian bawah form. Sistem akan:
-
-   - Validasi data yang diinput
-   - Menyimpan perubahan ke database
-   - Menampilkan notifikasi sukses
-   - Redirect ke halaman view informasi
+1. Klik ikon **Edit** pada row informasi yang ingin diubah
+2. Perbarui konten atau pengaturan
+3. Klik **"Simpan"**
 
 </Steps>
 
----
-
-## 🖼️ Panduan Upload Logo
-
-### Spesifikasi Logo
-
-<Card title="📐 Persyaratan Teknis" icon="approve-check">
-
-**Format File:**
-
-- PNG (Recommended) - Mendukung transparansi
-- JPG/JPEG - Untuk foto atau gambar kompleks
-- SVG - Vector, resolusi tak terbatas
-
-**Ukuran File:**
-
-- Maksimal: 2 MB
-- Recommended: 500 KB - 1 MB
-
-**Dimensi:**
-
-- Minimum: 200 x 200 px
-- Recommended: 512 x 512 px atau 1024 x 1024 px
-- Rasio: 1:1 (Square)
-
-**Background:**
-
-- PNG dengan transparansi (untuk fleksibilitas)
-- Atau background putih untuk logo berwarna
-
-</Card>
-
-### Tips Upload Logo
-
-<Aside type="tip" title="Best Practices">
-
-1. **Gunakan logo beresolusi tinggi** untuk hasil terbaik di berbagai ukuran layar
-2. **Siapkan 2 versi** - satu untuk light mode, satu untuk dark mode
-3. **Test tampilan** setelah upload di berbagai halaman sistem
-4. **Compress file** jika ukuran terlalu besar tanpa mengurangi kualitas
-5. **Gunakan format PNG** dengan background transparan untuk fleksibilitas maksimal
-
+<Aside type="caution" title="Catatan Penting!">
+  - Mengedit informasi yang sudah **Published** **TIDAK** akan mengirim
+  notifikasi WhatsApp ulang - Jika perlu kirim notifikasi baru, buat pengumuman
+  baru - Perubahan akan langsung terlihat di dashboard pengguna
 </Aside>
 
 ---
 
-## 📊 Contoh Pengisian Data
+## Menghapus Informasi
 
-### Format Data yang Benar
+<Tabs>
+  <TabItem label="Soft Delete (Arsip)">
+    **Direkomendasikan** 1. Edit informasi 2. Ubah status menjadi **"Archived"**
+    3. Informasi hilang dari dashboard tapi tetap tersimpan **Keuntungan**: -
+    Data tetap ada untuk histori - Dapat di-restore jika diperlukan - Audit
+    trail lengkap
+  </TabItem>
 
-```
-Nama Lengkap    : MTs Negeri 1 Pandeglang
-Nama Singkat    : MTsN 1 Pandeglang
-NPSN            : 20604046
-NSM             : 121236010001
-Jenjang         : MTs (Madrasah Tsanawiyah)
-Status          : Negeri
-Tahun Berdiri   : 1995
+  <TabItem label="Hard Delete (Hapus)">
+    **Hati-hati!** 1. Klik ikon **Hapus** (trash) 2. Konfirmasi penghapusan 3.
+    Data **dihapus permanen** **Peringatan**: - Data tidak dapat dikembalikan -
+    Histori notifikasi hilang - Hanya untuk informasi yang salah input
+  </TabItem>
+</Tabs>
 
-Alamat          : Jl. Raya Labuan-Pandeglang KM. 3
-RT/RW           : 001/001
-Desa/Kelurahan  : Kadubeureum
-Kecamatan       : Pandeglang
-Kabupaten       : Pandeglang
-Provinsi        : Banten
-Kode Pos        : 42212
-
-Telepon         : (0253) 201234
-Email           : info@mtsn1pandeglang.sch.id
-Website         : https://mtsn1pandeglang.sch.id
-```
-
----
-
-## ⚠️ Hal yang Perlu Diperhatikan
-
-<Aside type="caution" title="Perhatian Penting">
-
-1. **Data NPSN dan NSM** harus sesuai dengan data resmi dari Kementerian Agama/Kemendikbud
-2. **Perubahan logo** akan mempengaruhi seluruh tampilan sistem termasuk laporan
-3. **Backup logo lama** sebelum menggantinya dengan yang baru
-4. **Validasi email** - pastikan email sekolah aktif dan dapat diakses
-5. **Update data secara berkala** jika ada perubahan status akreditasi atau kontak
-
+<Aside type="danger">
+  Informasi yang sudah dikirim ke WhatsApp **tidak dapat ditarik kembali**
+  meskipun dihapus dari sistem. WhatsApp sudah terkirim ke device pengguna.
 </Aside>
 
 ---
 
-## 🔄 Dampak Perubahan Data
+## Best Practice
 
-Perubahan informasi sekolah akan berpengaruh pada:
-
-<CardGrid stagger>
-  <Card title="📄 Header Laporan" icon="document">
-    Logo dan nama sekolah muncul di semua laporan presensi yang digenerate
-    sistem.
+<CardGrid>
+  <Card title="Judul Jelas & Menarik" icon="star">
+    Gunakan judul yang informatif dan langsung to the point agar pengguna
+    langsung paham
   </Card>
 
-{" "}
-
-<Card title="🖥️ Dashboard" icon="laptop">
-  Identitas sekolah ditampilkan di header dashboard dan sidebar navigasi.
+<Card title="Konten Terstruktur" icon="document">
+  Gunakan bullet points, numbering, dan paragraph pendek agar mudah dibaca
 </Card>
 
-{" "}
-
-<Card title="📧 Email Notifikasi" icon="email">
-  Informasi kontak digunakan dalam email otomatis yang dikirim sistem.
+<Card title="Review Sebelum Publish" icon="approve-check">
+  Simpan sebagai Draft dulu, minta review atasan, baru publish untuk menghindari
+  kesalahan
 </Card>
 
-  <Card title="🎫 Kartu Presensi" icon="star">
-    Data sekolah tercetak pada kartu RFID yang diterbitkan untuk siswa dan
-    pegawai.
+  <Card title="Target Tepat" icon="rocket">
+    Pilih target audience yang tepat agar tidak spam pengguna yang tidak relevan
   </Card>
 </CardGrid>
 
 ---
 
-## ❓ FAQ - Pertanyaan Umum
+## Contoh Kasus Penggunaan
 
-<details>
-<summary>**Apakah perubahan informasi langsung terlihat di sistem?**</summary>
+### Kasus 1: Pengumuman Libur Mendadak
 
-Ya, setelah menyimpan perubahan, informasi akan langsung terupdate di seluruh sistem. Namun untuk beberapa cache, mungkin perlu refresh halaman (F5) untuk melihat perubahan.
+**Skenario**: Hujan deras, madrasah diliburkan
 
-</details>
+```
+Judul:  LIBUR MENDADAK - Hujan Deras
+Kategori: Darurat
+Prioritas: Urgent
+Target: Semua Pengguna
+Status: Published (langsung)
 
-<details>
-<summary>**Bagaimana jika logo tidak muncul setelah diupload?**</summary>
+Konten:
+Assalamu'alaikum Wr. Wb.
 
-Pastikan:
+Mengingat kondisi cuaca yang tidak memungkinkan,
+madrasah DILIBURKAN untuk hari ini:
 
-1. Format file sudah benar (PNG/JPG/SVG)
-2. Ukuran file tidak melebihi 2MB
-3. File tidak corrupt atau rusak
-4. Clear cache browser dan refresh halaman
-5. Hubungi admin jika masalah berlanjut
+ Tanggal: Senin, 15 Januari 2025
+ Pengumuman: 06:00 WIB
 
-</details>
+Kegiatan belajar mengajar akan dilanjutkan
+kembali besok (Selasa, 16 Januari 2025)
+dengan jadwal normal.
 
-<details>
-<summary>**Siapa yang bisa mengubah informasi sekolah?**</summary>
+Harap informasikan ke teman dan keluarga.
 
-Hanya **Super Admin** dan **Administrator** yang memiliki hak akses untuk mengubah informasi sekolah. Operator dan user biasa hanya bisa melihat (read-only).
+Wassalamu'alaikum Wr. Wb.
+```
 
-</details>
+**Hasil**: Notifikasi WhatsApp langsung terkirim ke 1000+ pengguna dalam hitungan menit.
 
-<details>
-<summary>**Apakah ada log perubahan data?**</summary>
+### Kasus 2: Jadwal Ujian Semester
 
-Ya, sistem mencatat setiap perubahan data termasuk waktu, user yang melakukan perubahan, dan data apa yang diubah untuk keperluan audit.
+**Skenario**: Pengumuman jadwal UAS
 
-</details>
+```
+Judul:  Jadwal Ujian Akhir Semester Genap 2024/2025
+Kategori: Akademik
+Prioritas: High
+Target: Semua Siswa
+Status: Scheduled (Publish 1 minggu sebelum ujian)
 
-<details>
-<summary>**Bagaimana cara mengganti logo untuk dark mode?**</summary>
+Konten:
+Kepada seluruh siswa,
 
-Upload logo dengan warna yang kontras untuk background gelap di field "Logo Dark Mode". Sistem akan otomatis menggunakan logo yang sesuai berdasarkan theme yang dipilih user.
+Berikut jadwal Ujian Akhir Semester Genap:
 
-</details>
+ Tanggal: 1-8 Juni 2025
+ Waktu: 07:30 - selesai
+
+Jadwal lengkap terlampir.
+
+Persiapkan diri dengan baik!
+
+[Lampiran: jadwal_uas_genap_2025.pdf]
+```
+
+### Kasus 3: Reminder Pembayaran SPP
+
+**Skenario**: Reminder SPP bulan depan jatuh tempo
+
+```
+Judul: Reminder Pembayaran SPP Maret 2025
+Kategori: Administratif
+Prioritas: Medium
+Target: Siswa (khusus yang belum bayar)
+Status: Published
+
+Konten:
+Kepada orang tua/wali siswa,
+
+Kami ingatkan bahwa pembayaran SPP bulan Maret 2025
+akan jatuh tempo pada:
+
+ Tanggal: 10 Maret 2025
+ Nominal: Sesuai tagihan masing-masing
+
+Pembayaran dapat dilakukan di:
+- Bendahara madrasah (Loket TU)
+- Transfer bank (rekening terlampir)
+
+Terima kasih atas perhatiannya.
+```
 
 ---
 
-## 📞 Butuh Bantuan?
+## Troubleshooting
 
-<Card title="💬 Hubungi Support" icon="comment">
+### Notifikasi WhatsApp tidak terkirim
 
-Jika Anda mengalami kesulitan atau ada pertanyaan lebih lanjut tentang pengelolaan informasi sekolah:
+**Penyebab**:
 
-- **Email Support:** support@mtsn1pandeglang.sch.id
-- **Kontak IT:** Hubungi tim IT sekolah
-- **Jam Layanan:** Senin - Jumat, 08:00 - 15:00 WIB
+- Nomor WhatsApp pengguna tidak terdaftar
+- WhatsApp Gateway offline
+- Koneksi internet bermasalah
 
-Atau laporkan masalah melalui form feedback di sistem.
+**Solusi**:
 
-</Card>
+1. Cek status WhatsApp Gateway di dashboard
+2. Verifikasi nomor WA pengguna di profil mereka
+3. Restart WhatsApp Gateway jika perlu
+4. Kirim ulang notifikasi secara manual
+
+### Informasi tidak muncul di dashboard pengguna
+
+**Penyebab**:
+
+- Status masih **Draft**
+- Target audience tidak termasuk pengguna tersebut
+- Tanggal mulai belum tercapai
+
+**Solusi**:
+
+1. Ubah status menjadi **Published**
+2. Cek target audience, pastikan sudah benar
+3. Cek tanggal mulai dan berakhir
+
+### Notifikasi terkirim double
+
+**Penyebab**: Klik tombol "Publish" berkali-kali
+
+**Solusi**:
+
+- Tunggu sampai proses selesai (loading indicator)
+- Cek log pengiriman notifikasi
+- Di masa depan, klik sekali saja dan tunggu
 
 ---
 
-<div style="text-align: center; margin-top: 2rem; padding: 1rem; border-top: 1px solid var(--sl-color-gray-5);">
-  <p style="font-size: 0.875rem; color: var(--sl-color-gray-3);">
-    💡 <strong>Tips:</strong> Perbarui informasi sekolah secara berkala untuk
-    menjaga akurasi data sistem
-  </p>
-</div>
+## Tips Keamanan
+
+<Aside type="tip">
+  - Batasi akses pembuatan informasi hanya untuk **Super Admin**, **Operator**,
+  dan **Kepala Madrasah** - Aktifkan fitur approval untuk pengumuman prioritas
+  **Urgent** - Log semua aktivitas publikasi untuk audit - Backup database
+  secara berkala untuk recovery
+</Aside>
+
+---
+
+## Statistik & Monitoring
+
+Dashboard informasi menyediakan statistik:
+
+- Total informasi published
+- Jumlah penerima per informasi
+- Rate notifikasi WhatsApp terkirim
+- Jumlah pengguna yang sudah membaca
+- Tren publikasi informasi per bulan
+
+---
+
+## Langkah Selanjutnya
+
+<CardGrid>
+  <Card title="Setup WhatsApp Gateway" icon="external">
+    Pastikan WhatsApp Gateway sudah terkonfigurasi dengan baik. [Hubungi Tim IT
+    untuk Setup →](../memulai)
+  </Card>
+
+  <Card title="Update Profil Pengguna" icon="star">
+    Pastikan semua pengguna memiliki nomor WhatsApp terdaftar di profil.
+    [Pelajari Update Profile →](../update-profile)
+  </Card>
+</CardGrid>
