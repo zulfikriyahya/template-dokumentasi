@@ -1,0 +1,509 @@
+---
+title: "Update Profile"
+description: "Panduan lengkap mengelola dan memperbarui profil pengguna"
+template: splash
+hero:
+  image:
+    file: "../../assets/update-profile.svg"
+  tagline: "Kelola profil Anda dengan mudah dan aman"
+  # actions:
+  #   - text: "Mulai Update"
+  #     link: "#mengakses-halaman-profile"
+  #     icon: "pencil"
+  #     variant: primary
+  #   - text: "Tips Keamanan"
+  #     link: "#keamanan-profile"
+  #     icon: "lock"
+  #     variant: secondary
+---
+
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+} from "@astrojs/starlight/components";
+
+## Mengakses Halaman Profile
+
+Untuk mengakses dan mengelola profil Anda:
+
+<Steps>
+
+1. **Klik Menu Profile**
+
+   Klik nama pengguna atau avatar Anda di pojok kanan atas dashboard
+
+2. **Pilih "Edit Profile"**
+
+   Dari dropdown menu, pilih opsi "Edit Profile" atau "Pengaturan Akun"
+
+3. **Halaman Profile Terbuka**
+
+   Anda akan diarahkan ke halaman pengaturan profil lengkap
+
+</Steps>
+
+<Aside type="tip">
+  Anda juga bisa mengakses halaman profile melalui **Settings → Profile** di
+  sidebar menu.
+</Aside>
+
+---
+
+## Mengubah Avatar/Foto Profil
+
+Foto profil membantu identifikasi visual Anda dalam sistem.
+
+<Steps>
+
+1. **Klik Foto Profile**
+
+   Di halaman profile, klik pada foto profil atau tombol "Ubah Foto"
+
+2. **Upload Foto Baru**
+
+   Pilih foto dari perangkat Anda:
+
+   - Format: JPG, PNG, atau WEBP
+   - Ukuran maksimal: 2MB
+   - Resolusi rekomendasi: 400x400 pixels
+
+3. **Crop & Sesuaikan**
+
+   Gunakan tool crop untuk menyesuaikan posisi dan zoom foto
+
+4. **Simpan Perubahan**
+
+   Klik "Simpan" untuk menerapkan foto profil baru
+
+</Steps>
+
+<CardGrid>
+  <Card title="✅ Foto yang Baik" icon="approve-check">
+    - Wajah terlihat jelas - Pencahayaan cukup - Latar belakang bersih -
+    Ekspresi profesional/ramah - Resolusi tinggi
+  </Card>
+
+  <Card title="❌ Hindari" icon="error">
+    - Foto blur atau gelap - Wajah terpotong - Latar berantakan - Foto grup -
+    Gambar/logo bukan foto diri
+  </Card>
+</CardGrid>
+
+<Aside type="note">
+  Foto profil akan ditampilkan di berbagai bagian sistem termasuk dashboard,
+  laporan, dan notifikasi.
+</Aside>
+
+---
+
+## Mengedit Nama Lengkap
+
+<Steps>
+
+1. **Temukan Field "Nama Lengkap"**
+
+   Di halaman profile, scroll ke section "Informasi Pribadi"
+
+2. **Klik Field Nama**
+
+   Klik pada kolom nama lengkap untuk mulai mengedit
+
+3. **Masukkan Nama Baru**
+
+   Ketik nama lengkap sesuai identitas resmi Anda
+
+4. **Simpan Perubahan**
+
+   Klik tombol "Simpan" atau "Update Profile"
+
+</Steps>
+
+<Aside type="caution" title="Penting!">
+  - Gunakan nama lengkap sesuai KTP/dokumen resmi - Hindari penggunaan nickname
+  atau singkatan - Nama akan muncul di laporan dan dokumen resmi - Perubahan
+  nama mungkin memerlukan verifikasi admin
+</Aside>
+
+---
+
+## Memperbarui Nomor Telepon
+
+Nomor telepon digunakan untuk notifikasi WhatsApp dan kontak darurat.
+
+<Steps>
+
+1. **Buka Section "Kontak"**
+
+   Temukan field nomor telepon di halaman profile
+
+2. **Input Nomor Baru**
+
+   Format: +62 atau 08xx-xxxx-xxxx
+
+   ```
+   Contoh valid:
+   - +62 812-3456-7890
+   - 081234567890
+   - 0812 3456 7890
+   ```
+
+3. **Verifikasi OTP (Opsional)**
+
+   Masukkan kode OTP yang dikirim via SMS untuk verifikasi
+
+4. **Simpan Nomor**
+
+   Klik "Simpan" setelah verifikasi berhasil
+
+</Steps>
+
+<CardGrid>
+  <Card title="📱 Notifikasi WhatsApp" icon="bell">
+    Nomor telepon akan digunakan untuk: - Notifikasi presensi real-time -
+    Pengumuman penting - Reminder dan alert - Verifikasi keamanan
+  </Card>
+
+  <Card title="✅ Pastikan Nomor Aktif" icon="approve-check">
+    - Gunakan nomor yang aktif - WhatsApp terdaftar di nomor tersebut - Dapat
+    menerima SMS (untuk OTP) - Nomor tidak berubah-ubah
+  </Card>
+</CardGrid>
+
+---
+
+## Mengubah Alamat Email
+
+Email digunakan untuk login dan komunikasi sistem.
+
+<Steps>
+
+1. **Temukan Field Email**
+
+   Di section "Informasi Kontak", klik field email
+
+2. **Masukkan Email Baru**
+
+   Ketik alamat email baru yang valid:
+
+   ```
+   Format: nama@domain.com
+   Contoh: user@gmail.com
+   ```
+
+3. **Verifikasi Email**
+
+   Cek inbox email baru Anda dan klik link verifikasi
+
+4. **Konfirmasi Perubahan**
+
+   Setelah klik link, email akan otomatis terupdate
+
+</Steps>
+
+<Aside type="caution" title="Peringatan Keamanan!">
+  - Email lama akan menerima notifikasi perubahan - Link verifikasi berlaku 24
+  jam - Jangan gunakan email orang lain - Pastikan Anda memiliki akses ke email
+  baru
+</Aside>
+
+<Tabs>
+  <TabItem label="Email yang Baik">
+    ✅ Personal email yang Anda kontrol ✅ Email dengan provider terpercaya ✅
+    Aktif dan sering dicek ✅ Memiliki keamanan 2FA
+  </TabItem>
+
+  <TabItem label="Hindari">
+    ❌ Email milik orang lain ❌ Email yang jarang dicek ❌ Email
+    temporary/disposable ❌ Email dengan password lemah
+  </TabItem>
+</Tabs>
+
+---
+
+## Mengganti Password
+
+Keamanan akun dimulai dari password yang kuat.
+
+<Steps>
+
+1. **Buka Tab "Keamanan"**
+
+   Di halaman profile, klik tab atau section "Keamanan"
+
+2. **Klik "Ubah Password"**
+
+   Temukan dan klik tombol "Change Password"
+
+3. **Isi Form Password**
+
+   ```
+   Password Lama: ••••••••
+   Password Baru: ••••••••
+   Konfirmasi: ••••••••
+   ```
+
+4. **Verifikasi Identitas**
+
+   Masukkan kode OTP yang dikirim ke email/WhatsApp
+
+5. **Simpan Password Baru**
+
+   Klik "Update Password" untuk menyimpan
+
+</Steps>
+
+### Syarat Password Kuat
+
+<CardGrid>
+  <Card title="✅ Harus Memenuhi" icon="approve-check">
+    - Minimal 8 karakter - Kombinasi huruf besar & kecil - Mengandung angka
+    (0-9) - Mengandung simbol (!@#$%^&*) - Tidak mudah ditebak
+  </Card>
+
+  <Card title="❌ Hindari" icon="error">
+    - Password umum (123456, password) - Tanggal lahir - Nama lengkap - Urutan
+    keyboard (qwerty) - Password yang pernah bocor
+  </Card>
+</CardGrid>
+
+### Tips Password Manager
+
+<Aside type="tip" title="Gunakan Password Manager">
+  Pertimbangkan menggunakan password manager seperti: - **1Password** - Premium,
+  fitur lengkap - **Bitwarden** - Open source, gratis - **LastPass** -
+  User-friendly - **KeePass** - Offline, sangat aman
+</Aside>
+
+---
+
+## Verifikasi Perubahan Data
+
+Setiap perubahan data penting akan melalui proses verifikasi:
+
+### Proses Verifikasi
+
+<Steps>
+
+1. **Perubahan Diajukan**
+
+   Anda melakukan perubahan pada data profile
+
+2. **Notifikasi Dikirim**
+
+   Sistem mengirim kode OTP ke email/WhatsApp
+
+3. **Input Kode OTP**
+
+   Masukkan 6 digit kode dalam waktu 5 menit
+
+4. **Perubahan Disetujui**
+
+   Data terupdate setelah verifikasi berhasil
+
+</Steps>
+
+### Data yang Memerlukan Verifikasi
+
+| Data          | Metode Verifikasi         | Waktu Proses |
+| ------------- | ------------------------- | ------------ |
+| Email         | Link verifikasi via email | Instant      |
+| Nomor Telepon | OTP via SMS/WhatsApp      | 1-2 menit    |
+| Password      | OTP ke email & WhatsApp   | Instant      |
+| Data Sensitif | Approval admin            | 1x24 jam     |
+
+<Aside type="note">
+  Jika tidak menerima kode OTP dalam 5 menit, klik "Kirim Ulang Kode".
+</Aside>
+
+---
+
+## Keamanan Profile
+
+### Fitur Keamanan yang Tersedia
+
+<CardGrid>
+  <Card title="🔐 Two-Factor Authentication (2FA)" icon="lock">
+    Tambah lapisan keamanan ekstra dengan 2FA **Cara Aktifkan:** 1. Buka
+    Settings → Security 2. Enable "Two-Factor Authentication" 3. Scan QR code
+    dengan authenticator app 4. Simpan backup codes
+  </Card>
+
+{" "}
+
+<Card title="📱 Trusted Devices" icon="approve-check">
+  Kelola perangkat yang dapat mengakses akun **Fitur:** - Lihat daftar perangkat
+  aktif - Logout dari perangkat tertentu - Blokir perangkat mencurigakan -
+  Notifikasi login baru
+</Card>
+
+{" "}
+
+<Card title="🔍 Activity Log" icon="list-format">
+  Monitor aktivitas akun Anda **Informasi:** - Waktu login/logout - Perangkat
+  yang digunakan - IP Address - Perubahan data penting
+</Card>
+
+  <Card title="🚨 Security Alerts" icon="warning">
+    Dapatkan notifikasi aktivitas mencurigakan **Alert untuk:** - Login dari
+    lokasi baru - Perubahan password - Aktivitas tidak biasa - Multiple failed
+    login
+  </Card>
+</CardGrid>
+
+---
+
+## Tips Keamanan Akun
+
+### Do's ✅
+
+<Steps>
+
+1. **Gunakan Password Unik**
+
+   Jangan pakai password yang sama dengan akun lain
+
+2. **Aktifkan 2FA**
+
+   Tambah lapisan keamanan dengan verifikasi 2 langkah
+
+3. **Update Informasi Berkala**
+
+   Pastikan email dan nomor telepon selalu aktif
+
+4. **Logout di Perangkat Publik**
+
+   Selalu logout setelah gunakan komputer umum
+
+5. **Periksa Activity Log**
+
+   Cek log aktivitas secara berkala
+
+</Steps>
+
+### Don'ts ❌
+
+<CardGrid>
+  <Card title="❌ Jangan Share Akun" icon="error">
+    Jangan berikan username/password ke orang lain, bahkan teman dekat
+  </Card>
+
+{" "}
+
+<Card title="❌ Jangan Save Password di Browser Publik" icon="error">
+  Hindari menyimpan password di browser komputer umum/warnet
+</Card>
+
+{" "}
+
+<Card title="❌ Jangan Klik Link Mencurigakan" icon="error">
+  Waspadai phishing email yang meminta kredensial login
+</Card>
+
+  <Card title="❌ Jangan Abaikan Notifikasi Keamanan" icon="error">
+    Periksa dan tindaklanjuti setiap security alert yang diterima
+  </Card>
+</CardGrid>
+
+---
+
+## Troubleshooting Update Profile
+
+### Masalah Umum & Solusi
+
+<Tabs>
+  <TabItem label="Foto Tidak Terupload">
+    **Penyebab:** - File terlalu besar (>2MB) - Format tidak didukung - Koneksi
+    internet lambat **Solusi:** - Kompres foto terlebih dahulu - Gunakan format
+    JPG/PNG - Coba dengan koneksi lebih stabil - Clear browser cache
+  </TabItem>
+
+{" "}
+
+<TabItem label="OTP Tidak Diterima">
+  **Penyebab:** - Nomor tidak aktif - Inbox SMS penuh - WhatsApp tidak terdaftar
+  - Delay pengiriman **Solusi:** - Periksa nomor sudah benar - Tunggu 5 menit,
+  kirim ulang - Gunakan metode verifikasi alternatif - Hubungi admin jika masih
+  gagal
+</TabItem>
+
+{" "}
+
+<TabItem label="Perubahan Tidak Tersimpan">
+  **Penyebab:** - Form tidak lengkap - Session expired - Data duplikat - Error
+  server **Solusi:** - Isi semua field required - Login ulang jika session habis
+  - Gunakan data unik (email/nomor berbeda) - Refresh halaman dan coba lagi
+</TabItem>
+
+  <TabItem label="Lupa Password">
+    **Solusi:** 1. Klik "Lupa Password" di halaman login 2. Masukkan email
+    terdaftar 3. Cek inbox email untuk link reset 4. Klik link dan buat password
+    baru 5. Login dengan password baru **Jika Email Tidak Bisa Diakses:** -
+    Hubungi administrator sistem - Bawa dokumen identitas untuk verifikasi -
+    Admin akan manual reset password
+  </TabItem>
+</Tabs>
+
+---
+
+## Hubungi Support
+
+Jika mengalami kendala dalam update profile:
+
+<CardGrid>
+  <Card title="💬 Live Chat" icon="comment">
+    Chat langsung dengan admin **Jam Kerja:** Senin-Jumat, 08:00-16:00 WIB
+  </Card>
+
+{" "}
+
+<Card title="📧 Email Support" icon="email">
+  support@attendance-systems.id **Response Time:** Maksimal 1x24 jam
+</Card>
+
+{" "}
+
+<Card title="📱 WhatsApp" icon="phone">
+  +62 812-3456-7890 **Layanan:** 24/7 (prioritas emergency)
+</Card>
+
+  <Card title="🎫 Help Desk" icon="question">
+    Kunjungi ruang admin sekolah **Lokasi:** Gedung Administrasi
+  </Card>
+</CardGrid>
+
+---
+
+## Langkah Selanjutnya
+
+Setelah profile Anda terupdate:
+
+<CardGrid>
+  <Card title="🗄️ Kelola Data Master" icon="list-format">
+    Pelajari cara mengelola data dasar sistem [Baca Panduan
+    →](/menu-data-master/)
+  </Card>
+
+{" "}
+
+<Card title="💳 Ajukan Kartu RFID" icon="approve-check">
+  Daftar dan dapatkan kartu presensi Anda [Baca Panduan
+  →](/menu-kartu-presensi/)
+</Card>
+
+  <Card title="📊 Lihat Presensi" icon="chart">
+    Cek riwayat kehadiran Anda [Untuk Pegawai
+    →](/menu-pegawai/riwayat-presensi-pegawai/) [Untuk Siswa
+    →](/menu-siswa/riwayat-presensi-siswa/)
+  </Card>
+</CardGrid>
+
+---
+
+<Aside type="tip" title="Pro Tips">
+  - Update foto profil minimal 1 tahun sekali - Ganti password setiap 3-6 bulan
+  - Simpan backup codes 2FA di tempat aman - Review activity log setiap bulan
+</Aside>

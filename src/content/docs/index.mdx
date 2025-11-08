@@ -1,111 +1,213 @@
 ---
-title: Panduan Presensi
-description: Occaecat officia mollit adipisicing dolor elit quis duis laboris deserunt consequat aute sit pariatur. Cupidatat occaecat exercitation cupidatat esse fugiat sit consequat velit ipsum ipsum cillum magna. Velit nostrud eu commodo deserunt nulla cupidatat labore. Mollit deserunt in tempor fugiat Lorem excepteur ex dolore laboris nostrud aliqua aliqua. Culpa sint reprehenderit anim qui in aliquip velit minim enim adipisicing. Ipsum sint incididunt velit pariatur dolore nostrud laboris ex anim tempor dolore culpa ut. Eiusmod pariatur non est consectetur exercitation esse Lorem minim velit est amet exercitation dolore.
+title: "Attendance Systems"
+description: "Sistem Presensi RFID Modern untuk Institusi Pendidikan"
 template: splash
 hero:
   image:
-    file: ../../assets/banner.svg
-  tagline: Aliquip occaecat reprehenderit fugiat sit tempor consequat reprehenderit aliquip aute consequat.
+    file: "../../assets/banner.svg"
+  tagline: "Solusi presensi otomatis berbasis RFID yang dikembangkan khusus untuk MTs Negeri 1 Pandeglang"
   actions:
-    - text: Mulai Panduan
-      link: memulai
-      icon: right-arrow
+    - text: "Mulai Sekarang"
+      link: "/memulai/"
+      icon: "rocket"
       variant: primary
-    - text: Presensi MTs Negeri 1 Pandeglang
-      link: https://presensi.mtsn1pandeglang.sch.id
-      icon: external
+    - text: "Lihat di GitHub"
+      link: "https://github.com/yahyazulfikri"
+      icon: "external"
       variant: secondary
-    # - text: Presensi MA Negeri 1 Pandeglang
-    #   link: https://presensi-mapansa.mtsn1pandeglang.sch.id
-    #   icon: external
-    #   variant: secondary
-    # - text: Presensi Sekolah Alam Bahriatul Ulum Pandeglang
-    #   link: https://presensi.sekolahalampandeglang.id
-    #   icon: external
-    #   variant: secondary
-    # - text: Presensi Darul Huda Pusat Pandeglang
-    #   link: https://presensi-dhpusat.mtsn1pandeglang.sch.id
-    #   icon: external
-    #   variant: secondary
 ---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Tentang Sistem
+
+**Attendance Systems** adalah sistem presensi otomatis berbasis teknologi RFID yang dibangun dengan teknologi web modern. Sistem ini dirancang untuk memudahkan pengelolaan kehadiran siswa dan pegawai di lingkungan madrasah secara efisien, akurat, dan terintegrasi.
+
+Dikembangkan menggunakan **Laravel 12**, **FilamentPHP 3.x**, dan **PHP 8.4+**, sistem ini menawarkan antarmuka yang intuitif dengan fitur-fitur lengkap untuk manajemen presensi yang komprehensif.
 
 ---
 
-## Daftar Menu
-
-import {
-  Icon,
-  FileTree,
-  Card,
-  CardGrid,
-  LinkCard,
-} from "@astrojs/starlight/components";
+## Keunggulan Utama
 
 <CardGrid>
-  <LinkCard
-    title="Menu Data Master"
-    href="menu-data-master"
-    description="Configure Starlight to support multiple languages."
-  />
-  <LinkCard
-    title="Menu Pegawai"
-    href="menu-pegawai"
-    description="Configure Starlight to support multiple languages."
-  />
-  <LinkCard
-    title="Menu Siswa"
-    href="menu-siswa"
-    description="Configure Starlight to support multiple languages."
-  />
-  <LinkCard
-    title="Menu Kartu Presensi"
-    href="menu-kartu-presensi"
-    description="Configure Starlight to support multiple languages."
-  />
+  <Card title="⚡ Presensi Real-time" icon="rocket">
+    Sistem pencatatan kehadiran instan menggunakan teknologi RFID dengan
+    notifikasi langsung melalui WhatsApp
+  </Card>
+  <Card title="📊 Dashboard Interaktif" icon="bars">
+    Visualisasi data kehadiran dengan grafik dan statistik yang mudah dipahami
+  </Card>
+  <Card title="🔐 Keamanan Terjamin" icon="lock">
+    Multi-level authentication dengan sistem role-based access control (RBAC)
+  </Card>
+  <Card title="📱 Notifikasi Otomatis" icon="bell">
+    Pemberitahuan real-time via WhatsApp untuk orang tua dan administrator
+  </Card>
+  <Card title="📈 Laporan Lengkap" icon="document">
+    Export data presensi dalam berbagai format (PDF, Excel) dengan filter kustom
+  </Card>
+  <Card title="🎯 User-Friendly" icon="heart">
+    Antarmuka modern dan responsif yang mudah digunakan untuk semua kalangan
+  </Card>
 </CardGrid>
 
 ---
 
-## Struktur Folder
+## Daftar Menu Dokumentasi
 
-<FileTree>
+<CardGrid>
+  <Card title="🚀 Memulai" icon="rocket">
+    Panduan lengkap untuk memulai menggunakan sistem presensi [Baca Panduan
+    →](/memulai/)
+  </Card>
 
-- public
-  - favicon.svg
-- src
-  - assets
-    - banner.svg
-    - brand-darkmode.png
-    - brand-lightmode.png
-    - pengajuan-kartu.svg
-  - content
-    - docs
-      - menu-data-master
-        - **index.mdx**
-        - informasi.mdx
-        - pengguna.mdx
-        - peran.mdx
-      - menu-kartu-presensi
-        - **index.mdx**
-        - pengajuan-kartu-presensi.mdx
-      - menu-pegawai
-        - **index.mdx**
-        - pegawai.mdx
-        - presensi-pegawai.mdx
-      - menu-siswa
-        - **index.mdx**
-        - presensi-siswa.mdx
-        - siswa.mdx
-      - **index.mdx**
-      - **memulai.mdx**
-  - styles
-    - custom.css
-    - global.css
-  - content.config.ts
-- README.md
-- astro.config.mjs
-- package.json
-- tsconfig.json
-- yarn.lock
+{" "}
 
-</FileTree>
+<Card title="👤 Update Profile" icon="user">
+  Cara mengubah dan mengelola profil pengguna Anda [Baca Panduan
+  →](/update-profile/)
+</Card>
+
+{" "}
+
+<Card title="🗄️ Data Master" icon="list-format">
+  Kelola data dasar sistem: peran, pengguna, instansi, dan lainnya [Baca Panduan
+  →](/menu-data-master/)
+</Card>
+
+{" "}
+
+<Card title="💳 Kartu Presensi" icon="approve-check">
+  Panduan pengajuan dan pengelolaan kartu RFID [Baca Panduan
+  →](/menu-kartu-presensi/)
+</Card>
+
+{" "}
+
+<Card title="👨‍🏫 Pegawai" icon="star">
+  Manajemen data dan presensi pegawai madrasah [Baca Panduan →](/menu-pegawai/)
+</Card>
+
+  <Card title="🎓 Siswa" icon="pencil">
+    Manajemen data dan presensi siswa madrasah [Baca Panduan →](/menu-siswa/)
+  </Card>
+</CardGrid>
+
+---
+
+## Teknologi Yang Digunakan
+
+Sistem ini dibangun dengan stack teknologi modern dan handal:
+
+- **Backend Framework**: Laravel 12 (PHP 8.4+)
+- **Admin Panel**: FilamentPHP 3.x
+- **Database**: MySQL/PostgreSQL
+- **Hardware**: RFID Reader (RC522/PN532)
+- **Notifikasi**: WhatsApp Business API
+- **Dokumentasi**: Astro + Starlight
+
+---
+
+## Cara Menggunakan Dokumentasi
+
+Dokumentasi ini disusun secara sistematis untuk memudahkan Anda menemukan informasi yang dibutuhkan:
+
+1. **Navigasi Sidebar**: Gunakan menu di sebelah kiri untuk menjelajahi berbagai topik
+2. **Pencarian**: Manfaatkan fitur pencarian (Ctrl/Cmd + K) untuk menemukan informasi spesifik
+3. **Breadcrumb**: Ikuti jejak navigasi di bagian atas untuk memahami lokasi Anda
+4. **Link Terkait**: Klik link yang tersedia untuk mempelajari topik yang berhubungan
+
+---
+
+## Struktur Dokumentasi
+
+### 1. Panduan Pengguna
+
+- Memulai dengan sistem
+- Update profile dan keamanan akun
+- Navigasi dasar aplikasi
+
+### 2. Data Master
+
+Pengelolaan data dasar sistem:
+
+- Peran dan Pengguna
+- Instansi dan Tahun Pelajaran
+- Jurusan, Kelas, dan Jabatan
+- Jadwal Presensi dan Mata Pelajaran
+- Informasi dan Pengumuman
+
+### 3. Manajemen Kartu RFID
+
+- Pengajuan kartu presensi
+- Registrasi dan aktivasi
+- Penggantian kartu hilang/rusak
+
+### 4. Manajemen Pegawai
+
+- Data pegawai dan jabatan
+- Riwayat presensi pegawai
+- Laporan dan statistik
+
+### 5. Manajemen Siswa
+
+- Data siswa dan kelas
+- Riwayat presensi siswa
+- Laporan dan grafik kehadiran
+
+---
+
+## Butuh Bantuan?
+
+Jika Anda mengalami kesulitan atau memiliki pertanyaan:
+
+- 📧 **Email**: support@attendance-systems.id
+- 💬 **WhatsApp**: +62 812-3456-7890
+- 🐛 **Laporkan Bug**: [GitHub Issues](https://github.com/yahyazulfikri/attendance-systems/issues)
+- 📖 **Forum Diskusi**: [Community Forum](https://forum.attendance-systems.id)
+
+---
+
+## Lisensi
+
+**MIT License**
+
+Copyright (c) 2025 Yahya Zulfikri
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.**
+
+---
+
+## Kontribusi
+
+Kami sangat menghargai kontribusi dari komunitas! Jika Anda ingin berkontribusi:
+
+1. Fork repository ini
+2. Buat branch fitur baru (`git checkout -b fitur-baru`)
+3. Commit perubahan (`git commit -am 'Menambahkan fitur baru'`)
+4. Push ke branch (`git push origin fitur-baru`)
+5. Buat Pull Request
+
+---
+
+## Tim Pengembang
+
+Sistem ini dikembangkan dengan dedikasi oleh:
+
+**Yahya Zulfikri**  
+_Lead Developer & System Architect_
+
+- 🌐 Website: [yahyazulfikri.com](https://yahyazulfikri.com)
+- 💼 LinkedIn: [Yahya Zulfikri](https://linkedin.com/in/yahyazulfikri)
+- 🐙 GitHub: [@yahyazulfikri](https://github.com/yahyazulfikri)
+
+---
+
+<Card title="💡 Tips" icon="information">
+  Untuk pengalaman terbaik, gunakan browser modern seperti Chrome, Firefox, atau
+  Edge versi terbaru.
+</Card>

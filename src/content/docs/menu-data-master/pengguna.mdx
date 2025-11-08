@@ -1,29 +1,757 @@
 ---
-title: Pengguna
-description: deskripsi
-# template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: "Pengguna (Users)"
+description: "Kelola akun pengguna sistem dengan mudah dan aman"
+# template: splash
 # hero:
-#   tagline:
 #   image:
-#     file: ../../../assets/banner.svg
-#   actions:
-#     - text: Example Guide
-#       link: /guides/example/
-#       icon: right-arrow
-#     - text: Read the Starlight docs
-#       link: https://starlight.astro.build
-#       icon: external
-#       variant: minimal
+#     file: "../../../assets/pengguna.svg"
+#   tagline: "Manajemen pengguna terpusat untuk kontrol akses yang optimal"
+# actions:
+#   - text: "Tambah Pengguna"
+#     link: "#menambah-pengguna-baru"
+#     icon: "add-document"
+#     variant: primary
+#   - text: "Tips Keamanan"
+#     link: "#tips-keamanan-akun"
+#     icon: "lock"
+#     variant: secondary
 ---
 
-## Konten
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+} from "@astrojs/starlight/components";
 
-Minim commodo in ipsum nisi mollit irure elit reprehenderit ut. Deserunt sunt laboris pariatur aliquip tempor et esse amet. Tempor voluptate qui velit adipisicing voluptate occaecat et consectetur ut ut. Qui aliquip aliqua ipsum eiusmod nisi duis aliquip aliqua. Consectetur labore enim sint qui esse enim voluptate exercitation veniam tempor. Ipsum sit exercitation labore Lorem dolore eiusmod dolor magna anim nisi esse do velit. Ex deserunt amet deserunt voluptate sunt do laboris et.
+## Pengertian Pengguna
 
-Quis ullamco velit exercitation ea minim et aliquip. Excepteur ipsum deserunt proident eu cillum nostrud officia nulla ipsum ullamco. Eu fugiat ea labore laborum duis aliquip in velit velit deserunt. Sit nisi esse cupidatat veniam pariatur laboris. In sint est ea aliquip nostrud aliquip pariatur fugiat eiusmod fugiat do officia irure ipsum. Enim dolore ad qui exercitation est sunt pariatur irure excepteur.
+**Pengguna (User)** adalah individu yang memiliki akun untuk mengakses sistem presensi RFID. Setiap pengguna memiliki kredensial login (email/username dan password) serta peran yang menentukan hak aksesnya dalam sistem.
 
-Excepteur laborum aliqua ut quis do voluptate duis ut nulla magna fugiat ut. Sit sint do ut in ipsum. Veniam duis commodo velit cupidatat eiusmod dolor tempor ullamco sint nulla laboris. Cillum tempor officia aute aute incididunt enim occaecat consectetur voluptate. Commodo sunt pariatur ad cupidatat sint id. Proident reprehenderit irure aute mollit. Occaecat laboris tempor nulla nisi quis proident.
+### Komponen Data Pengguna
 
-Anim est laborum pariatur id quis aute. Commodo do ipsum voluptate ullamco. Eu ea officia nulla occaecat aute officia consequat aute dolore. Commodo nostrud ad labore voluptate in exercitation laborum et minim velit. Quis tempor laborum officia do quis laborum ea. Ex commodo reprehenderit reprehenderit ullamco ut magna ullamco ad officia exercitation officia quis ea. Ad labore eu culpa aliquip et eiusmod sint ut.
+<CardGrid>
+  <Card title="🆔 Identitas" icon="user">
+    - Nama Lengkap - Email - Username - Nomor Telepon - Foto Profil
+  </Card>
 
-Amet esse in minim officia amet. Dolor occaecat excepteur excepteur cillum. Veniam occaecat in eiusmod sit culpa nostrud in id aliquip mollit eu do ad. Voluptate labore proident in sit duis fugiat. Occaecat veniam adipisicing ex cillum in qui deserunt deserunt exercitation cillum consectetur culpa nisi. Aliqua esse ipsum ipsum laborum duis sit nostrud aute.
+{" "}
+
+<Card title="🔐 Keamanan" icon="lock">
+  - Password (encrypted) - Status Aktif/Nonaktif - 2FA Settings - Last Login -
+  Failed Login Attempts
+</Card>
+
+{" "}
+
+<Card title="👔 Peran & Akses" icon="star">
+  - Role Assignment - Permission Override - Department/Class - Employment Status
+</Card>
+
+  <Card title="📞 Kontak" icon="phone">
+    - Email Primer - Nomor WhatsApp - Nomor Darurat - Alamat
+  </Card>
+</CardGrid>
+
+---
+
+## Menambah Pengguna Baru
+
+<Steps>
+
+1. **Akses Menu Pengguna**
+
+   Dashboard → Data Master → Pengguna
+
+2. **Klik Tombol "Tambah Pengguna"**
+
+   Klik tombol "+ Tambah Pengguna" di pojok kanan atas
+
+3. **Isi Form Data Pribadi**
+
+   ```
+   Nama Lengkap: Ahmad Hidayat, S.Pd
+   Email: ahmad.hidayat@mtsn1pandeglang.sch.id
+   Username: ahmad.hidayat (opsional)
+   Nomor Telepon: +62 812-3456-7890
+   ```
+
+4. **Upload Foto Profil**
+
+   - Format: JPG, PNG (Max 2MB)
+   - Resolusi: 400x400px (recommended)
+   - Foto formal dengan latar bersih
+
+5. **Set Password Awal**
+
+   ```
+   Password: (generate atau manual)
+   Konfirmasi Password: (ketik ulang)
+
+   ☑️ Kirim email password ke pengguna
+   ☑️ User harus ganti password saat login pertama
+   ```
+
+6. **Pilih Peran (Role)**
+
+   Pilih role yang sesuai dari dropdown:
+
+   - Super Admin
+   - Operator
+   - Wali Kelas
+   - Pegawai
+   - Siswa
+
+7. **Atur Status & Informasi Tambahan**
+
+   ```
+   Status: ● Aktif / ○ Nonaktif
+
+   Informasi Tambahan (sesuai role):
+   - Jika Wali Kelas: Pilih kelas yang diampu
+   - Jika Pegawai: Pilih jabatan
+   - Jika Siswa: Pilih kelas dan NISN
+   ```
+
+8. **Simpan Data**
+
+   Klik "Simpan" atau "Simpan & Tambah Lagi"
+
+</Steps>
+
+<Aside type="tip" title="Tips Password Awal">
+  **Rekomendasi password default:** - Format: `NamaDepan@Tahun` (contoh:
+  Ahmad@2025) - Atau gunakan generator password otomatis - Aktifkan opsi "User
+  harus ganti password" untuk keamanan
+</Aside>
+
+### Form Input Berdasarkan Role
+
+<Tabs>
+  <TabItem label="Super Admin / Operator">
+    **Field Wajib:** - Nama Lengkap - Email - Password - Role - Status Aktif
+    **Field Opsional:** - Username - Nomor Telepon - Foto - Jabatan (untuk
+    operator)
+  </TabItem>
+
+{" "}
+
+<TabItem label="Wali Kelas">
+  **Field Wajib:** - Nama Lengkap - Email - Password - Role: Wali Kelas - Kelas
+  yang Diampu - Status Aktif **Field Opsional:** - NIP/NUPTK - Nomor Telepon -
+  Foto - Mata Pelajaran (jika mengajar)
+</TabItem>
+
+{" "}
+
+<TabItem label="Pegawai">
+  **Field Wajib:** - Nama Lengkap - Email - Password - Role: Pegawai - Jabatan -
+  Status Aktif **Field Opsional:** - NIP/NUPTK - Nomor Telepon - Foto - Alamat
+</TabItem>
+
+  <TabItem label="Siswa">
+    **Field Wajib:** - Nama Lengkap - NISN - Email - Password - Role: Siswa -
+    Kelas - Status Aktif **Field Opsional:** - NIS (Nomor Induk Siswa) - Nomor
+    Telepon - Nomor Telepon Orang Tua - Foto - Alamat - Nama Orang Tua/Wali
+  </TabItem>
+</Tabs>
+
+---
+
+## Mengatur Peran Pengguna
+
+### Assign Role Saat Pembuatan User
+
+Role dapat di-assign langsung saat membuat user baru (lihat langkah 6 di atas).
+
+### Mengubah Role User Yang Sudah Ada
+
+<Steps>
+
+1. **Cari User yang Ingin Diubah**
+
+   Gunakan search box atau filter berdasarkan role
+
+2. **Klik Tombol Edit**
+
+   Klik icon ✏️ pada baris user tersebut
+
+3. **Ubah Role di Dropdown**
+
+   Pilih role baru dari dropdown "Peran"
+
+4. **Sesuaikan Data Tambahan**
+
+   Jika berganti role, sesuaikan data tambahan:
+
+   - Wali Kelas → Operator: Hapus assignment kelas
+   - Pegawai → Wali Kelas: Tambahkan kelas yang diampu
+
+5. **Simpan Perubahan**
+
+   Klik "Update" untuk apply perubahan
+
+6. **Notifikasi User**
+
+   Sistem akan kirim notifikasi perubahan role ke email user
+
+</Steps>
+
+<Aside type="caution" title="Peringatan!">
+  Perubahan role langsung mempengaruhi hak akses user. Pastikan user sudah
+  diberi tahu sebelum role diubah untuk menghindari kebingungan.
+</Aside>
+
+### Multiple Role (Tidak Disarankan)
+
+Sistem mendukung multiple role, namun **sangat tidak disarankan** karena dapat menyebabkan:
+
+- Konflik permission
+- Kesulitan audit
+- Potensi security hole
+
+**Alternatif:**
+Jika user butuh akses khusus, gunakan **Permission Override** daripada multiple role.
+
+---
+
+## Mengedit Data Pengguna
+
+<Steps>
+
+1. **Temukan User di Daftar**
+
+   Gunakan fitur pencarian atau filter
+
+2. **Klik Tombol Edit**
+
+   Klik icon ✏️ atau tombol "Edit"
+
+3. **Ubah Data yang Diperlukan**
+
+   Modify field yang ingin diubah:
+
+   - Data pribadi
+   - Kontak
+   - Foto
+   - Role
+   - Status
+
+4. **Review Perubahan**
+
+   Pastikan perubahan sudah benar
+
+5. **Simpan**
+
+   Klik "Update" untuk menyimpan
+
+</Steps>
+
+### Field yang Tidak Bisa Diubah
+
+<Card title="🔒 Field Read-Only" icon="lock">
+  Beberapa field tidak bisa diubah setelah user dibuat: - **Email** - Gunakan
+  fitur "Ubah Email" khusus dengan verifikasi - **Username** - Permanent setelah
+  dibuat - **Created Date** - System generated - **User ID** - Auto increment
+  Jika perlu mengubah, hubungi Super Admin untuk manual intervention.
+</Card>
+
+---
+
+## Reset Password Pengguna
+
+### Cara 1: Reset oleh Admin
+
+<Steps>
+
+1. **Buka Detail User**
+
+   Klik nama user atau tombol detail
+
+2. **Klik "Reset Password"**
+
+   Cari tombol atau tab "Reset Password"
+
+3. **Pilih Metode Reset**
+
+   - **Generate Otomatis**: Sistem buat password random
+   - **Set Manual**: Admin set password baru
+   - **Kirim Link Reset**: Kirim email reset ke user
+
+4. **Konfirmasi Reset**
+
+   Klik "Ya, Reset Password"
+
+5. **Notifikasi ke User**
+
+   Sistem kirim password baru via email (jika auto-generate)
+
+</Steps>
+
+### Cara 2: Forgot Password (Self-Service)
+
+User dapat reset sendiri melalui halaman login:
+
+<Steps>
+
+1. **Klik "Lupa Password"**
+
+   Di halaman login
+
+2. **Masukkan Email Terdaftar**
+
+   Ketik email yang terdaftar di sistem
+
+3. **Cek Email**
+
+   Buka inbox dan cari email reset password
+
+4. **Klik Link Reset**
+
+   Link berlaku 60 menit
+
+5. **Set Password Baru**
+
+   Buat password baru sesuai syarat keamanan
+
+6. **Login dengan Password Baru**
+
+   Gunakan password yang baru dibuat
+
+</Steps>
+
+<Aside type="note">
+  **Keamanan:** Link reset password hanya berlaku 1 jam dan hanya bisa digunakan
+  1 kali. Setelah password berhasil direset, link otomatis expired.
+</Aside>
+
+---
+
+## Menonaktifkan Pengguna
+
+Menonaktifkan user (bukan menghapus) adalah cara yang disarankan untuk user yang tidak aktif sementara.
+
+### Kapan Nonaktifkan User?
+
+<CardGrid>
+  <Card title="📚 Siswa Lulus/Pindah" icon="graduation">
+    Nonaktifkan akun siswa yang sudah lulus atau pindah sekolah
+  </Card>
+
+{" "}
+
+<Card title="👔 Pegawai Resign/Pensiun" icon="user">
+  Nonaktifkan pegawai yang sudah tidak bekerja
+</Card>
+
+{" "}
+
+<Card title="🔐 Security Breach" icon="warning">
+  Nonaktifkan sementara jika ada kecurigaan akun di-hack
+</Card>
+
+  <Card title="⏸️ Cuti Panjang" icon="clock">
+    Nonaktifkan sementara untuk pegawai cuti panjang
+  </Card>
+</CardGrid>
+
+### Cara Menonaktifkan
+
+<Steps>
+
+1. **Edit User**
+
+   Buka form edit user
+
+2. **Ubah Status ke "Nonaktif"**
+
+   Toggle switch status dari Aktif ke Nonaktif
+
+3. **Simpan**
+
+   Klik "Update"
+
+4. **User Otomatis Logout**
+
+   User akan logout paksa di semua device
+
+</Steps>
+
+### Efek Menonaktifkan User
+
+- ❌ Tidak bisa login
+- ❌ Session langsung terminated
+- ❌ Tidak muncul di daftar user aktif
+- ✅ Data tetap tersimpan
+- ✅ History presensi tetap ada
+- ✅ Bisa diaktifkan kembali kapan saja
+
+---
+
+## Menghapus Pengguna
+
+<Aside type="caution" title="Peringatan Keras!">
+  **Menghapus user bersifat PERMANENT dan TIDAK BISA DI-UNDO!** Data yang akan
+  terhapus: - Akun user - Riwayat login - Data profile - Permission custom
+  **TAPI TIDAK MENGHAPUS:** - Riwayat presensi (tetap ada di log) - Data
+  siswa/pegawai (terpisah dari user account)
+</Aside>
+
+### Langkah Menghapus
+
+<Steps>
+
+1. **Backup Data Terlebih Dahulu**
+
+   Export data user dan riwayatnya
+
+2. **Pastikan User Sudah Nonaktif**
+
+   Nonaktifkan dulu minimal 30 hari
+
+3. **Cek Dependencies**
+
+   Pastikan tidak ada data yang bergantung pada user ini
+
+4. **Klik Tombol Hapus**
+
+   Klik icon 🗑️ atau tombol "Hapus"
+
+5. **Konfirmasi 2x**
+
+   Sistem akan minta konfirmasi 2 kali untuk keamanan
+
+6. **Ketik "HAPUS" untuk Konfirmasi**
+
+   Ketik kata "HAPUS" (case-sensitive) untuk confirm
+
+7. **User Terhapus Permanent**
+
+   User dan data terkait akan dihapus dari sistem
+
+</Steps>
+
+### Alternatif: Archive User
+
+Alih-alih menghapus, pertimbangkan untuk **archive** user:
+
+- Status: Arsip
+- Tidak muncul di daftar aktif
+- Data tetap lengkap tersimpan
+- Bisa di-restore jika diperlukan
+
+---
+
+## Tips Keamanan Akun
+
+### Untuk Administrator
+
+<CardGrid>
+  <Card title="🔐 Password Policy" icon="lock">
+    Terapkan kebijakan password yang kuat: - Minimal 8 karakter - Kombinasi
+    huruf, angka, simbol - Tidak boleh password umum - Harus ganti password
+    setiap 6 bulan - Tidak boleh reuse 5 password terakhir
+  </Card>
+
+{" "}
+
+<Card title="🚨 Monitoring" icon="warning">
+  Monitor aktivitas user secara berkala: - Failed login attempts - Login dari
+  lokasi tidak biasa - Akses data sensitif - Perubahan settings penting -
+  Multiple concurrent sessions
+</Card>
+
+{" "}
+
+<Card title="✅ 2FA Mandatory" icon="approve-check">
+  Wajibkan 2FA untuk role sensitif: - Super Admin: WAJIB - Operator: WAJIB -
+  Wali Kelas: Direkomendasikan - Pegawai/Siswa: Opsional
+</Card>
+
+  <Card title="📋 Regular Audit" icon="list-format">
+    Audit user secara berkala: - Review daftar user aktif setiap bulan -
+    Hapus/nonaktifkan user tidak terpakai - Cek user dengan multiple failed
+    login - Review permission yang diberikan
+  </Card>
+</CardGrid>
+
+### Untuk Pengguna
+
+<Steps>
+
+1. **Password Kuat & Unik**
+
+   Jangan gunakan password yang sama dengan akun lain
+
+2. **Aktifkan 2FA**
+
+   Gunakan Google Authenticator atau Authy
+
+3. **Jangan Share Akun**
+
+   Setiap orang harus punya akun sendiri
+
+4. **Logout Setelah Selesai**
+
+   Terutama di komputer publik
+
+5. **Waspada Phishing**
+
+   Jangan klik link mencurigakan dari email/WA
+
+6. **Update Info Kontak**
+
+   Pastikan email dan nomor HP selalu aktif
+
+7. **Report Aktivitas Mencurigakan**
+
+   Segera lapor jika ada yang aneh
+
+</Steps>
+
+---
+
+## Import Data Pengguna Massal
+
+Untuk sekolah dengan banyak user, gunakan fitur import Excel:
+
+### Persiapan
+
+<Steps>
+
+1. **Download Template Excel**
+
+   Klik tombol "Download Template" di halaman Pengguna
+
+2. **Isi Template**
+
+   Template memiliki kolom:
+
+   ```
+   | Nama | Email | Username | Password | Role | Telepon | Status |
+   |------|-------|----------|----------|------|---------|--------|
+   ```
+
+3. **Validasi Data**
+
+   Pastikan:
+
+   - Email unik (tidak duplikat)
+   - Format email valid
+   - Password minimal 8 karakter
+   - Role valid (sesuai list)
+   - Nomor telepon format Indonesia
+
+4. **Save as .xlsx**
+
+   Simpan file dengan format Excel 2007+
+
+</Steps>
+
+### Proses Import
+
+<Steps>
+
+1. **Klik "Import User"**
+
+   Tombol di halaman Pengguna
+
+2. **Upload File Excel**
+
+   Drag & drop atau browse file .xlsx
+
+3. **Preview Data**
+
+   Sistem akan show preview 10 baris pertama
+
+4. **Map Kolom (Jika Perlu)**
+
+   Match kolom Excel dengan field sistem
+
+5. **Validasi**
+
+   Sistem validasi semua data:
+
+   - ✅ Valid: Siap import
+   - ⚠️ Warning: Bisa import tapi ada catatan
+   - ❌ Error: Harus diperbaiki dulu
+
+6. **Konfirmasi & Import**
+
+   Klik "Import" untuk proses
+
+7. **Lihat Hasil**
+
+   Sistem tampilkan report:
+
+   - Berhasil: X user
+   - Gagal: Y user (dengan alasan)
+   - Warning: Z user
+
+</Steps>
+
+<Aside type="tip" title="Tips Import Sukses">
+  - Start dengan batch kecil (50-100 user) untuk test - Gunakan username
+  berbasis NIS/NIP untuk menghindari duplikasi - Set password default yang sama
+  untuk semua, lalu force change password - Import per role untuk memudahkan
+  tracking
+</Aside>
+
+---
+
+## Export Data Pengguna
+
+Export data user untuk backup atau reporting:
+
+### Format Export
+
+<Tabs>
+  <TabItem label="Excel (.xlsx)">
+    **Cocok untuk:** - Backup data - Edit massal - Sharing dengan tim **Kolom
+    yang di-export:** - ID, Nama, Email, Username, Role, Status, Created Date,
+    Last Login
+  </TabItem>
+
+{" "}
+
+<TabItem label="CSV (.csv)">
+  **Cocok untuk:** - Import ke sistem lain - Data processing - Lightweight
+  backup **Format:** UTF-8 dengan comma delimiter
+</TabItem>
+
+  <TabItem label="PDF (.pdf)">
+    **Cocok untuk:** - Laporan cetak - Dokumentasi - Presentasi **Layout:**
+    Table with header dan footer
+  </TabItem>
+</Tabs>
+
+### Cara Export
+
+<Steps>
+
+1. **Filter Data (Opsional)**
+
+   Filter user yang ingin di-export:
+
+   - Berdasarkan role
+   - Status aktif/nonaktif
+   - Periode registrasi
+   - Department/kelas
+
+2. **Klik "Export"**
+
+   Pilih format export yang diinginkan
+
+3. **Pilih Kolom**
+
+   Centang kolom yang ingin disertakan
+
+4. **Download File**
+
+   Klik "Generate & Download"
+
+</Steps>
+
+---
+
+## Troubleshooting
+
+<Tabs>
+  <TabItem label="User Tidak Bisa Login">
+    **Kemungkinan Penyebab:** - ❌ Password salah - ❌ Account nonaktif - ❌
+    Email belum diverifikasi - ❌ Account di-block (terlalu banyak failed login)
+    **Solusi:** 1. Cek status account (aktif/nonaktif) 2. Reset password user 3.
+    Kirim ulang email verifikasi 4. Unblock account jika ter-block 5. Clear
+    failed login attempts
+  </TabItem>
+
+{" "}
+
+<TabItem label="Email Duplicate">
+  **Gejala:** Error "Email sudah terdaftar" saat tambah user baru **Penyebab:**
+  Email sudah digunakan user lain (termasuk yang nonaktif) **Solusi:** 1. Search
+  email tersebut di list user 2. Jika user lama nonaktif, ubah email-nya 3. Atau
+  gunakan email berbeda untuk user baru 4. Untuk siswa/pegawai baru yang sama:
+  tambahkan angka (email+1@domain.com)
+</TabItem>
+
+  <TabItem label="Import Gagal">
+    **Kemungkinan Penyebab:** - File bukan .xlsx - Format kolom tidak sesuai
+    template - Ada data duplikat - Field required kosong - Format email/telp
+    tidak valid **Solusi:** 1. Gunakan template resmi dari sistem 2. Cek semua
+    email valid dan unik 3. Pastikan field required terisi 4. Hapus karakter
+    special di nama 5. Gunakan role yang valid 6. Download error report untuk
+    detail
+  </TabItem>
+</Tabs>
+
+---
+
+## FAQ
+
+<details>
+<summary>**Berapa maksimal user yang bisa dibuat?**</summary>
+
+Tidak ada batasan hard limit. Namun untuk performa optimal:
+
+- < 1000 user: Excellent
+- 1000-5000 user: Good
+- > 5000 user: Butuh optimasi server
+
+</details>
+
+<details>
+<summary>**Bisakah user punya multiple role?**</summary>
+
+Secara teknis bisa, tapi **sangat tidak disarankan**. Gunakan permission override sebagai gantinya untuk kebutuhan akses khusus.
+
+</details>
+
+<details>
+<summary>**Bagaimana jika email user sudah tidak aktif?**</summary>
+
+1. Update email user ke email aktif baru
+2. Atau hubungi admin untuk manual reset via nomor telepon
+3. Verifikasi identitas user dengan dokumen resmi
+
+</details>
+
+<details>
+<summary>**User lupa username, bagaimana?**</summary>
+
+User bisa login menggunakan email. Atau hubungi admin untuk cek username di sistem.
+
+</details>
+
+---
+
+## Langkah Selanjutnya
+
+<CardGrid>
+  <Card title="🏫 Setup Instansi" icon="home">
+    Lengkapi data instansi/sekolah [Panduan Instansi
+    →](/menu-data-master/instansi/)
+  </Card>
+
+{" "}
+
+<Card title="📅 Tahun Pelajaran" icon="calendar">
+  Atur periode akademik aktif [Panduan Tahun Pelajaran
+  →](/menu-data-master/tahun-pelajaran/)
+</Card>
+
+  <Card title="🔙 Data Master" icon="left-arrow">
+    Kembali ke overview data master [Data Master →](/menu-data-master/)
+  </Card>
+</CardGrid>
+
+---
+
+<Aside type="tip" title="Pro Tips">
+  - Buat naming convention untuk username (contoh: NIS/NIP.nama) - Gunakan email
+  institusi untuk user resmi - Review dan cleanup user tidak aktif setiap
+  semester - Backup data user sebelum update massal - Dokumentasikan semua
+  perubahan role/permission
+</Aside>

@@ -4,12 +4,18 @@ import starlight from "@astrojs/starlight";
 import starlightThemeRapide from "starlight-theme-rapide";
 // import expressiveCode from "astro-expressive-code";
 import tailwindcss from "@tailwindcss/vite";
+import mermaid from "astro-mermaid";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://docs.zedlabs.id/presensi",
+  site: "https://docs.zedlabs.id/presensi/",
 
   integrations: [
+    mermaid({
+      // Opsi konfigurasi tambahan (opsional)
+      theme: "forest",
+      autoTheme: true,
+    }),
     starlight({
       plugins: [starlightThemeRapide()],
 

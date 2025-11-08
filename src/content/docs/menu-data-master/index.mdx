@@ -1,29 +1,402 @@
 ---
-title: "Menu Data Master"
-description: deskripsi
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: "Data Master"
+description: "Kelola data dasar sistem presensi dengan mudah dan terstruktur"
+template: splash
 hero:
-  # tagline: tagline
   image:
-    file: ../../../assets/pengajuan-kartu.svg
+    file: "../../../assets/index.svg"
+  tagline: "Pusat pengelolaan data dasar untuk operasional sistem presensi RFID"
   # actions:
-  #   - text: Example Guide
-  #     link: /guides/example/
-  #     icon: right-arrow
-  #   - text: Read the Starlight docs
-  #     link: https://starlight.astro.build
-  #     icon: external
-  #     variant: minimal
+  #   - text: "Mulai Kelola Data"
+  #     link: "#daftar-sub-menu-data-master"
+  #     icon: "rocket"
+  #     variant: primary
+  #   - text: "Urutan Setup"
+  #     link: "#urutan-pengisian-data"
+  #     icon: "list-format"
+  #     variant: secondary
 ---
 
-## Konten
+import { Card, CardGrid, Steps, Aside } from "@astrojs/starlight/components";
 
-Minim commodo in ipsum nisi mollit irure elit reprehenderit ut. Deserunt sunt laboris pariatur aliquip tempor et esse amet. Tempor voluptate qui velit adipisicing voluptate occaecat et consectetur ut ut. Qui aliquip aliqua ipsum eiusmod nisi duis aliquip aliqua. Consectetur labore enim sint qui esse enim voluptate exercitation veniam tempor. Ipsum sit exercitation labore Lorem dolore eiusmod dolor magna anim nisi esse do velit. Ex deserunt amet deserunt voluptate sunt do laboris et.
+## Apa itu Data Master?
 
-Quis ullamco velit exercitation ea minim et aliquip. Excepteur ipsum deserunt proident eu cillum nostrud officia nulla ipsum ullamco. Eu fugiat ea labore laborum duis aliquip in velit velit deserunt. Sit nisi esse cupidatat veniam pariatur laboris. In sint est ea aliquip nostrud aliquip pariatur fugiat eiusmod fugiat do officia irure ipsum. Enim dolore ad qui exercitation est sunt pariatur irure excepteur.
+**Data Master** adalah kumpulan data dasar (master data) yang menjadi fondasi operasional sistem presensi RFID. Data master ini bersifat relatif statis dan digunakan sebagai referensi oleh modul-modul lain dalam sistem.
 
-Excepteur laborum aliqua ut quis do voluptate duis ut nulla magna fugiat ut. Sit sint do ut in ipsum. Veniam duis commodo velit cupidatat eiusmod dolor tempor ullamco sint nulla laboris. Cillum tempor officia aute aute incididunt enim occaecat consectetur voluptate. Commodo sunt pariatur ad cupidatat sint id. Proident reprehenderit irure aute mollit. Occaecat laboris tempor nulla nisi quis proident.
+Data master mencakup informasi tentang:
 
-Anim est laborum pariatur id quis aute. Commodo do ipsum voluptate ullamco. Eu ea officia nulla occaecat aute officia consequat aute dolore. Commodo nostrud ad labore voluptate in exercitation laborum et minim velit. Quis tempor laborum officia do quis laborum ea. Ex commodo reprehenderit reprehenderit ullamco ut magna ullamco ad officia exercitation officia quis ea. Ad labore eu culpa aliquip et eiusmod sint ut.
+- 👥 Pengguna dan peran mereka
+- 🏫 Instansi dan struktur organisasi
+- 📅 Tahun pelajaran dan periode akademik
+- 📚 Jurusan, kelas, dan mata pelajaran
+- 👔 Jabatan dan posisi pegawai
+- ⏰ Jadwal presensi harian
+- 📢 Informasi dan pengumuman
 
-Amet esse in minim officia amet. Dolor occaecat excepteur excepteur cillum. Veniam occaecat in eiusmod sit culpa nostrud in id aliquip mollit eu do ad. Voluptate labore proident in sit duis fugiat. Occaecat veniam adipisicing ex cillum in qui deserunt deserunt exercitation cillum consectetur culpa nisi. Aliqua esse ipsum ipsum laborum duis sit nostrud aute.
+<Aside type="note" title="Penting!">
+  Data master harus diisi dengan lengkap dan akurat sebelum sistem dapat
+  beroperasi secara optimal. Data ini akan menjadi acuan untuk seluruh transaksi
+  presensi.
+</Aside>
+
+---
+
+## Fungsi Data Master
+
+<CardGrid>
+  <Card title="🎯 Referensi Data" icon="star">
+    Menjadi acuan utama untuk semua proses bisnis dalam sistem presensi
+  </Card>
+
+{" "}
+
+<Card title="📊 Konsistensi Data" icon="bars">
+  Memastikan data yang digunakan di seluruh sistem konsisten dan terstandar
+</Card>
+
+{" "}
+
+<Card title="⚡ Efisiensi Input" icon="rocket">
+  Mempercepat proses input data dengan dropdown dan pilihan yang sudah tersedia
+</Card>
+
+{" "}
+
+<Card title="🔍 Kemudahan Pencarian" icon="magnifier">
+  Memudahkan filtering dan pencarian data berdasarkan kategori yang jelas
+</Card>
+
+{" "}
+
+<Card title="📈 Analisis & Laporan" icon="chart">
+  Mendukung pembuatan laporan dan analisis data yang akurat
+</Card>
+
+  <Card title="🔐 Kontrol Akses" icon="lock">
+    Mengatur hak akses pengguna berdasarkan peran dan struktur organisasi
+  </Card>
+</CardGrid>
+
+---
+
+## Daftar Sub-Menu Data Master
+
+### 1. Manajemen Pengguna & Akses
+
+<CardGrid>
+  <Card title="👤 Peran (Roles)" icon="star">
+    Kelola peran pengguna dan hak akses sistem **Fitur:** - Super Admin,
+    Operator, Wali Kelas, Pegawai, Siswa - Permission management - Role
+    hierarchy [Pelajari Lebih Lanjut →](/menu-data-master/peran/)
+  </Card>
+
+  <Card title="👥 Pengguna (Users)" icon="user">
+    Manajemen akun pengguna sistem **Fitur:** - Create/edit user account -
+    Assign roles - Reset password - User activation [Pelajari Lebih Lanjut
+    →](/menu-data-master/pengguna/)
+  </Card>
+</CardGrid>
+
+### 2. Data Institusi
+
+<CardGrid>
+  <Card title="🏫 Instansi" icon="home">
+    Data sekolah/madrasah **Informasi:** - Nama dan identitas instansi - Logo
+    dan branding - Status (Negeri/Swasta) - Jadwal operasional [Pelajari Lebih
+    Lanjut →](/menu-data-master/instansi/)
+  </Card>
+
+  <Card title="📅 Tahun Pelajaran" icon="calendar">
+    Periode akademik **Kelola:** - Tahun ajaran aktif - Semester - Tanggal
+    mulai/selesai [Pelajari Lebih Lanjut →](/menu-data-master/tahun-pelajaran/)
+  </Card>
+</CardGrid>
+
+### 3. Struktur Akademik
+
+<CardGrid>
+  <Card title="📚 Jurusan" icon="open-book">
+    Program studi/jurusan **Data:** - Kode dan nama jurusan - Deskripsi - Status
+    aktif [Pelajari Lebih Lanjut →](/menu-data-master/jurusan/)
+  </Card>
+
+{" "}
+
+<Card title="🎓 Kelas" icon="graduation">
+  Rombongan belajar **Kelola:** - Tingkat kelas (X, XI, XII) - Wali kelas -
+  Jumlah siswa - Ruang kelas [Pelajari Lebih Lanjut →](/menu-data-master/kelas/)
+</Card>
+
+  <Card title="📖 Mata Pelajaran" icon="book">
+    Daftar mata pelajaran **Data:** - Kode mapel - Nama lengkap - Kategori -
+    Guru pengampu [Pelajari Lebih Lanjut →](/menu-data-master/mata-pelajaran/)
+  </Card>
+</CardGrid>
+
+### 4. Data Kepegawaian
+
+<CardGrid>
+  <Card title="👔 Jabatan" icon="briefcase">
+    Posisi dan jabatan pegawai **Jenis:** - Kepala Madrasah - Guru - Staff TU -
+    Satpam, dll [Pelajari Lebih Lanjut →](/menu-data-master/jabatan/)
+  </Card>
+</CardGrid>
+
+### 5. Konfigurasi Presensi
+
+<CardGrid>
+  <Card title="⏰ Jadwal Presensi" icon="clock">
+    Waktu presensi masuk/pulang **Atur:** - Jam masuk/pulang - Toleransi
+    keterlambatan - Hari libur - Jadwal khusus [Pelajari Lebih Lanjut
+    →](/menu-data-master/jadwal-presensi/)
+  </Card>
+
+  <Card title="📢 Informasi" icon="information">
+    Pengumuman dan broadcast **Kelola:** - Pengumuman sistem - Notifikasi
+    WhatsApp - Status publish - Target audience [Pelajari Lebih Lanjut
+    →](/menu-data-master/informasi/)
+  </Card>
+</CardGrid>
+
+---
+
+## Siapa yang Dapat Mengakses?
+
+Menu Data Master memiliki kontrol akses yang ketat untuk menjaga integritas data:
+
+| Peran           | Akses             | Hak Akses                                      |
+| --------------- | ----------------- | ---------------------------------------------- |
+| **Super Admin** | ✅ Full Access    | Create, Read, Update, Delete semua data master |
+| **Operator**    | ✅ Limited Access | CRUD untuk sebagian besar data master          |
+| **Wali Kelas**  | ⚠️ Read Only      | Hanya bisa melihat data kelas yang diampu      |
+| **Pegawai**     | ❌ No Access      | Tidak memiliki akses ke data master            |
+| **Siswa**       | ❌ No Access      | Tidak memiliki akses ke data master            |
+
+<Aside type="caution" title="Keamanan Data">
+  Hanya pengguna dengan peran Super Admin dan Operator yang dapat mengelola data
+  master. Pastikan kredensial admin dijaga dengan baik.
+</Aside>
+
+---
+
+## Pentingnya Data Master
+
+### Dampak Data Master pada Sistem
+
+<Steps>
+
+1. **Akurasi Presensi**
+
+   Data jadwal yang tepat memastikan presensi tercatat dengan benar (hadir/terlambat)
+
+2. **Notifikasi yang Relevan**
+
+   Data kontak yang akurat menjamin notifikasi sampai ke penerima yang tepat
+
+3. **Laporan yang Valid**
+
+   Data master yang lengkap menghasilkan laporan yang akurat dan dapat dipercaya
+
+4. **Efisiensi Operasional**
+
+   Data terstruktur mempercepat proses kerja harian administrator
+
+5. **Keamanan Sistem**
+
+   Role management yang baik melindungi data sensitif dari akses tidak sah
+
+</Steps>
+
+### Risiko Data Master yang Tidak Akurat
+
+<CardGrid>
+  <Card title="⚠️ Presensi Salah" icon="warning">
+    Jadwal tidak tepat → siswa hadir dicatat terlambat
+  </Card>
+
+{" "}
+
+<Card title="❌ Notifikasi Gagal" icon="error">
+  Nomor tidak valid → orang tua tidak dapat notifikasi
+</Card>
+
+{" "}
+
+<Card title="📊 Laporan Tidak Valid" icon="ban">
+  Data tidak lengkap → laporan tidak dapat dihasilkan
+</Card>
+
+  <Card title="🔐 Keamanan Lemah" icon="lock">
+    Role tidak teratur → akses data oleh pihak tidak berwenang
+  </Card>
+</CardGrid>
+
+---
+
+## Urutan Pengisian Data
+
+Untuk setup sistem yang optimal, ikuti urutan pengisian data master berikut:
+
+<Steps>
+
+1. **Setup Peran (Roles)**
+
+   Buat peran pengguna terlebih dahulu: Super Admin, Operator, Wali Kelas, Pegawai, Siswa
+
+   🔗 [Panduan Peran →](/menu-data-master/peran/)
+
+2. **Tambahkan Pengguna Admin**
+
+   Buat akun untuk administrator dan operator sistem
+
+   🔗 [Panduan Pengguna →](/menu-data-master/pengguna/)
+
+3. **Input Data Instansi**
+
+   Lengkapi profil sekolah/madrasah termasuk logo dan identitas
+
+   🔗 [Panduan Instansi →](/menu-data-master/instansi/)
+
+4. **Setup Tahun Pelajaran**
+
+   Tentukan tahun ajaran aktif dan periode akademik
+
+   🔗 [Panduan Tahun Pelajaran →](/menu-data-master/tahun-pelajaran/)
+
+5. **Tambahkan Jabatan**
+
+   Buat daftar jabatan untuk pegawai (Guru, Staff, dll)
+
+   🔗 [Panduan Jabatan →](/menu-data-master/jabatan/)
+
+6. **Input Jurusan**
+
+   Tambahkan program studi yang tersedia
+
+   🔗 [Panduan Jurusan →](/menu-data-master/jurusan/)
+
+7. **Buat Kelas**
+
+   Setup rombongan belajar per tingkat dan jurusan
+
+   🔗 [Panduan Kelas →](/menu-data-master/kelas/)
+
+8. **Tambahkan Mata Pelajaran**
+
+   Input daftar mapel yang diajarkan
+
+   🔗 [Panduan Mata Pelajaran →](/menu-data-master/mata-pelajaran/)
+
+9. **Atur Jadwal Presensi**
+
+   Tentukan waktu masuk/pulang dan toleransi keterlambatan
+
+   🔗 [Panduan Jadwal Presensi →](/menu-data-master/jadwal-presensi/)
+
+10. **Buat Informasi/Pengumuman (Opsional)**
+
+    Tambahkan pengumuman untuk broadcast ke pengguna
+
+    🔗 [Panduan Informasi →](/menu-data-master/informasi/)
+
+</Steps>
+
+<Aside type="tip" title="Tips Setup Awal">
+  - Siapkan semua data di Excel terlebih dahulu - Gunakan fitur import untuk
+  mempercepat input data massal - Verifikasi setiap data sebelum melanjutkan ke
+  step berikutnya - Backup data secara berkala
+</Aside>
+
+---
+
+## Best Practices Pengelolaan Data Master
+
+<CardGrid>
+  <Card title="📝 Dokumentasi" icon="document">
+    **Catat setiap perubahan:** - Siapa yang mengubah - Kapan perubahan
+    dilakukan - Alasan perubahan - Data sebelum dan sesudah
+  </Card>
+
+{" "}
+
+<Card title="🔄 Update Berkala" icon="refresh">
+  **Review data secara rutin:** - Awal semester baru - Pergantian tahun ajaran -
+  Saat ada perubahan struktur - Minimal 6 bulan sekali
+</Card>
+
+{" "}
+
+<Card title="💾 Backup Reguler" icon="hard-drive">
+  **Lindungi data Anda:** - Export data setiap minggu - Simpan di lokasi
+  terpisah - Test restore backup - Gunakan cloud storage
+</Card>
+
+  <Card title="✅ Validasi Data" icon="approve-check">
+    **Pastikan kualitas data:** - Cek duplikasi - Verifikasi format - Validasi
+    relasi antar data - Hapus data yang tidak terpakai
+  </Card>
+</CardGrid>
+
+---
+
+## Troubleshooting Data Master
+
+### Masalah Umum
+
+<Aside type="caution" title="Data Tidak Bisa Dihapus">
+  **Penyebab:** Data sedang digunakan oleh modul lain **Solusi:** - Cek relasi
+  data dengan modul lain - Nonaktifkan data (jangan hapus) - Arsipkan data lama
+  - Hubungi admin jika perlu force delete
+</Aside>
+
+<Aside type="caution" title="Import Data Gagal">
+  **Penyebab:** Format file atau data tidak sesuai template **Solusi:** -
+  Download template yang benar - Periksa format setiap kolom - Hapus data
+  duplikat - Pastikan tidak ada cell yang kosong di kolom wajib
+</Aside>
+
+<Aside type="caution" title="Perubahan Tidak Tersimpan">
+  **Penyebab:** Session expired atau error validasi **Solusi:** - Login ulang -
+  Cek pesan error validasi - Isi semua field yang required - Clear browser cache
+  dan coba lagi
+</Aside>
+
+---
+
+## Video Tutorial
+
+<Aside type="note">
+  Video tutorial lengkap untuk setiap sub-menu Data Master akan segera
+  ditambahkan.
+</Aside>
+
+---
+
+## Langkah Selanjutnya
+
+Setelah memahami konsep Data Master:
+
+<CardGrid>
+  <Card title="🚀 Setup Awal" icon="rocket">
+    Mulai setup data master dari awal [Ikuti Urutan Setup
+    →](#urutan-pengisian-data)
+  </Card>
+
+{" "}
+
+<Card title="👥 Kelola Pengguna" icon="user">
+  Buat dan atur akun pengguna [Panduan Pengguna →](/menu-data-master/pengguna/)
+</Card>
+
+  <Card title="⏰ Atur Jadwal" icon="clock">
+    Konfigurasi jam presensi [Panduan Jadwal
+    →](/menu-data-master/jadwal-presensi/)
+  </Card>
+</CardGrid>
+
+---
+
+<Aside type="tip" title="Butuh Bantuan?">
+  Jika mengalami kesulitan dalam pengelolaan data master, hubungi tim support
+  atau baca FAQ di setiap halaman sub-menu.
+</Aside>

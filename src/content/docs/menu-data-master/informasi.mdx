@@ -1,29 +1,339 @@
 ---
-title: Informasi
-description: deskripsi
-# template: splash # Remove or comment out this line to display the site sidebar on this page.
-# hero:
-#   tagline:
-#   image:
-#     file: ../../../assets/banner.svg
-#   actions:
-#     - text: Example Guide
-#       link: /guides/example/
-#       icon: right-arrow
-#     - text: Read the Starlight docs
-#       link: https://starlight.astro.build
-#       icon: external
-#       variant: minimal
+title: Informasi Sekolah
+description: Panduan lengkap mengelola profil dan informasi sekolah termasuk identitas, logo, alamat, kontak, dan data institusi lainnya dalam sistem presensi
 ---
 
-## Konten
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+} from "@astrojs/starlight/components";
 
-Minim commodo in ipsum nisi mollit irure elit reprehenderit ut. Deserunt sunt laboris pariatur aliquip tempor et esse amet. Tempor voluptate qui velit adipisicing voluptate occaecat et consectetur ut ut. Qui aliquip aliqua ipsum eiusmod nisi duis aliquip aliqua. Consectetur labore enim sint qui esse enim voluptate exercitation veniam tempor. Ipsum sit exercitation labore Lorem dolore eiusmod dolor magna anim nisi esse do velit. Ex deserunt amet deserunt voluptate sunt do laboris et.
+## 📋 Tentang Menu Informasi
 
-Quis ullamco velit exercitation ea minim et aliquip. Excepteur ipsum deserunt proident eu cillum nostrud officia nulla ipsum ullamco. Eu fugiat ea labore laborum duis aliquip in velit velit deserunt. Sit nisi esse cupidatat veniam pariatur laboris. In sint est ea aliquip nostrud aliquip pariatur fugiat eiusmod fugiat do officia irure ipsum. Enim dolore ad qui exercitation est sunt pariatur irure excepteur.
+Menu **Informasi Sekolah** adalah pusat pengelolaan profil dan identitas institusi yang akan ditampilkan di seluruh sistem presensi. Data yang dikelola di sini akan muncul pada dashboard, laporan, dan berbagai output sistem lainnya.
 
-Excepteur laborum aliqua ut quis do voluptate duis ut nulla magna fugiat ut. Sit sint do ut in ipsum. Veniam duis commodo velit cupidatat eiusmod dolor tempor ullamco sint nulla laboris. Cillum tempor officia aute aute incididunt enim occaecat consectetur voluptate. Commodo sunt pariatur ad cupidatat sint id. Proident reprehenderit irure aute mollit. Occaecat laboris tempor nulla nisi quis proident.
+<Aside type="tip" title="Akses Menu">
+  Menu ini hanya dapat diakses oleh **Super Admin** dan **Administrator** dengan
+  hak akses penuh untuk melakukan perubahan data sekolah.
+</Aside>
 
-Anim est laborum pariatur id quis aute. Commodo do ipsum voluptate ullamco. Eu ea officia nulla occaecat aute officia consequat aute dolore. Commodo nostrud ad labore voluptate in exercitation laborum et minim velit. Quis tempor laborum officia do quis laborum ea. Ex commodo reprehenderit reprehenderit ullamco ut magna ullamco ad officia exercitation officia quis ea. Ad labore eu culpa aliquip et eiusmod sint ut.
+---
 
-Amet esse in minim officia amet. Dolor occaecat excepteur excepteur cillum. Veniam occaecat in eiusmod sit culpa nostrud in id aliquip mollit eu do ad. Voluptate labore proident in sit duis fugiat. Occaecat veniam adipisicing ex cillum in qui deserunt deserunt exercitation cillum consectetur culpa nisi. Aliqua esse ipsum ipsum laborum duis sit nostrud aute.
+## 🎯 Fungsi Menu Informasi
+
+<CardGrid>
+  <Card title="🏫 Profil Sekolah" icon="document">
+    Kelola nama lengkap, nama singkat, dan identitas resmi sekolah yang
+    terdaftar.
+  </Card>
+
+{" "}
+
+<Card title="🖼️ Logo & Branding" icon="star">
+  Upload dan atur logo sekolah untuk tampilan sistem dan dokumen output.
+</Card>
+
+{" "}
+
+<Card title="📍 Alamat & Kontak" icon="map">
+  Atur alamat lengkap, nomor telepon, email, dan informasi kontak lainnya.
+</Card>
+
+  <Card title="🔢 Data Administratif" icon="information">
+    Kelola NPSN, NSM, kode sekolah, dan data administratif resmi lainnya.
+  </Card>
+</CardGrid>
+
+---
+
+## 📝 Data yang Dapat Dikelola
+
+### Informasi Dasar
+
+<Tabs>
+  <TabItem label="Identitas">
+    - **Nama Sekolah Lengkap** - Nama resmi sekolah sesuai SK pendirian - **Nama
+    Singkat** - Akronim atau nama pendek untuk tampilan ringkas - **Jenjang
+    Pendidikan** - MTs, MA, SD, SMP, SMA, dll. - **Status Sekolah** - Negeri
+    atau Swasta - **Tahun Berdiri** - Tahun pendirian sekolah
+  </TabItem>
+
+{" "}
+
+<TabItem label="Data Administratif">
+  - **NPSN** (Nomor Pokok Sekolah Nasional) - **NSM** (Nomor Statistik Madrasah)
+  - **NIS/NISS** (Nomor Induk Sekolah) - **Kode Sekolah** - Kode unik untuk
+  identifikasi - **Akreditasi** - Status dan nilai akreditasi
+</TabItem>
+
+{" "}
+
+<TabItem label="Kontak & Lokasi">
+  - **Alamat Lengkap** - Jalan, RT/RW, Desa/Kelurahan - **Kecamatan** - Wilayah
+  kecamatan - **Kabupaten/Kota** - Wilayah kabupaten atau kota - **Provinsi** -
+  Provinsi lokasi sekolah - **Kode Pos** - Kode pos wilayah - **Nomor Telepon**
+  - Telepon kantor - **Email** - Email resmi sekolah - **Website** - URL website
+  sekolah (opsional)
+</TabItem>
+
+  <TabItem label="Logo & Media">
+    - **Logo Sekolah** - Format PNG/JPG/SVG (max 2MB) - **Logo Dark Mode** -
+    Versi logo untuk tampilan gelap - **Logo Light Mode** - Versi logo untuk
+    tampilan terang - **Favicon** - Icon untuk browser tab - **Kop Surat** -
+    Header untuk dokumen resmi
+  </TabItem>
+</Tabs>
+
+---
+
+## 🚀 Cara Mengelola Informasi Sekolah
+
+<Steps>
+
+1. **Akses Menu Informasi**
+
+   Login sebagai Administrator, kemudian navigasi ke:
+
+   ```
+   Dashboard → Data Master → Informasi
+   ```
+
+2. **Lihat Data Saat Ini**
+
+   Sistem akan menampilkan informasi sekolah yang tersimpan saat ini. Periksa data yang perlu diperbarui.
+
+3. **Edit Informasi**
+
+   Klik tombol **"Edit"** atau **"Ubah"** pada bagian atas halaman untuk masuk ke mode editing.
+
+4. **Isi Form Data**
+
+   Lengkapi atau perbarui field yang diperlukan:
+
+   - Isi semua field **wajib** yang ditandai dengan tanda bintang (\*)
+   - Pastikan data sesuai dengan dokumen resmi
+   - Gunakan format yang benar untuk setiap field
+
+5. **Upload Logo**
+
+   Untuk mengunggah atau mengubah logo:
+
+   - Klik area upload atau tombol **"Pilih File"**
+   - Pilih file gambar (PNG/JPG/SVG)
+   - Pastikan ukuran file tidak melebihi 2MB
+   - Preview akan muncul setelah file dipilih
+
+   <Aside type="note">
+     Disarankan menggunakan logo dengan rasio 1:1 (square) untuk hasil terbaik
+     di berbagai tampilan.
+   </Aside>
+
+6. **Validasi Data**
+
+   Periksa kembali seluruh data yang telah diisi:
+
+   - ✅ Tidak ada typo atau kesalahan ketik
+   - ✅ Format nomor telepon dan email sudah benar
+   - ✅ Alamat lengkap dan akurat
+   - ✅ Logo tampil dengan jelas
+
+7. **Simpan Perubahan**
+
+   Klik tombol **"Simpan"** atau **"Update"** di bagian bawah form. Sistem akan:
+
+   - Validasi data yang diinput
+   - Menyimpan perubahan ke database
+   - Menampilkan notifikasi sukses
+   - Redirect ke halaman view informasi
+
+</Steps>
+
+---
+
+## 🖼️ Panduan Upload Logo
+
+### Spesifikasi Logo
+
+<Card title="📐 Persyaratan Teknis" icon="approve-check">
+
+**Format File:**
+
+- PNG (Recommended) - Mendukung transparansi
+- JPG/JPEG - Untuk foto atau gambar kompleks
+- SVG - Vector, resolusi tak terbatas
+
+**Ukuran File:**
+
+- Maksimal: 2 MB
+- Recommended: 500 KB - 1 MB
+
+**Dimensi:**
+
+- Minimum: 200 x 200 px
+- Recommended: 512 x 512 px atau 1024 x 1024 px
+- Rasio: 1:1 (Square)
+
+**Background:**
+
+- PNG dengan transparansi (untuk fleksibilitas)
+- Atau background putih untuk logo berwarna
+
+</Card>
+
+### Tips Upload Logo
+
+<Aside type="tip" title="Best Practices">
+
+1. **Gunakan logo beresolusi tinggi** untuk hasil terbaik di berbagai ukuran layar
+2. **Siapkan 2 versi** - satu untuk light mode, satu untuk dark mode
+3. **Test tampilan** setelah upload di berbagai halaman sistem
+4. **Compress file** jika ukuran terlalu besar tanpa mengurangi kualitas
+5. **Gunakan format PNG** dengan background transparan untuk fleksibilitas maksimal
+
+</Aside>
+
+---
+
+## 📊 Contoh Pengisian Data
+
+### Format Data yang Benar
+
+```
+Nama Lengkap    : MTs Negeri 1 Pandeglang
+Nama Singkat    : MTsN 1 Pandeglang
+NPSN            : 20604046
+NSM             : 121236010001
+Jenjang         : MTs (Madrasah Tsanawiyah)
+Status          : Negeri
+Tahun Berdiri   : 1995
+
+Alamat          : Jl. Raya Labuan-Pandeglang KM. 3
+RT/RW           : 001/001
+Desa/Kelurahan  : Kadubeureum
+Kecamatan       : Pandeglang
+Kabupaten       : Pandeglang
+Provinsi        : Banten
+Kode Pos        : 42212
+
+Telepon         : (0253) 201234
+Email           : info@mtsn1pandeglang.sch.id
+Website         : https://mtsn1pandeglang.sch.id
+```
+
+---
+
+## ⚠️ Hal yang Perlu Diperhatikan
+
+<Aside type="caution" title="Perhatian Penting">
+
+1. **Data NPSN dan NSM** harus sesuai dengan data resmi dari Kementerian Agama/Kemendikbud
+2. **Perubahan logo** akan mempengaruhi seluruh tampilan sistem termasuk laporan
+3. **Backup logo lama** sebelum menggantinya dengan yang baru
+4. **Validasi email** - pastikan email sekolah aktif dan dapat diakses
+5. **Update data secara berkala** jika ada perubahan status akreditasi atau kontak
+
+</Aside>
+
+---
+
+## 🔄 Dampak Perubahan Data
+
+Perubahan informasi sekolah akan berpengaruh pada:
+
+<CardGrid stagger>
+  <Card title="📄 Header Laporan" icon="document">
+    Logo dan nama sekolah muncul di semua laporan presensi yang digenerate
+    sistem.
+  </Card>
+
+{" "}
+
+<Card title="🖥️ Dashboard" icon="laptop">
+  Identitas sekolah ditampilkan di header dashboard dan sidebar navigasi.
+</Card>
+
+{" "}
+
+<Card title="📧 Email Notifikasi" icon="email">
+  Informasi kontak digunakan dalam email otomatis yang dikirim sistem.
+</Card>
+
+  <Card title="🎫 Kartu Presensi" icon="star">
+    Data sekolah tercetak pada kartu RFID yang diterbitkan untuk siswa dan
+    pegawai.
+  </Card>
+</CardGrid>
+
+---
+
+## ❓ FAQ - Pertanyaan Umum
+
+<details>
+<summary>**Apakah perubahan informasi langsung terlihat di sistem?**</summary>
+
+Ya, setelah menyimpan perubahan, informasi akan langsung terupdate di seluruh sistem. Namun untuk beberapa cache, mungkin perlu refresh halaman (F5) untuk melihat perubahan.
+
+</details>
+
+<details>
+<summary>**Bagaimana jika logo tidak muncul setelah diupload?**</summary>
+
+Pastikan:
+
+1. Format file sudah benar (PNG/JPG/SVG)
+2. Ukuran file tidak melebihi 2MB
+3. File tidak corrupt atau rusak
+4. Clear cache browser dan refresh halaman
+5. Hubungi admin jika masalah berlanjut
+
+</details>
+
+<details>
+<summary>**Siapa yang bisa mengubah informasi sekolah?**</summary>
+
+Hanya **Super Admin** dan **Administrator** yang memiliki hak akses untuk mengubah informasi sekolah. Operator dan user biasa hanya bisa melihat (read-only).
+
+</details>
+
+<details>
+<summary>**Apakah ada log perubahan data?**</summary>
+
+Ya, sistem mencatat setiap perubahan data termasuk waktu, user yang melakukan perubahan, dan data apa yang diubah untuk keperluan audit.
+
+</details>
+
+<details>
+<summary>**Bagaimana cara mengganti logo untuk dark mode?**</summary>
+
+Upload logo dengan warna yang kontras untuk background gelap di field "Logo Dark Mode". Sistem akan otomatis menggunakan logo yang sesuai berdasarkan theme yang dipilih user.
+
+</details>
+
+---
+
+## 📞 Butuh Bantuan?
+
+<Card title="💬 Hubungi Support" icon="comment">
+
+Jika Anda mengalami kesulitan atau ada pertanyaan lebih lanjut tentang pengelolaan informasi sekolah:
+
+- **Email Support:** support@mtsn1pandeglang.sch.id
+- **Kontak IT:** Hubungi tim IT sekolah
+- **Jam Layanan:** Senin - Jumat, 08:00 - 15:00 WIB
+
+Atau laporkan masalah melalui form feedback di sistem.
+
+</Card>
+
+---
+
+<div style="text-align: center; margin-top: 2rem; padding: 1rem; border-top: 1px solid var(--sl-color-gray-5);">
+  <p style="font-size: 0.875rem; color: var(--sl-color-gray-3);">
+    💡 <strong>Tips:</strong> Perbarui informasi sekolah secara berkala untuk
+    menjaga akurasi data sistem
+  </p>
+</div>

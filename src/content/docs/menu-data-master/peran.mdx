@@ -1,29 +1,502 @@
 ---
-title: Peran
-description: deskripsi
-# template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: "Peran (Roles)"
+description: "Kelola peran pengguna dan hak akses sistem dengan mudah"
+# template: splash
 # hero:
-#   tagline:
 #   image:
-#     file: ../../../assets/banner.svg
+#     file: "../../../assets/peran.svg"
+#   tagline: "Atur hierarki dan hak akses pengguna untuk keamanan sistem yang optimal"
 #   actions:
-#     - text: Example Guide
-#       link: /guides/example/
-#       icon: right-arrow
-#     - text: Read the Starlight docs
-#       link: https://starlight.astro.build
-#       icon: external
-#       variant: minimal
+#     - text: "Mulai Kelola Peran"
+#       link: "#jenis-jenis-peran"
+#       icon: "star"
+#       variant: primary
+#     - text: "Best Practice"
+#       link: "#best-practice-pengaturan-peran"
+#       icon: "approve-check"
+#       variant: secondary
 ---
 
-## Konten
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+} from "@astrojs/starlight/components";
 
-Minim commodo in ipsum nisi mollit irure elit reprehenderit ut. Deserunt sunt laboris pariatur aliquip tempor et esse amet. Tempor voluptate qui velit adipisicing voluptate occaecat et consectetur ut ut. Qui aliquip aliqua ipsum eiusmod nisi duis aliquip aliqua. Consectetur labore enim sint qui esse enim voluptate exercitation veniam tempor. Ipsum sit exercitation labore Lorem dolore eiusmod dolor magna anim nisi esse do velit. Ex deserunt amet deserunt voluptate sunt do laboris et.
+## Pengertian Peran
 
-Quis ullamco velit exercitation ea minim et aliquip. Excepteur ipsum deserunt proident eu cillum nostrud officia nulla ipsum ullamco. Eu fugiat ea labore laborum duis aliquip in velit velit deserunt. Sit nisi esse cupidatat veniam pariatur laboris. In sint est ea aliquip nostrud aliquip pariatur fugiat eiusmod fugiat do officia irure ipsum. Enim dolore ad qui exercitation est sunt pariatur irure excepteur.
+**Peran (Role)** adalah kumpulan hak akses dan permission yang diberikan kepada pengguna untuk mengakses fitur-fitur tertentu dalam sistem. Peran berfungsi sebagai template akses yang dapat diterapkan ke banyak pengguna sekaligus, sehingga memudahkan pengelolaan keamanan sistem.
 
-Excepteur laborum aliqua ut quis do voluptate duis ut nulla magna fugiat ut. Sit sint do ut in ipsum. Veniam duis commodo velit cupidatat eiusmod dolor tempor ullamco sint nulla laboris. Cillum tempor officia aute aute incididunt enim occaecat consectetur voluptate. Commodo sunt pariatur ad cupidatat sint id. Proident reprehenderit irure aute mollit. Occaecat laboris tempor nulla nisi quis proident.
+### Mengapa Peran Penting?
 
-Anim est laborum pariatur id quis aute. Commodo do ipsum voluptate ullamco. Eu ea officia nulla occaecat aute officia consequat aute dolore. Commodo nostrud ad labore voluptate in exercitation laborum et minim velit. Quis tempor laborum officia do quis laborum ea. Ex commodo reprehenderit reprehenderit ullamco ut magna ullamco ad officia exercitation officia quis ea. Ad labore eu culpa aliquip et eiusmod sint ut.
+<CardGrid>
+  <Card title="🔐 Keamanan Terjaga" icon="lock">
+    Mencegah akses tidak sah ke data sensitif dengan membatasi hak akses sesuai
+    kebutuhan
+  </Card>
 
-Amet esse in minim officia amet. Dolor occaecat excepteur excepteur cillum. Veniam occaecat in eiusmod sit culpa nostrud in id aliquip mollit eu do ad. Voluptate labore proident in sit duis fugiat. Occaecat veniam adipisicing ex cillum in qui deserunt deserunt exercitation cillum consectetur culpa nisi. Aliqua esse ipsum ipsum laborum duis sit nostrud aute.
+{" "}
+
+<Card title="⚡ Efisiensi Manajemen" icon="rocket">
+  Atur hak akses puluhan user sekaligus hanya dengan assign role yang sesuai
+</Card>
+
+{" "}
+
+<Card title="📊 Audit Trail" icon="list-format">
+  Lacak siapa yang mengakses apa, kapan, dan dengan peran apa
+</Card>
+
+  <Card title="🎯 Separation of Duties" icon="star">
+    Pisahkan tanggung jawab antar user untuk mencegah fraud dan error
+  </Card>
+</CardGrid>
+
+---
+
+## Jenis-jenis Peran
+
+Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah/madrasah:
+
+### 1. Super Admin
+
+<Card title="👑 Super Admin - Kontrol Penuh" icon="star">
+  **Deskripsi:** Pengguna dengan hak akses tertinggi. Memiliki kontrol penuh
+  terhadap seluruh fitur dan data sistem. **Hak Akses:** - ✅ Akses semua menu
+  dan fitur - ✅ Kelola semua data master - ✅ Kelola user dan role management -
+  ✅ Konfigurasi sistem - ✅ Lihat dan hapus semua data - ✅ Export/Import data
+  massal - ✅ Akses log sistem dan audit trail **Recommended untuk:** - IT
+  Administrator - Kepala Madrasah - Developer/Technical Support **Jumlah
+  Ideal:** 1-2 orang
+</Card>
+
+<Aside type="caution" title="Peringatan!">
+  Batasi jumlah Super Admin karena memiliki akses unlimited. Hanya berikan role
+  ini kepada orang yang sangat dipercaya.
+</Aside>
+
+### 2. Operator
+
+<Card title="⚙️ Operator - Pengelola Harian" icon="setting">
+  **Deskripsi:** Pengelola operasional harian sistem presensi. Fokus pada input
+  dan maintenance data. **Hak Akses:** - ✅ Kelola data master (kecuali user
+  management) - ✅ Input dan edit data siswa/pegawai - ✅ Proses pengajuan kartu
+  RFID - ✅ Input manual presensi - ✅ Generate laporan - ✅ Kelola
+  informasi/pengumuman - ❌ Tidak bisa ubah role dan permission - ❌ Tidak bisa
+  akses log sistem **Recommended untuk:** - Staff TU (Tata Usaha) - Admin
+  Sekolah - Bagian Kesiswaan **Jumlah Ideal:** 2-5 orang
+</Card>
+
+### 3. Wali Kelas
+
+<Card title="👨‍🏫 Wali Kelas - Monitor Kelas" icon="graduation">
+  **Deskripsi:** Guru yang bertanggung jawab mengawasi presensi dan data siswa
+  di kelas tertentu. **Hak Akses:** - ✅ Lihat data siswa di kelas yang diampu -
+  ✅ Lihat riwayat presensi siswa kelas sendiri - ✅ Input manual presensi kelas
+  sendiri - ✅ Export laporan presensi kelas sendiri - ✅ Koreksi data presensi
+  kelas sendiri - ❌ Tidak bisa akses data kelas lain - ❌ Tidak bisa ubah data
+  master - ❌ Tidak bisa lihat data pegawai **Recommended untuk:** - Guru Wali
+  Kelas - Guru BK (Bimbingan Konseling) **Jumlah Ideal:** Sesuai jumlah kelas
+</Card>
+
+### 4. Pegawai
+
+<Card title="👔 Pegawai - User Standar" icon="user">
+  **Deskripsi:** Guru dan staff yang menggunakan sistem untuk presensi pribadi.
+  **Hak Akses:** - ✅ Lihat riwayat presensi pribadi - ✅ Update profile pribadi
+  - ✅ Ajukan kartu RFID pribadi - ✅ Lihat pengumuman/informasi - ✅ Download
+  slip presensi pribadi - ❌ Tidak bisa akses data pegawai lain - ❌ Tidak bisa
+  akses data siswa - ❌ Tidak bisa ubah data apapun **Recommended untuk:** -
+  Guru (non wali kelas) - Staff TU - Staff Perpustakaan - Satpam, Office Boy,
+  dll **Jumlah Ideal:** Sesuai jumlah pegawai
+</Card>
+
+### 5. Siswa
+
+<Card title="🎓 Siswa - User Basic" icon="pencil">
+  **Deskripsi:** Siswa yang menggunakan sistem untuk melihat presensi dan
+  mengajukan kartu. **Hak Akses:** - ✅ Lihat riwayat presensi pribadi - ✅
+  Update profile pribadi (terbatas) - ✅ Ajukan kartu RFID - ✅ Lihat
+  pengumuman/informasi - ✅ Download rekap presensi pribadi - ❌ Tidak bisa
+  akses data siswa lain - ❌ Tidak bisa ubah data apapun - ❌ Tidak bisa input
+  manual presensi **Recommended untuk:** - Seluruh siswa aktif **Jumlah Ideal:**
+  Sesuai jumlah siswa
+</Card>
+
+---
+
+## Menambah Peran Baru
+
+<Steps>
+
+1. **Akses Menu Peran**
+
+   Dashboard → Data Master → Peran
+
+2. **Klik Tombol "Tambah Peran"**
+
+   Klik tombol "+ Tambah Peran" di pojok kanan atas
+
+3. **Isi Form Peran**
+
+   ```
+   Nama Peran: Wakil Kepala Sekolah
+   Slug: wakil-kepala
+   Deskripsi: Wakil kepala dengan akses monitoring
+   Status: Aktif
+   ```
+
+4. **Atur Permission**
+
+   Pilih hak akses yang sesuai dari daftar permission yang tersedia
+
+5. **Simpan Peran**
+
+   Klik "Simpan" untuk membuat peran baru
+
+</Steps>
+
+<Aside type="tip" title="Tips Penamaan Peran">
+  - Gunakan nama yang jelas dan deskriptif - Hindari nama yang terlalu umum -
+  Gunakan konvensi penamaan konsisten - Tambahkan deskripsi yang detail
+</Aside>
+
+---
+
+## Mengatur Hak Akses Peran
+
+### Kategori Permission
+
+Permission dikelompokkan berdasarkan modul sistem:
+
+<Tabs>
+  <TabItem label="Data Master">
+    **Permissions:** - `view_data_master` - Lihat menu data master -
+    `create_data_master` - Tambah data master - `edit_data_master` - Edit data
+    master - `delete_data_master` - Hapus data master **Sub-permissions:** -
+    Peran (view_roles, create_roles, edit_roles, delete_roles) - Pengguna
+    (view_users, create_users, edit_users, delete_users) - Instansi, Tahun
+    Pelajaran, Jurusan, Kelas, dll
+  </TabItem>
+
+{" "}
+
+<TabItem label="Presensi">
+  **Permissions:** - `view_attendance` - Lihat data presensi -
+  `create_attendance` - Input presensi manual - `edit_attendance` - Koreksi
+  presensi - `delete_attendance` - Hapus data presensi - `view_own_attendance` -
+  Lihat presensi pribadi **Scope:** - All: Semua data presensi - Own: Hanya
+  presensi pribadi - Class: Presensi kelas yang diampu
+</TabItem>
+
+{" "}
+
+<TabItem label="Pegawai & Siswa">
+  **Permissions:** - `view_employees` - Lihat data pegawai - `create_employees`
+  - Tambah pegawai - `edit_employees` - Edit pegawai - `delete_employees` -
+  Hapus pegawai - `view_students` - Lihat data siswa - `create_students` -
+  Tambah siswa - `edit_students` - Edit siswa - `delete_students` - Hapus siswa
+</TabItem>
+
+{" "}
+
+<TabItem label="Kartu RFID">
+  **Permissions:** - `view_rfid_cards` - Lihat pengajuan kartu -
+  `approve_rfid_cards` - Setujui pengajuan - `process_rfid_cards` - Proses
+  pembuatan kartu - `complete_rfid_cards` - Selesaikan pengajuan -
+  `apply_own_rfid_card` - Ajukan kartu pribadi
+</TabItem>
+
+{" "}
+
+<TabItem label="Laporan">
+  **Permissions:** - `view_reports` - Lihat laporan - `export_reports` - Export
+  laporan - `view_statistics` - Lihat statistik - `view_all_reports` - Laporan
+  semua data - `view_own_reports` - Laporan pribadi
+</TabItem>
+
+  <TabItem label="Sistem">
+    **Permissions:** - `view_system_settings` - Lihat pengaturan -
+    `edit_system_settings` - Ubah pengaturan - `view_logs` - Lihat log sistem -
+    `backup_data` - Backup database - `restore_data` - Restore database
+  </TabItem>
+</Tabs>
+
+### Cara Setting Permission
+
+<Steps>
+
+1. **Edit Peran yang Diinginkan**
+
+   Klik tombol edit pada peran yang ingin diatur
+
+2. **Tab Permission**
+
+   Buka tab "Permission" di form edit peran
+
+3. **Pilih Permission**
+
+   Centang permission yang ingin diberikan:
+
+   - 📋 Select All: Centang semua permission
+   - 🔍 Filter: Cari permission spesifik
+   - 📁 Expand: Buka kategori permission
+
+4. **Atur Scope (Opsional)**
+
+   Untuk permission tertentu, atur scope akses:
+
+   - All: Semua data
+   - Own: Data pribadi saja
+   - Department: Data departemen/kelas tertentu
+
+5. **Simpan Perubahan**
+
+   Klik "Simpan" untuk apply permission baru
+
+</Steps>
+
+<Aside type="note">
+  Perubahan permission akan langsung berlaku untuk semua user dengan role
+  tersebut tanpa perlu logout-login.
+</Aside>
+
+---
+
+## Mengedit Peran
+
+<Steps>
+
+1. **Cari Peran yang Ingin Diedit**
+
+   Gunakan search box atau scroll list peran
+
+2. **Klik Tombol Edit**
+
+   Klik icon ✏️ atau tombol "Edit"
+
+3. **Ubah Data yang Diperlukan**
+
+   Modify nama, deskripsi, atau permission
+
+4. **Review Perubahan**
+
+   Pastikan perubahan tidak mengganggu operasional
+
+5. **Simpan & Konfirmasi**
+
+   Klik "Simpan" dan konfirmasi perubahan
+
+</Steps>
+
+<Aside type="caution" title="Hati-hati!">
+  Mengubah permission peran yang sedang digunakan banyak user dapat mempengaruhi
+  akses mereka secara langsung. Pastikan melakukan perubahan di luar jam
+  operasional atau beri notifikasi terlebih dahulu.
+</Aside>
+
+---
+
+## Menghapus Peran
+
+<Steps>
+
+1. **Pastikan Peran Tidak Digunakan**
+
+   Cek apakah ada user yang menggunakan peran tersebut
+
+2. **Reassign User (Jika Ada)**
+
+   Pindahkan user ke peran lain terlebih dahulu
+
+3. **Klik Tombol Hapus**
+
+   Klik icon 🗑️ atau tombol "Hapus"
+
+4. **Konfirmasi Penghapusan**
+
+   Baca warning dan ketik konfirmasi jika diminta
+
+5. **Peran Terhapus**
+
+   Peran akan dihapus dari sistem
+
+</Steps>
+
+<Aside type="caution" title="Tidak Bisa Dihapus?">
+  **Peran default (Super Admin, Operator, Wali Kelas, Pegawai, Siswa) tidak
+  dapat dihapus** karena merupakan bagian integral dari sistem. Anda hanya bisa
+  memodifikasi permission-nya.
+</Aside>
+
+---
+
+## Best Practice Pengaturan Peran
+
+### 1. Principle of Least Privilege
+
+<Card title="🔐 Berikan Akses Minimum" icon="lock">
+  Hanya berikan permission yang benar-benar dibutuhkan untuk menjalankan tugas.
+  Jangan berikan akses berlebihan "untuk berjaga-jaga". **Contoh:** - ❌
+  **Salah:** Wali kelas diberi akses edit semua data siswa - ✅ **Benar:** Wali
+  kelas hanya bisa edit siswa di kelasnya
+</Card>
+
+### 2. Separation of Duties
+
+<Card title="⚖️ Pisahkan Tanggung Jawab" icon="bars">
+  Pisahkan fungsi kritis ke beberapa peran untuk mencegah fraud. **Contoh:** -
+  Operator: Input data presensi - Super Admin: Approve dan hapus data - Wali
+  Kelas: Monitor dan validasi
+</Card>
+
+### 3. Regular Review
+
+<Card title="🔄 Review Berkala" icon="refresh">
+  Tinjau permission secara berkala (minimal 6 bulan sekali). **Yang Perlu
+  Dicek:** - Apakah ada permission yang tidak terpakai? - Apakah ada user dengan
+  akses berlebihan? - Apakah ada peran yang bisa digabung? - Apakah ada
+  kebutuhan permission baru?
+</Card>
+
+### 4. Dokumentasi
+
+<Card title="📝 Catat Semua Perubahan" icon="document">
+  Dokumentasikan setiap perubahan role dan permission. **Informasi yang Perlu
+  Dicatat:** - Tanggal perubahan - Siapa yang mengubah - Apa yang diubah -
+  Alasan perubahan - User yang terpengaruh
+</Card>
+
+### 5. Testing
+
+<Card title="🧪 Test Sebelum Apply" icon="star">
+  Test permission di environment test sebelum apply ke production. **Cara
+  Test:** 1. Buat test user dengan role baru 2. Login dengan test user 3. Coba
+  akses setiap menu 4. Verifikasi permission bekerja sesuai harapan 5. Baru
+  apply ke production
+</Card>
+
+---
+
+## Matrix Hak Akses Default
+
+Tabel berikut menunjukkan permission default untuk setiap peran:
+
+| Fitur              | Super Admin | Operator | Wali Kelas | Pegawai | Siswa   |
+| ------------------ | ----------- | -------- | ---------- | ------- | ------- |
+| **Data Master**    |             |          |            |         |
+| - Peran            | ✅ CRUD     | ❌       | ❌         | ❌      | ❌      |
+| - Pengguna         | ✅ CRUD     | ✅ Read  | ❌         | ❌      | ❌      |
+| - Instansi         | ✅ CRUD     | ✅ CRUD  | ❌         | ❌      | ❌      |
+| - Tahun Pelajaran  | ✅ CRUD     | ✅ CRUD  | ✅ Read    | ❌      | ❌      |
+| - Jurusan/Kelas    | ✅ CRUD     | ✅ CRUD  | ✅ Read    | ❌      | ❌      |
+| - Jabatan          | ✅ CRUD     | ✅ CRUD  | ❌         | ❌      | ❌      |
+| - Jadwal           | ✅ CRUD     | ✅ CRUD  | ✅ Read    | ✅ Read | ✅ Read |
+| - Informasi        | ✅ CRUD     | ✅ CRUD  | ✅ Read    | ✅ Read | ✅ Read |
+| **Pegawai**        |             |          |            |         |
+| - Data Pegawai     | ✅ CRUD     | ✅ CRUD  | ❌         | ✅ Own  | ❌      |
+| - Presensi Pegawai | ✅ CRUD     | ✅ CRUD  | ❌         | ✅ Own  | ❌      |
+| **Siswa**          |             |          |            |         |
+| - Data Siswa       | ✅ CRUD     | ✅ CRUD  | ✅ Class   | ❌      | ✅ Own  |
+| - Presensi Siswa   | ✅ CRUD     | ✅ CRUD  | ✅ Class   | ❌      | ✅ Own  |
+| **Kartu RFID**     |             |          |            |         |
+| - Lihat Pengajuan  | ✅ All      | ✅ All   | ❌         | ✅ Own  | ✅ Own  |
+| - Approve          | ✅          | ✅       | ❌         | ❌      | ❌      |
+| - Proses           | ✅          | ✅       | ❌         | ❌      | ❌      |
+| - Ajukan Kartu     | ✅          | ✅       | ✅         | ✅      | ✅      |
+| **Laporan**        |             |          |            |         |
+| - Generate Laporan | ✅ All      | ✅ All   | ✅ Class   | ✅ Own  | ✅ Own  |
+| - Export Data      | ✅          | ✅       | ✅         | ❌      | ❌      |
+| **Sistem**         |             |          |            |         |
+| - Settings         | ✅          | ❌       | ❌         | ❌      | ❌      |
+| - Log Sistem       | ✅          | ❌       | ❌         | ❌      | ❌      |
+| - Backup/Restore   | ✅          | ❌       | ❌         | ❌      | ❌      |
+
+**Keterangan:**
+
+- ✅ CRUD: Create, Read, Update, Delete
+- ✅ Read: Hanya bisa lihat
+- ✅ Own: Hanya data pribadi
+- ✅ Class: Hanya data kelas yang diampu
+- ✅ All: Semua data
+- ❌: Tidak ada akses
+
+---
+
+## Troubleshooting
+
+<Tabs>
+  <TabItem label="User Tidak Bisa Akses Menu">
+    **Gejala:** User complain tidak bisa mengakses menu tertentu **Penyebab:** -
+    Permission tidak diberikan - Cache permission belum refresh - User belum
+    assign role **Solusi:** 1. Cek role user di menu Pengguna 2. Verify
+    permission role tersebut 3. Tambahkan permission yang kurang 4. Minta user
+    logout dan login kembali 5. Jika masih error, clear cache sistem
+  </TabItem>
+
+{" "}
+
+<TabItem label="Perubahan Permission Tidak Berlaku">
+  **Gejala:** Sudah ubah permission tapi user masih tidak bisa akses
+  **Penyebab:** - Cache belum clear - User belum refresh - Permission conflict
+  **Solusi:** 1. Clear cache aplikasi 2. Minta user hard refresh (Ctrl+Shift+R)
+  3. Atau minta logout-login 4. Cek apakah ada permission yang konflik
+</TabItem>
+
+  <TabItem label="Tidak Bisa Hapus Peran">
+    **Gejala:** Tombol hapus disabled atau muncul error **Penyebab:** - Peran
+    sedang digunakan user - Peran adalah default system role - Tidak punya
+    permission hapus role **Solusi:** 1. Cek daftar user dengan role tersebut 2.
+    Reassign user ke role lain 3. Jika role default, hanya bisa edit permission
+    4. Pastikan login sebagai Super Admin
+  </TabItem>
+</Tabs>
+
+---
+
+## Security Checklist
+
+<Card title="✅ Checklist Keamanan Peran" icon="approve-check">
+  Gunakan checklist ini untuk memastikan setup role Anda aman: - [ ] Super Admin
+  hanya diberikan ke 1-2 orang terpercaya - [ ] Setiap user hanya punya 1 role
+  (tidak multiple role) - [ ] Password Super Admin sangat kuat dan unik - [ ]
+  2FA aktif untuk Super Admin - [ ] Permission diberikan sesuai prinsip least
+  privilege - [ ] Tidak ada user dengan permission berlebihan - [ ] Role default
+  tidak dimodifikasi tanpa dokumentasi - [ ] Ada dokumentasi lengkap setiap
+  perubahan role - [ ] Regular review permission dilakukan setiap 6 bulan - [ ]
+  Log audit aktif untuk track perubahan role - [ ] Test role baru di staging
+  sebelum production - [ ] Backup data role dilakukan secara berkala
+</Card>
+
+---
+
+## Langkah Selanjutnya
+
+<CardGrid>
+  <Card title="👥 Kelola Pengguna" icon="user">
+    Setelah setup role, buat user dan assign role yang sesuai [Panduan Pengguna
+    →](/menu-data-master/pengguna/)
+  </Card>
+
+{" "}
+
+<Card title="🏫 Setup Instansi" icon="home">
+  Lengkapi data instansi sebagai langkah berikutnya [Panduan Instansi
+  →](/menu-data-master/instansi/)
+</Card>
+
+  <Card title="🔙 Kembali ke Data Master" icon="left-arrow">
+    Lihat overview lengkap menu data master [Data Master →](/menu-data-master/)
+  </Card>
+</CardGrid>
+
+---
+
+<Aside type="tip" title="Best Practice">
+  Role yang baik adalah role yang memberikan akses cukup untuk user menjalankan
+  tugasnya, tidak lebih dan tidak kurang. Review dan audit role secara berkala
+  untuk keamanan optimal.
+</Aside>

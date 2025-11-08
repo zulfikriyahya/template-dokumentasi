@@ -1,0 +1,528 @@
+---
+title: "Instansi"
+description: "Kelola data dan identitas sekolah/madrasah"
+# template: splash
+# hero:
+#   image:
+#     file: "../../../assets/instansi.svg"
+#   tagline: "Konfigurasi profil dan identitas institusi pendidikan Anda"
+#   actions:
+#     - text: "Setup Instansi"
+#       link: "#menambah-data-instansi"
+#       icon: "home"
+#       variant: primary
+#     - text: "Dampak Status"
+#       link: "#dampak-status-instansi"
+#       icon: "information"
+#       variant: secondary
+---
+
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+} from "@astrojs/starlight/components";
+
+## Pengertian Instansi
+
+**Instansi** adalah data profil lengkap sekolah/madrasah yang menggunakan sistem presensi RFID. Data ini menjadi identitas institusi yang akan muncul di berbagai laporan, dokumen, dan notifikasi sistem.
+
+### Pentingnya Data Instansi
+
+<CardGrid>
+  <Card title="🏫 Identitas Resmi" icon="home">
+    Menjadi identitas institusi di semua dokumen dan laporan resmi
+  </Card>
+
+{" "}
+
+<Card title="⏰ Jadwal Operasional" icon="clock">
+  Menentukan hari kerja dan jadwal presensi otomatis berdasarkan status
+</Card>
+
+{" "}
+
+<Card title="📊 Laporan Profesional" icon="document">
+  Data lengkap untuk header laporan, surat, dan dokumen resmi
+</Card>
+
+  <Card title="🎨 Branding Konsisten" icon="star">
+    Logo dan identitas visual yang konsisten di seluruh sistem
+  </Card>
+</CardGrid>
+
+---
+
+## Menambah Data Instansi
+
+<Steps>
+
+1. **Akses Menu Instansi**
+
+   Dashboard → Data Master → Instansi
+
+2. **Klik "Tambah Instansi"**
+
+   Jika belum ada data, atau klik "+ Tambah" untuk instansi baru
+
+3. **Isi Informasi Dasar**
+
+   ```
+   Nama Instansi: MTs Negeri 1 Pandeglang
+   NSS/NPSN: 121232010001
+   Akreditasi: A
+   Status: ● Negeri / ○ Swasta
+   ```
+
+   <Aside type="note">
+     Status instansi sangat penting karena mempengaruhi jadwal operasional!
+   </Aside>
+
+4. **Alamat Lengkap**
+
+   ```
+   Alamat: Jl. Raya Labuan KM. 7
+   Desa/Kelurahan: Sukaratu
+   Kecamatan: Cadasari
+   Kabupaten/Kota: Pandeglang
+   Provinsi: Banten
+   Kode Pos: 42281
+   ```
+
+5. **Kontak Instansi**
+
+   ```
+   Telepon: (0253) 801234
+   Email: info@mtsn1pandeglang.sch.id
+   Website: https://mtsn1pandeglang.sch.id
+   Fax: (0253) 801235 (opsional)
+   ```
+
+6. **Upload Logo**
+
+   - Format: PNG dengan background transparan (recommended)
+   - Ukuran: 500x500px (1:1 ratio)
+   - Max size: 2MB
+   - Logo akan muncul di: Header sistem, laporan, kartu RFID
+
+7. **Kepala Instansi**
+
+   ```
+   Nama: Drs. H. Ahmad Yani, M.Pd.I
+   NIP: 196505121990031003
+   Jabatan: Kepala Madrasah
+   Periode: 2020 - 2024
+   ```
+
+8. **Simpan Data**
+
+   Klik "Simpan" untuk menyimpan data instansi
+
+</Steps>
+
+---
+
+## Informasi yang Dibutuhkan
+
+### Data Wajib
+
+<Card title="✅ Field Required" icon="approve-check">
+  Field yang wajib diisi: - **Nama Instansi** - Nama resmi sekolah/madrasah -
+  **NSS/NPSN** - Nomor Statistik Sekolah/Nomor Pokok Sekolah Nasional -
+  **Status** - Negeri atau Swasta (sangat penting!) - **Alamat Lengkap** -
+  Minimal jalan, kelurahan, kecamatan, kota - **Kontak** - Minimal telepon atau
+  email - **Kepala Instansi** - Nama dan NIP kepala sekolah
+</Card>
+
+### Data Opsional
+
+<Card title="➕ Field Optional" icon="information">
+  Field yang direkomendasikan diisi: - **Logo** - Untuk branding profesional -
+  **Akreditasi** - A, B, C, atau Belum Terakreditasi - **Website** - URL website
+  resmi - **Fax** - Jika ada - **Visi Misi** - Untuk dokumen lengkap - **Sejarah
+  Singkat** - Untuk profil institusi
+</Card>
+
+---
+
+## Mengedit Data Instansi
+
+<Steps>
+
+1. **Buka Detail Instansi**
+
+   Klik nama instansi atau tombol "Edit"
+
+2. **Ubah Data yang Diperlukan**
+
+   Edit field yang ingin diperbarui
+
+3. **Update Logo (Opsional)**
+
+   Jika ada perubahan logo atau branding
+
+4. **Review Perubahan**
+
+   Pastikan semua data sudah benar
+
+5. **Simpan Update**
+
+   Klik "Update" untuk menyimpan
+
+</Steps>
+
+<Aside type="tip" title="Kapan Update Data Instansi?">
+  Update data instansi saat: - Pergantian kepala sekolah - Perubahan
+  alamat/kontak - Update akreditasi - Rebranding logo - Perubahan status (sangat
+  jarang)
+</Aside>
+
+---
+
+## Logo dan Identitas Instansi
+
+### Spesifikasi Logo
+
+<CardGrid>
+  <Card title="📐 Dimensi & Format" icon="setting">
+    **Ukuran Optimal:** - Primary: 500x500px (1:1) - Minimal: 300x300px -
+    Format: PNG (transparan) atau JPG - Max size: 2MB **Tips:** - Gunakan vector
+    untuk hasil terbaik - Background transparan untuk fleksibilitas - High
+    resolution untuk print quality
+  </Card>
+
+  <Card title="🎨 Design Guidelines" icon="star">
+    **Rekomendasi:** - Simple dan recognizable - Scalable (jelas di ukuran
+    kecil) - Consistent dengan brand identity - Hindari detail terlalu rumit
+    **Warna:** - Max 3 warna utama - Kontras yang baik - Readable di background
+    terang/gelap
+  </Card>
+</CardGrid>
+
+### Penggunaan Logo
+
+Logo instansi akan muncul di:
+
+<Tabs>
+  <TabItem label="Sistem Internal">
+    - Header dashboard - Login page - Sidebar menu - Profile page - Settings
+    page
+  </TabItem>
+
+{" "}
+
+<TabItem label="Dokumen & Laporan">
+  - Header laporan presensi - Surat keterangan - Rekap bulanan - Export
+  PDF/Excel - Sertifikat (jika ada)
+</TabItem>
+
+{" "}
+
+<TabItem label="Kartu & Fisik">
+  - Kartu RFID presensi - ID Card pegawai/siswa - Banner sistem (di sekolah) -
+  Stiker/poster
+</TabItem>
+
+  <TabItem label="Notifikasi">
+    - Email template - WhatsApp message (opsional) - Push notification - SMS
+    template
+  </TabItem>
+</Tabs>
+
+---
+
+## Dampak Status Instansi
+
+Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
+
+### Status: Negeri
+
+<Card title="🏛️ Instansi Negeri" icon="home">
+  **Karakteristik:** - Hari kerja: **Senin - Jumat** - Weekend: Sabtu & Minggu
+  libur - Mengikuti kalender pemerintah **Otomatis di Sistem:** - ✅ Jadwal
+  presensi Senin-Jumat - ✅ Laporan presensi 5 hari kerja - ✅ Sabtu-Minggu
+  otomatis libur - ✅ Statistik berdasarkan 5 hari - ✅ Hari libur nasional
+  berlaku **Contoh Perhitungan:** ``` 1 Bulan = ±20-22 hari kerja 1 Semester =
+  ±100 hari kerja Persentase = (Hadir / Total Hari Kerja) × 100% ```
+</Card>
+
+### Status: Swasta
+
+<Card title="🏢 Instansi Swasta" icon="briefcase">
+  **Karakteristik:** - Hari kerja: **Senin - Sabtu** - Weekend: Hanya Minggu
+  libur - Bisa custom libur mingguan **Otomatis di Sistem:** - ✅ Jadwal
+  presensi Senin-Sabtu - ✅ Laporan presensi 6 hari kerja - ✅ Hanya Minggu
+  otomatis libur - ✅ Statistik berdasarkan 6 hari - ✅ Hari libur nasional
+  tetap berlaku **Contoh Perhitungan:** ``` 1 Bulan = ±26 hari kerja 1 Semester
+  = ±120 hari kerja Persentase = (Hadir / Total Hari Kerja) × 100% ```
+</Card>
+
+### Perbandingan Detail
+
+| Aspek                 | Negeri        | Swasta       |
+| --------------------- | ------------- | ------------ |
+| **Hari Kerja/Minggu** | 5 hari        | 6 hari       |
+| **Libur Mingguan**    | Sabtu-Minggu  | Minggu       |
+| **Hari Kerja/Bulan**  | ±20-22 hari   | ±26 hari     |
+| **Hari Kerja/Tahun**  | ±240 hari     | ±288 hari    |
+| **Jam Kerja**         | Sesuai aturan | Bisa berbeda |
+| **Libur Nasional**    | ✅ Berlaku    | ✅ Berlaku   |
+| **Cuti Bersama**      | ✅ Berlaku    | ⚠️ Opsional  |
+
+<Aside type="caution" title="Penting!">
+  **Perubahan status instansi akan langsung mempengaruhi:** - Jadwal presensi
+  harian - Perhitungan kehadiran - Laporan statistik - Notifikasi ketidakhadiran
+  Pastikan status sudah benar dari awal! Perubahan status di tengah semester
+  akan memerlukan rekalkulasi data.
+</Aside>
+
+---
+
+## Custom Jadwal (Advanced)
+
+Meskipun status menentukan default jadwal, Anda bisa override dengan custom jadwal:
+
+### Skenario Custom
+
+<CardGrid>
+  <Card title="🎯 Institusi Negeri dengan Sabtu Aktif" icon="calendar">
+    Beberapa sekolah negeri ada kegiatan Sabtu (ekstrakurikuler, dll) **Setup:**
+    1. Status tetap "Negeri" 2. Di menu Jadwal Presensi, tambah jadwal Sabtu 3.
+    Set jenis: "Kegiatan Khusus" 4. Tandai sebagai opsional
+  </Card>
+
+{" "}
+
+<Card title="🏫 Institusi Swasta dengan 5 Hari" icon="briefcase">
+  Beberapa sekolah swasta modern menerapkan 5 hari kerja **Setup:** 1. Status
+  tetap "Swasta" (untuk administrasi) 2. Di menu Jadwal Presensi, nonaktifkan
+  Sabtu 3. Atau set Sabtu sebagai "Libur Tetap"
+</Card>
+
+  <Card title="🕌 Libur Jumat untuk Shalat Jumat" icon="star">
+    Sekolah Islam dengan pulang lebih awal Jumat **Setup:** 1. Buat jadwal
+    khusus Jumat 2. Jam pulang lebih awal (misal: 11:00) 3. Set sebagai
+    recurring setiap Jumat
+  </Card>
+</CardGrid>
+
+---
+
+## Multi Instansi (Advanced)
+
+Sistem mendukung multi-instansi untuk yayasan dengan beberapa sekolah:
+
+### Use Case
+
+<Card title="🏫 Yayasan dengan Beberapa Unit" icon="home">
+  **Contoh:** - MTs Negeri 1 Pandeglang - MA Negeri 1 Pandeglang - MI Negeri 1
+  Pandeglang **Keuntungan:** - Database terpusat - Laporan konsolidasi - User
+  management terpadu - Cost-effective **Setup:** - Setiap instansi punya data
+  terpisah - User bisa akses multiple instansi (cross-access) - Laporan bisa per
+  instansi atau gabungan
+</Card>
+
+<Aside type="note">
+  Fitur multi-instansi memerlukan konfigurasi khusus. Hubungi administrator atau
+  technical support untuk setup.
+</Aside>
+
+---
+
+## Data Tambahan Instansi
+
+### Visi & Misi
+
+```markdown
+**Visi:**
+Menjadi madrasah yang unggul dalam prestasi, berkarakter Islami,
+dan berwawasan lingkungan.
+
+**Misi:**
+
+1. Menyelenggarakan pendidikan berkualitas berbasis teknologi
+2. Membentuk karakter siswa yang berakhlakul karimah
+3. Mengembangkan budaya literasi dan inovasi
+4. Menjaga kelestarian lingkungan hidup
+```
+
+### Sejarah Singkat
+
+Tambahkan narasi singkat tentang:
+
+- Tahun berdiri
+- Pendiri/tokoh penting
+- Milestone penting
+- Prestasi/pencapaian
+- Perkembangan fasilitas
+
+**Manfaat:**
+
+- Untuk website profile
+- Dokumen akreditasi
+- Brosur/promosi
+- Laporan tahunan
+
+---
+
+## Tips Optimalisasi
+
+<CardGrid>
+  <Card title="📸 Logo Berkualitas" icon="star">
+    **Do:** - Gunakan logo vector (SVG/AI) - Export dengan resolution tinggi -
+    Test di berbagai ukuran - Pastikan readable di hitam-putih **Don't:** - Logo
+    blur atau pixelated - Background tidak transparan - Warna terlalu banyak -
+    Detail terlalu rumit
+  </Card>
+
+{" "}
+
+<Card title="📝 Data Akurat" icon="approve-check">
+  **Verifikasi:** - NSS/NPSN valid (cek di Dapodik) - Alamat sesuai Google Maps
+  - Kontak aktif dan responsif - Email bukan personal - Website accessible
+  **Update Berkala:** - Review setiap awal semester - Update saat ada perubahan
+  - Backup data lama
+</Card>
+
+  <Card title="🔐 Keamanan Data" icon="lock">
+    **Proteksi:** - Hanya Super Admin yang edit - Log semua perubahan - Backup
+    sebelum update - Verifikasi setelah update **Sensitive Info:** - Jangan
+    share password sistem - Email admin harus aman - Telepon verified
+  </Card>
+</CardGrid>
+
+---
+
+## Troubleshooting
+
+<Tabs>
+  <TabItem label="Logo Tidak Muncul">
+    **Kemungkinan Penyebab:**
+    - File terlalu besar (>2MB)
+    - Format tidak didukung
+    - Upload error
+    - Cache browser
+    
+    **Solusi:**
+    1. Kompres logo ke < 500KB
+    2. Gunakan PNG atau JPG
+    3. Upload ulang dengan koneksi stabil
+    4. Clear browser cache (Ctrl+Shift+R)
+    5. Cek apakah logo tersimpan di server
+  </TabItem>
+  
+  <TabItem label="Jadwal Tidak Sesuai Status">
+    **Gejala:**
+    Institusi Negeri tapi laporan 6 hari atau sebaliknya
+    
+    **Penyebab:**
+    - Status salah di setup awal
+    - Ada jadwal custom yang override
+    - Cache jadwal belum refresh
+    
+    **Solusi:**
+    1. Verifikasi status instansi
+    2. Cek jadwal presensi custom
+    3. Nonaktifkan jadwal yang konflik
+    4. Refresh sistem (logout-login)
+    5. Rekalkulasi laporan
+  </TabItem>
+  
+  <TabItem label="Data Tidak Bisa Diubah">
+    **Gejala:**
+    Form edit disabled atau error saat save
+    
+    **Penyebab:**
+    - User bukan Super Admin
+    - Data sedang digunakan proses lain
+    - Validation error
+    - Database lock
+    
+    **Solusi:**
+    1. Pastikan login sebagai Super Admin
+    2. Tunggu proses lain selesai
+    3. Cek error message untuk detail
+    4. Isi semua field required
+    5. Hubungi tech support jika persist
+  </TabItem>
+</Tabs>
+
+---
+
+## Checklist Setup Instansi
+
+<Card title="✅ Checklist Lengkap" icon="approve-check">
+  Gunakan checklist ini untuk memastikan data instansi lengkap: **Identitas
+  Dasar:** - [ ] Nama instansi lengkap - [ ] NSS/NPSN valid - [ ] Akreditasi
+  (jika ada) - [ ] Status Negeri/Swasta (pastikan benar!) **Alamat & Kontak:** -
+  [ ] Alamat lengkap dengan kode pos - [ ] Telepon aktif - [ ] Email resmi
+  institusi - [ ] Website (jika ada) **Visual & Branding:** - [ ] Logo HD dengan
+  background transparan - [ ] Logo tampil normal di semua ukuran - [ ] Test logo
+  di laporan PDF **Kepemimpinan:** - [ ] Nama kepala instansi - [ ] NIP/NIDN
+  lengkap - [ ] Periode jabatan **Konten Tambahan:** - [ ] Visi Misi institusi -
+  [ ] Sejarah singkat - [ ] Prestasi/pencapaian (opsional) **Testing:** - [ ]
+  Generate laporan test - [ ] Cek logo di kartu RFID - [ ] Verifikasi jadwal
+  sesuai status - [ ] Test email dengan logo
+</Card>
+
+---
+
+## Integrasi dengan Modul Lain
+
+Data instansi terintegrasi dengan:
+
+<CardGrid>
+  <Card title="📊 Laporan" icon="document">
+    - Header semua laporan - Footer dengan kontak - Metadata dokumen - Digital
+    signature
+  </Card>
+
+{" "}
+
+<Card title="💳 Kartu RFID" icon="approve-check">
+  - Logo di kartu - Nama institusi - Alamat singkat - Kontak support
+</Card>
+
+{" "}
+
+<Card title="📧 Notifikasi" icon="bell">
+  - Email sender name - Signature email - WhatsApp template - SMS sender ID
+</Card>
+
+  <Card title="⚙️ Sistem" icon="setting">
+    - Timezone - Kalender akademik - Jadwal operasional - Hari libur default
+  </Card>
+</CardGrid>
+
+---
+
+## Langkah Selanjutnya
+
+<CardGrid>
+  <Card title="📅 Setup Tahun Pelajaran" icon="calendar">
+    Tentukan periode akademik aktif [Panduan Tahun Pelajaran
+    →](/menu-data-master/tahun-pelajaran/)
+  </Card>
+
+{" "}
+
+<Card title="👔 Tambah Jabatan" icon="briefcase">
+  Setup jabatan untuk pegawai [Panduan Jabatan →](/menu-data-master/jabatan/)
+</Card>
+
+  <Card title="🔙 Kembali ke Data Master" icon="left-arrow">
+    Lihat overview data master [Data Master →](/menu-data-master/)
+  </Card>
+</CardGrid>
+
+---
+
+<Aside type="tip" title="Pro Tips">
+  - Backup data instansi sebelum update major (logo, status) - Test perubahan
+  status di staging dulu jika memungkinkan - Update data instansi di luar jam
+  operasional - Dokumentasikan setiap perubahan dengan screenshot - Koordinasi
+  dengan semua stakeholder sebelum ubah status
+</Aside>

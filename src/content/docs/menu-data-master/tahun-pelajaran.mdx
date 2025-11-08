@@ -1,0 +1,523 @@
+---
+title: "Tahun Pelajaran"
+description: "Kelola periode akademik dan tahun ajaran"
+# template: splash
+# hero:
+#   image:
+#     file: "../../../assets/tahun-pelajaran.svg"
+#   tagline: "Atur periode akademik untuk manajemen presensi yang terstruktur"
+#   actions:
+#     - text: "Tambah Tahun Ajaran"
+#       link: "#menambah-tahun-pelajaran-baru"
+#       icon: "add-document"
+#       variant: primary
+#     - text: "Set Aktif"
+#       link: "#mengatur-tahun-pelajaran-aktif"
+#       icon: "setting"
+#       variant: secondary
+---
+
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+} from "@astrojs/starlight/components";
+
+## Pengertian Tahun Pelajaran
+
+**Tahun Pelajaran** adalah periode akademik yang digunakan untuk mengorganisir data presensi, siswa, dan pegawai berdasarkan siklus pendidikan. Setiap tahun pelajaran memiliki tanggal mulai dan selesai yang jelas.
+
+### Format Tahun Pelajaran
+
+<Card title="📅 Penamaan Standar" icon="calendar">
+  **Format Indonesia:** ``` 2024/2025 ``` Terdiri dari 2 tahun kalender yang
+  mencakup: - Semester Ganjil: Juli-Desember (tahun pertama) - Semester Genap:
+  Januari-Juni (tahun kedua) **Contoh:** - 2023/2024 - 2024/2025 - 2025/2026
+</Card>
+
+---
+
+## Menambah Tahun Pelajaran Baru
+
+<Steps>
+
+1. **Akses Menu Tahun Pelajaran**
+
+   Dashboard → Data Master → Tahun Pelajaran
+
+2. **Klik "Tambah Tahun Pelajaran"**
+
+   Klik tombol "+ Tambah" di pojok kanan atas
+
+3. **Isi Data Tahun Pelajaran**
+
+   ```
+   Nama: 2024/2025
+   Tanggal Mulai: 15 Juli 2024
+   Tanggal Selesai: 30 Juni 2025
+   Status: ○ Aktif / ● Nonaktif
+   ```
+
+4. **Atur Semester**
+
+   **Semester Ganjil:**
+
+   ```
+   Mulai: 15 Juli 2024
+   Selesai: 31 Desember 2024
+   ```
+
+   **Semester Genap:**
+
+   ```
+   Mulai: 1 Januari 2025
+   Selesai: 30 Juni 2025
+   ```
+
+5. **Konfigurasi Libur**
+
+   Tambahkan periode libur:
+
+   - Libur Semester
+   - Libur Ramadan/Idul Fitri
+   - Libur Akhir Tahun
+   - Libur Nasional
+
+6. **Simpan Data**
+
+   Klik "Simpan" untuk membuat tahun pelajaran baru
+
+</Steps>
+
+<Aside type="note">
+  Tahun pelajaran baru dibuat dengan status "Nonaktif" secara default. Aktifkan
+  saat sudah siap digunakan.
+</Aside>
+
+---
+
+## Mengatur Tahun Pelajaran Aktif
+
+Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
+
+### Cara Mengaktifkan
+
+<Steps>
+
+1. **Pilih Tahun Pelajaran**
+
+   Cari tahun pelajaran yang ingin diaktifkan
+
+2. **Klik Tombol "Aktifkan"**
+
+   Atau toggle switch status ke "Aktif"
+
+3. **Konfirmasi Aktivasi**
+
+   Sistem akan menanyakan konfirmasi:
+
+   ```
+   Aktifkan tahun pelajaran 2024/2025?
+
+   Tahun pelajaran 2023/2024 akan dinonaktifkan
+   otomatis.
+
+   [Batal]  [Ya, Aktifkan]
+   ```
+
+4. **Tahun Pelajaran Aktif**
+
+   Status berubah dan mulai digunakan sistem
+
+</Steps>
+
+### Dampak Mengaktifkan Tahun Ajaran Baru
+
+<CardGrid>
+  <Card title="✅ Yang Terjadi" icon="approve-check">
+    - Tahun lama otomatis nonaktif - Presensi baru masuk tahun ajaran baru -
+    Dashboard menampilkan data tahun aktif - Laporan default tahun aktif -
+    Kalender akademik update
+  </Card>
+
+  <Card title="⚠️ Perlu Diperhatikan" icon="warning">
+    - Data tahun lama tetap tersimpan - Riwayat presensi tidak hilang - Siswa
+    perlu naik tingkat/kelas - Pengaturan jadwal mungkin perlu update - Inform
+    semua stakeholder
+  </Card>
+</CardGrid>
+
+<Aside type="caution" title="Persiapan Sebelum Aktivasi!">
+  Pastikan sudah melakukan: 1. Backup database 2. Naik tingkat siswa (X→XI,
+  XI→XII) 3. Update data kelas baru 4. Setup jadwal tahun ajaran baru 5. Inform
+  pengumuman ke semua pengguna
+</Aside>
+
+---
+
+## Mengedit Tahun Pelajaran
+
+<Steps>
+
+1. **Pilih Tahun yang Ingin Diedit**
+
+   Klik nama tahun pelajaran atau tombol edit
+
+2. **Ubah Data**
+
+   Edit field yang diperlukan:
+
+   - Tanggal mulai/selesai
+   - Nama tahun ajaran
+   - Semester
+   - Periode libur
+
+3. **Simpan Perubahan**
+
+   Klik "Update" untuk menyimpan
+
+</Steps>
+
+<Aside type="caution">
+  **Hati-hati edit tahun pelajaran yang sedang aktif!** Perubahan tanggal dapat
+  mempengaruhi perhitungan kehadiran.
+</Aside>
+
+---
+
+## Menonaktifkan Tahun Pelajaran
+
+### Kapan Menonaktifkan?
+
+<CardGrid>
+  <Card title="📚 Tahun Ajaran Selesai" icon="approve-check">
+    Saat berganti tahun ajaran baru, tahun lama otomatis nonaktif
+  </Card>
+
+{" "}
+
+<Card title="🔧 Maintenance" icon="setting">
+  Sementara nonaktifkan untuk perbaikan data
+</Card>
+
+  <Card title="❌ Data Error" icon="error">
+    Jika ada kesalahan setup yang perlu diperbaiki
+  </Card>
+</CardGrid>
+
+### Cara Menonaktifkan
+
+<Steps>
+
+1. **Pilih Tahun Ajaran Aktif**
+
+   Pastikan ada tahun ajaran pengganti yang siap diaktifkan
+
+2. **Klik Toggle Status**
+
+   Ubah status dari "Aktif" ke "Nonaktif"
+
+3. **Konfirmasi**
+
+   Sistem akan memperingatkan:
+
+   ```
+   Yakin nonaktifkan tahun 2024/2025?
+   Tidak ada tahun pelajaran aktif di sistem.
+
+   [Batal]  [Ya, Nonaktifkan]
+   ```
+
+4. **Tahun Pelajaran Nonaktif**
+
+   Status berubah, sistem tidak bisa mencatat presensi baru
+
+</Steps>
+
+<Aside type="caution" title="Peringatan!">
+  Sistem **tidak bisa beroperasi normal tanpa tahun pelajaran aktif**. Pastikan
+  selalu ada 1 tahun ajaran yang aktif.
+</Aside>
+
+---
+
+## Dampak Pergantian Tahun Pelajaran
+
+### Checklist Pergantian Tahun Ajaran
+
+<Steps>
+
+1. **Persiapan Data (1-2 Bulan Sebelum)**
+
+   - [ ] Buat tahun pelajaran baru
+   - [ ] Setup semester dan periode libur
+   - [ ] Siapkan data kelas baru
+   - [ ] Update jadwal presensi jika ada perubahan
+
+2. **Proses Kenaikan Kelas (Minggu Terakhir)**
+
+   - [ ] Export data siswa tahun lama
+   - [ ] Naik tingkat siswa (bulk action)
+   - [ ] Update wali kelas baru
+   - [ ] Verifikasi data siswa di kelas baru
+
+3. **Aktivasi Tahun Baru (Hari H)**
+
+   - [ ] Backup database lengkap
+   - [ ] Aktifkan tahun pelajaran baru
+   - [ ] Verifikasi semua modul berfungsi
+   - [ ] Test presensi dengan beberapa kartu
+   - [ ] Monitor log error
+
+4. **Post-Aktivasi (Minggu Pertama)**
+
+   - [ ] Kirim pengumuman ke semua user
+   - [ ] Monitor complain/issue
+   - [ ] Generate laporan test
+   - [ ] Dokumentasikan perubahan
+   - [ ] Training user jika ada fitur baru
+
+</Steps>
+
+### Modul yang Terpengaruh
+
+| Modul          | Dampak                 | Action Required            |
+| -------------- | ---------------------- | -------------------------- |
+| **Siswa**      | Naik tingkat/kelas     | Update kelas siswa         |
+| **Kelas**      | Kelas baru terbentuk   | Buat kelas tingkat baru    |
+| **Wali Kelas** | Assignment berubah     | Update assignment kelas    |
+| **Presensi**   | Data baru tahun baru   | Tidak perlu action         |
+| **Laporan**    | Filter tahun bertambah | Tidak perlu action         |
+| **Kartu RFID** | Tetap valid            | Tidak perlu action         |
+| **Jadwal**     | Mungkin berubah        | Review & update jika perlu |
+
+---
+
+## Semester Management
+
+### Konsep Semester
+
+<Tabs>
+  <TabItem label="Semester Ganjil">
+    **Periode:** Juli - Desember **Karakteristik:** - Awal tahun ajaran -
+    Orientasi siswa baru - Ujian Tengah Semester (UTS) Ganjil - Ujian Akhir
+    Semester (UAS) Ganjil - Libur semester pendek **Timeline:** ```
+    Juli-Agustus: Pembelajaran awal September-Oktober: UTS Ganjil November:
+    Pembelajaran lanjutan Desember: UAS Ganjil & Libur ```
+  </TabItem>
+
+  <TabItem label="Semester Genap">
+    **Periode:** Januari - Juni **Karakteristik:** - Lanjutan tahun ajaran -
+    Persiapan ujian akhir - Ujian Tengah Semester (UTS) Genap - Ujian Akhir
+    Semester (UAS) Genap/Kenaikan - Libur panjang **Timeline:** ```
+    Januari-Februari: Pembelajaran Maret: UTS Genap April-Mei: Pembelajaran &
+    persiapan UN/US Juni: UAS Genap & Libur panjang ```
+  </TabItem>
+</Tabs>
+
+### Setting Periode Semester
+
+<Steps>
+
+1. **Akses Setting Semester**
+
+   Edit tahun pelajaran → Tab "Semester"
+
+2. **Atur Semester Ganjil**
+
+   ```
+   Nama: Semester 1 / Ganjil
+   Mulai: 15 Juli 2024
+   Selesai: 31 Desember 2024
+   Status: Aktif
+   ```
+
+3. **Atur Semester Genap**
+
+   ```
+   Nama: Semester 2 / Genap
+   Mulai: 1 Januari 2025
+   Selesai: 30 Juni 2025
+   Status: Belum Aktif
+   ```
+
+4. **Tentukan Periode Ujian**
+
+   Tambahkan periode khusus:
+
+   - UTS Ganjil: 15-19 Oktober 2024
+   - UAS Ganjil: 10-14 Desember 2024
+   - UTS Genap: 10-14 Maret 2025
+   - UAS Genap: 5-9 Juni 2025
+
+5. **Simpan Konfigurasi**
+
+   Klik "Simpan Semester"
+
+</Steps>
+
+---
+
+## Kalender Akademik
+
+### Menambah Event Kalender
+
+<CardGrid>
+  <Card title="📅 Hari Libur" icon="calendar">
+    **Jenis Libur:** - Libur Nasional (otomatis dari sistem) - Libur Keagamaan
+    (custom) - Libur Semester - Cuti Bersama **Impact:** - Presensi tidak wajib
+    - Tidak dihitung sebagai alpha - Muncul di kalendar
+  </Card>
+
+{" "}
+
+<Card title="📝 Periode Ujian" icon="document">
+  **Jenis Ujian:** - UTS (Ujian Tengah Semester) - UAS (Ujian Akhir Semester) -
+  UN (Ujian Nasional) - Try Out **Impact:** - Jadwal khusus - Notifikasi
+  reminder - Laporan terpisah
+</Card>
+
+  <Card title="🎉 Event Sekolah" icon="star">
+    **Jenis Event:** - MPLS/MOS - Peringatan Hari Besar - Kegiatan
+    Ekstrakurikuler - Study Tour **Impact:** - Informasi di dashboard -
+    Notifikasi broadcast - Dokumentasi kegiatan
+  </Card>
+</CardGrid>
+
+---
+
+## Laporan Berdasarkan Tahun Ajaran
+
+### Filter Tahun di Laporan
+
+<Card title="📊 Multi-Year Reporting" icon="bars">
+  Sistem mendukung laporan dari berbagai tahun ajaran: **Filter Options:** -
+  Tahun Ajaran: 2023/2024, 2024/2025, dst - Semester: Ganjil / Genap - Periode
+  Custom: Pilih tanggal manual - Perbandingan Antar Tahun **Report Types:** -
+  Rekap Kehadiran per Tahun - Trend Kehadiran Multi-Year - Perbandingan Kelas
+  Antar Tahun - Statistik Keterlambatan
+</Card>
+
+### Export Historical Data
+
+<Steps>
+
+1. **Pilih Menu Laporan**
+
+   Dashboard → Laporan → Historical Report
+
+2. **Filter Tahun Ajaran**
+
+   Pilih tahun ajaran yang ingin di-export
+
+3. **Pilih Format**
+
+   - Excel: Untuk analisis lanjutan
+   - PDF: Untuk arsip cetak
+   - CSV: Untuk import ke sistem lain
+
+4. **Export Data**
+
+   Klik "Generate & Download"
+
+</Steps>
+
+---
+
+## Archive & Backup
+
+### Archiving Old Data
+
+<Card title="🗄️ Data Archiving" icon="hard-drive">
+  **Best Practice:** - Archive data tahun ajaran >3 tahun - Simpan di cold
+  storage - Backup before archive - Keep metadata accessible **Benefit:** -
+  Database lebih cepat - Fokus pada data relevan - Compliant dengan retention
+  policy - Cost-effective storage
+</Card>
+
+### Backup Strategy
+
+<Steps>
+
+1. **Daily Backup (Automated)**
+
+   - Incremental backup setiap hari
+   - Retain 7 hari terakhir
+   - Auto-delete yang lebih lama
+
+2. **Weekly Full Backup**
+
+   - Full database dump setiap Minggu
+   - Retain 4 minggu
+   - Store di multiple location
+
+3. **End-of-Year Backup**
+
+   - Backup lengkap akhir tahun ajaran
+   - Permanent storage
+   - Include semua attachment
+   - Document dengan detail
+
+</Steps>
+
+---
+
+## Troubleshooting
+
+<Tabs>
+  <TabItem label="Tidak Bisa Aktivasi">
+    **Gejala:** Tombol aktivasi disabled atau error **Penyebab:** - Tanggal
+    overlap dengan tahun aktif - Data tidak lengkap - Tahun sudah pernah aktif
+    **Solusi:** 1. Cek tanggal tidak overlap 2. Lengkapi semua field required 3.
+    Nonaktifkan tahun lama dulu 4. Refresh page dan coba lagi
+  </TabItem>
+
+{" "}
+
+<TabItem label="Presensi Salah Tahun">
+  **Gejala:** Presensi masuk ke tahun ajaran yang salah **Penyebab:** - Multiple
+  tahun aktif (bug) - Tanggal sistem salah - Cache tidak refresh **Solusi:** 1.
+  Cek hanya 1 tahun yang aktif 2. Verifikasi tanggal server 3. Clear cache
+  aplikasi 4. Manual move data jika perlu 5. Hubungi tech support
+</TabItem>
+
+  <TabItem label="Laporan Kosong">
+    **Gejala:** Laporan tidak menampilkan data **Penyebab:** - Filter tahun
+    salah - Tidak ada data di periode tersebut - Query timeout **Solusi:** 1.
+    Verifikasi filter tahun ajaran 2. Cek ada data di periode tersebut 3.
+    Perkecil range tanggal 4. Generate ulang laporan
+  </TabItem>
+</Tabs>
+
+---
+
+## Langkah Selanjutnya
+
+<CardGrid>
+  <Card title="📚 Setup Jurusan" icon="open-book">
+    Tambahkan program studi yang tersedia [Panduan Jurusan
+    →](/menu-data-master/jurusan/)
+  </Card>
+
+{" "}
+
+<Card title="🎓 Buat Kelas" icon="graduation">
+  Setup rombongan belajar [Panduan Kelas →](/menu-data-master/kelas/)
+</Card>
+
+  <Card title="🔙 Data Master" icon="left-arrow">
+    Kembali ke overview data master [Data Master →](/menu-data-master/)
+  </Card>
+</CardGrid>
+
+---
+
+<Aside type="tip" title="Pro Tips">
+  - Buat tahun ajaran baru minimal 2 bulan sebelum aktivasi - Gunakan nama
+  konsisten (format 2024/2025) - Backup data sebelum aktivasi tahun baru -
+  Komunikasikan jadwal pergantian ke semua user - Document semua perubahan dan
+  issue
+</Aside>
