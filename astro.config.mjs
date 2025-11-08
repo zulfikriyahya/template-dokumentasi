@@ -114,20 +114,20 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: "Data Master",
-          autogenerate: { directory: "data-master" },
+          label: "Menu Data Master",
+          autogenerate: { directory: "menu-data-master" },
         },
         {
-          label: "Data Pegawai",
-          autogenerate: { directory: "data-pegawai" },
+          label: "Menu Pegawai",
+          autogenerate: { directory: "menu-pegawai" },
         },
         {
-          label: "Data Siswa",
-          autogenerate: { directory: "data-siswa" },
+          label: "Menu Siswa",
+          autogenerate: { directory: "menu-siswa" },
         },
         {
-          label: "Kartu Presensi",
-          autogenerate: { directory: "kartu-presensi" },
+          label: "Menu Kartu Presensi",
+          autogenerate: { directory: "menu-kartu-presensi" },
         },
       ],
     }),
