@@ -135,7 +135,7 @@ import {
 
 ### Data Opsional
 
-<Card title="➕ Field Optional" icon="information">
+<Card title="Field Optional" icon="information">
   Field yang direkomendasikan diisi: - **Logo** - Untuk branding profesional -
   **Akreditasi** - A, B, C, atau Belum Terakreditasi - **Website** - URL website
   resmi - **Fax** - Jika ada - **Visi Misi** - Untuk dokumen lengkap - **Sejarah
@@ -183,7 +183,7 @@ import {
 ### Spesifikasi Logo
 
 <CardGrid>
-  <Card title="📐 Dimensi & Format" icon="setting">
+  <Card title="Dimensi & Format" icon="setting">
     **Ukuran Optimal:** - Primary: 500x500px (1:1) - Minimal: 300x300px -
     Format: PNG (transparan) atau JPG - Max size: 2MB **Tips:** - Gunakan vector
     untuk hasil terbaik - Background transparan untuk fleksibilitas - High
@@ -232,7 +232,7 @@ Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
 
 ### Status: Negeri
 
-<Card title="🏛️ Instansi Negeri" icon="home">
+<Card title="Instansi Negeri" icon="home">
   **Karakteristik:** - Hari kerja: **Senin - Jumat** - Weekend: Sabtu & Minggu
   libur - Mengikuti kalender pemerintah **Otomatis di Sistem:** - Jadwal
   presensi Senin-Jumat - Laporan presensi 5 hari kerja - Sabtu-Minggu otomatis
@@ -243,13 +243,29 @@ Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
 
 ### Status: Swasta
 
-<Card title="🏢 Instansi Swasta" icon="briefcase">
-  **Karakteristik:** - Hari kerja: **Senin - Sabtu** - Weekend: Hanya Minggu
-  libur - Bisa custom libur mingguan **Otomatis di Sistem:** - Jadwal presensi
-  Senin-Sabtu - Laporan presensi 6 hari kerja - Hanya Minggu otomatis libur -
-  Statistik berdasarkan 6 hari - Hari libur nasional tetap berlaku **Contoh
-  Perhitungan:** ``` 1 Bulan = ±26 hari kerja 1 Semester = ±120 hari kerja
-  Persentase = (Hadir / Total Hari Kerja) x 100% ```
+<Card title="Instansi Swasta" icon="briefcase">
+
+**Karakteristik:**
+
+- Hari kerja: **Senin - Sabtu**
+- Weekend: Hanya Minggu libur
+- Bisa custom libur mingguan
+
+**Otomatis di Sistem:**
+
+- Jadwal presensi Senin-Sabtu
+- Laporan presensi 6 hari kerja
+- Hanya Minggu otomatis libur
+- Statistik berdasarkan 6 hari
+- Hari libur nasional tetap berlaku
+
+**Contoh Perhitungan:**
+
+```
+1 Bulan = ±26 hari kerja 1 Semester = ±120 hari kerja
+Persentase = (Hadir / Total Hari Kerja) x 100%
+```
+
 </Card>
 
 ### Perbandingan Detail
@@ -265,10 +281,15 @@ Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
 | **Cuti Bersama**      | Berlaku       | Opsional     |
 
 <Aside type="caution" title="Penting!">
-  **Perubahan status instansi akan langsung mempengaruhi:** - Jadwal presensi
-  harian - Perhitungan kehadiran - Laporan statistik - Notifikasi ketidakhadiran
-  Pastikan status sudah benar dari awal! Perubahan status di tengah semester
-  akan memerlukan rekalkulasi data.
+  **Perubahan status instansi akan langsung mempengaruhi:** 
+  - Jadwal presensi harian 
+  - Perhitungan kehadiran 
+  - Laporan statistik 
+  - Notifikasi ketidakhadiran
+
+Pastikan status sudah benar dari awal! Perubahan status di tengah semester
+akan memerlukan rekalkulasi data.
+
 </Aside>
 
 ---
@@ -280,23 +301,33 @@ Meskipun status menentukan default jadwal, Anda bisa override dengan custom jadw
 ### Skenario Custom
 
 <CardGrid>
-  <Card title="Institusi Negeri dengan Sabtu Aktif" icon="calendar">
-    Beberapa sekolah negeri ada kegiatan Sabtu (ekstrakurikuler, dll) **Setup:**
-    1. Status tetap "Negeri" 2. Di menu Jadwal Presensi, tambah jadwal Sabtu 3.
-    Set jenis: "Kegiatan Khusus" 4. Tandai sebagai opsional
-  </Card>
+<Card title="Institusi Negeri dengan Sabtu Aktif" icon="calendar">
+  Beberapa sekolah negeri ada kegiatan Sabtu (ekstrakurikuler, dll) 
+  **Setup:**
+  1. Status tetap "Negeri"
+  2. Di menu Jadwal Presensi, tambah jadwal Sabtu
+  3. Set jenis: "Kegiatan Khusus"
+  4. Tandai sebagai opsional
 
-<Card title="Institusi Swasta dengan 5 Hari" icon="briefcase">
-  Beberapa sekolah swasta modern menerapkan 5 hari kerja **Setup:** 1. Status
-  tetap "Swasta" (untuk administrasi) 2. Di menu Jadwal Presensi, nonaktifkan
-  Sabtu 3. Atau set Sabtu sebagai "Libur Tetap"
 </Card>
 
-  <Card title="🕌 Libur Jumat untuk Shalat Jumat" icon="star">
-    Sekolah Islam dengan pulang lebih awal Jumat **Setup:** 1. Buat jadwal
-    khusus Jumat 2. Jam pulang lebih awal (misal: 11:00) 3. Set sebagai
-    recurring setiap Jumat
-  </Card>
+<Card title="Institusi Swasta dengan 5 Hari" icon="briefcase">
+  Beberapa sekolah swasta modern menerapkan 5 hari kerja 
+  **Setup:** 
+  1. Status tetap "Swasta" (untuk administrasi) 
+  2. Di menu Jadwal Presensi, nonaktifkan Sabtu 
+  3. Atau set Sabtu sebagai "Libur Tetap"
+
+</Card>
+
+<Card title="Libur Jumat untuk Shalat Jumat" icon="star">
+  Sekolah Islam dengan pulang lebih awal Jumat 
+  **Setup:** 
+  1. Buat jadwal khusus Jumat 
+  2. Jam pulang lebih awal (misal: 11:00) 
+  3. Set sebagai recurring setiap Jumat
+
+</Card>
 </CardGrid>
 
 ---
@@ -308,16 +339,31 @@ Sistem mendukung multi-instansi untuk yayasan dengan beberapa sekolah:
 ### Use Case
 
 <Card title="Yayasan dengan Beberapa Unit" icon="home">
-  **Contoh:** - MTs Negeri 1 Pandeglang - MA Negeri 1 Pandeglang - MI Negeri 1
-  Pandeglang **Keuntungan:** - Database terpusat - Laporan konsolidasi - User
-  management terpadu - Cost-effective **Setup:** - Setiap instansi punya data
-  terpisah - User bisa akses multiple instansi (cross-access) - Laporan bisa per
-  instansi atau gabungan
+
+**Contoh:**
+
+- MTs Negeri 1 Pandeglang
+- MA Negeri 1 Pandeglang
+- MI Negeri 1 Pandeglang
+
+**Keuntungan:**
+
+- Database terpusat
+- Laporan konsolidasi
+- User management terpadu
+- Cost-effective
+
+**Setup:**
+
+- Setiap instansi punya data terpisah
+- User bisa akses multiple instansi (cross-access)
+- Laporan bisa per instansi atau gabungan
+
 </Card>
 
 <Aside type="note">
-  Fitur multi-instansi memerlukan konfigurasi khusus. Hubungi administrator atau
-  technical support untuk setup.
+Fitur multi-instansi memerlukan konfigurasi khusus. Hubungi administrator atau technical support untuk setup.
+
 </Aside>
 
 ---
@@ -361,7 +407,7 @@ Tambahkan narasi singkat tentang:
 ## Tips Optimalisasi
 
 <CardGrid>
-  <Card title="📸 Logo Berkualitas" icon="star">
+  <Card title="Logo Berkualitas" icon="star">
     **Do:** - Gunakan logo vector (SVG/AI) - Export dengan resolution tinggi -
     Test di berbagai ukuran - Pastikan readable di hitam-putih **Don't:** - Logo
     blur atau pixelated - Background tidak transparan - Warna terlalu banyak -
@@ -468,15 +514,15 @@ Data instansi terintegrasi dengan:
     signature
   </Card>
 
-<Card title=" Kartu RFID" icon="approve-check">
+<Card title="Kartu RFID" icon="approve-check">
   - Logo di kartu - Nama institusi - Alamat singkat - Kontak support
 </Card>
 
-<Card title=" Notifikasi" icon="bell">
+<Card title="Notifikasi" icon="bell">
   - Email sender name - Signature email - WhatsApp template - SMS sender ID
 </Card>
 
-  <Card title="⚙️ Sistem" icon="setting">
+  <Card title="Sistem" icon="setting">
     - Timezone - Kalender akademik - Jadwal operasional - Hari libur default
   </Card>
 </CardGrid>
@@ -503,8 +549,11 @@ Data instansi terintegrasi dengan:
 ---
 
 <Aside type="tip" title="Pro Tips">
-  - Backup data instansi sebelum update major (logo, status) - Test perubahan
-  status di staging dulu jika memungkinkan - Update data instansi di luar jam
-  operasional - Dokumentasikan setiap perubahan dengan screenshot - Koordinasi
-  dengan semua stakeholder sebelum ubah status
+
+- Backup data instansi sebelum update major (logo, status)
+- Test perubahan status di staging dulu jika memungkinkan
+- Update data instansi di luar jam operasional
+- Dokumentasikan setiap perubahan dengan screenshot
+- Koordinasi dengan semua stakeholder sebelum ubah status
+
 </Aside>
