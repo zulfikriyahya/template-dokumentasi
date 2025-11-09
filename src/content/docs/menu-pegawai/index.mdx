@@ -6,15 +6,15 @@ hero:
   image:
     file: "../../../assets/index-pegawai.svg"
   tagline: "Kelola data pegawai dan monitoring kehadiran secara komprehensif"
-  actions:
-    - text: "Kelola Data Pegawai"
-      link: "./pegawai"
-      icon: "star"
-      variant: primary
-    - text: "Lihat Riwayat Presensi"
-      link: "./riwayat-presensi-pegawai"
-      icon: "document"
-      variant: secondary
+  # actions:
+  #   - text: "Kelola Data Pegawai"
+  #     link: "./pegawai"
+  #     icon: "star"
+  #     variant: primary
+  #   - text: "Lihat Riwayat Presensi"
+  #     link: "./riwayat-presensi-pegawai"
+  #     icon: "document"
+  #     variant: secondary
 ---
 
 import {
@@ -54,32 +54,32 @@ Menu Pegawai adalah modul lengkap untuk mengelola data kepegawaian dan monitorin
 
 **Kelola Informasi Kepegawaian**
 
-- ✅ Data personal pegawai (nama, NIP, kontak)
-- ✅ Jabatan dan struktural
-- ✅ Status kepegawaian (PNS, GTT, PTT)
-- ✅ Riwayat kepangkatan dan pendidikan
-- ✅ Upload dokumen dan foto pegawai
-- ✅ Link kartu presensi RFID
+- Data personal pegawai (nama, NIP, kontak)
+- Jabatan dan struktural
+- Status kepegawaian (PNS, GTT, PTT)
+- Riwayat kepangkatan dan pendidikan
+- Upload dokumen dan foto pegawai
+- Link kartu presensi RFID
 
 ### Monitoring Kehadiran
 
 **Tracking Presensi Harian**
 
-- 📊 Rekap kehadiran per pegawai
-- ⏰ Status: Hadir, Terlambat, Izin, Sakit, Cuti, Alpha
-- 📈 Grafik dan statistik kehadiran
-- 📅 Filter berdasarkan periode (harian/bulanan)
-- 💼 Laporan per jabatan atau unit kerja
+- Rekap kehadiran per pegawai
+- Status: Hadir, Terlambat, Izin, Sakit, Cuti, Alpha
+- Grafik dan statistik kehadiran
+- Filter berdasarkan periode (harian/bulanan)
+- Laporan per jabatan atau unit kerja
 
 ### Administrasi
 
 **Pengelolaan Administrasi Kepegawaian**
 
-- 📄 Upload dokumen penting (SK, ijazah)
+- Upload dokumen penting (SK, ijazah)
 - Manajemen kartu RFID pegawai
-- 🔄 Import/export data massal
-- 🖨️ Cetak ID card dan laporan
-- 📧 Notifikasi ke pegawai via sistem/WhatsApp
+- Import/export data massal
+- Cetak ID card dan laporan
+- Notifikasi ke pegawai via sistem/WhatsApp
 
 ---
 
@@ -158,38 +158,32 @@ Menu Pegawai adalah modul lengkap untuk mengelola data kepegawaian dan monitorin
 
 <Tabs>
   <TabItem label="Super Admin">
-    **Akses Penuh** ✅ Kelola semua data pegawai ✅ Tambah/edit/hapus pegawai ✅
-    Import/export data massal ✅ Lihat semua riwayat presensi ✅ Koreksi data
-    presensi ✅ Generate semua laporan ✅ Atur jabatan dan hak akses
+    **Akses Penuh**  Kelola semua data pegawai  Tambah/edit/hapus pegawai 
+    Import/export data massal  Lihat semua riwayat presensi  Koreksi data
+    presensi  Generate semua laporan  Atur jabatan dan hak akses
   </TabItem>
 
-{" "}
-
 <TabItem label="Operator">
-  **Akses Operasional** ✅ Tambah/edit data pegawai ✅ Upload foto pegawai ✅
-  Import/export data ✅ Lihat riwayat presensi ✅ Koreksi data presensi ✅
-  Generate laporan ❌ Tidak bisa hapus pegawai ❌ Tidak bisa atur hak akses
+  **Akses Operasional** Tambah/edit data pegawai Upload foto pegawai
+  Import/export data Lihat riwayat presensi Koreksi data presensi Generate
+  laporan Tidak bisa hapus pegawai Tidak bisa atur hak akses
 </TabItem>
-
-{" "}
 
 <TabItem label="Kepala Madrasah">
-  **Akses Monitoring** ✅ Lihat semua data pegawai ✅ Lihat semua riwayat
-  presensi ✅ Generate laporan ✅ Lihat statistik dan grafik ❌ Tidak bisa edit
-  data ❌ Tidak bisa koreksi presensi
+  **Akses Monitoring** Lihat semua data pegawai Lihat semua riwayat presensi
+  Generate laporan Lihat statistik dan grafik Tidak bisa edit data Tidak bisa
+  koreksi presensi
 </TabItem>
 
-{" "}
-
 <TabItem label="Kepala TU">
-  **Akses Administrasi** ✅ Kelola data pegawai TU ✅ Upload dokumen ✅ Lihat
-  presensi pegawai TU ✅ Generate laporan TU ⚠️ Terbatas pada unit TU saja
+  **Akses Administrasi** Kelola data pegawai TU Upload dokumen Lihat presensi
+  pegawai TU Generate laporan TU Terbatas pada unit TU saja
 </TabItem>
 
   <TabItem label="Pegawai">
-    **Akses Personal** ✅ Lihat data pribadi sendiri ✅ Update profil sendiri ✅
-    Lihat riwayat presensi sendiri ✅ Download slip gaji/presensi sendiri ❌
-    Tidak bisa lihat data pegawai lain ❌ Tidak bisa edit data orang lain
+    **Akses Personal**  Lihat data pribadi sendiri  Update profil sendiri 
+    Lihat riwayat presensi sendiri  Download slip gaji/presensi sendiri 
+    Tidak bisa lihat data pegawai lain  Tidak bisa edit data orang lain
   </TabItem>
 </Tabs>
 
@@ -270,8 +264,6 @@ graph TD
     Gaji dari APBN - Pensiun di usia 60 tahun
   </Card>
 
-{" "}
-
 <Card title="GTT (Guru Tidak Tetap)" icon="document">
   **Guru Honorer** - SK dari Kepala Madrasah - Kontrak per tahun ajaran - Gaji
   dari BOS/Komite - Dapat diangkat PNS
@@ -330,15 +322,11 @@ graph LR
     massal
   </Card>
 
-{" "}
-
 <Card title="Export Laporan Fleksibel" icon="document">
   **Multiple Format Export** - Excel (.xlsx) - untuk analisis lanjutan - PDF -
   untuk cetak dan arsip - CSV - untuk integrasi sistem lain - Custom template
   sesuai kebutuhan Cocok untuk: Pelaporan rutin, audit, evaluasi
 </Card>
-
-{" "}
 
 <Card title="Koreksi Presensi Manual" icon="star">
   **Flexibilitas Koreksi Data** - Input manual untuk izin/sakit - Koreksi
@@ -427,13 +415,9 @@ graph LR
     Review dan update data pegawai setiap semester untuk memastikan akurasi
   </Card>
 
-{" "}
-
 <Card title="Backup Rutin" icon="approve-check">
   Lakukan backup database pegawai minimal 1x per bulan ke storage eksternal
 </Card>
-
-{" "}
 
 <Card title="Validasi Import" icon="warning">
   Selalu cek preview sebelum finalisasi import untuk menghindari data duplikat
@@ -464,19 +448,19 @@ Dashboard Menu Pegawai menyediakan statistik real-time:
 
 ### Key Metrics
 
-- 👥 **Total Pegawai Aktif**: Jumlah pegawai yang masih aktif bekerja
-- 📊 **Tingkat Kehadiran**: Persentase kehadiran rata-rata per bulan
-- ⚠️ **Pegawai Alpha Hari Ini**: Alert untuk follow-up
-- 📈 **Tren Kedisiplinan**: Grafik naik/turun dibanding bulan lalu
-- 🏆 **Top Performer**: Pegawai dengan kehadiran terbaik
-- ⏰ **Rata-rata Keterlambatan**: Analisis pola keterlambatan
+- **Total Pegawai Aktif**: Jumlah pegawai yang masih aktif bekerja
+- **Tingkat Kehadiran**: Persentase kehadiran rata-rata per bulan
+- **Pegawai Alpha Hari Ini**: Alert untuk follow-up
+- **Tren Kedisiplinan**: Grafik naik/turun dibanding bulan lalu
+- **Top Performer**: Pegawai dengan kehadiran terbaik
+- **Rata-rata Keterlambatan**: Analisis pola keterlambatan
 
 ### Visual Dashboard
 
-- 📊 **Chart**: Bar chart, line chart, pie chart
-- 🗓️ **Calendar View**: Heatmap kehadiran per hari
-- 📋 **Table**: Sortable dan searchable datatable
-- 🔔 **Alert**: Real-time notification untuk anomali
+- **Chart**: Bar chart, line chart, pie chart
+- **Calendar View**: Heatmap kehadiran per hari
+- **Table**: Sortable dan searchable datatable
+- **Alert**: Real-time notification untuk anomali
 
 ---
 

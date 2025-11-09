@@ -592,7 +592,7 @@ hero:
   tagline: "Organisasi siswa dalam rombongan belajar yang terstruktur"
 ---
 
-[Konten: Pengertian kelas, cara menambah kelas dengan format X IPA 1, mengatur wali kelas, kapasitas siswa, memindahkan siswa antar kelas, menghapus kelas, hubungan dengan jurusan]
+[Konten: Pengertian kelas, cara menambah kelas dengan format VII Unggulan, mengatur wali kelas, kapasitas siswa, memindahkan siswa antar kelas, menghapus kelas, hubungan dengan jurusan]
 ```
 
 ---

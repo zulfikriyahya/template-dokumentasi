@@ -1,29 +1,1168 @@
 ---
-title: Presensi Siswa
-description: deskripsi
-# template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: "Riwayat Presensi Siswa"
+description: "Monitor dan kelola kehadiran siswa dengan notifikasi real-time ke orang tua"
+# template: splash
 # hero:
-#   tagline:
 #   image:
-#     file: ../../../assets/banner.svg
+#     file: "../../../assets/riwayat-presensi-siswa.svg"
+#   tagline: "Tracking kehadiran siswa secara real-time dengan notifikasi otomatis"
 #   actions:
-#     - text: Example Guide
-#       link: /guides/example/
-#       icon: right-arrow
-#     - text: Read the Starlight docs
-#       link: https://starlight.astro.build
-#       icon: external
-#       variant: minimal
+#     - text: "Lihat Rekap Hari Ini"
+#       link: "#rekap-harian"
+#       icon: "star"
+#       variant: primary
+#     - text: "Export Laporan"
+#       link: "#export-laporan"
+#       icon: "document"
+#       variant: secondary
 ---
 
-## Konten
+import {
+  Card,
+  CardGrid,
+  Steps,
+  Tabs,
+  TabItem,
+  Aside,
+} from "@astrojs/starlight/components";
 
-Minim commodo in ipsum nisi mollit irure elit reprehenderit ut. Deserunt sunt laboris pariatur aliquip tempor et esse amet. Tempor voluptate qui velit adipisicing voluptate occaecat et consectetur ut ut. Qui aliquip aliqua ipsum eiusmod nisi duis aliquip aliqua. Consectetur labore enim sint qui esse enim voluptate exercitation veniam tempor. Ipsum sit exercitation labore Lorem dolore eiusmod dolor magna anim nisi esse do velit. Ex deserunt amet deserunt voluptate sunt do laboris et.
+## Pengertian Riwayat Presensi Siswa
 
-Quis ullamco velit exercitation ea minim et aliquip. Excepteur ipsum deserunt proident eu cillum nostrud officia nulla ipsum ullamco. Eu fugiat ea labore laborum duis aliquip in velit velit deserunt. Sit nisi esse cupidatat veniam pariatur laboris. In sint est ea aliquip nostrud aliquip pariatur fugiat eiusmod fugiat do officia irure ipsum. Enim dolore ad qui exercitation est sunt pariatur irure excepteur.
+Riwayat Presensi Siswa adalah modul untuk monitoring, analisis, dan pelaporan kehadiran seluruh siswa madrasah. Modul ini menampilkan data presensi real-time yang tercatat melalui sistem RFID dan **otomatis mengirim notifikasi ke orang tua** melalui WhatsApp.
 
-Excepteur laborum aliqua ut quis do voluptate duis ut nulla magna fugiat ut. Sit sint do ut in ipsum. Veniam duis commodo velit cupidatat eiusmod dolor tempor ullamco sint nulla laboris. Cillum tempor officia aute aute incididunt enim occaecat consectetur voluptate. Commodo sunt pariatur ad cupidatat sint id. Proident reprehenderit irure aute mollit. Occaecat laboris tempor nulla nisi quis proident.
+<CardGrid>
+  <Card title="Real-time Monitoring" icon="rocket">
+    Pantau kehadiran siswa secara langsung saat tap kartu RFID
+  </Card>
+  <Card title="Notifikasi Orang Tua" icon="star">
+    Kirim notifikasi WhatsApp otomatis ke orang tua saat anak tap kartu
+  </Card>
+  <Card title="Multi Filter" icon="setting">
+    Filter berdasarkan periode, kelas, siswa, atau status kehadiran
+  </Card>
+  <Card title="Input Manual" icon="document">
+    Input presensi manual untuk siswa yang lupa tap atau kondisi khusus
+  </Card>
+</CardGrid>
 
-Anim est laborum pariatur id quis aute. Commodo do ipsum voluptate ullamco. Eu ea officia nulla occaecat aute officia consequat aute dolore. Commodo nostrud ad labore voluptate in exercitation laborum et minim velit. Quis tempor laborum officia do quis laborum ea. Ex commodo reprehenderit reprehenderit ullamco ut magna ullamco ad officia exercitation officia quis ea. Ad labore eu culpa aliquip et eiusmod sint ut.
+---
 
-Amet esse in minim officia amet. Dolor occaecat excepteur excepteur cillum. Veniam occaecat in eiusmod sit culpa nostrud in id aliquip mollit eu do ad. Voluptate labore proident in sit duis fugiat. Occaecat veniam adipisicing ex cillum in qui deserunt deserunt exercitation cillum consectetur culpa nisi. Aliqua esse ipsum ipsum laborum duis sit nostrud aute.
+## Melihat Rekap Presensi
+
+### Rekap Harian
+
+**Melihat kehadiran siswa hari ini**
+
+<Steps>
+
+1. **Buka Menu Riwayat Presensi**
+
+   Navigasi ke **Menu Siswa → Riwayat Presensi Siswa**
+
+2. **Dashboard Real-time**
+
+   Dashboard akan menampilkan:
+
+   - Total siswa aktif
+   - Sudah presensi: X siswa
+   - Belum presensi: Y siswa
+   - Terlambat: Z siswa
+   - Alpha: A siswa
+   - Izin/Sakit: B siswa
+
+3. **Lihat Detail Per Kelas**
+
+   Pilih kelas dari dropdown untuk melihat:
+
+   - Daftar siswa per kelas
+   - Status kehadiran masing-masing
+   - Waktu tap masuk dan pulang
+   - Foto siswa (opsional)
+
+</Steps>
+
+<Aside type="tip">
+  Dashboard akan **auto-refresh** setiap 30 detik untuk menampilkan data
+  presensi terbaru secara real-time.
+</Aside>
+
+---
+
+## Filter Berdasarkan Periode
+
+Sistem mendukung berbagai filter periode untuk analisis kehadiran.
+
+<Tabs>
+  <TabItem label="Hari Ini">
+    **Presensi Real-time Hari Ini** - Default view saat membuka halaman - Update
+    setiap siswa tap - Cocok untuk monitoring harian wali kelas **Klik**: Tab
+    **"Hari Ini"**
+  </TabItem>
+
+<TabItem label="Minggu Ini">
+  **Rekap 7 Hari Terakhir** - Senin - Sabtu (untuk madrasah swasta) atau Senin -
+  Jumat (negeri) - Tampilkan tren kehadiran mingguan - Identifikasi pola
+  keterlambatan siswa **Klik**: Tab **"Minggu Ini"**
+</TabItem>
+
+<TabItem label="Bulan Ini">
+  **Rekap Bulan Berjalan** - Dari tanggal 1 sampai hari ini - Summary: total
+  hadir, izin, sakit, alpha per siswa - Persentase kehadiran per siswa - Ranking
+  kelas berdasarkan kehadiran **Klik**: Tab **"Bulan Ini"**
+</TabItem>
+
+  <TabItem label="Custom Range">
+    **Pilih Tanggal Sendiri** - Klik **"Custom"** - Pilih tanggal mulai - Pilih
+    tanggal akhir (max 3 bulan) - Klik **"Terapkan"** Cocok untuk laporan
+    semester, triwulan, atau periode khusus untuk rapor
+  </TabItem>
+</Tabs>
+
+---
+
+## Filter Berdasarkan Kelas
+
+Wali kelas atau admin dapat memfilter presensi berdasarkan kelas.
+
+### Filter Kelas
+
+<Steps>
+
+1. Klik dropdown **"Pilih Kelas"**
+2. Pilih kelas yang diinginkan (contoh: VII Unggulan)
+3. Tabel akan menampilkan hanya siswa kelas tersebut
+
+</Steps>
+
+### Filter Multi Kelas
+
+**Bandingkan beberapa kelas sekaligus**
+
+1. Centang beberapa kelas (contoh: VII Unggulan, X Unggulan2, X Unggulan3)
+2. Klik **"Bandingkan"**
+3. Sistem tampilkan:
+   - Persentase kehadiran per kelas
+   - Grafik komparasi
+   - Kelas dengan kehadiran terbaik/terburuk
+
+<Aside type="note">
+  **Untuk Wali Kelas**: Anda hanya dapat melihat data presensi kelas binaan
+  Anda. Untuk melihat kelas lain, hubungi admin atau kepala madrasah.
+</Aside>
+
+---
+
+## Filter Berdasarkan Siswa
+
+### Filter Individual
+
+**Melihat riwayat presensi siswa tertentu**
+
+<Steps>
+
+1. Klik dropdown **"Pilih Siswa"**
+2. Ketik nama siswa di search box
+3. Pilih siswa dari hasil pencarian
+4. Tabel akan menampilkan riwayat presensi siswa tersebut
+
+</Steps>
+
+**Use Case**:
+
+- Wali kelas follow up siswa yang sering alpha
+- BK konseling siswa bermasalah
+- Orang tua cek kehadiran anak
+
+---
+
+## Status Presensi
+
+Sistem mencatat berbagai status kehadiran siswa yang lebih lengkap dibanding pegawai.
+
+### Status Kehadiran
+
+| Status         | Icon | Keterangan                                      | Warna     |
+| -------------- | ---- | ----------------------------------------------- | --------- |
+| **Hadir**      |      | Tepat waktu, tidak terlambat                    | Hijau     |
+| **Terlambat**  |      | Masuk melebihi toleransi keterlambatan          | Kuning    |
+| **Izin**       |      | Tidak masuk dengan izin resmi (surat orang tua) | Biru      |
+| **Dispensasi** |      | Izin khusus (lomba, sakit ringan, dll)          | Biru muda |
+| **Sakit**      |      | Tidak masuk karena sakit (dengan surat dokter)  | Orange    |
+| **Alpha**      |      | Tidak masuk tanpa keterangan                    | Merah     |
+| **Libur**      |      | Hari libur nasional/madrasah                    | Abu-abu   |
+
+### Detail Status
+
+<Tabs>
+  <TabItem label="Hadir & Terlambat">
+    **Kehadiran Normal dan Keterlambatan** **Hadir** : - Tap masuk sebelum
+    batas waktu - Dalam toleransi keterlambatan (biasanya 10-15 menit) - Status:
+    Hijau, tidak ada sanksi **Contoh**: - Jadwal masuk: 07:00 - Toleransi: 10
+    menit - Siswa tap: 06:55 → **Hadir**  - Siswa tap: 07:08 → **Hadir** 
+    (masih dalam toleransi) --- **Terlambat** : - Tap masuk melebihi toleransi
+    - Masih dalam batas maksimal tap - Status: Kuning, ada catatan **Contoh**: -
+    Jadwal masuk: 07:00 - Toleransi: 10 menit - Siswa tap: 07:15 → **Terlambat**
+     (5 menit lebih) **Dampak**: - Tercatat dalam rapor/catatan siswa - Jika
+    >3x terlambat dalam sebulan → Panggil orang tua - Notifikasi ke orang tua:
+    "Anak Anda terlambat 15 menit hari ini"
+  </TabItem>
+
+<TabItem label="Izin & Dispensasi">
+  **Tidak Hadir dengan Izin** **Izin** : - Tidak masuk dengan alasan yang jelas
+  - Harus ada surat izin dari orang tua - Upload surat izin ke sistem (opsional)
+  - Tidak mengurangi nilai sikap **Contoh**: - Urusan keluarga (kondangan, acara
+  keluarga) - Keperluan pribadi penting - Sakit ringan (tanpa surat dokter)
+  **Proses**: 1. Siswa/orang tua mengajukan izin via sistem atau manual 2. Wali
+  kelas approve 3. Status berubah dari "Alpha" → "Izin" --- **Dispensasi** : -
+  Izin khusus untuk kegiatan resmi - Tidak perlu surat orang tua - Approval dari
+  madrasah - Tetap dianggap "Hadir" **Contoh**: - Mewakili madrasah dalam lomba
+  - Sakit di UKS saat jam pelajaran - Dipanggil kepala madrasah - Mengikuti
+  kegiatan ekstrakurikuler
+</TabItem>
+
+  <TabItem label="Sakit & Alpha">
+    **Sakit** : - Tidak masuk karena sakit - Untuk >3 hari: perlu surat dokter
+    - Untuk 1-2 hari: surat orang tua cukup - Tidak mengurangi nilai sikap
+    **Proses**: 1. Orang tua informasikan via WhatsApp/telp ke wali kelas 2.
+    Wali kelas input manual status "Sakit" 3. Setelah sembuh, siswa serahkan
+    surat keterangan sakit 4. Admin/wali kelas upload surat ke sistem ---
+    **Alpha** : - Tidak masuk tanpa keterangan - Tidak tap sampai batas
+    maksimal - Tidak ada izin, tidak ada kabar **Kriteria**: - Batas maksimal
+    tap: 12:00 - Sampai jam 12:00 belum tap → **Alpha**  **Dampak**: -
+    Mengurangi nilai sikap di rapor - Notifikasi urgent ke orang tua: "Anak Anda
+    tidak hadir hari ini tanpa keterangan" - Jika 3x alpha dalam sebulan →
+    Panggilan orang tua wajib - Jika >7x alpha dalam semester → Sanksi sesuai
+    tata tertib
+  </TabItem>
+</Tabs>
+
+---
+
+## Notifikasi ke Orang Tua
+
+<Aside type="tip" title="Fitur Unggulan!">
+  Setiap kali siswa tap kartu RFID, sistem **otomatis mengirim notifikasi
+  WhatsApp** ke nomor HP orang tua yang terdaftar. Orang tua dapat memantau
+  kehadiran anak secara real-time.
+</Aside>
+
+### Kapan Notifikasi Terkirim?
+
+1. **Saat Tap Masuk** (Pagi)
+2. **Saat Tap Pulang** (Sore)
+3. **Saat Status Berubah** (Alpha, Izin, Sakit)
+4. **Saat Terlambat >3x** (Alert khusus)
+
+### Format Notifikasi WhatsApp
+
+**1. Notifikasi Tap Masuk (Hadir Tepat Waktu)**
+
+```
+ *PRESENSI MASUK*
+
+Assalamu'alaikum, Bapak/Ibu
+
+Anak Anda telah tiba di madrasah dengan selamat.
+
+ Nama: Ahmad Zainuddin
+ Kelas: VII Unggulan
+ Waktu: 06:55 WIB
+ Lokasi: Gate Utama
+ Status: HADIR
+
+Semoga hari ini menyenangkan!
+
+---
+MTs Negeri 1 Pandeglang
+Sistem Presensi RFID
+```
+
+**2. Notifikasi Tap Masuk (Terlambat)**
+
+```
+ *PRESENSI MASUK - TERLAMBAT*
+
+Assalamu'alaikum, Bapak/Ibu
+
+Anak Anda tiba di madrasah terlambat.
+
+ Nama: Ahmad Zainuddin
+ Kelas: VII Unggulan
+ Waktu: 07:25 WIB (Terlambat 25 menit)
+ Lokasi: Gate Utama
+ Status: TERLAMBAT
+
+Mohon perhatian orang tua agar anak berangkat
+lebih pagi besok.
+
+Keterlambatan bulan ini: 2 kali
+
+---
+MTs Negeri 1 Pandeglang
+Sistem Presensi RFID
+```
+
+**3. Notifikasi Tap Pulang**
+
+```
+ *PRESENSI PULANG*
+
+Assalamu'alaikum, Bapak/Ibu
+
+Anak Anda telah selesai KBM dan akan pulang.
+
+ Nama: Ahmad Zainuddin
+ Kelas: VII Unggulan
+ Waktu: 15:30 WIB
+ Lokasi: Gate Utama
+ Status: PULANG
+
+Harap dijemput atau pastikan anak sampai
+rumah dengan selamat.
+
+---
+MTs Negeri 1 Pandeglang
+Sistem Presensi RFID
+```
+
+**4. Notifikasi Alpha (Tidak Hadir)**
+
+```
+ *ALERT: TIDAK HADIR*
+
+Assalamu'alaikum, Bapak/Ibu
+
+Anak Anda TIDAK HADIR hari ini tanpa keterangan.
+
+ Nama: Ahmad Zainuddin
+ Kelas: VII Unggulan
+ Tanggal: 15 Januari 2025
+ Status: ALPHA (Tidak Hadir Tanpa Keterangan)
+
+ PENTING:
+- Anak tidak tap kartu sampai pukul 12:00
+- Tidak ada pemberitahuan izin/sakit
+- Mohon segera konfirmasi keberadaan anak
+
+Jika anak sakit/berhalangan, segera hubungi:
+📞 Wali Kelas: 0812-3456-7890
+
+---
+MTs Negeri 1 Pandeglang
+Sistem Presensi RFID
+```
+
+**5. Notifikasi Terlambat Berulang**
+
+```
+ *PERINGATAN: SERING TERLAMBAT*
+
+Assalamu'alaikum, Bapak/Ibu
+
+Kami informasikan bahwa:
+
+ Nama: Ahmad Zainuddin
+ Kelas: VII Unggulan
+ Keterlambatan bulan ini: 4 kali
+
+Tanggal terlambat:
+- 10 Jan: 15 menit
+- 12 Jan: 20 menit
+- 15 Jan: 10 menit
+- 17 Jan: 25 menit
+
+Mohon perhatian orang tua untuk memastikan
+anak berangkat tepat waktu.
+
+Jika terus terlambat, akan ada pemanggilan
+orang tua ke madrasah.
+
+Terima kasih atas kerjasamanya.
+
+---
+Wali Kelas VII Unggulan
+MTs Negeri 1 Pandeglang
+```
+
+### Syarat Notifikasi Terkirim
+
+<CardGrid>
+  <Card title="Nomor Terdaftar" icon="approve-check">
+    Orang tua harus memiliki nomor WhatsApp terdaftar di data siswa
+  </Card>
+
+<Card title="Nomor Aktif" icon="star">
+  Nomor WhatsApp harus aktif dan tidak diblokir
+</Card>
+
+<Card title="Koneksi Gateway" icon="rocket">
+  Sistem WhatsApp Gateway madrasah dalam kondisi online
+</Card>
+
+  <Card title="Siswa Tap" icon="document">
+    Siswa harus tap kartu RFID di reader untuk trigger notifikasi
+  </Card>
+</CardGrid>
+
+---
+
+## Koreksi Data Presensi
+
+Untuk kasus lupa tap, error sistem, atau kondisi khusus, wali kelas/admin dapat melakukan koreksi manual.
+
+### Kapan Perlu Koreksi?
+
+<CardGrid>
+  <Card title="Lupa Tap" icon="warning">
+    Siswa hadir tapi lupa tap kartu RFID
+  </Card>
+
+<Card title="Kartu Rusak" icon="star">
+  Kartu RFID tidak berfungsi, siswa tidak bisa tap
+</Card>
+
+<Card title="Dispensasi" icon="rocket">
+  Siswa mewakili madrasah dalam lomba/kegiatan
+</Card>
+
+  <Card title="Sakit di UKS" icon="document">
+    Siswa sakit saat jam pelajaran, tap masuk tapi pulang awal
+  </Card>
+</CardGrid>
+
+### Cara Koreksi Data
+
+<Steps>
+
+1.  **Buka Detail Presensi**
+
+    Cari tanggal dan siswa yang akan dikoreksi
+
+2.  **Klik Tombol Edit**
+
+    Klik ikon **Edit** (pensil) pada row presensi tersebut
+
+3.  **Pilih Jenis Koreksi**
+
+        <Tabs>
+
+        <TabItem label="Input Waktu Manual">
+          **Input Jam Masuk/Pulang** - Pilih: "Input Manual" - Isi waktu masuk
+          (contoh: 07:00) - Isi waktu pulang (contoh: 15:30) - Isi alasan koreksi
+          (wajib): "Lupa tap kartu" - Upload bukti (opsional): foto siswa di kelas
+        </TabItem>
+
+        <TabItem label="Ubah Status">
+          **Ganti Status Kehadiran** - Pilih: "Ubah Status" - Pilih status baru:
+          Izin/Sakit/Dispensasi - Isi alasan (wajib): "Sakit demam" - Upload bukti
+          (opsional): surat dokter/surat orang tua
+        </TabItem>
+
+        <TabItem label="Hapus Presensi">
+
+    **Batalkan Presensi Salah** - Pilih: "Hapus Presensi" - Konfirmasi
+    penghapusan - Isi alasan (wajib): "Tap kartu tidak sengaja/double tap"
+    Presensi akan dihapus dan status kembali "Belum Presensi"
+
+        </TabItem>
+
+        </Tabs>
+
+4.  **Simpan Koreksi**
+
+    Klik **"Simpan"**, sistem akan:
+
+    - Catat perubahan di log audit
+    - Update status presensi
+    - Kirim notifikasi update ke orang tua (opsional)
+
+</Steps>
+
+<Aside type="caution" title="Audit Trail">
+Semua koreksi data presensi akan **tercatat dalam log** yang mencakup:
+- Siapa yang melakukan koreksi (wali kelas/admin)
+- Kapan koreksi dilakukan
+- Data sebelum dan sesudah koreksi
+- Alasan koreksi
+
+Log ini penting untuk transparansi dan audit oleh kepala madrasah.
+
+</Aside>
+
+---
+
+## Input Manual Presensi
+
+Untuk siswa yang tidak bisa tap kartu (lupa/kartu rusak), wali kelas dapat input manual.
+
+### Cara Input Manual
+
+<Steps>
+
+1. **Buka Form Input Manual**
+
+   Klik button **"+ Input Manual"** di halaman Riwayat Presensi
+
+2. **Pilih Siswa**
+
+   - Pilih kelas terlebih dahulu
+   - Pilih siswa dari dropdown
+   - Atau ketik nama siswa di search
+
+3. **Pilih Status Presensi**
+
+   - **Hadir**: Input waktu masuk & pulang manual
+   - **Izin**: Upload surat izin dari orang tua
+   - **Sakit**: Upload surat keterangan sakit
+   - **Dispensasi**: Pilih alasan dispensasi
+
+4. **Isi Detail**
+
+   - Tanggal presensi
+   - Waktu masuk (jika status Hadir)
+   - Waktu pulang (jika status Hadir)
+   - Alasan/keterangan (wajib)
+   - Upload bukti (opsional)
+
+5. **Simpan**
+
+   Klik **"Simpan"**, sistem akan:
+
+   - Catat presensi manual di database
+   - Tandai sebagai "Input Manual" (bukan dari RFID)
+   - Log aktivitas
+   - Notifikasi ke orang tua (opsional)
+
+</Steps>
+
+<Aside type="note">
+  Presensi yang di-input manual akan ditandai dengan icon (pensil) di tabel
+  untuk membedakan dengan presensi RFID otomatis.
+</Aside>
+
+---
+
+## Export Laporan Presensi
+
+Generate laporan kehadiran siswa untuk keperluan rapor, orang tua, atau kepala madrasah.
+
+### Format Export
+
+<Tabs>
+  <TabItem label="Excel (.xlsx)">
+    **Microsoft Excel - Rekomendasi** **Kelebihan**: - Dapat diedit dan analisis
+    lanjutan - Support formula dan pivot table - Grafik kehadiran otomatis **Isi
+    Laporan**: - Sheet 1: Data presensi detail - Sheet 2: Summary per siswa
+    (untuk rapor) - Sheet 3: Summary per kelas - Sheet 4: Grafik kehadiran **Use
+    Case**: Analisis data, input rapor, pelaporan ke atasan
+  </TabItem>
+
+<TabItem label="PDF">
+  **Portable Document Format** **Kelebihan**: - Siap cetak dan distribusi ke
+  orang tua - Layout rapi dan profesional - Tidak dapat diedit (final) **Isi
+  Laporan**: - Header: Logo, judul, periode, kelas - Body: Tabel presensi per
+  siswa - Summary: Persentase kehadiran - Footer: Tanda tangan wali kelas **Use
+  Case**: Laporan ke orang tua, arsip, dokumentasi resmi
+</TabItem>
+
+  <TabItem label="CSV">
+    **Comma-Separated Values** **Kelebihan**: - Format universal, ringan -
+    Integrasi dengan aplikasi rapor - Mudah di-import **Isi Laporan**: - Plain
+    text dengan delimiter koma - Hanya data, tidak ada formatting **Use Case**:
+    Import ke aplikasi rapor e-Raport
+  </TabItem>
+</Tabs>
+
+### Cara Export
+
+<Steps>
+
+1. **Pilih Filter**
+
+   Tentukan data yang akan di-export:
+
+   - Periode waktu (harian/mingguan/bulanan/semester)
+   - Kelas (satu kelas atau semua kelas)
+   - Siswa (semua atau pilihan)
+   - Status kehadiran (semua atau filter tertentu)
+
+2. **Klik Tombol Export**
+
+   Klik button **"Export Laporan"** di pojok kanan atas
+
+3. **Pilih Format**
+
+   Pilih format yang diinginkan:
+
+   - Excel (recommended untuk analisis)
+   - PDF (untuk distribusi ke orang tua)
+   - CSV (untuk integrasi e-Raport)
+
+4. **Customize Layout** (Untuk PDF)
+
+   - Pilih orientasi: Portrait / Landscape
+   - Tampilkan/sembunyikan kolom tertentu
+   - Include grafik kehadiran atau tidak
+   - Include foto siswa atau tidak
+
+5. **Generate & Download**
+
+   Klik **"Generate"**, tunggu proses selesai, lalu **Download**
+
+</Steps>
+
+<Aside type="tip">
+  Untuk laporan bulanan yang dikirim ke orang tua, Anda dapat membuat **Template
+  Laporan** yang tersimpan sehingga tidak perlu setting ulang setiap bulan.
+</Aside>
+
+---
+
+## Statistik Kehadiran Siswa
+
+Dashboard menyediakan berbagai statistik untuk analisis kehadiran per siswa dan per kelas.
+
+### Key Metrics Per Siswa
+
+<CardGrid>
+  <Card title="Persentase Kehadiran" icon="star">
+    **Formula**: (Total Hadir / Total Hari Kerja) x 100%
+    
+    -  >95%: Excellent (Nilai A)
+    -  90-95%: Good (Nilai B)
+    -  80-90%: Fair (Nilai C)
+    -  < 80%: Poor (Perlu perhatian khusus)
+    
+    Dimasukkan ke nilai sikap di rapor
+  </Card>
+  
+  <Card title="Frekuensi Keterlambatan" icon="warning">
+    **Jumlah Terlambat per Bulan**
+    
+    - 0-1x: Baik
+    - 2-3x: Cukup (Peringatan lisan)
+    - >3x: Buruk (Panggil orang tua)
+    
+    Dimasukkan ke catatan kedisiplinan
+  </Card>
+  
+  <Card title="Alpha Rate" icon="document">
+    **Persentase Alpha**
+    
+    Formula: (Total Alpha / Total Hari Kerja) x 100%
+    
+    - 0%: Sempurna
+    - >5%: Bermasalah (Konseling BK)
+    - >10%: Sangat bermasalah (Panggil orang tua wajib)
+  </Card>
+  
+  <Card title="Pola Ketidakhadiran" icon="approve-check">
+    **Analisis Izin/Sakit**
+    
+    - Izin: Frekuensi izin per bulan
+    - Sakit: Frekuensi sakit (kesehatan siswa)
+    - Pola: Sering hari Senin? Jumat? (indikasi bolos)
+  </Card>
+</CardGrid>
+
+### Key Metrics Per Kelas
+
+| Metric                      | Cara Hitung                          | Target    |
+| --------------------------- | ------------------------------------ | --------- |
+| **Tingkat Kehadiran Kelas** | Rata-rata % kehadiran semua siswa    | >92%      |
+| **Ranking Kehadiran**       | Posisi kelas dibanding kelas lain    | Top 5     |
+| **Siswa Bermasalah**        | Jumlah siswa dengan kehadiran < 80%  | < 3 siswa |
+| **Keterlambatan Rata-rata** | Total menit terlambat / jumlah siswa | < 5 menit |
+
+---
+
+## Grafik Kehadiran per Kelas
+
+Visualisasi data kehadiran untuk memudahkan analisis tren dan komparasi antar kelas.
+
+### Jenis Grafik
+
+<Tabs>
+  <TabItem label="Line Chart">
+    **Grafik Garis - Tren Waktu**
+    
+    Menampilkan tren kehadiran kelas dari hari ke hari atau bulan ke bulan
+    
+    **X-axis**: Tanggal/Bulan
+    **Y-axis**: Persentase kehadiran
+    
+    **Use Case**: 
+    - Identifikasi pola (kehadiran turun saat mendekati libur?)
+    - Analisis tren jangka panjang
+    - Komparasi semester 1 vs semester 2
+  </TabItem>
+  
+  <TabItem label="Bar Chart">
+    **Grafik Batang - Perbandingan Kelas**
+    
+    Membandingkan kehadiran antar kelas dalam satu periode
+    
+    **X-axis**: Nama kelas (VII Unggulan, X Unggulan2, X Unggulan3)
+    **Y-axis**: Persentase kehadiran
+    
+    **Use Case**: 
+    - Ranking kelas berdasarkan kehadiran
+    - Identifikasi kelas yang perlu perhatian
+    - Kompetisi kehadiran antar kelas
+  </TabItem>
+  <TabItem label="Pie Chart">
+    **Grafik Lingkaran - Komposisi Status**
+
+    Menampilkan proporsi status kehadiran dalam satu kelas
+
+    **Segmen**:
+    -  Hadir: X%
+    -  Terlambat: Y%
+    -  Izin: Z%
+    -  Sakit: A%
+    -  Alpha: B%
+
+    **Use Case**:
+    - Overview cepat komposisi kehadiran
+    - Identifikasi masalah dominan (alpha tinggi?)
+    - Presentasi ke orang tua/kepala madrasah
+
+  </TabItem>
+  
+  <TabItem label="Heatmap">
+    **Peta Panas - Pola Kehadiran Harian**
+    
+    Menampilkan intensitas kehadiran per hari dalam kalender
+    
+    **Warna**:
+    -  Hijau tua: Kehadiran >95%
+    -  Kuning: Kehadiran 80-95%
+    -  Merah: Kehadiran < 80%
+    -  Putih: Hari libur
+    
+    **Use Case**: 
+    - Identifikasi hari dengan kehadiran rendah
+    - Pola absen (Senin/Jumat sering rendah?)
+    - Perencanaan kegiatan madrasah
+  </TabItem>
+</Tabs>
+
+---
+
+## Laporan Siswa Bermasalah
+
+Sistem otomatis mendeteksi siswa dengan pola kehadiran bermasalah untuk tindak lanjut wali kelas atau BK.
+
+### Kriteria Siswa Bermasalah
+
+<CardGrid>
+  <Card title="Kehadiran Rendah" icon="warning">
+    **Persentase hadir < 80%**
+    
+    - Kategori: Merah 
+    - Tindakan: Konseling BK + Panggil orang tua
+    - Follow up: Weekly monitoring
+  </Card>
+  
+  <Card title="Sering Terlambat" icon="star">
+    **Terlambat >5x per bulan**
+    
+    - Kategori: Kuning 
+    - Tindakan: Peringatan tertulis + Panggil orang tua
+    - Follow up: Cek penyebab (jarak rumah jauh?)
+  </Card>
+  
+  <Card title="Alpha Tinggi" icon="document">
+    **Alpha >3x per bulan**
+    
+    - Kategori: Merah 
+    - Tindakan: Panggil orang tua WAJIB + Home visit
+    - Follow up: Cek kondisi keluarga
+  </Card>
+  
+  <Card title="Pola Mencurigakan" icon="rocket">
+    **Sering absen hari tertentu**
+    
+    - Contoh: Selalu alpha/izin hari Senin
+    - Kategori: Orange 
+    - Tindakan: Investigasi + Konseling
+    - Follow up: Validasi alasan absen
+  </Card>
+</CardGrid>
+
+### Cara Melihat Laporan
+
+<Steps>
+
+1. **Buka Menu Laporan Bermasalah**
+
+   Klik tab **"Siswa Bermasalah"** di dashboard Riwayat Presensi
+
+2. **Filter Berdasarkan Kategori**
+
+   - Kehadiran Rendah
+   - Sering Terlambat
+   - Alpha Tinggi
+   - Pola Mencurigakan
+   - Semua Kategori
+
+3. **Lihat Detail Siswa**
+
+   Tabel akan menampilkan:
+
+   - Nama siswa & kelas
+   - Kategori masalah
+   - Statistik detail (% kehadiran, jumlah alpha, dll)
+   - Status follow up (sudah ditindak lanjuti atau belum)
+   - Tanggal terakhir update
+
+4. **Tandai Tindak Lanjut**
+
+   - Klik tombol **"Tindak Lanjut"** pada row siswa
+   - Isi form tindakan yang sudah dilakukan:
+     - Konseling tanggal X
+     - Panggilan orang tua tanggal Y
+     - Kesepakatan: siswa berjanji X, Y, Z
+   - Upload dokumen pendukung (berita acara, foto pertemuan)
+   - Simpan
+
+5. **Export Laporan**
+
+   Export laporan siswa bermasalah untuk:
+
+   - Kepala madrasah (evaluasi bulanan)
+   - Rapat wali kelas
+   - Dokumentasi BK
+
+</Steps>
+
+<Aside type="caution" title="Privacy & Confidentiality">
+Data siswa bermasalah bersifat **rahasia** dan hanya dapat diakses oleh:
+- Wali kelas yang bersangkutan
+- BK (Bimbingan Konseling)
+- Kepala madrasah
+- Admin sistem
+
+Jangan bagikan data ini ke pihak tidak berwenang untuk menjaga privasi siswa.
+
+</Aside>
+
+---
+
+## Rekap Presensi per Mata Pelajaran
+
+Untuk guru mata pelajaran, sistem juga menyediakan rekap kehadiran siswa per mapel (jika terintegrasi dengan jadwal pelajaran).
+
+### Cara Melihat Rekap per Mapel
+
+<Steps>
+
+1. **Login sebagai Guru Mapel**
+
+   Sistem akan menampilkan menu khusus guru
+
+2. **Pilih Mata Pelajaran**
+
+   Dropdown: Pilih mapel yang Anda ajar (contoh: Matematika)
+
+3. **Pilih Kelas**
+
+   Pilih kelas yang Anda ajar mapel tersebut (contoh: VII Unggulan)
+
+4. **Lihat Rekap**
+
+   Sistem akan menampilkan:
+
+   - Total pertemuan (misal: 12 pertemuan)
+   - Kehadiran per siswa per pertemuan
+   - Persentase kehadiran per siswa khusus mapel ini
+   - Siswa dengan kehadiran < 75% (tidak boleh ikut ujian)
+
+</Steps>
+
+<Aside type="note">
+**Perhatian**: Jika kehadiran siswa di mata pelajaran tertentu < 75%, siswa tersebut **tidak diizinkan mengikuti ujian akhir** sesuai aturan madrasah. Guru mapel harus memberikan tugas pengganti.
+</Aside>
+
+---
+
+## Integrasi dengan Modul Lain
+
+Modul Riwayat Presensi Siswa terintegrasi dengan modul lain di sistem SIAKAD.
+
+### Integrasi Modul
+
+<CardGrid>
+  <Card title="Modul Rapor" icon="document">
+    **Data kehadiran otomatis masuk rapor**
+    
+    - Nilai sikap: Persentase kehadiran
+    - Catatan: Frekuensi terlambat
+    - Sanksi: Jika alpha >7x
+    
+    Guru tidak perlu input manual
+  </Card>
+  
+  <Card title="Modul BK" icon="star">
+    **Siswa bermasalah auto-masuk sistem BK**
+    
+    - BK dapat langsung follow up
+    - Histori konseling tercatat
+    - Tracking progress perbaikan
+  </Card>
+  
+  <Card title="Modul Jadwal" icon="rocket">
+    **Presensi per mata pelajaran**
+    
+    - Guru dapat cek kehadiran per mapel
+    - Validasi syarat ikut ujian (75%)
+    - Rekap pertemuan per semester
+  </Card>
+  
+  <Card title="Modul Keuangan" icon="approve-check">
+    **Potongan uang jajan/SPP**
+    
+    - Jika alpha >5x → Potongan uang jajan
+    - Jika kehadiran < 70% → Pemanggilan orang tua
+    - Integrasi reward untuk siswa rajin
+  </Card>
+</CardGrid>
+
+---
+
+## FAQ - Pertanyaan Umum
+
+<details>
+<summary>**Bagaimana jika siswa lupa bawa kartu RFID?**</summary>
+
+Siswa harus melapor ke wali kelas atau petugas presensi. Wali kelas akan **input manual** presensi siswa tersebut dengan status "Hadir" dan keterangan "Lupa bawa kartu". Siswa harus membawa kartu keesokan harinya.
+
+Jika sering lupa (>3x), akan ada teguran tertulis dan panggilan orang tua.
+
+</details>
+
+<details>
+<summary>**Bagaimana jika kartu RFID rusak atau hilang?**</summary>
+
+Siswa harus segera melapor ke admin atau TU untuk **penerbitan kartu baru**. Sementara menunggu kartu baru, presensi di-input manual oleh wali kelas.
+
+**Biaya penggantian kartu rusak/hilang**: Rp 25.000 (kebijakan dapat berbeda per madrasah).
+
+</details>
+
+<details>
+<summary>**Apakah orang tua bisa cek presensi anak secara online?**</summary>
+
+Ya! Orang tua dapat mengakses **Portal Orang Tua** di website madrasah atau aplikasi mobile. Login menggunakan username & password yang diberikan saat pendaftaran.
+
+Orang tua dapat melihat:
+
+- Riwayat presensi anak (harian/mingguan/bulanan)
+- Status kehadiran real-time
+- Notifikasi WhatsApp otomatis saat anak tap
+- Grafik kehadiran dan laporan bulanan
+
+</details>
+
+<details>
+<summary>**Bagaimana cara mengajukan izin untuk anak?**</summary>
+
+**Cara 1 - Via Portal Orang Tua** (Recommended):
+
+1. Login ke Portal Orang Tua
+2. Klik menu **"Pengajuan Izin"**
+3. Isi form: tanggal, alasan, upload surat (opsional)
+4. Submit → Menunggu approval wali kelas
+
+**Cara 2 - WhatsApp ke Wali Kelas**:
+Kirim pesan: "Assalamu'alaikum Pak/Bu, saya [Nama Orang Tua], orang tua [Nama Siswa] kelas [X]. Anak saya izin tidak masuk hari ini karena [alasan]. Terima kasih."
+
+**Cara 3 - Surat Tertulis**:
+Siswa membawa surat izin dari orang tua ke wali kelas saat kembali masuk.
+
+</details>
+
+<details>
+<summary>**Apakah notifikasi WhatsApp dikenakan biaya?**</summary>
+
+**Tidak ada biaya tambahan** untuk orang tua. Notifikasi WhatsApp gratis karena menggunakan sistem WhatsApp Gateway madrasah.
+
+Pastikan nomor WhatsApp orang tua yang terdaftar di sistem adalah nomor yang aktif dan sering digunakan.
+
+</details>
+
+<details>
+<summary>**Bagaimana jika notifikasi tidak masuk ke WhatsApp orang tua?**</summary>
+
+**Penyebab Umum**:
+
+1.  Nomor WhatsApp tidak terdaftar/salah di sistem
+2.  Nomor WhatsApp tidak aktif atau di-blokir
+3.  WhatsApp Gateway madrasah sedang offline/maintenance
+4.  HP orang tua tidak terkoneksi internet
+
+**Solusi**:
+
+- Cek nomor WhatsApp di data siswa, pastikan benar dan aktif
+- Hubungi admin untuk update nomor jika perlu
+- Test notifikasi dengan klik "Test Notifikasi" di Portal Orang Tua
+- Jika masih bermasalah, hubungi admin IT madrasah
+
+</details>
+
+<details>
+<summary>**Bagaimana cara melihat siswa yang belum presensi hari ini?**</summary>
+
+<Steps>
+
+1. Buka halaman **Riwayat Presensi Siswa**
+2. Klik tab **"Hari Ini"**
+3. Klik filter **"Belum Presensi"** di bagian atas
+4. Sistem akan menampilkan daftar siswa yang belum tap sampai saat ini
+
+</Steps>
+
+Wali kelas dapat follow up siswa yang belum tap dengan:
+
+- Cek ke kelas apakah siswa hadir tapi lupa tap
+- Telepon orang tua jika sampai jam 09:00 belum tap
+- Input manual jika siswa hadir tapi lupa tap
+
+</details>
+
+<details>
+<summary>**Apakah data presensi aman dan tidak bisa diubah sembarangan?**</summary>
+
+**Ya, sangat aman!** Sistem memiliki fitur:
+
+1. **Role-based Access**: Hanya wali kelas, admin, dan kepala madrasah yang bisa edit
+2. **Audit Log**: Semua perubahan tercatat (siapa, kapan, apa yang diubah)
+3. **Approval System**: Koreksi data butuh approval dari kepala madrasah (untuk data sensitif)
+4. **Backup Otomatis**: Data di-backup setiap hari ke cloud storage
+5. **Immutable RFID Data**: Data tap dari RFID tidak bisa dihapus, hanya bisa ditambah keterangan
+
+Jadi, data presensi **terlindungi** dan **accountable**.
+
+</details>
+
+---
+
+## Tips & Best Practices
+
+<Aside type="tip" title="Tips untuk Wali Kelas">
+
+**1. Monitoring Harian**
+
+- Cek dashboard presensi setiap pagi jam 08:00
+- Identifikasi siswa yang belum tap, telepon orang tua
+- Input manual untuk siswa lupa bawa kartu (max 2 siswa/hari)
+
+**2. Follow Up Mingguan**
+
+- Setiap Jumat, review kehadiran minggu ini
+- Identifikasi siswa dengan pola terlambat berulang
+- Buat catatan untuk konseling BK jika perlu
+
+**3. Laporan Bulanan**
+
+- Generate laporan kehadiran akhir bulan
+- Kirim ke orang tua via WhatsApp atau hardcopy
+- Identifikasi siswa bermasalah untuk rapat wali kelas
+
+**4. Komunikasi Proaktif**
+
+- Jangan tunggu sampai alpha >7x baru panggil orang tua
+- Telepon orang tua jika ada pola aneh (misal: 3x alpha berturut-turut)
+- Apresiasi siswa dengan kehadiran 100% di akhir bulan
+
+</Aside>
+
+<Aside type="tip" title="Tips untuk Admin">
+
+**1. Maintenance Rutin**
+
+- Cek koneksi RFID reader setiap pagi
+- Pastikan WhatsApp Gateway online
+- Backup database setiap Minggu
+
+**2. Training User**
+
+- Training wali kelas baru cara input manual & koreksi data
+- Training guru cara cek presensi per mapel
+- Buat video tutorial untuk orang tua
+
+**3. Monitoring Sistem**
+
+- Cek log error jika ada notifikasi yang gagal terkirim
+- Pastikan tidak ada siswa dengan kartu duplikat/rusak
+- Update firmware RFID reader secara berkala
+
+</Aside>
+
+<Aside type="tip" title="Tips untuk Orang Tua">
+
+**1. Monitoring Aktif**
+
+- Cek notifikasi WhatsApp setiap hari
+- Login ke Portal Orang Tua minimal 1x per minggu
+- Review laporan bulanan yang dikirim wali kelas
+
+**2. Komunikasi Terbuka**
+
+- Jika anak izin/sakit, informasikan ke wali kelas ASAP
+- Jangan tunggu sampai anak alpha baru merespon panggilan
+- Ajukan pertanyaan jika ada data presensi yang tidak sesuai
+
+**3. Dukung Kedisiplinan**
+
+- Pastikan anak bawa kartu RFID setiap hari
+- Bantu anak berangkat tepat waktu (tidak terlambat)
+- Apresiasi anak jika kehadiran 100% dalam sebulan
+
+</Aside>
+
+---
+
+## Troubleshooting
+
+<CardGrid>
+  <Card title="Kartu Tidak Terbaca" icon="warning">
+    **Penyebab**: Kartu rusak, reader error, atau jarak terlalu jauh **Solusi**:
+    - Coba tap ulang dengan jarak lebih dekat - Bersihkan kartu dari kotoran -
+    Lapor ke admin jika tetap error - Sementara: Input manual oleh wali kelas
+  </Card>
+
+<Card title="Notifikasi Tidak Masuk" icon="star">
+  **Penyebab**: Nomor salah, WA Gateway offline, atau internet HP mati
+  **Solusi**: - Cek nomor WA di data siswa - Test notifikasi via Portal Orang
+  Tua - Hubungi admin untuk cek Gateway - Pastikan HP terkoneksi internet
+</Card>
+
+<Card title="Data Presensi Salah" icon="document">
+  **Penyebab**: Double tap, tap tidak sengaja, atau siswa tukar kartu
+  **Solusi**: - Wali kelas edit/hapus data yang salah - Isi alasan koreksi
+  dengan jelas - Log akan tercatat untuk audit - Edukasi siswa untuk tidak tukar
+  kartu
+</Card>
+
+  <Card title="Export Laporan Error" icon="rocket">
+    **Penyebab**: Data terlalu besar, koneksi timeout, atau server sibuk
+    **Solusi**: - Kurangi range tanggal export (max 3 bulan) - Filter hanya
+    kelas tertentu - Coba di jam yang tidak sibuk (malam) - Hubungi admin jika
+    tetap error
+  </Card>
+</CardGrid>
+
+---
+
+## Penutup
+
+Modul **Riwayat Presensi Siswa** adalah jantung dari sistem monitoring kehadiran di madrasah. Dengan fitur notifikasi WhatsApp real-time, orang tua dapat memantau kehadiran anak secara langsung tanpa perlu menunggu laporan bulanan.
+
+**Manfaat Utama**:
+
+- Transparansi kehadiran siswa ke orang tua
+- Deteksi dini siswa bermasalah
+- Efisiensi administrasi wali kelas
+- Data akurat untuk nilai rapor
+- Komunikasi proaktif madrasah-orang tua

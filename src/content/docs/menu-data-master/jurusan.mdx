@@ -28,12 +28,12 @@ import {
 
 ## Pengertian Jurusan
 
-**Jurusan** atau Program Studi adalah kelompok bidang keahlian khusus yang ditawarkan kepada siswa, biasanya dimulai dari kelas X (untuk SMA/MA/SMK). Jurusan membantu mengorganisir siswa berdasarkan minat dan bakat akademiknya.
+**Jurusan** atau Program Studi adalah kelompok bidang keahlian khusus yang ditawarkan kepada siswa, biasanya dimulai dari kelas VII (untuk SMA/MA/SMK). Jurusan membantu mengorganisir siswa berdasarkan minat dan bakat akademiknya.
 
 ### Contoh Jurusan
 
 <CardGrid>
-  <Card title="🔬 IPA (Ilmu Pengetahuan Alam)" icon="star">
+  <Card title="🔬 Unggulan(Ilmu Pengetahuan Alam)" icon="star">
     Fokus pada sains dan matematika **Mata Pelajaran Khas:** - Matematika
     Peminatan - Fisika - Kimia - Biologi
   </Card>
@@ -92,7 +92,7 @@ import {
 
    ```
    Deskripsi:
-   Program IPA mempelajari ilmu sains dan matematika
+   Program Unggulanmempelajari ilmu sains dan matematika
    dengan fokus pada pengembangan kemampuan analitis,
    logika, dan pemecahan masalah saintifik.
    ```
@@ -117,9 +117,9 @@ import {
 </Steps>
 
 <Aside type="tip" title="Naming Convention">
-  **Format yang direkomendasikan:** - Kode: ALL CAPS, no space (contoh: IPA,
-  IPS, AGM) - Nama: Title Case (contoh: Ilmu Pengetahuan Alam) - Singkatan: ALL
-  CAPS (contoh: IPA)
+  **Format yang direkomendasikan:** - Kode: ALL CAPS, no space (contoh:
+  Unggulan, IPS, AGM) - Nama: Title Case (contoh: Ilmu Pengetahuan Alam) -
+  Singkatan: ALL CAPS (contoh: IPA)
 </Aside>
 
 ---
@@ -147,7 +147,7 @@ import {
 
   <TabItem label="Custom">
     Anda bisa membuat kode custom sesuai kebutuhan: **Contoh:** - **MIPA**:
-    Matematika & IPA - **IIS**: Ilmu-Ilmu Sosial - **IBB**: Ilmu Bahasa & Budaya
+    Matematika & Unggulan- **IIS**: Ilmu-Ilmu Sosial - **IBB**: Ilmu Bahasa & Budaya
     - **IPK**: Ilmu Pengetahuan Keagamaan **Rules:** - Maksimal 10 karakter -
     Hindari karakter khusus - Harus unique
   </TabItem>
@@ -157,14 +157,14 @@ import {
 
 <CardGrid>
   <Card title="Good" icon="approve-check">
-    **Kode:** - IPA ✓ - TKJ ✓ - BHS ✓ **Nama:** - Ilmu Pengetahuan Alam ✓ -
+    **Kode:** - Unggulan✓ - TKJ ✓ - BHS ✓ **Nama:** - Ilmu Pengetahuan Alam ✓ -
     Teknik Komputer & Jaringan ✓ - Bahasa dan Budaya ✓
   </Card>
 
   <Card title="Bad" icon="error">
-    **Kode:** - ipa (lowercase) ✗ - IPA-2024 (dengan tahun) ✗ - I.P.A. (dengan
-    titik) ✗ **Nama:** - ipa (lowercase) ✗ - IPA Kelas X (dengan tingkat) ✗ -
-    Jurusan IPA (dengan prefix) ✗
+    **Kode:** - Unggulan(lowercase) ✗ - IPA-2024 (dengan tahun) ✗ - I.P.A. (dengan
+    titik) ✗ **Nama:** - Unggulan(lowercase) ✗ - Unggulankelas VII (dengan tingkat) ✗ -
+    Jurusan Unggulan(dengan prefix) ✗
   </Card>
 </CardGrid>
 
@@ -264,20 +264,20 @@ Jika tidak bisa dihapus, **nonaktifkan** jurusan:
 
 ```mermaid
 graph TD
-    A[Jurusan] --> B[Kelas X]
-    A --> C[Kelas XI]
-    A --> D[Kelas XII]
-    B --> E[Siswa Kelas X]
-    C --> F[Siswa Kelas XI]
-    D --> G[Siswa Kelas XII]
+    A[Jurusan] --> B[kelas VII]
+    A --> C[Kelas VIII ]
+    A --> D[Kelas VIII I]
+    B --> E[Siswa kelas VII]
+    C --> F[Siswa Kelas VIII ]
+    D --> G[Siswa Kelas VIII I]
 ```
 
 ### Penamaan Kelas Berdasarkan Jurusan
 
 <Tabs>
   <TabItem label="Format Standar">
-    **Pattern:** `[Tingkat] [Jurusan] [Nomor]` **Contoh:** ``` X IPA 1 X IPA 2 X
-    IPS 1 XI IPA 1 XI IPA 2 XII IPS 1 ```
+    **Pattern:** `[Tingkat] [Jurusan] [Nomor]` **Contoh:** ``` VII Unggulan X Unggulan2 X
+    IPS 1 VIII Unggulan1 VIII Unggulan2 XII IPS 1 ```
   </TabItem>
 
 <TabItem label="Format Alternatif">
@@ -294,9 +294,10 @@ graph TD
 ### One-to-Many Relationship
 
 <Card title="Relasi Jurusan-Kelas" icon="bars">
-  **1 Jurusan dapat memiliki banyak Kelas:** Contoh Jurusan **IPA**: - X IPA 1
-  (30 siswa) - X IPA 2 (32 siswa) - XI IPA 1 (28 siswa) - XI IPA 2 (30 siswa) -
-  XII IPA 1 (25 siswa) - XII IPA 2 (27 siswa) **Total:** 6 kelas, 172 siswa
+  **1 Jurusan dapat memiliki banyak Kelas:** Contoh Jurusan **IPA**: - VII
+  Unggulan (30 siswa) - X Unggulan2 (32 siswa) - VIII Unggulan1 (28 siswa) - XI
+  Unggulan2 (30 siswa) - XII Unggulan1 (25 siswa) - XII Unggulan2 (27 siswa)
+  **Total:** 6 kelas, 172 siswa
 </Card>
 
 ---
@@ -423,7 +424,7 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
    ```
    | Kode | Nama | Deskripsi | Status |
    |------|------|-----------|--------|
-   | IPA  | Ilmu Pengetahuan Alam | ... | Aktif |
+   | Unggulan | Ilmu Pengetahuan Alam | ... | Aktif |
    | IPS  | Ilmu Pengetahuan Sosial | ... | Aktif |
    ```
 
@@ -485,7 +486,7 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
 Tidak ada batasan hard limit. Namun untuk madrasah umum:
 
 - MTs: Biasanya tidak ada jurusan (kelas reguler)
-- MA/SMA: 2-4 jurusan (IPA, IPS, Agama, Bahasa)
+- MA/SMA: 2-4 jurusan (Unggulan, IPS, Agama, Bahasa)
 - SMK/MAK: 3-8 jurusan tergantung kemampuan
 
 </details>

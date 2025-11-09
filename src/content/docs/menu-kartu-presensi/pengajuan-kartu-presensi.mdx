@@ -4,17 +4,17 @@ description: "Proses pengajuan dan approval kartu RFID dari awal hingga distribu
 # template: splash
 # hero:
 #   image:
-#     file: "../../../assets/pengajuan-kartu-presensi.svg"
+#     file: "../../../assets/pengajuan-kartu-presensi.webp"
 #   tagline: "Kelola siklus hidup kartu RFID dari pengajuan hingga distribusi"
-#   actions:
-#     - text: "Ajukan Kartu Baru"
-#       link: "#mengajukan-kartu-baru"
-#       icon: "add-circle"
-#       variant: primary
-#     - text: "Cek Status Pengajuan"
-#       link: "#melihat-status"
-#       icon: "document"
-#       variant: secondary
+# actions:
+#   - text: "Ajukan Kartu Baru"
+#     link: "#mengajukan-kartu-baru"
+#     icon: "add-circle"
+#     variant: primary
+#   - text: "Cek Status Pengajuan"
+#     link: "#melihat-status"
+#     icon: "document"
+#     variant: secondary
 ---
 
 import {
@@ -100,7 +100,7 @@ Pengajuan Kartu adalah proses formal untuk mendapatkan kartu presensi RFID baru.
 
    Klik **"Kirim Pengajuan"**
 
-   **Status**: Pending ⏳
+   **Status**: Pending
 
 7. **Tunggu Persetujuan**
 
@@ -160,25 +160,23 @@ Administrator akan mereview setiap pengajuan sebelum diproses.
 ### Kriteria Persetujuan
 
 <Tabs>
-  <TabItem label="Disetujui ✅">
-    **Pengajuan Memenuhi Syarat** - ✅ Foto sesuai ketentuan - ✅ Data diri
-    lengkap dan valid - ✅ Alasan jelas (untuk pengganti) - ✅ Tidak ada
-    pengajuan ganda - ✅ Nomor WhatsApp aktif **Aksi**: Status → **Diproses**
+  <TabItem label="Disetujui ">
+    **Pengajuan Memenuhi Syarat** -  Foto sesuai ketentuan -  Data diri
+    lengkap dan valid -  Alasan jelas (untuk pengganti) -  Tidak ada
+    pengajuan ganda -  Nomor WhatsApp aktif **Aksi**: Status → **Diproses**
     **Notifikasi**: WhatsApp terkirim otomatis
   </TabItem>
 
-{" "}
-
-<TabItem label="Ditolak ❌">
-  **Pengajuan Tidak Memenuhi Syarat** - ❌ Foto tidak sesuai (selfie, background
-  salah) - ❌ Data tidak lengkap - ❌ Alasan tidak jelas - ❌ Sudah ada
-  pengajuan aktif - ❌ Nomor WhatsApp tidak valid **Aksi**: Status → **Ditolak**
-  + Alasan penolakan **Notifikasi**: User diminta mengajukan ulang
+<TabItem label="Ditolak ">
+  **Pengajuan Tidak Memenuhi Syarat** - Foto tidak sesuai (selfie, background
+  salah) - Data tidak lengkap - Alasan tidak jelas - Sudah ada pengajuan aktif -
+  Nomor WhatsApp tidak valid **Aksi**: Status → **Ditolak** + Alasan penolakan
+  **Notifikasi**: User diminta mengajukan ulang
 </TabItem>
 
   <TabItem label="Pending Review">
-    **Perlu Verifikasi Tambahan** - ⏳ Menunggu konfirmasi data - ⏳ Foto kurang
-    jelas, diminta upload ulang - ⏳ Perlu persetujuan kepala madrasah (kasus
+    **Perlu Verifikasi Tambahan** -  Menunggu konfirmasi data -  Foto kurang
+    jelas, diminta upload ulang -  Perlu persetujuan kepala madrasah (kasus
     tertentu) **Aksi**: Status tetap **Pending** + Catatan **Notifikasi**: User
     dihubungi untuk klarifikasi
   </TabItem>
@@ -242,7 +240,7 @@ Setelah nomor RFID teregistrasi, admin akan mencetak kartu fisik.
 
 ## Status Pengajuan
 
-### 1. Pending ⏳
+### 1. Pending
 
 **Pengajuan baru masuk, menunggu review**
 
@@ -254,9 +252,9 @@ Setelah nomor RFID teregistrasi, admin akan mencetak kartu fisik.
 
 **Yang Bisa Dilakukan User**:
 
-- ✅ Cek status di dashboard
-- ✅ Batalkan pengajuan
-- ❌ Belum bisa ambil kartu
+- Cek status di dashboard
+- Batalkan pengajuan
+- Belum bisa ambil kartu
 
 **Estimasi Waktu**: Maksimal 1 hari kerja
 
@@ -276,7 +274,7 @@ Setelah nomor RFID teregistrasi, admin akan mencetak kartu fisik.
 **Isi Notifikasi**:
 
 ```
-🔔 KARTU PRESENSI - DIPROSES
+ KARTU PRESENSI - DIPROSES
 
 Halo, [Nama]
 
@@ -297,15 +295,15 @@ MTs Negeri 1 Pandeglang
 
 **Yang Bisa Dilakukan User**:
 
-- ✅ Pantau status via dashboard
-- ✅ Hubungi admin jika ada pertanyaan
-- ❌ Tidak bisa batalkan (sudah diproses)
+- Pantau status via dashboard
+- Hubungi admin jika ada pertanyaan
+- Tidak bisa batalkan (sudah diproses)
 
 **Estimasi Waktu**: 2-3 hari kerja
 
 ---
 
-### 3. Selesai ✅
+### 3. Selesai
 
 **Kartu sudah jadi, siap diambil**
 
@@ -319,18 +317,18 @@ MTs Negeri 1 Pandeglang
 **Isi Notifikasi**:
 
 ```
-🔔 KARTU PRESENSI - SIAP DIAMBIL
+ KARTU PRESENSI - SIAP DIAMBIL
 
 Halo, [Nama]
 
 Kartu presensi Anda sudah selesai!
 
  No. Pengajuan: KP-2025-0123
-✅ Status: SELESAI
+ Status: SELESAI
 💰 Biaya: Rp 15.000 (bayar saat ambil)
 
-📍 Ambil di: Loket TU Madrasah
-⏰ Jam buka: Senin-Jumat, 08:00-14:00
+ Ambil di: Loket TU Madrasah
+ Jam buka: Senin-Jumat, 08:00-14:00
         Sabtu, 08:00-12:00
 
 Harap bawa:
@@ -345,19 +343,19 @@ MTs Negeri 1 Pandeglang
 
 **Yang Bisa Dilakukan User**:
 
-- ✅ Ambil kartu di loket TU
-- ✅ Siapkan uang Rp 15.000 tunai/transfer
-- ✅ Bawa bukti identitas
+- Ambil kartu di loket TU
+- Siapkan uang Rp 15.000 tunai/transfer
+- Bawa bukti identitas
 
 **Lokasi Pengambilan**:
 
-- 📍 Loket TU MTs Negeri 1 Pandeglang
-- ⏰ Senin-Jumat: 08:00 - 14:00
-- ⏰ Sabtu: 08:00 - 12:00 (untuk madrasah swasta)
+- Loket TU MTs Negeri 1 Pandeglang
+- Senin-Jumat: 08:00 - 14:00
+- Sabtu: 08:00 - 12:00 (untuk madrasah swasta)
 
 ---
 
-### 4. Diserahkan ✅
+### 4. Diserahkan
 
 **Kartu sudah diserahkan kepada user**
 
@@ -371,22 +369,22 @@ MTs Negeri 1 Pandeglang
 **Isi Notifikasi**:
 
 ```
-🔔 KARTU PRESENSI - DISERAHKAN
+ KARTU PRESENSI - DISERAHKAN
 
 Halo, [Nama]
 
 Kartu presensi Anda telah diserahkan.
 
  No. Pengajuan: KP-2025-0123
-✅ Status: DISERAHKAN
-📅 Tanggal penyerahan: 15 Jan 2025, 10:30
+ Status: DISERAHKAN
+ Tanggal penyerahan: 15 Jan 2025, 10:30
  Biaya: Rp 15.000
     (sudah ditambahkan ke tagihan)
 
 Kartu Anda sudah AKTIF dan dapat digunakan
 untuk presensi mulai sekarang.
 
-⚠️ PENTING:
+ PENTING:
 • Jaga kartu dengan baik
 • Gunakan lanyard agar tidak hilang
 • Lapor segera jika hilang/rusak
@@ -400,10 +398,10 @@ MTs Negeri 1 Pandeglang
 
 **Yang Bisa Dilakukan User**:
 
-- ✅ Mulai gunakan kartu untuk presensi
-- ✅ Cek tagihan pembayaran di sistem
-- ✅ Simpan kartu dengan baik
-- ✅ Pasang lanyard
+- Mulai gunakan kartu untuk presensi
+- Cek tagihan pembayaran di sistem
+- Simpan kartu dengan baik
+- Pasang lanyard
 
 **Akumulasi Biaya**:
 
@@ -421,11 +419,9 @@ MTs Negeri 1 Pandeglang
   <TabItem label="Via Dashboard">
     **Melalui Halaman Dashboard** 1. Login ke sistem 2. Di dashboard, lihat
     widget **"Pengajuan Kartu Saya"** 3. Status terbaru akan ditampilkan dengan
-    warna: - 🟡 **Pending**: Kuning -  **Diproses**: Biru - 🟢 **Selesai**:
-    Hijau - ✅ **Diserahkan**: Hijau ceklis
+    warna: -  **Pending**: Kuning -  **Diproses**: Biru -  **Selesai**:
+    Hijau -  **Diserahkan**: Hijau ceklis
   </TabItem>
-
-{" "}
 
 <TabItem label="Via Menu">
   **Melalui Menu Kartu Presensi** 1. Navigasi ke **Kartu Presensi → Pengajuan
@@ -453,14 +449,10 @@ Sistem menyimpan histori lengkap semua pengajuan Anda.
     pengajuan
   </Card>
 
-{" "}
-
 <Card title="Timeline Status" icon="rocket">
   - Pending: 10 Jan 2025, 09:00 - Diproses: 10 Jan 2025, 14:00 - Selesai: 13 Jan
   2025, 16:00 - Diserahkan: 15 Jan 2025, 10:30
 </Card>
-
-{" "}
 
 <Card title="Data Kartu" icon="star">
   - Nomor RFID teregistrasi - Tanggal aktivasi - Status kartu (Aktif/Nonaktif) -
@@ -522,17 +514,17 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
 ### Alasan Nonaktif
 
 - 🎓 **Siswa lulus/pindah**: Kartu otomatis nonaktif
-- 💼 **Pegawai resign/pensiun**: Kartu dikembalikan ke TU
-- ❌ **Kartu hilang**: Dinonaktifkan untuk keamanan
+- **Pegawai resign/pensiun**: Kartu dikembalikan ke TU
+- **Kartu hilang**: Dinonaktifkan untuk keamanan
 - 🔧 **Kartu rusak**: Dinonaktifkan sebelum diganti
 - 🔒 **Sanksi/pelanggaran**: Suspend sementara oleh admin
 
 ### Dampak Kartu Nonaktif
 
-- ❌ Tidak bisa tap presensi
-- ❌ Tidak bisa akses area RFID-protected
-- ✅ Data histori tetap tersimpan
-- ✅ Bisa diaktifkan kembali (kasus tertentu)
+- Tidak bisa tap presensi
+- Tidak bisa akses area RFID-protected
+- Data histori tetap tersimpan
+- Bisa diaktifkan kembali (kasus tertentu)
 
 ---
 
@@ -557,8 +549,6 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
     + bukti pembayaran - Simpan bukti untuk rekonsiliasi
   </TabItem>
 
-{" "}
-
 <TabItem label="Transfer">
   **Transfer Bank** - Transfer ke rekening madrasah - Screenshot bukti transfer
   - Tunjukkan saat pengambilan kartu - Biaya transfer ditanggung pengirim
@@ -580,14 +570,10 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
     untuk hasil cetak maksimal
   </Card>
 
-{" "}
-
 <Card title="Data Lengkap" icon="approve-check">
   Pastikan nomor WhatsApp aktif agar notifikasi terkirim dan Anda tidak
   ketinggalan update
 </Card>
-
-{" "}
 
 <Card title="Jaga Kartu" icon="warning">
   Pasang lanyard, simpan di tempat aman, hindari tekukan dan air untuk
@@ -604,7 +590,7 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
 
 ## Troubleshooting
 
-### ❓ Pengajuan ditolak, kenapa?
+### Pengajuan ditolak, kenapa?
 
 **Penyebab Umum**:
 
@@ -618,7 +604,7 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
 - Perbaiki sesuai feedback admin
 - Ajukan ulang dengan data yang benar
 
-### ❓ Sudah 5 hari tapi kartu belum selesai?
+### Sudah 5 hari tapi kartu belum selesai?
 
 **Kemungkinan**:
 
@@ -632,7 +618,7 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
 - Cek status di dashboard untuk update terbaru
 - Bersabar, admin akan infokan jika ada kendala
 
-### ❓ Notifikasi WhatsApp tidak masuk?
+### Notifikasi WhatsApp tidak masuk?
 
 **Penyebab**:
 
@@ -646,7 +632,7 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
 - Cek status via dashboard (tidak bergantung WA saja)
 - Hubungi admin untuk re-send notifikasi
 
-### ❓ Kartu tidak berfungsi saat tap?
+### Kartu tidak berfungsi saat tap?
 
 **Penyebab**:
 

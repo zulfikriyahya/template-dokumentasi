@@ -1,20 +1,20 @@
 ---
 title: "Kartu Presensi RFID"
 description: "Kelola pengajuan dan distribusi kartu RFID untuk presensi otomatis"
-# template: splash
-# hero:
-#   image:
-#     file: "../../../assets/index-kartu-presensi.svg"
-#   tagline: "Manajemen kartu RFID untuk presensi otomatis siswa dan pegawai"
-#   actions:
-#     - text: "Ajukan Kartu Baru"
-#       link: "./pengajuan-kartu-presensi"
-#       icon: "add-circle"
-#       variant: primary
-#     - text: "Lihat Panduan"
-#       link: "#alur-pengajuan"
-#       icon: "document"
-#       variant: secondary
+template: splash
+hero:
+  image:
+    file: "../../../assets/index-kartu-presensi.webp"
+  tagline: "Manajemen kartu RFID untuk presensi otomatis siswa dan pegawai"
+  # actions:
+  #   - text: "Ajukan Kartu Baru"
+  #     link: "./pengajuan-kartu-presensi"
+  #     icon: "add-circle"
+  #     variant: primary
+  #   - text: "Lihat Panduan"
+  #     link: "#alur-pengajuan"
+  #     icon: "document"
+  #     variant: secondary
 ---
 
 import {
@@ -53,18 +53,18 @@ Kartu Presensi RFID adalah kartu identitas yang dilengkapi dengan chip RFID (Rad
 
 **Tap untuk Masuk dan Pulang**
 
-- ✅ Presensi masuk di pagi hari
-- ✅ Presensi pulang di sore hari
-- ✅ Otomatis tercatat dengan timestamp
-- ✅ Status kehadiran langsung ter-update (Hadir/Terlambat)
+- Presensi masuk di pagi hari
+- Presensi pulang di sore hari
+- Otomatis tercatat dengan timestamp
+- Status kehadiran langsung ter-update (Hadir/Terlambat)
 
 ### Identifikasi & Akses
 
 **Kartu sebagai ID Digital**
 
 - 🔐 Akses ke area tertentu (perpustakaan, lab)
-- 👤 Identifikasi diri yang sah dan resmi
-- 📊 Tracking aktivitas siswa/pegawai
+- Identifikasi diri yang sah dan resmi
+- Tracking aktivitas siswa/pegawai
 - 🎫 Integrasi dengan sistem lain (kantin, dll - future)
 
 ---
@@ -77,8 +77,6 @@ Kartu Presensi RFID adalah kartu identitas yang dilengkapi dengan chip RFID (Rad
     / NISN - Kelas - Logo madrasah - Nomor RFID (barcode) **Desain**: Vertikal,
     full color **Biaya**: Rp 15.000 per kartu
   </TabItem>
-
-{" "}
 
 <TabItem label="Kartu Pegawai">
   **ID Card Guru/Staff** **Informasi di Kartu**: - Foto pegawai - Nama lengkap -
@@ -123,7 +121,7 @@ graph TD
 
    Siswa/pegawai mengajukan pembuatan kartu baru melalui sistem
 
-   **Status**: Pending ⏳
+   **Status**: Pending
 
 2. **Review & Persetujuan (Admin)**
 
@@ -143,7 +141,7 @@ graph TD
 
    Kartu fisik dicetak dengan desain dan informasi lengkap
 
-   **Status**: Selesai ✅
+   **Status**: Selesai
 
    **Notifikasi**: WhatsApp ke user "Kartu sudah siap diambil"
 
@@ -151,7 +149,7 @@ graph TD
 
    User mengambil kartu di loket TU/operator
 
-   Admin ceklis status "Diserahkan" ✅
+   Admin ceklis status "Diserahkan"
 
    **Biaya**: Rp 15.000 ditagihkan/dibayar
 
@@ -187,8 +185,6 @@ graph TD
     pengajuan
   </Card>
 
-{" "}
-
 <Card title="Akumulasi Otomatis" icon="rocket">
   Sistem otomatis menambahkan biaya ke tagihan SPP/pembayaran user
 </Card>
@@ -202,7 +198,7 @@ graph TD
 
 ## Status Pengajuan Kartu
 
-### Status: Pending ⏳
+### Status: Pending
 
 **Pengajuan menunggu review administrator**
 
@@ -225,7 +221,7 @@ graph TD
   antrian.
 </Aside>
 
-### Status: Selesai ✅
+### Status: Selesai
 
 **Kartu sudah siap diambil**
 
@@ -234,7 +230,7 @@ graph TD
 - **Notifikasi WhatsApp otomatis terkirim**: "Kartu sudah siap diambil di loket TU"
 - User dapat mengecek lokasi dan jam pengambilan
 
-### Status: Diserahkan ✅
+### Status: Diserahkan
 
 **Kartu sudah diserahkan kepada user**
 
@@ -254,7 +250,7 @@ Setiap perubahan status pengajuan kartu akan **otomatis mengirim notifikasi What
 **1. Status Diproses**
 
 ```
-🔔 *KARTU PRESENSI - UPDATE*
+ *KARTU PRESENSI - UPDATE*
 
 Halo, [Nama User]
 
@@ -276,18 +272,18 @@ Sistem Presensi RFID
 **2. Status Selesai (Siap Diambil)**
 
 ```
-🔔 *KARTU PRESENSI - SIAP DIAMBIL*
+ *KARTU PRESENSI - SIAP DIAMBIL*
 
 Halo, [Nama User]
 
 Kartu presensi Anda sudah selesai dan siap diambil!
 
  No. Pengajuan: KP-2025-0001
-✅ Status: SELESAI
+ Status: SELESAI
 💰 Biaya: Rp 15.000 (dibayar saat pengambilan)
 
-📍 Lokasi Pengambilan: Loket TU
-⏰ Jam Pengambilan: Senin-Jumat, 08:00-14:00
+ Lokasi Pengambilan: Loket TU
+ Jam Pengambilan: Senin-Jumat, 08:00-14:00
 
 Harap bawa bukti identitas saat pengambilan.
 
@@ -299,20 +295,20 @@ Sistem Presensi RFID
 **3. Status Diserahkan**
 
 ```
-🔔 *KARTU PRESENSI - DISERAHKAN*
+ *KARTU PRESENSI - DISERAHKAN*
 
 Halo, [Nama User]
 
 Kartu presensi Anda telah diserahkan.
 
  No. Pengajuan: KP-2025-0001
-✅ Status: DISERAHKAN
+ Status: DISERAHKAN
  Biaya: Rp 15.000 (sudah ditambahkan ke tagihan)
 
 Kartu Anda sudah aktif dan dapat digunakan untuk
 presensi mulai sekarang.
 
-⚠️ PENTING:
+ PENTING:
 - Jaga kartu dengan baik
 - Lapor segera jika hilang/rusak
 - Kartu pengganti dikenakan biaya baru
@@ -384,12 +380,12 @@ Sistem menyimpan histori lengkap semua pengajuan kartu untuk setiap user.
 
 ### Informasi yang Tersimpan
 
-- 📅 Tanggal pengajuan
+- Tanggal pengajuan
 - 🔢 Nomor pengajuan (unik)
 - Status (Pending/Diproses/Selesai/Diserahkan/Ditolak)
 - Nomor RFID yang diregistrasi
 - 💰 Biaya yang ditagihkan
-- 📝 Alasan pengajuan (Baru/Hilang/Rusak)
+- Alasan pengajuan (Baru/Hilang/Rusak)
 - ⏱️ Timeline perubahan status
 
 ### Manfaat Riwayat
@@ -403,23 +399,23 @@ Sistem menyimpan histori lengkap semua pengajuan kartu untuk setiap user.
 
 ## FAQ
 
-### ❓ Berapa lama proses pembuatan kartu?
+### Berapa lama proses pembuatan kartu?
 
 **Jawab**: 2-3 hari kerja setelah pengajuan disetujui, tergantung antrian.
 
-### ❓ Apakah bisa percepat pembuatan kartu?
+### Apakah bisa percepat pembuatan kartu?
 
 **Jawab**: Untuk kasus mendesak, hubungi operator. Bisa dipercepat dengan biaya tambahan atau prioritas khusus.
 
-### ❓ Kartu hilang saat belum bayar, apakah tetap kena biaya?
+### Kartu hilang saat belum bayar, apakah tetap kena biaya?
 
 **Jawab**: Jika kartu hilang sebelum diserahkan (status masih Selesai), hubungi admin. Biaya bisa diwaive-kan untuk kasus tertentu.
 
-### ❓ Bisa tidak minta desain kartu khusus?
+### Bisa tidak minta desain kartu khusus?
 
 **Jawab**: Desain kartu mengikuti template standar madrasah. Tidak ada customization untuk individu demi keseragaman.
 
-### ❓ Nomor RFID bisa dipindah ke kartu lain?
+### Nomor RFID bisa dipindah ke kartu lain?
 
 **Jawab**: Tidak bisa. Setiap chip RFID memiliki nomor unik yang permanen dan tidak dapat dipindahkan.
 
@@ -432,13 +428,9 @@ Sistem menyimpan histori lengkap semua pengajuan kartu untuk setiap user.
     Data di chip RFID terenkripsi dan tidak dapat dibaca sembarangan
   </Card>
 
-{" "}
-
 <Card title="Unique ID" icon="approve-check">
   Setiap kartu memiliki ID unik yang terdaftar di sistem, tidak bisa diduplikasi
 </Card>
-
-{" "}
 
 <Card title="Monitoring Real-time" icon="rocket">
   Setiap tap kartu tercatat dengan lokasi dan waktu yang akurat
@@ -455,12 +447,12 @@ Sistem menyimpan histori lengkap semua pengajuan kartu untuk setiap user.
 
 Dashboard menampilkan statistik kartu untuk monitoring:
 
-- 📊 Total kartu aktif (siswa + pegawai)
-- 📈 Pengajuan kartu per bulan
+- Total kartu aktif (siswa + pegawai)
+- Pengajuan kartu per bulan
 - ⏱️ Rata-rata waktu proses pembuatan
 - 💰 Total pendapatan dari biaya kartu
-- 🔄 Jumlah kartu pengganti (hilang/rusak)
-- ✅ Tingkat penggunaan kartu vs manual
+- Jumlah kartu pengganti (hilang/rusak)
+- Tingkat penggunaan kartu vs manual
 
 ---
 

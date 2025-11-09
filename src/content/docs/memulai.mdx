@@ -1,20 +1,21 @@
 ---
 title: "Memulai"
 description: "Panduan lengkap untuk memulai menggunakan Attendance Systems"
-template: splash
-hero:
-  image:
-    file: "../../assets/banner.svg"
-  tagline: "Pelajari cara menggunakan sistem presensi RFID dalam beberapa langkah mudah"
-  # actions:
-  #   - text: "Ke Dashboard"
-  #     link: "#dashboard-utama"
-  #     icon: "rocket"
-  #     variant: primary
-  #   - text: "Konsep Dasar"
-  #     link: "#konsep-dasar-presensi-rfid"
-  #     icon: "open-book"
-  #     variant: secondary
+# template: splash
+# hero:
+#   image:
+#     file: "../../assets/banner.svg"
+
+#   tagline: "Pelajari cara menggunakan sistem presensi RFID dalam beberapa langkah mudah"
+#   actions:
+#     - text: "Ke Dashboard"
+#       link: "#dashboard-utama"
+#       icon: "rocket"
+#       variant: primary
+#     - text: "Konsep Dasar"
+#       link: "#konsep-dasar-presensi-rfid"
+#       icon: "open-book"
+#       variant: secondary
 ---
 
 import {
@@ -39,10 +40,15 @@ Sistem ini dirancang untuk:
 - Mengintegrasikan data presensi dengan sistem akademik
 
 <Aside type="tip" title="Siapa yang bisa menggunakan sistem ini?">
-  Sistem ini dapat digunakan oleh: - **Super Admin**: Akses penuh ke semua fitur
-  - **Operator**: Mengelola data master dan presensi - **Wali Kelas**: Melihat
-  dan mengelola presensi siswa di kelasnya - **Pegawai**: Melihat riwayat
-  presensi pribadi - **Siswa**: Melihat riwayat presensi pribadi
+
+Sistem ini dapat digunakan oleh:
+
+- **Super Admin**: Akses penuh ke semua fitur
+- **Operator**: Mengelola data master dan presensi
+- **Wali Kelas**: Melihat dan mengelola presensi siswa di kelasnya
+- **Pegawai**: Melihat riwayat presensi pribadi
+- **Siswa**: Melihat riwayat presensi pribadi
+
 </Aside>
 
 ---
@@ -53,7 +59,7 @@ Sistem ini dirancang untuk:
 
 1. **Buka Browser**
 
-   Akses sistem melalui URL yang diberikan oleh administrator (contoh: `https://presensi.mtsn1pandeglang.sch.id`)
+   Akses sistem melalui URL yang diberikan oleh administrator (`https://presensi.mtsn1pandeglang.sch.id`)
 
 2. **Masukkan Kredensial**
 
@@ -89,40 +95,61 @@ Sistem ini dirancang untuk:
 Setelah login berhasil, Anda akan melihat dashboard yang menampilkan informasi penting:
 
 <CardGrid>
-  <Card title="Statistik Hari Ini" icon="bars">
-    - Total kehadiran siswa - Total kehadiran pegawai - Tingkat kehadiran hari
-    ini - Perbandingan dengan hari sebelumnya
-  </Card>
+<Card title="Statistik Hari Ini" icon="bars">
+
+- Total kehadiran siswa
+- Total kehadiran pegawai
+- Tingkat kehadiran hari ini
+- Daftar Pegawai dan Siswa yang melakukan presensi paling awal
+
+</Card>
 
 <Card title="Grafik Kehadiran" icon="chart">
-  - Tren kehadiran mingguan - Grafik perbandingan hadir/tidak hadir - Statistik
-  keterlambatan
+
+- Tren kehadiran mingguan
+- Grafik perbandingan hadir/tidak hadir
+- Statistik keterlambatan
+
 </Card>
 
-<Card title="🔔 Notifikasi Terbaru" icon="bell">
-  - Pengumuman sistem - Pengajuan kartu RFID - Update data penting - Reminder
-  deadline
+<Card title="Notifikasi Terbaru" icon="bell">
+
+- Pengumuman sistem
+- Pengajuan kartu RFID
+- Update data penting
+- Reminder deadline
+
 </Card>
 
-  <Card title=" Akses Cepat" icon="rocket">
-    - Presensi Manual - Lihat Riwayat - Input Data - Generate Laporan
-  </Card>
+<Card title="Akses Cepat" icon="rocket">
+
+- Presensi Manual
+- Lihat Riwayat
+- Input Data
+- Generate Laporan
+
+</Card>
 </CardGrid>
 
 ### Komponen Dashboard Berdasarkan Peran
 
 <Tabs>
-  <TabItem label="Super Admin">
-    - **Overview Sistem**: Total users, data master, statistik global -
-    **Aktivitas Terbaru**: Log aktivitas semua pengguna - **Sistem Monitoring**:
-    Status server, database, RFID reader - **Quick Actions**: Kelola semua menu
-    dengan akses penuh
-  </TabItem>
+<TabItem label="Super Admin">
+
+- **Overview Sistem**: Total users, data master, statistik global
+- **Aktivitas Terbaru**: Log aktivitas semua pengguna
+- **Sistem Monitoring**: Status server, database, RFID reader
+- **Quick Actions**: Kelola semua menu dengan akses penuh
+
+</TabItem>
 
 <TabItem label="Operator">
-  - **Data Master**: Statistik data siswa, pegawai, kelas - **Presensi Hari
-  Ini**: Rekap kehadiran real-time - **Pengajuan Kartu**: Daftar pengajuan yang
-  perlu diproses - **Quick Actions**: Input data, generate laporan
+
+- **Data Master**: Statistik data siswa, pegawai, kelas
+- **Presensi Hari Ini**: Rekap kehadiran real-time
+- **Pengajuan Kartu**: Daftar pengajuan yang perlu diproses
+- **Quick Actions**: Input data, generate laporan
+
 </TabItem>
 
 <TabItem label="Wali Kelas">
@@ -247,7 +274,7 @@ Sistem menggunakan sidebar navigasi yang intuitif dengan struktur sebagai beriku
   Tidak hadir dengan surat izin yang disetujui
 </Card>
 
-<Card title="🏥 Sakit" icon="heart">
+<Card title=" Sakit" icon="heart">
   Tidak hadir karena sakit dengan surat keterangan
 </Card>
 

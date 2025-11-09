@@ -126,8 +126,6 @@ Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staf
     - Nama lengkap - NIK (KTP) - Tempat & tanggal lahir - Jenis kelamin - Agama
   </Card>
 
-{" "}
-
 <Card title="Kontak" icon="document">
   - Email aktif - Nomor HP/WhatsApp - Alamat lengkap
 </Card>
@@ -172,8 +170,6 @@ Setiap pegawai harus memiliki jabatan yang menentukan:
     dulu di menu **Data Master → Jabatan**
   </TabItem>
 
-{" "}
-
 <TabItem label="Edit Pegawai Existing">
   **Ubah Jabatan** 1. Klik **Edit** pada row pegawai 2. Ubah field **"Jabatan"**
   3. Simpan perubahan Perubahan jabatan akan mempengaruhi jadwal presensi mulai
@@ -208,8 +204,8 @@ Agar pegawai dapat presensi dengan sistem RFID, data pegawai harus di-link denga
 3. **Scan Nomor RFID**
 
    - Gunakan RFID reader untuk scan kartu
-   - Atau input manual nomor RFID (16 digit hex)
-   - Contoh: 0AB3D5E7F1234567
+   - Atau input manual nomor RFID (10 digit integer)
+   - Contoh: 1365289563
 
 4. **Simpan**
 
@@ -246,12 +242,12 @@ Agar pegawai dapat presensi dengan sistem RFID, data pegawai harus di-link denga
 
 ### Yang Dapat Diedit
 
-- ✅ Data personal (nama, kontak, alamat)
-- ✅ Jabatan dan status kepegawaian
-- ✅ Foto pegawai
-- ✅ Nomor RFID
-- ✅ Email dan nomor HP
-- ⚠️ NIK dan NIP (hati-hati, harus sesuai dokumen resmi)
+- Data personal (nama, kontak, alamat)
+- Jabatan dan status kepegawaian
+- Foto pegawai
+- Nomor RFID
+- Email dan nomor HP
+- NIK dan NIP (hati-hati, harus sesuai dokumen resmi)
 
 <Aside type="note">
   Perubahan data pegawai akan **langsung berlaku** dan mempengaruhi sistem
@@ -275,8 +271,6 @@ Foto pegawai digunakan untuk:
     - JPG, JPEG, PNG - Maksimal 2 MB - Resolusi minimum 300x400 px - Resolusi
     ideal 600x800 px
   </Card>
-
-{" "}
 
 <Card title="Background" icon="star">
   - **Biru** untuk pegawai - Background polos, tidak bergambar - Lighting cukup,
@@ -425,8 +419,6 @@ Export data untuk keperluan pelaporan atau backup.
     **"Excel"**
   </TabItem>
 
-{" "}
-
 <TabItem label="PDF">
   **Portable Document Format** - Cocok untuk cetak dan arsip - Tidak dapat
   diedit (read-only) - Layout rapi dan profesional **Klik**: **"Export"** →
@@ -444,10 +436,10 @@ Export data untuk keperluan pelaporan atau backup.
 
 Anda dapat memfilter data sebelum export:
 
-- ☑️ **Filter Jabatan**: Export hanya guru, atau hanya staff TU
-- ☑️ **Filter Status**: Hanya PNS, atau hanya GTT
-- ☑️ **Filter Aktif**: Hanya pegawai aktif
-- ☑️ **Pilih Kolom**: Pilih kolom mana saja yang akan di-export
+- **Filter Jabatan**: Export hanya guru, atau hanya staff TU
+- **Filter Status**: Hanya PNS, atau hanya GTT
+- **Filter Aktif**: Hanya pegawai aktif
+- **Pilih Kolom**: Pilih kolom mana saja yang akan di-export
 
 ---
 
@@ -475,10 +467,10 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 
    Pegawai nonaktif akan:
 
-   - ❌ Tidak bisa login sistem
-   - ❌ Kartu RFID tidak aktif (tidak bisa tap)
-   - ✅ Data tetap tersimpan untuk histori
-   - ✅ Riwayat presensi tetap ada
+   - Tidak bisa login sistem
+   - Kartu RFID tidak aktif (tidak bisa tap)
+   - Data tetap tersimpan untuk histori
+   - Riwayat presensi tetap ada
 
 </Steps>
 
@@ -498,15 +490,15 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 
 ### Kapan Boleh Hapus?
 
-- ✅ Data duplikat atau salah input
-- ✅ Pegawai belum pernah presensi
-- ✅ Tidak ada histori transaksi
+- Data duplikat atau salah input
+- Pegawai belum pernah presensi
+- Tidak ada histori transaksi
 
 ### Kapan TIDAK Boleh Hapus?
 
-- ❌ Pegawai sudah pernah presensi
-- ❌ Sudah ada riwayat transaksi (gaji, dll)
-- ❌ Terhubung dengan data lain (kartu RFID, pengguna)
+- Pegawai sudah pernah presensi
+- Sudah ada riwayat transaksi (gaji, dll)
+- Terhubung dengan data lain (kartu RFID, pengguna)
 
 **Solusi**: Gunakan **"Nonaktifkan"** daripada menghapus.
 
@@ -525,7 +517,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 
 ## Troubleshooting
 
-### ❓ Tidak bisa simpan data pegawai baru
+### Tidak bisa simpan data pegawai baru
 
 **Penyebab**:
 
@@ -539,7 +531,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 2. Perbaiki data sesuai petunjuk
 3. Pastikan NIK dan email unik
 
-### ❓ Import Excel gagal semua
+### Import Excel gagal semua
 
 **Penyebab**:
 
@@ -555,7 +547,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 3. Perbaiki data di Excel
 4. Upload ulang
 
-### ❓ Foto tidak muncul setelah upload
+### Foto tidak muncul setelah upload
 
 **Penyebab**:
 
@@ -569,7 +561,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 2. Gunakan format JPG/PNG
 3. Upload ulang dengan koneksi stabil
 
-### ❓ Kartu RFID tidak bisa di-link
+### Kartu RFID tidak bisa di-link
 
 **Penyebab**:
 
@@ -580,7 +572,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 **Solusi**:
 
 1. Cek apakah nomor RFID sudah terdaftar
-2. Pastikan format 16 digit hex
+2. Pastikan format 10 digit integer
 3. Registrasi kartu dulu di menu Kartu Presensi
 
 ---
@@ -593,13 +585,9 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
     masalah administrasi
   </Card>
 
-{" "}
-
 <Card title="Update Berkala" icon="star">
   Review dan update data pegawai setiap semester, terutama kontak dan alamat
 </Card>
-
-{" "}
 
 <Card title="Backup Rutin" icon="warning">
   Export data pegawai setiap bulan sebagai backup, simpan di storage terpisah
