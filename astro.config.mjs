@@ -8,7 +8,7 @@ import mermaid from "astro-mermaid";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://docs.zedlabs.id/presensi/",
+  site: "https://docs.mtsn1pandeglang.sch.id",
 
   integrations: [
     mermaid({
