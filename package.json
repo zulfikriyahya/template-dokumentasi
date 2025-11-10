@@ -1,6 +1,7 @@
 {
-	"name": "dokumentasi-presensi",
+	"name": "dokumentasi-madrasah",
 	"type": "module",
+	"author": "zulfikriyahya",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "astro dev",
