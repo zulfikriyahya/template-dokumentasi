@@ -62,7 +62,6 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
 3. **Isi Data Personal**
 
    **Identitas Siswa**:
-
    - **Nama Lengkap** (wajib) - Sesuai akta lahir
    - **NIS** (wajib) - Nomor Induk Siswa madrasah
    - **NISN** (wajib) - Nomor Induk Siswa Nasional
@@ -74,7 +73,6 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
    - **Anak ke-** (opsional) - Urutan dalam keluarga
 
    **Kontak**:
-
    - **No. HP Siswa** (opsional) - WhatsApp siswa
    - **Email Siswa** (opsional) - Email aktif
    - **Alamat Lengkap** (wajib)
@@ -85,7 +83,6 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
    - **Kode Pos** (opsional)
 
 4. **Isi Data Akademik**
-
    - **Tahun Masuk** (wajib) - Contoh: 2024
    - **Kelas** (wajib) - Pilih dari dropdown
    - **Jurusan** (wajib) - Otomatis sesuai kelas
@@ -97,7 +94,6 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
 5. **Isi Data Orang Tua/Wali**
 
    **Data Ayah**:
-
    - Nama Ayah (wajib)
    - NIK Ayah (opsional)
    - Pekerjaan Ayah (wajib)
@@ -105,7 +101,6 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
    - No. HP Ayah (wajib) - WhatsApp aktif
 
    **Data Ibu**:
-
    - Nama Ibu (wajib)
    - NIK Ibu (opsional)
    - Pekerjaan Ibu (wajib)
@@ -113,20 +108,17 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
    - No. HP Ibu (wajib) - WhatsApp aktif
 
    **Data Wali** (jika ada):
-
    - Nama Wali (opsional)
    - Hubungan dengan siswa
    - No. HP Wali (opsional)
 
 6. **Upload Foto Siswa**
-
    - Klik **"Upload Foto"**
    - Pilih file foto (JPG/PNG, max 2MB)
    - Background: Merah untuk siswa
    - Crop dan sesuaikan jika perlu
 
 7. **Link Kartu RFID** (Opsional)
-
    - Jika sudah ada kartu RFID, input nomor RFID
    - Atau skip, akan diisi nanti saat kartu ready
 
@@ -224,7 +216,6 @@ Agar siswa dapat presensi dengan sistem RFID, data siswa harus di-link dengan ka
    Klik **Edit** pada siswa yang akan di-link
 
 3. **Scan Nomor RFID**
-
    - Gunakan RFID reader untuk scan kartu
    - Atau input manual nomor RFID (10 digit integer)
    - Contoh: 1365289563
@@ -232,7 +223,6 @@ Agar siswa dapat presensi dengan sistem RFID, data siswa harus di-link dengan ka
 4. **Simpan**
 
    Klik **"Simpan"**, sistem akan validasi:
-
    - Apakah nomor RFID sudah terdaftar?
    - Apakah sudah digunakan siswa lain?
 
@@ -363,13 +353,11 @@ Untuk menambahkan banyak siswa sekaligus (misalnya siswa baru PPDB), gunakan fit
    | status_siswa   | Ya    | Aktif              |
 
 3. **Upload File Excel**
-
    - Klik **"Import Data Siswa"**
    - Pilih file Excel yang sudah diisi
    - Klik **"Upload"**
 
 4. **Preview & Validasi**
-
    - Sistem akan tampilkan preview data
    - Cek apakah ada error atau warning:
      - NIS/NISN duplikat
@@ -378,7 +366,6 @@ Untuk menambahkan banyak siswa sekaligus (misalnya siswa baru PPDB), gunakan fit
    - Perbaiki jika ada yang salah
 
 5. **Proses Import**
-
    - Jika tidak ada error, klik **"Proses Import"**
    - Tunggu hingga selesai (bisa 1-5 menit untuk ratusan data)
    - Sistem akan tampilkan summary:
@@ -410,24 +397,20 @@ Untuk upload banyak foto sekaligus:
 2. **Rename File Foto**
 
    Nama file harus sesuai NIS atau NISN:
-
    - `2024001.jpg` (NIS)
    - `0012345678.jpg` (NISN)
    - Ekstensi: `.jpg`, `.jpeg`, `.png`
 
 3. **Compress ke ZIP**
-
    - Zip folder tersebut
    - Nama ZIP bebas, contoh: `foto_siswa_x_2024.zip`
 
 4. **Upload ZIP**
-
    - Klik **"Import Foto Siswa"**
    - Pilih file ZIP
    - Upload
 
 5. **Proses Import**
-
    - Sistem extract ZIP
    - Match foto dengan data siswa berdasarkan nama file
    - Tampilkan summary:
@@ -506,7 +489,6 @@ Anda dapat memfilter data sebelum export:
 <Steps>
 
 1. **Filter Siswa**
-
    - Klik tab **"kelas VII"** (atau XI)
    - Centang **"Pilih Semua"** atau pilih siswa tertentu yang naik
 
@@ -517,19 +499,16 @@ Anda dapat memfilter data sebelum export:
 3. **Pilih Rombel Tujuan**
 
    Sistem akan tampilkan pilihan:
-
    - **Otomatis**: Sistem distribusi siswa merata ke semua rombel
    - **Manual**: Anda pilih rombel tujuan untuk setiap siswa
 
    Untuk mode otomatis:
-
    - Siswa X Unggulan→ VIII Unggulan(dipisah ke rombel 1, 2, 3 otomatis)
    - Siswa X IPS → XI IPS (dipisah ke rombel 1, 2 otomatis)
 
 4. **Preview Perubahan**
 
    Sistem tampilkan preview:
-
    - Siswa A: VII Unggulan → VIII Unggulan1
    - Siswa B: VII Unggulan → VIII Unggulan2
    - dst...
@@ -541,7 +520,6 @@ Anda dapat memfilter data sebelum export:
    Klik **"Proses Naik Tingkat"**
 
    Sistem akan:
-
    - Update kelas semua siswa terpilih
    - Update tahun pelajaran
    - Log aktivitas
@@ -550,7 +528,6 @@ Anda dapat memfilter data sebelum export:
 6. **Notifikasi**
 
    Sistem otomatis kirim notifikasi ke:
-
    - Siswa: "Selamat, Anda naik ke Kelas VIII Unggulan1"
    - Orang tua: "Anak Anda naik ke Kelas VIII Unggulan1"
    - Wali kelas baru: "Siswa baru di kelas Anda: ..."
@@ -581,7 +558,6 @@ Anda dapat memfilter data sebelum export:
    Klik button **"Proses Kelulusan"**
 
 3. **Input Data Kelulusan**
-
    - Tanggal lulus
    - Nomor ijazah
    - Rata-rata nilai (opsional)
@@ -590,7 +566,6 @@ Anda dapat memfilter data sebelum export:
 4. **Konfirmasi**
 
    Sistem akan:
-
    - Update status siswa → **"Lulus"**
    - Nonaktifkan kartu RFID
    - Nonaktifkan akun login

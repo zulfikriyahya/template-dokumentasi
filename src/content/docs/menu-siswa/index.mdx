@@ -239,7 +239,6 @@ graph TD
 <Steps>
 
 1. **Setup Awal (Pendaftaran Siswa Baru)**
-
    - Admin input data siswa baru
    - Upload foto untuk ID card
    - Atur kelas dan jurusan
@@ -247,7 +246,6 @@ graph TD
    - Link dengan kartu presensi RFID
 
 2. **Operasional Harian**
-
    - Siswa tap kartu RFID saat masuk sekolah
    - Data presensi otomatis tercatat
    - Notifikasi otomatis terkirim ke WhatsApp orang tua
@@ -255,14 +253,12 @@ graph TD
    - Admin/operator monitoring dashboard
 
 3. **Monitoring & Koreksi**
-
    - Wali kelas cek rekap presensi harian
    - Koreksi manual jika ada siswa lupa tap
    - Input manual untuk izin/sakit/dispensasi
    - Follow up siswa yang sering alpha
 
 4. **Akhir Periode (Naik Tingkat/Lulus)**
-
    - Admin proses kenaikan kelas (X→XI, XI→XII)
    - Proses kelulusan siswa Kelas VIII I
    - Update status siswa (Lulus/Tidak Lulus)
@@ -375,34 +371,29 @@ graph LR
 <Steps>
 
 1. **Persiapan Data**
-
    - Kumpulkan data siswa baru dari formulir PPDB
    - Scan dokumen (ijazah, KK, akta)
    - Foto siswa dengan background merah
 
 2. **Import Massal**
-
    - Format data di Excel sesuai template
    - Upload Excel via sistem
    - Review preview, cek error
    - Proses import (sistem assign kelas otomatis)
 
 3. **Upload Foto Massal**
-
    - Rename foto sesuai NIS/NISN
    - Zip semua foto
    - Upload ZIP file
    - Sistem match foto dengan data siswa
 
 4. **Registrasi Kartu RFID**
-
    - Scan kartu RFID kosong
    - Link dengan data siswa
    - Test tap untuk validasi
    - Cetak kartu fisik
 
 5. **Orientasi Siswa**
-
    - Serahkan kartu RFID + lanyard
    - Edukasi cara presensi
    - Aktivasi akun login siswa
@@ -417,27 +408,23 @@ graph LR
 <Steps>
 
 1. **Evaluasi & Seleksi**
-
    - Tentukan siswa yang naik kelas
    - Identifikasi siswa tidak naik (tinggal kelas)
    - Tentukan kelas tujuan (Unggulan/Reguler)
 
 2. **Proses Naik Tingkat**
-
    - Filter siswa kelas VII yang naik
    - Pilih "Naik ke Kelas VIII "
    - Sistem otomatis update kelas
    - Assign ke rombel baru (VIII Unggulan1, 2, dst)
 
 3. **Update Data**
-
    - Update wali kelas baru
    - Update jadwal pelajaran
    - Notifikasi ke siswa & orang tua
    - Generate laporan kenaikan
 
 4. **Verifikasi**
-
    - Cek apakah semua siswa sudah di kelas baru
    - Cek siswa tinggal kelas tetap di kelas lama
    - Backup data untuk arsip

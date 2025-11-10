@@ -62,7 +62,6 @@ Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staf
 3. **Isi Data Personal**
 
    **Informasi Dasar**:
-
    - **Nama Lengkap** (wajib) - Sesuai ijazah
    - **NIP** (opsional) - Untuk PNS
    - **NIK** (wajib) - Nomor KTP
@@ -73,28 +72,24 @@ Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staf
    - **Agama** (wajib)
 
    **Kontak**:
-
    - **Email** (wajib) - Email aktif
    - **No. HP** (wajib) - WhatsApp aktif
    - **Alamat Lengkap** (wajib)
    - **Kode Pos** (opsional)
 
 4. **Atur Jabatan & Status**
-
    - **Jabatan** (wajib) - Pilih dari dropdown
    - **Status Kepegawaian** (wajib) - PNS / GTT / PTT
    - **TMT (Terhitung Mulai Tanggal)** (wajib) - Tanggal mulai kerja
    - **Status Aktif** (wajib) - Aktif / Nonaktif
 
 5. **Upload Foto Pegawai**
-
    - Klik **"Upload Foto"**
    - Pilih file foto (JPG/PNG, max 2MB)
    - Background: Biru untuk pegawai
    - Crop dan sesuaikan jika perlu
 
 6. **Link Kartu RFID** (Opsional)
-
    - Jika sudah ada kartu RFID, input nomor RFID
    - Atau skip, akan diisi nanti saat kartu tersedia
 
@@ -103,7 +98,6 @@ Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staf
    Klik **"Simpan"** untuk menyimpan data pegawai
 
 8. **Verifikasi**
-
    - Sistem akan validasi data
    - Jika ada error, perbaiki sesuai petunjuk
    - Jika sukses, pegawai muncul di daftar
@@ -202,7 +196,6 @@ Agar pegawai dapat presensi dengan sistem RFID, data pegawai harus di-link denga
    Klik **Edit** pada pegawai yang akan di-link
 
 3. **Scan Nomor RFID**
-
    - Gunakan RFID reader untuk scan kartu
    - Atau input manual nomor RFID (10 digit integer)
    - Contoh: 1365289563
@@ -210,7 +203,6 @@ Agar pegawai dapat presensi dengan sistem RFID, data pegawai harus di-link denga
 4. **Simpan**
 
    Klik **"Simpan"**, sistem akan validasi:
-
    - Apakah nomor RFID sudah terdaftar?
    - Apakah sudah digunakan pegawai lain?
 
@@ -335,19 +327,16 @@ Untuk menambahkan banyak pegawai sekaligus, gunakan fitur import.
    | status_aktif       | Ya    | Aktif / Nonaktif   |
 
 3. **Upload File Excel**
-
    - Klik **"Import Data Pegawai"**
    - Pilih file Excel yang sudah diisi
    - Klik **"Upload"**
 
 4. **Preview & Validasi**
-
    - Sistem akan tampilkan preview data
    - Cek apakah ada error atau warning
    - Perbaiki jika ada yang salah
 
 5. **Proses Import**
-
    - Jika tidak ada error, klik **"Proses Import"**
    - Tunggu hingga selesai
    - Sistem akan tampilkan summary: berapa data berhasil, berapa gagal
@@ -375,24 +364,20 @@ Untuk upload banyak foto sekaligus:
 2. **Rename File Foto**
 
    Nama file harus sesuai NIK atau NIP:
-
    - `3601012345678901.jpg` (NIK)
    - `198501012010011001.jpg` (NIP)
    - Ekstensi: `.jpg`, `.jpeg`, `.png`
 
 3. **Compress ke ZIP**
-
    - Zip folder tersebut
    - Nama ZIP bebas, contoh: `foto_pegawai_2025.zip`
 
 4. **Upload ZIP**
-
    - Klik **"Import Foto Pegawai"**
    - Pilih file ZIP
    - Upload
 
 5. **Proses Import**
-
    - Sistem extract ZIP
    - Match foto dengan data pegawai berdasarkan nama file
    - Tampilkan summary: berapa foto berhasil, berapa tidak cocok
@@ -454,7 +439,6 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
    Cari pegawai yang akan dinonaktifkan
 
 2. **Edit Status**
-
    - Klik **Edit**
    - Ubah **Status Aktif** menjadi **"Nonaktif"**
    - Isi **Alasan** (opsional): Resign, Pensiun, Cuti, dll
@@ -466,7 +450,6 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 4. **Verifikasi**
 
    Pegawai nonaktif akan:
-
    - Tidak bisa login sistem
    - Kartu RFID tidak aktif (tidak bisa tap)
    - Data tetap tersimpan untuk histori

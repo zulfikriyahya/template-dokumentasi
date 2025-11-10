@@ -1,20 +1,20 @@
 ---
 title: "Data Master"
 description: "Kelola data dasar sistem presensi dengan mudah dan terstruktur"
-# template: splash
-# hero:
-#   image:
-#     file: "../../../assets/index.svg"
-#   tagline: "Pusat pengelolaan data dasar untuk operasional sistem presensi RFID"
-#   actions:
-#     - text: "Mulai Kelola Data"
-#       link: "#daftar-sub-menu-data-master"
-#       icon: "rocket"
-#       variant: primary
-#     - text: "Urutan Setup"
-#       link: "#urutan-pengisian-data"
-#       icon: "list-format"
-#       variant: secondary
+template: splash
+hero:
+  image:
+    file: "../../../assets/index.svg"
+  tagline: "Pusat pengelolaan data dasar untuk operasional sistem presensi RFID"
+  actions:
+    - text: "Mulai Kelola Data"
+      link: "#daftar-sub-menu-data-master"
+      icon: "rocket"
+      variant: primary
+    - text: "Urutan Setup"
+      link: "#urutan-pengisian-data"
+      icon: "list-format"
+      variant: secondary
 ---
 
 import { Card, CardGrid, Steps, Aside } from "@astrojs/starlight/components";
@@ -44,9 +44,10 @@ Data master mencakup informasi tentang:
 ## Fungsi Data Master
 
 <CardGrid>
-  <Card title="Referensi Data" icon="star">
-    Menjadi acuan utama untuk semua proses bisnis dalam sistem presensi
-  </Card>
+
+<Card title="Referensi Data" icon="star">
+  Menjadi acuan utama untuk semua proses bisnis dalam sistem presensi
+</Card>
 
 <Card title="Konsistensi Data" icon="bars">
   Memastikan data yang digunakan di seluruh sistem konsisten dan terstandar
@@ -64,9 +65,10 @@ Data master mencakup informasi tentang:
   Mendukung pembuatan laporan dan analisis data yang akurat
 </Card>
 
-  <Card title="Kontrol Akses" icon="lock">
-    Mengatur hak akses pengguna berdasarkan peran dan struktur organisasi
-  </Card>
+<Card title="Kontrol Akses" icon="lock">
+  Mengatur hak akses pengguna berdasarkan peran dan struktur organisasi
+</Card>
+
 </CardGrid>
 
 ---
@@ -76,17 +78,19 @@ Data master mencakup informasi tentang:
 ### 1. Manajemen Pengguna & Akses
 
 <CardGrid>
-  <Card title="Peran (Roles)" icon="star">
-    Kelola peran pengguna dan hak akses sistem **Fitur:** - Super Admin,
-    Operator, Wali Kelas, Pegawai, Siswa - Permission management - Role
-    hierarchy [Pelajari Lebih Lanjut →](/menu-data-master/peran/)
-  </Card>
 
-  <Card title="Pengguna (Users)" icon="user">
-    Manajemen akun pengguna sistem **Fitur:** - Create/edit user account -
-    Assign roles - Reset password - User activation [Pelajari Lebih Lanjut
-    →](/menu-data-master/pengguna/)
-  </Card>
+<Card title="Peran (Roles)" icon="star">
+  Kelola peran pengguna dan hak akses sistem **Fitur:** - Super Admin, Operator,
+  Wali Kelas, Pegawai, Siswa - Permission management - Role hierarchy [Pelajari
+  Lebih Lanjut →](/menu-data-master/peran/)
+</Card>
+
+<Card title="Pengguna (Users)" icon="user">
+  Manajemen akun pengguna sistem **Fitur:** - Create/edit user account - Assign
+  roles - Reset password - User activation [Pelajari Lebih Lanjut
+  →](/menu-data-master/pengguna/)
+</Card>
+
 </CardGrid>
 
 ### 2. Data Institusi
