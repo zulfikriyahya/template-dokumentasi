@@ -1,6 +1,6 @@
 ---
-title: "Memulai"
-description: "Panduan lengkap untuk memulai menggunakan Attendance Systems"
+title: 'Memulai'
+description: 'Panduan lengkap untuk memulai menggunakan Attendance Systems'
 # template: splash
 # hero:
 #   image:
@@ -25,7 +25,7 @@ import {
   Aside,
   Tabs,
   TabItem,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengenalan Sistem
 
@@ -59,31 +59,31 @@ Sistem ini dapat digunakan oleh:
 
 1. **Buka Browser**
 
-   Akses sistem melalui URL yang diberikan oleh administrator (`https://presensi.mtsn1pandeglang.sch.id`)
+Akses sistem melalui URL yang diberikan oleh administrator (`https://presensi.mtsn1pandeglang.sch.id`)
 
 2. **Masukkan Kredensial**
 
-   ```
-   Email/Username: email@example.com
-   Password: ********
-   ```
+```
+Email/Username: email@example.com
+Password: ********
+```
 
-   <Aside type="caution">
-     Jangan bagikan password Anda kepada siapapun. Gunakan password yang kuat
-     dengan kombinasi huruf, angka, dan simbol.
-   </Aside>
+<Aside type='caution'>
+  Jangan bagikan password Anda kepada siapapun. Gunakan password yang kuat
+  dengan kombinasi huruf, angka, dan simbol.
+</Aside>
 
 3. **Klik Tombol "Masuk"**
 
-   Setelah kredensial valid, Anda akan diarahkan ke dashboard utama sesuai dengan peran akun Anda.
+Setelah kredensial valid, Anda akan diarahkan ke dashboard utama sesuai dengan peran akun Anda.
 
 4. **Verifikasi Dua Faktor (Opsional)**
 
-   Jika diaktifkan, masukkan kode OTP yang dikirim ke email atau aplikasi authenticator Anda.
+Jika diaktifkan, masukkan kode OTP yang dikirim ke email atau aplikasi authenticator Anda.
 
 </Steps>
 
-<Aside type="note" title="Lupa Password?">
+<Aside type='note' title='Lupa Password?'>
   Klik link **"Lupa Password?"** di halaman login, masukkan email terdaftar, dan
   ikuti instruksi reset password yang dikirim ke email Anda.
 </Aside>
@@ -153,16 +153,22 @@ Setelah login berhasil, Anda akan melihat dashboard yang menampilkan informasi p
 </TabItem>
 
 <TabItem label="Wali Kelas">
-  - **Presensi Kelas**: Statistik kehadiran siswa di kelas - **Daftar Siswa**:
-  Data siswa yang diampu - **Rekap Bulanan**: Grafik kehadiran per bulan -
-  **Quick Actions**: Input manual presensi, export laporan kelas
+
+- **Presensi Kelas**: Statistik kehadiran siswa di kelas
+- **Daftar Siswa**: Data siswa yang diampu
+- **Rekap Bulanan**: Grafik kehadiran per bulan
+- **Quick Actions**: Input manual presensi, export laporan kelas
+
 </TabItem>
 
-  <TabItem label="Pegawai/Siswa">
-    - **Riwayat Presensi**: Data kehadiran pribadi - **Statistik Pribadi**:
-    Persentase kehadiran, keterlambatan - **Informasi**: Pengumuman dan
-    informasi penting - **Profile**: Kelola data pribadi dan kartu RFID
-  </TabItem>
+<TabItem label="Pegawai/Siswa">
+
+- **Riwayat Presensi**: Data kehadiran pribadi
+- **Statistik Pribadi**: Persentase kehadiran, keterlambatan
+- **Informasi**: Pengumuman dan informasi penting
+- **Profile**: Kelola data pribadi dan kartu RFID
+
+</TabItem>
 </Tabs>
 
 ---
@@ -215,10 +221,14 @@ Sistem menggunakan sidebar navigasi yang intuitif dengan struktur sebagai beriku
 - Keamanan Akun
 - Preferensi Sistem
 
-<Aside type="tip" title="Tips Navigasi">
-  - Gunakan **search box** (Ctrl/Cmd + K) untuk menemukan menu dengan cepat -
-  Menu yang aktif ditandai dengan highlight warna - Klik ikon menu di mobile
-  untuk membuka/tutup sidebar
+<Aside
+type="tip"
+title="Tips Navigasi"
+>
+- Gunakan **search box** (Ctrl/Cmd + K) untuk menemukan menu dengan cepat 
+- Menu yang aktif ditandai dengan highlight warna 
+- Klik ikon menu di mobile untuk membuka/tutup sidebar
+
 </Aside>
 
 ---
@@ -239,52 +249,52 @@ Sistem menggunakan sidebar navigasi yang intuitif dengan struktur sebagai beriku
 
 1. **Tap Kartu**
 
-   Siswa/pegawai menempelkan kartu RFID ke reader
+Siswa/pegawai menempelkan kartu RFID ke reader
 
 2. **Pembacaan ID**
 
-   Reader menangkap ID unik dari kartu dan mengirim ke sistem
+Reader menangkap ID unik dari kartu dan mengirim ke sistem
 
 3. **Validasi Data**
 
-   Sistem memvalidasi ID kartu dengan database pengguna
+Sistem memvalidasi ID kartu dengan database pengguna
 
 4. **Pencatatan Presensi**
 
-   Jika valid, sistem mencatat waktu presensi secara otomatis
+Jika valid, sistem mencatat waktu presensi secara otomatis
 
 5. **Notifikasi**
 
-   Notifikasi dikirim ke sistem dan WhatsApp orang tua (khusus siswa)
+Notifikasi dikirim ke sistem dan WhatsApp orang tua (khusus siswa)
 
 </Steps>
 
 ### Status Presensi
 
 <CardGrid>
-  <Card title="Hadir" icon="approve-check">
-    Tap kartu dalam rentang waktu yang ditentukan
-  </Card>
+<Card title="Hadir" icon="approve-check">
+Tap kartu dalam rentang waktu yang ditentukan
+</Card>
 
-<Card title="Terlambat" icon="warning">
+<Card title='Terlambat' icon='warning'>
   Tap kartu melebihi batas waktu toleransi
 </Card>
 
-<Card title="Izin" icon="document">
+<Card title='Izin' icon='document'>
   Tidak hadir dengan surat izin yang disetujui
 </Card>
 
-<Card title=" Sakit" icon="heart">
+<Card title=' Sakit' icon='heart'>
   Tidak hadir karena sakit dengan surat keterangan
 </Card>
 
-<Card title="Dispensasi" icon="star">
+<Card title='Dispensasi' icon='star'>
   Izin meninggalkan kelas untuk keperluan sekolah
 </Card>
 
-  <Card title="Alpha" icon="error">
-    Tidak hadir tanpa keterangan yang jelas
-  </Card>
+<Card title="Alpha" icon="error">
+Tidak hadir tanpa keterangan yang jelas
+</Card>
 </CardGrid>
 
 ---
@@ -295,25 +305,25 @@ Sistem menggunakan sidebar navigasi yang intuitif dengan struktur sebagai beriku
 
 ```mermaid
 graph TD
-    A[Setup Data Master] --> B[Input Data Siswa/Pegawai]
-    B --> C[Proses Pengajuan Kartu RFID]
-    C --> D[Aktivasi Kartu]
-    D --> E[Monitoring Presensi Harian]
-    E --> F[Generate Laporan]
-    F --> G[Evaluasi & Perbaikan]
-    G --> E
+A[Setup Data Master] --> B[Input Data Siswa/Pegawai]
+B --> C[Proses Pengajuan Kartu RFID]
+C --> D[Aktivasi Kartu]
+D --> E[Monitoring Presensi Harian]
+E --> F[Generate Laporan]
+F --> G[Evaluasi & Perbaikan]
+G --> E
 ```
 
 ### Untuk Siswa/Pegawai
 
 ```mermaid
 graph LR
-    A[Login Sistem] --> B[Ajukan Kartu RFID]
-    B --> C[Bayar Biaya Kartu]
-    C --> D[Ambil Kartu]
-    D --> E[Tap Kartu Setiap Hari]
-    E --> F[Cek Riwayat Presensi]
-    F --> G[Terima Notifikasi]
+A[Login Sistem] --> B[Ajukan Kartu RFID]
+B --> C[Bayar Biaya Kartu]
+C --> D[Ambil Kartu]
+D --> E[Tap Kartu Setiap Hari]
+E --> F[Cek Riwayat Presensi]
+F --> G[Terima Notifikasi]
 ```
 
 ---
@@ -330,7 +340,7 @@ Sistem menggunakan **Role-Based Access Control (RBAC)** untuk mengatur hak akses
 | **Pegawai**     | Profile, Presensi Pribadi      | Read riwayat pribadi, update profile                |
 | **Siswa**       | Profile, Presensi Pribadi      | Read riwayat pribadi, update profile, ajukan kartu  |
 
-<Aside type="caution" title="Keamanan Akses">
+<Aside type='caution' title='Keamanan Akses'>
   Setiap peran hanya dapat mengakses menu dan data sesuai dengan haknya.
   Percobaan akses ilegal akan tercatat dalam sistem log.
 </Aside>
@@ -340,35 +350,36 @@ Sistem menggunakan **Role-Based Access Control (RBAC)** untuk mengatur hak akses
 ## Tips Penggunaan
 
 <CardGrid>
-  <Card title="Keamanan" icon="lock">
-    - Logout setelah selesai menggunakan sistem - Jangan simpan password di
-    browser publik - Ganti password secara berkala - Aktifkan verifikasi dua
-    faktor jika tersedia
-  </Card>
+<Card title="Keamanan" icon="lock">
+- Logout setelah selesai menggunakan sistem 
+- Jangan simpan password di browser publik
+- Ganti password secara berkala 
+- Aktifkan verifikasi dua faktor jika tersedia
+</Card>
 
-<Card title=" Efisiensi" icon="rocket">
+<Card title=' Efisiensi' icon='rocket'>
   - Gunakan fitur pencarian untuk akses cepat - Manfaatkan filter dan sorting
   data - Export data secara berkala untuk backup - Gunakan keyboard shortcuts
 </Card>
 
-<Card title=" Notifikasi" icon="bell">
+<Card title=' Notifikasi' icon='bell'>
   - Pastikan nomor WhatsApp aktif dan valid - Periksa notifikasi sistem secara
   rutin - Simpan nomor kontak admin untuk emergency - Enable push notification
   di browser
 </Card>
 
-  <Card title="Laporan" icon="document">
-    - Generate laporan di luar jam sibuk - Gunakan filter untuk laporan spesifik
-    - Download laporan dalam format yang sesuai - Verifikasi data sebelum export
-    final
-  </Card>
+<Card title="Laporan" icon="document">
+- Generate laporan di luar jam sibuk - Gunakan filter untuk laporan spesifik
+- Download laporan dalam format yang sesuai - Verifikasi data sebelum export
+final
+</Card>
 </CardGrid>
 
 ---
 
 ## Video Tutorial
 
-<Aside type="note">
+<Aside type='note'>
   Video tutorial akan segera ditambahkan. Sementara waktu, ikuti panduan
   text-based di dokumentasi ini.
 </Aside>
@@ -380,23 +391,23 @@ Sistem menggunakan **Role-Based Access Control (RBAC)** untuk mengatur hak akses
 Setelah memahami dasar-dasar sistem, Anda dapat melanjutkan ke:
 
 <CardGrid>
-  <Card title="Update Profile" icon="user">
-    Pelajari cara mengelola profil dan keamanan akun [Baca Panduan
-    →](/update-profile/)
-  </Card>
+<Card title="Update Profile" icon="user">
+Pelajari cara mengelola profil dan keamanan akun [Baca Panduan
+→](/update-profile/)
+</Card>
 
-<Card title=" Data Master" icon="list-format">
+<Card title=' Data Master' icon='list-format'>
   Pahami cara mengelola data dasar sistem [Baca Panduan →](/menu-data-master/)
 </Card>
 
-  <Card title=" Kartu Presensi" icon="approve-check">
-    Pelajari proses pengajuan kartu RFID [Baca Panduan →](/menu-kartu-presensi/)
-  </Card>
+<Card title=" Kartu Presensi" icon="approve-check">
+Pelajari proses pengajuan kartu RFID [Baca Panduan →](/menu-kartu-presensi/)
+</Card>
 </CardGrid>
 
 ---
 
-<Aside type="tip" title="Butuh Bantuan?">
+<Aside type='tip' title='Butuh Bantuan?'>
   Jika mengalami kesulitan, hubungi administrator sistem atau baca FAQ di menu
   bantuan.
 </Aside>

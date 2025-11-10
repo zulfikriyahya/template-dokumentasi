@@ -1,6 +1,6 @@
 ---
-title: "Mata Pelajaran"
-description: "Kelola daftar mata pelajaran yang diajarkan di madrasah"
+title: 'Mata Pelajaran'
+description: 'Kelola daftar mata pelajaran yang diajarkan di madrasah'
 # template: splash
 # hero:
 #   image:
@@ -24,23 +24,23 @@ import {
   Tabs,
   TabItem,
   Aside,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Mata Pelajaran
 
 Mata Pelajaran adalah database seluruh mata pelajaran yang diajarkan di madrasah. Data ini digunakan sebagai acuan untuk penyusunan jadwal pelajaran dan penugasan guru pengampu.
 
 <CardGrid>
-  <Card title="Terorganisir" icon="document">
+  <Card title='Terorganisir' icon='document'>
     Kelola seluruh mata pelajaran dengan kode dan kategori yang jelas
   </Card>
-  <Card title="Guru Pengampu" icon="star">
+  <Card title='Guru Pengampu' icon='star'>
     Hubungkan mata pelajaran dengan guru yang mengampu
   </Card>
-  <Card title="Kategori Fleksibel" icon="puzzle">
+  <Card title='Kategori Fleksibel' icon='puzzle'>
     Kelompokkan mapel: Wajib, Peminatan, Muatan Lokal, Ekstrakurikuler
   </Card>
-  <Card title="Integrasi Jadwal" icon="rocket">
+  <Card title='Integrasi Jadwal' icon='rocket'>
     Data mapel terintegrasi dengan sistem jadwal pelajaran
   </Card>
 </CardGrid>
@@ -60,7 +60,7 @@ Mata pelajaran yang wajib diikuti oleh seluruh siswa sesuai kurikulum nasional.
     Inggris
   </TabItem>
 
-<TabItem label="Kelompok B (Umum)">
+<TabItem label='Kelompok B (Umum)'>
   **Mata Pelajaran Penunjang** - Seni Budaya - Pendidikan Jasmani, Olahraga, dan
   Kesehatan - Prakarya dan Kewirausahaan
 </TabItem>
@@ -97,7 +97,7 @@ Setiap mata pelajaran memiliki kode unik untuk memudahkan identifikasi dan penca
 
 **[KATEGORI]-[SINGKATAN]**
 
-<Aside type="tip" title="Contoh Kode">
+<Aside type='tip' title='Contoh Kode'>
   - **PAI-QH** → Pendidikan Agama Islam - Al-Qur'an Hadits - **MTK-01** →
   Matematika Wajib - **IPA-FIS** → Unggulan- Fisika - **BHS-ING** → Bahasa
   Inggris - **MUL-BJW** → Muatan Lokal - Bahasa Jawa - **EKSKUL-THF** →
@@ -147,7 +147,7 @@ Setiap mata pelajaran memiliki kode unik untuk memudahkan identifikasi dan penca
 
 </Steps>
 
-<Aside type="note">
+<Aside type='note'>
   Pastikan data guru sudah lengkap di menu **Data Master → Pegawai** sebelum
   menambahkan guru pengampu.
 </Aside>
@@ -165,7 +165,7 @@ Setiap mata pelajaran dapat memiliki satu atau lebih guru pengampu.
     kelas VII, VIII, IX
   </TabItem>
 
-<TabItem label="Multiple Pengampu">
+<TabItem label='Multiple Pengampu'>
   **Beberapa Guru untuk Kelas Berbeda** Cocok untuk: - Mapel dengan banyak
   rombel - Pembagian beban mengajar Contoh: - Guru A: Matematika VII Unggulan, 2
   - Guru B: Matematika X Unggulan3, 4
@@ -207,7 +207,7 @@ Setiap mata pelajaran memiliki alokasi waktu (beban jam) sesuai kurikulum.
 | **Muatan Lokal**    | 2 jam            | Bahasa Daerah, dll                   |
 | **Ekstrakurikuler** | 2-4 jam          | Tahfidz, Pramuka, dll                |
 
-<Aside type="note">
+<Aside type='note'>
   Total beban belajar siswa dalam seminggu disesuaikan dengan struktur kurikulum
   yang berlaku (Kurikulum 2013 atau Kurikulum Merdeka).
 </Aside>
@@ -232,7 +232,7 @@ Setiap mata pelajaran memiliki alokasi waktu (beban jam) sesuai kurikulum.
 - Kategori dan kelompok
 - Kode (hati-hati, akan mempengaruhi jadwal existing)
 
-<Aside type="caution">
+<Aside type='caution'>
   Perubahan kode mata pelajaran dapat mempengaruhi jadwal pelajaran yang sudah
   dibuat. Pastikan melakukan sinkronisasi setelah mengubah kode.
 </Aside>
@@ -317,7 +317,7 @@ Untuk menambahkan banyak mata pelajaran sekaligus:
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Gunakan fitur import untuk setup awal atau saat pergantian kurikulum agar
   lebih efisien.
 </Aside>
@@ -342,11 +342,11 @@ Export data untuk:
     pelajaran
   </Card>
 
-<Card title="Update Guru Pengampu" icon="star">
+<Card title='Update Guru Pengampu' icon='star'>
   Pastikan data guru pengampu selalu update, terutama di awal tahun ajaran
 </Card>
 
-<Card title="Sesuai Kurikulum" icon="document">
+<Card title='Sesuai Kurikulum' icon='document'>
   Sinkronkan mata pelajaran dengan struktur kurikulum yang berlaku
   (K13/Kurikulum Merdeka)
 </Card>
@@ -444,7 +444,7 @@ Status: Aktif
 
 ## Tips Manajemen Kurikulum
 
-<Aside type="tip">
+<Aside type='tip'>
   - **Awal Tahun Ajaran**: Review dan update seluruh daftar mata pelajaran -
   **Pergantian Kurikulum**: Siapkan mata pelajaran baru sebelum tahun ajaran
   dimulai - **Dokumentasi**: Simpan struktur kurikulum dalam bentuk dokumen

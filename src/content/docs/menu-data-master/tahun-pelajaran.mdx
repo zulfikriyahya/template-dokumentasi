@@ -1,6 +1,6 @@
 ---
-title: "Tahun Pelajaran"
-description: "Kelola periode akademik dan tahun ajaran"
+title: 'Tahun Pelajaran'
+description: 'Kelola periode akademik dan tahun ajaran'
 # template: splash
 # hero:
 #   image:
@@ -24,7 +24,7 @@ import {
   Aside,
   Tabs,
   TabItem,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Tahun Pelajaran
 
@@ -32,7 +32,7 @@ import {
 
 ### Format Tahun Pelajaran
 
-<Card title="Penamaan Standar" icon="calendar">
+<Card title='Penamaan Standar' icon='calendar'>
   **Format Indonesia:** ``` 2024/2025 ``` Terdiri dari 2 tahun kalender yang
   mencakup: - Semester Ganjil: Juli-Desember (tahun pertama) - Semester Genap:
   Januari-Juni (tahun kedua) **Contoh:** - 2023/2024 - 2024/2025 - 2025/2026
@@ -91,7 +91,7 @@ import {
 
 </Steps>
 
-<Aside type="note">
+<Aside type='note'>
   Tahun pelajaran baru dibuat dengan status "Nonaktif" secara default. Aktifkan
   saat sudah siap digunakan.
 </Aside>
@@ -149,7 +149,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
   </Card>
 </CardGrid>
 
-<Aside type="caution" title="Persiapan Sebelum Aktivasi!">
+<Aside type='caution' title='Persiapan Sebelum Aktivasi!'>
   Pastikan sudah melakukan: 1. Backup database 2. Naik tingkat siswa (X→XI,
   XI→XII) 3. Update data kelas baru 4. Setup jadwal tahun ajaran baru 5. Inform
   pengumuman ke semua pengguna
@@ -179,7 +179,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
 
 </Steps>
 
-<Aside type="caution">
+<Aside type='caution'>
   **Hati-hati edit tahun pelajaran yang sedang aktif!** Perubahan tanggal dapat
   mempengaruhi perhitungan kehadiran.
 </Aside>
@@ -195,7 +195,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
     Saat berganti tahun ajaran baru, tahun lama otomatis nonaktif
   </Card>
 
-<Card title="🔧 Maintenance" icon="setting">
+<Card title='🔧 Maintenance' icon='setting'>
   Sementara nonaktifkan untuk perbaikan data
 </Card>
 
@@ -233,7 +233,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
 
 </Steps>
 
-<Aside type="caution" title="Peringatan!">
+<Aside type='caution' title='Peringatan!'>
   Sistem **tidak bisa beroperasi normal tanpa tahun pelajaran aktif**. Pastikan
   selalu ada 1 tahun ajaran yang aktif.
 </Aside>
@@ -363,7 +363,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
     - Tidak dihitung sebagai alpha - Muncul di kalendar
   </Card>
 
-<Card title="Periode Ujian" icon="document">
+<Card title='Periode Ujian' icon='document'>
   **Jenis Ujian:** - UTS (Ujian Tengah Semester) - UAS (Ujian Akhir Semester) -
   UN (Ujian Nasional) - Try Out **Impact:** - Jadwal khusus - Notifikasi
   reminder - Laporan terpisah
@@ -382,7 +382,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
 
 ### Filter Tahun di Laporan
 
-<Card title="Multi-Year Reporting" icon="bars">
+<Card title='Multi-Year Reporting' icon='bars'>
   Sistem mendukung laporan dari berbagai tahun ajaran: **Filter Options:** -
   Tahun Ajaran: 2023/2024, 2024/2025, dst - Semester: Ganjil / Genap - Periode
   Custom: Pilih tanggal manual - Perbandingan Antar Tahun **Report Types:** -
@@ -419,7 +419,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
 
 ### Archiving Old Data
 
-<Card title=" Data Archiving" icon="hard-drive">
+<Card title=' Data Archiving' icon='hard-drive'>
   **Best Practice:** - Archive data tahun ajaran >3 tahun - Simpan di cold
   storage - Backup before archive - Keep metadata accessible **Benefit:** -
   Database lebih cepat - Fokus pada data relevan - Compliant dengan retention
@@ -460,7 +460,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
     Nonaktifkan tahun lama dulu 4. Refresh page dan coba lagi
   </TabItem>
 
-<TabItem label="Presensi Salah Tahun">
+<TabItem label='Presensi Salah Tahun'>
   **Gejala:** Presensi masuk ke tahun ajaran yang salah **Penyebab:** - Multiple
   tahun aktif (bug) - Tanggal sistem salah - Cache tidak refresh **Solusi:** 1.
   Cek hanya 1 tahun yang aktif 2. Verifikasi tanggal server 3. Clear cache
@@ -485,7 +485,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
     →](/menu-data-master/jurusan/)
   </Card>
 
-<Card title="Buat Kelas" icon="graduation">
+<Card title='Buat Kelas' icon='graduation'>
   Setup rombongan belajar [Panduan Kelas →](/menu-data-master/kelas/)
 </Card>
 
@@ -496,7 +496,7 @@ Hanya **1 tahun pelajaran yang bisa aktif** dalam satu waktu.
 
 ---
 
-<Aside type="tip" title="Pro Tips">
+<Aside type='tip' title='Pro Tips'>
   - Buat tahun ajaran baru minimal 2 bulan sebelum aktivasi - Gunakan nama
   konsisten (format 2024/2025) - Backup data sebelum aktivasi tahun baru -
   Komunikasikan jadwal pergantian ke semua user - Document semua perubahan dan

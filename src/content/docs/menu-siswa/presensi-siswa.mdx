@@ -1,6 +1,6 @@
 ---
-title: "Riwayat Presensi Siswa"
-description: "Monitor dan kelola kehadiran siswa dengan notifikasi real-time ke orang tua"
+title: 'Riwayat Presensi Siswa'
+description: 'Monitor dan kelola kehadiran siswa dengan notifikasi real-time ke orang tua'
 # template: splash
 # hero:
 #   image:
@@ -24,23 +24,23 @@ import {
   Tabs,
   TabItem,
   Aside,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Riwayat Presensi Siswa
 
 Riwayat Presensi Siswa adalah modul untuk monitoring, analisis, dan pelaporan kehadiran seluruh siswa madrasah. Modul ini menampilkan data presensi real-time yang tercatat melalui sistem RFID dan **otomatis mengirim notifikasi ke orang tua** melalui WhatsApp.
 
 <CardGrid>
-  <Card title="Real-time Monitoring" icon="rocket">
+  <Card title='Real-time Monitoring' icon='rocket'>
     Pantau kehadiran siswa secara langsung saat tap kartu RFID
   </Card>
-  <Card title="Notifikasi Orang Tua" icon="star">
+  <Card title='Notifikasi Orang Tua' icon='star'>
     Kirim notifikasi WhatsApp otomatis ke orang tua saat anak tap kartu
   </Card>
-  <Card title="Multi Filter" icon="setting">
+  <Card title='Multi Filter' icon='setting'>
     Filter berdasarkan periode, kelas, siswa, atau status kehadiran
   </Card>
-  <Card title="Input Manual" icon="document">
+  <Card title='Input Manual' icon='document'>
     Input presensi manual untuk siswa yang lupa tap atau kondisi khusus
   </Card>
 </CardGrid>
@@ -79,7 +79,7 @@ Riwayat Presensi Siswa adalah modul untuk monitoring, analisis, dan pelaporan ke
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Dashboard akan **auto-refresh** setiap 30 detik untuk menampilkan data
   presensi terbaru secara real-time.
 </Aside>
@@ -97,13 +97,13 @@ Sistem mendukung berbagai filter periode untuk analisis kehadiran.
     **"Hari Ini"**
   </TabItem>
 
-<TabItem label="Minggu Ini">
+<TabItem label='Minggu Ini'>
   **Rekap 7 Hari Terakhir** - Senin - Sabtu (untuk madrasah swasta) atau Senin -
   Jumat (negeri) - Tampilkan tren kehadiran mingguan - Identifikasi pola
   keterlambatan siswa **Klik**: Tab **"Minggu Ini"**
 </TabItem>
 
-<TabItem label="Bulan Ini">
+<TabItem label='Bulan Ini'>
   **Rekap Bulan Berjalan** - Dari tanggal 1 sampai hari ini - Summary: total
   hadir, izin, sakit, alpha per siswa - Persentase kehadiran per siswa - Ranking
   kelas berdasarkan kehadiran **Klik**: Tab **"Bulan Ini"**
@@ -143,7 +143,7 @@ Wali kelas atau admin dapat memfilter presensi berdasarkan kelas.
    - Grafik komparasi
    - Kelas dengan kehadiran terbaik/terburuk
 
-<Aside type="note">
+<Aside type='note'>
   **Untuk Wali Kelas**: Anda hanya dapat melihat data presensi kelas binaan
   Anda. Untuk melihat kelas lain, hubungi admin atau kepala madrasah.
 </Aside>
@@ -205,7 +205,7 @@ Sistem mencatat berbagai status kehadiran siswa yang lebih lengkap dibanding peg
     "Anak Anda terlambat 15 menit hari ini"
   </TabItem>
 
-<TabItem label="Izin & Dispensasi">
+<TabItem label='Izin & Dispensasi'>
   **Tidak Hadir dengan Izin** **Izin** : - Tidak masuk dengan alasan yang jelas
   - Harus ada surat izin dari orang tua - Upload surat izin ke sistem (opsional)
   - Tidak mengurangi nilai sikap **Contoh**: - Urusan keluarga (kondangan, acara
@@ -238,7 +238,7 @@ Sistem mencatat berbagai status kehadiran siswa yang lebih lengkap dibanding peg
 
 ## Notifikasi ke Orang Tua
 
-<Aside type="tip" title="Fitur Unggulan!">
+<Aside type='tip' title='Fitur Unggulan!'>
   Setiap kali siswa tap kartu RFID, sistem **otomatis mengirim notifikasi
   WhatsApp** ke nomor HP orang tua yang terdaftar. Orang tua dapat memantau
   kehadiran anak secara real-time.
@@ -389,11 +389,11 @@ MTs Negeri 1 Pandeglang
     Orang tua harus memiliki nomor WhatsApp terdaftar di data siswa
   </Card>
 
-<Card title="Nomor Aktif" icon="star">
+<Card title='Nomor Aktif' icon='star'>
   Nomor WhatsApp harus aktif dan tidak diblokir
 </Card>
 
-<Card title="Koneksi Gateway" icon="rocket">
+<Card title='Koneksi Gateway' icon='rocket'>
   Sistem WhatsApp Gateway madrasah dalam kondisi online
 </Card>
 
@@ -415,11 +415,11 @@ Untuk kasus lupa tap, error sistem, atau kondisi khusus, wali kelas/admin dapat 
     Siswa hadir tapi lupa tap kartu RFID
   </Card>
 
-<Card title="Kartu Rusak" icon="star">
+<Card title='Kartu Rusak' icon='star'>
   Kartu RFID tidak berfungsi, siswa tidak bisa tap
 </Card>
 
-<Card title="Dispensasi" icon="rocket">
+<Card title='Dispensasi' icon='rocket'>
   Siswa mewakili madrasah dalam lomba/kegiatan
 </Card>
 
@@ -528,7 +528,7 @@ Untuk siswa yang tidak bisa tap kartu (lupa/kartu rusak), wali kelas dapat input
 
 </Steps>
 
-<Aside type="note">
+<Aside type='note'>
   Presensi yang di-input manual akan ditandai dengan icon (pensil) di tabel
   untuk membedakan dengan presensi RFID otomatis.
 </Aside>
@@ -550,7 +550,7 @@ Generate laporan kehadiran siswa untuk keperluan rapor, orang tua, atau kepala m
     Case**: Analisis data, input rapor, pelaporan ke atasan
   </TabItem>
 
-<TabItem label="PDF">
+<TabItem label='PDF'>
   **Portable Document Format** **Kelebihan**: - Siap cetak dan distribusi ke
   orang tua - Layout rapi dan profesional - Tidak dapat diedit (final) **Isi
   Laporan**: - Header: Logo, judul, periode, kelas - Body: Tabel presensi per
@@ -601,7 +601,7 @@ Generate laporan kehadiran siswa untuk keperluan rapor, orang tua, atau kepala m
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Untuk laporan bulanan yang dikirim ke orang tua, Anda dapat membuat **Template
   Laporan** yang tersimpan sehingga tidak perlu setting ulang setiap bulan.
 </Aside>
@@ -1117,13 +1117,13 @@ Jadi, data presensi **terlindungi** dan **accountable**.
     Lapor ke admin jika tetap error - Sementara: Input manual oleh wali kelas
   </Card>
 
-<Card title="Notifikasi Tidak Masuk" icon="star">
+<Card title='Notifikasi Tidak Masuk' icon='star'>
   **Penyebab**: Nomor salah, WA Gateway offline, atau internet HP mati
   **Solusi**: - Cek nomor WA di data siswa - Test notifikasi via Portal Orang
   Tua - Hubungi admin untuk cek Gateway - Pastikan HP terkoneksi internet
 </Card>
 
-<Card title="Data Presensi Salah" icon="document">
+<Card title='Data Presensi Salah' icon='document'>
   **Penyebab**: Double tap, tap tidak sengaja, atau siswa tukar kartu
   **Solusi**: - Wali kelas edit/hapus data yang salah - Isi alasan koreksi
   dengan jelas - Log akan tercatat untuk audit - Edukasi siswa untuk tidak tukar

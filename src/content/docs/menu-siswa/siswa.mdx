@@ -1,6 +1,6 @@
 ---
-title: "Data Siswa"
-description: "Kelola data siswa madrasah secara komprehensif"
+title: 'Data Siswa'
+description: 'Kelola data siswa madrasah secara komprehensif'
 # template: splash
 # hero:
 #   image:
@@ -24,23 +24,23 @@ import {
   Tabs,
   TabItem,
   Aside,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Data Siswa
 
 Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madrasah dari berbagai tingkat dan jurusan. Database ini mencakup data personal, akademik, data orang tua, hingga dokumen pendukung yang terintegrasi dengan sistem presensi.
 
 <CardGrid>
-  <Card title="Database Terpusat" icon="document">
+  <Card title='Database Terpusat' icon='document'>
     Satu sumber data untuk ribuan siswa dari kelas VII sampai IX
   </Card>
-  <Card title="Terintegrasi" icon="puzzle">
+  <Card title='Terintegrasi' icon='puzzle'>
     Terhubung dengan presensi, kartu RFID, kelas, dan notifikasi orang tua
   </Card>
-  <Card title="Mudah Dikelola" icon="star">
+  <Card title='Mudah Dikelola' icon='star'>
     Interface user-friendly untuk CRUD dan operasi massal (naik tingkat, lulus)
   </Card>
-  <Card title="Scalable" icon="rocket">
+  <Card title='Scalable' icon='rocket'>
     Mampu menampung ribuan data siswa dengan performa optimal
   </Card>
 </CardGrid>
@@ -128,7 +128,7 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Pastikan **nomor HP orang tua** yang diinput **aktif WhatsApp** karena akan
   digunakan untuk notifikasi kehadiran anak secara real-time.
 </Aside>
@@ -145,7 +145,7 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
     (KTP/KK) - Tempat & tanggal lahir - Jenis kelamin - Agama - Alamat lengkap
   </Card>
 
-<Card title="Data Akademik" icon="document">
+<Card title='Data Akademik' icon='document'>
   - Tahun masuk - Kelas (VII, VIII, IX) - Jurusan (Unggulan/Reguler) - Tahun
   pelajaran - Status siswa (Aktif)
 </Card>
@@ -184,7 +184,7 @@ Setiap siswa harus terdaftar dalam satu kelas aktif.
     sesuai kelas 4. Contoh: Pilih "VII Unggulan" → Jurusan: Unggulan, Tingkat: VII
   </TabItem>
 
-<TabItem label="Pindah Kelas">
+<TabItem label='Pindah Kelas'>
   **Ubah Kelas Siswa** 1. Edit data siswa 2. Ubah field **"Kelas"** 3. Simpan
   perubahan Siswa akan berpindah ke kelas baru mulai hari berikutnya
 </TabItem>
@@ -232,7 +232,7 @@ Agar siswa dapat presensi dengan sistem RFID, data siswa harus di-link dengan ka
 
 </Steps>
 
-<Aside type="caution">
+<Aside type='caution'>
   Satu nomor RFID hanya bisa di-link ke **satu siswa**. Jika nomor sudah
   digunakan, sistem akan menolak dan menampilkan error.
 </Aside>
@@ -261,7 +261,7 @@ Agar siswa dapat presensi dengan sistem RFID, data siswa harus di-link dengan ka
 - Nomor RFID
 - NIS, NISN, NIK (hati-hati, harus sesuai dokumen resmi)
 
-<Aside type="note">
+<Aside type='note'>
   Perubahan kelas siswa akan **langsung berlaku** dan mempengaruhi wali kelas,
   laporan, dan notifikasi. Pastikan data yang diinput sudah benar.
 </Aside>
@@ -285,7 +285,7 @@ Foto siswa digunakan untuk:
     ideal 600x800 px
   </Card>
 
-<Card title="Background" icon="star">
+<Card title='Background' icon='star'>
   - **Merah** untuk siswa - Background polos, tidak bergambar - Lighting cukup,
   tidak gelap/silau
 </Card>
@@ -374,7 +374,7 @@ Untuk menambahkan banyak siswa sekaligus (misalnya siswa baru PPDB), gunakan fit
 
 </Steps>
 
-<Aside type="caution" title="Perhatian!">
+<Aside type='caution' title='Perhatian!'>
   - Data yang sudah ada (duplikat NIS/NISN) akan **dilewati** atau **di-update**
   sesuai pengaturan - Pastikan format tanggal sudah benar: **YYYY-MM-DD**
   (contoh: 2010-01-15) - Kode kelas harus sudah terdaftar di sistem (format:
@@ -419,7 +419,7 @@ Untuk upload banyak foto sekaligus:
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Foto yang tidak cocok dengan data siswa akan dilewati. Cek log import untuk
   detail siswa mana yang fotonya tidak ter-upload.
 </Aside>
@@ -440,7 +440,7 @@ Export data untuk keperluan pelaporan, backup, atau integrasi sistem lain.
     3: Statistik **Use Case**: Analisis data, rekap per kelas, dapodik
   </TabItem>
 
-<TabItem label="PDF">
+<TabItem label='PDF'>
   **Portable Document Format** **Kelebihan**: - Siap cetak, layout rapi - Tidak
   dapat diedit (final) - Professional look **Isi Export**: - Header: Logo,
   judul, tanggal - Body: Tabel data siswa - Footer: Tanda tangan kepala madrasah
@@ -534,7 +534,7 @@ Anda dapat memfilter data sebelum export:
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Lakukan backup data sebelum proses naik tingkat massal untuk berjaga-jaga jika
   ada kesalahan dan perlu rollback.
 </Aside>
@@ -606,7 +606,7 @@ Sistem akan:
 
 ## Menghapus Data Siswa
 
-<Aside type="danger" title="Peringatan!">
+<Aside type='danger' title='Peringatan!'>
   Menghapus data siswa adalah **tindakan permanen** dan **tidak dapat
   dibatalkan**. Hanya lakukan jika benar-benar yakin.
 </Aside>
@@ -711,11 +711,11 @@ Sistem akan:
     di Dapodik
   </Card>
 
-<Card title="Update Kontak Orang Tua" icon="star">
+<Card title='Update Kontak Orang Tua' icon='star'>
   Verifikasi nomor WhatsApp orang tua setiap semester agar notifikasi lancar
 </Card>
 
-<Card title="Backup Rutin" icon="warning">
+<Card title='Backup Rutin' icon='warning'>
   Export data siswa setiap bulan sebagai backup, terutama sebelum naik
   tingkat/kelulusan
 </Card>

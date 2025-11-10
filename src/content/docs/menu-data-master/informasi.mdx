@@ -1,6 +1,6 @@
 ---
-title: "Informasi & Pengumuman"
-description: "Kelola pengumuman dan broadcast informasi ke seluruh pengguna sistem"
+title: 'Informasi & Pengumuman'
+description: 'Kelola pengumuman dan broadcast informasi ke seluruh pengguna sistem'
 # template: splash
 # hero:
 #   image:
@@ -24,23 +24,23 @@ import {
   Tabs,
   TabItem,
   Aside,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Informasi & Pengumuman
 
 Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau informasi penting kepada seluruh pengguna sistem. Informasi yang dipublikasikan dapat dilihat di dashboard dan otomatis dikirimkan melalui notifikasi WhatsApp.
 
 <CardGrid>
-  <Card title="Broadcast Otomatis" icon="rocket">
+  <Card title='Broadcast Otomatis' icon='rocket'>
     Informasi yang dipublish otomatis tersebar ke seluruh pengguna sistem
   </Card>
-  <Card title="Notifikasi WhatsApp" icon="external">
+  <Card title='Notifikasi WhatsApp' icon='external'>
     Pengumuman penting langsung dikirim ke WhatsApp pengguna terdaftar
   </Card>
-  <Card title="Target Audience" icon="star">
+  <Card title='Target Audience' icon='star'>
     Pilih penerima: Semua, Guru, Siswa, Kelas Tertentu, atau Custom
   </Card>
-  <Card title="Status Publikasi" icon="document">
+  <Card title='Status Publikasi' icon='document'>
     Kelola dengan status: Draft, Published, Archived
   </Card>
 </CardGrid>
@@ -58,13 +58,13 @@ Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau infor
     pengguna sistem
   </TabItem>
 
-<TabItem label="Pengumuman Akademik">
+<TabItem label='Pengumuman Akademik'>
   **Informasi Pembelajaran** - Jadwal ujian/ulangan - Pengumpulan tugas -
   Perubahan jadwal pelajaran - Rapat guru **Target**: Guru dan/atau siswa
   tertentu
 </TabItem>
 
-<TabItem label="Pengumuman Administratif">
+<TabItem label='Pengumuman Administratif'>
   **Informasi Administrasi** - Pembayaran SPP - Pengambilan rapor - Verifikasi
   data siswa - Update kartu presensi **Target**: Siswa/orang tua dan staff TU
 </TabItem>
@@ -131,7 +131,7 @@ Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau infor
 
 </Steps>
 
-<Aside type="caution" title="Perhatian!">
+<Aside type='caution' title='Perhatian!'>
   Setelah klik **"Publish"**, informasi akan **langsung dikirim ke WhatsApp**
   semua pengguna yang menjadi target. Pastikan konten sudah benar sebelum
   publish!
@@ -190,7 +190,7 @@ Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau infor
 
 ## Notifikasi WhatsApp
 
-<Aside type="tip" title="Fitur Unggulan!">
+<Aside type='tip' title='Fitur Unggulan!'>
   Setiap informasi yang statusnya diubah menjadi **Published** akan **otomatis
   dikirimkan** ke WhatsApp pengguna yang menjadi target audience.
 </Aside>
@@ -262,11 +262,11 @@ MTs Negeri 1 Pandeglang
     Pengguna harus memiliki nomor WhatsApp terdaftar di profil
   </Card>
 
-<Card title="Status Published" icon="rocket">
+<Card title='Status Published' icon='rocket'>
   Informasi harus berstatus **Published** (bukan Draft)
 </Card>
 
-<Card title="Target Valid" icon="star">
+<Card title='Target Valid' icon='star'>
   Pengguna termasuk dalam target audience yang dipilih
 </Card>
 
@@ -290,13 +290,13 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
     Guru, Staff, Siswa, Wali Kelas, semua role
   </TabItem>
 
-<TabItem label="Per Role">
+<TabItem label='Per Role'>
   **Filter Berdasarkan Peran** - **Guru/Pegawai**: Rapat guru, update mengajar -
   **Siswa**: Jadwal ujian, tugas - **Staff TU**: Administrasi, pembayaran -
   **Wali Kelas**: Koordinasi kelas - **Orang Tua** (jika ada): Info kesiswaan
 </TabItem>
 
-<TabItem label="Per Kelas">
+<TabItem label='Per Kelas'>
   **Target Kelas Tertentu** Cocok untuk: - Pengumuman khusus Kelas VIII I
   (kelulusan) - Info jurusan tertentu - Acara kelas **Contoh**: Hanya siswa X
   Unggulan1, 2, 3
@@ -320,7 +320,7 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
 
 </Steps>
 
-<Aside type="caution" title="Catatan Penting!">
+<Aside type='caution' title='Catatan Penting!'>
   - Mengedit informasi yang sudah **Published** **TIDAK** akan mengirim
   notifikasi WhatsApp ulang - Jika perlu kirim notifikasi baru, buat pengumuman
   baru - Perubahan akan langsung terlihat di dashboard pengguna
@@ -345,7 +345,7 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
   </TabItem>
 </Tabs>
 
-<Aside type="danger">
+<Aside type='danger'>
   Informasi yang sudah dikirim ke WhatsApp **tidak dapat ditarik kembali**
   meskipun dihapus dari sistem. WhatsApp sudah terkirim ke device pengguna.
 </Aside>
@@ -360,11 +360,11 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
     langsung paham
   </Card>
 
-<Card title="Konten Terstruktur" icon="document">
+<Card title='Konten Terstruktur' icon='document'>
   Gunakan bullet points, numbering, dan paragraph pendek agar mudah dibaca
 </Card>
 
-<Card title="Review Sebelum Publish" icon="approve-check">
+<Card title='Review Sebelum Publish' icon='approve-check'>
   Simpan sebagai Draft dulu, minta review atasan, baru publish untuk menghindari
   kesalahan
 </Card>
@@ -509,7 +509,7 @@ Terima kasih atas perhatiannya.
 
 ## Tips Keamanan
 
-<Aside type="tip">
+<Aside type='tip'>
   - Batasi akses pembuatan informasi hanya untuk **Super Admin**, **Operator**,
   dan **Kepala Madrasah** - Aktifkan fitur approval untuk pengumuman prioritas
   **Urgent** - Log semua aktivitas publikasi untuk audit - Backup database

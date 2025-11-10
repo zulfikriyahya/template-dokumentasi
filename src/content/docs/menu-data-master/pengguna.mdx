@@ -1,6 +1,6 @@
 ---
-title: "Pengguna (Users)"
-description: "Kelola akun pengguna sistem dengan mudah dan aman"
+title: 'Pengguna (Users)'
+description: 'Kelola akun pengguna sistem dengan mudah dan aman'
 # template: splash
 # hero:
 #   image:
@@ -24,7 +24,7 @@ import {
   Aside,
   Tabs,
   TabItem,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Pengguna
 
@@ -37,12 +37,12 @@ import {
     - Nama Lengkap - Email - Username - Nomor Telepon - Foto Profil
   </Card>
 
-<Card title="Keamanan" icon="lock">
+<Card title='Keamanan' icon='lock'>
   - Password (encrypted) - Status Aktif/Nonaktif - 2FA Settings - Last Login -
   Failed Login Attempts
 </Card>
 
-<Card title="Peran & Akses" icon="star">
+<Card title='Peran & Akses' icon='star'>
   - Role Assignment - Permission Override - Department/Class - Employment Status
 </Card>
 
@@ -115,7 +115,7 @@ import {
 
 </Steps>
 
-<Aside type="tip" title="Tips Password Awal">
+<Aside type='tip' title='Tips Password Awal'>
   **Rekomendasi password default:** - Format: `NamaDepan@Tahun` (contoh:
   Ahmad@2025) - Atau gunakan generator password otomatis - Aktifkan opsi "User
   harus ganti password" untuk keamanan
@@ -130,13 +130,13 @@ import {
     operator)
   </TabItem>
 
-<TabItem label="Wali Kelas">
+<TabItem label='Wali Kelas'>
   **Field Wajib:** - Nama Lengkap - Email - Password - Role: Wali Kelas - Kelas
   yang Diampu - Status Aktif **Field Opsional:** - NIP/NUPTK - Nomor Telepon -
   Foto - Mata Pelajaran (jika mengajar)
 </TabItem>
 
-<TabItem label="Pegawai">
+<TabItem label='Pegawai'>
   **Field Wajib:** - Nama Lengkap - Email - Password - Role: Pegawai - Jabatan -
   Status Aktif **Field Opsional:** - NIP/NUPTK - Nomor Telepon - Foto - Alamat
 </TabItem>
@@ -188,7 +188,7 @@ Role dapat di-assign langsung saat membuat user baru (lihat langkah 6 di atas).
 
 </Steps>
 
-<Aside type="caution" title="Peringatan!">
+<Aside type='caution' title='Peringatan!'>
   Perubahan role langsung mempengaruhi hak akses user. Pastikan user sudah
   diberi tahu sebelum role diubah untuk menghindari kebingungan.
 </Aside>
@@ -239,7 +239,7 @@ Jika user butuh akses khusus, gunakan **Permission Override** daripada multiple 
 
 ### Field yang Tidak Bisa Diubah
 
-<Card title="🔒 Field Read-Only" icon="lock">
+<Card title='🔒 Field Read-Only' icon='lock'>
   Beberapa field tidak bisa diubah setelah user dibuat: - **Email** - Gunakan
   fitur "Ubah Email" khusus dengan verifikasi - **Username** - Permanent setelah
   dibuat - **Created Date** - System generated - **User ID** - Auto increment
@@ -309,7 +309,7 @@ User dapat reset sendiri melalui halaman login:
 
 </Steps>
 
-<Aside type="note">
+<Aside type='note'>
   **Keamanan:** Link reset password hanya berlaku 1 jam dan hanya bisa digunakan
   1 kali. Setelah password berhasil direset, link otomatis expired.
 </Aside>
@@ -327,11 +327,11 @@ Menonaktifkan user (bukan menghapus) adalah cara yang disarankan untuk user yang
     Nonaktifkan akun siswa yang sudah lulus atau pindah sekolah
   </Card>
 
-<Card title="Pegawai Resign/Pensiun" icon="user">
+<Card title='Pegawai Resign/Pensiun' icon='user'>
   Nonaktifkan pegawai yang sudah tidak bekerja
 </Card>
 
-<Card title="Security Breach" icon="warning">
+<Card title='Security Breach' icon='warning'>
   Nonaktifkan sementara jika ada kecurigaan akun di-hack
 </Card>
 
@@ -375,7 +375,7 @@ Menonaktifkan user (bukan menghapus) adalah cara yang disarankan untuk user yang
 
 ## Menghapus Pengguna
 
-<Aside type="caution" title="Peringatan Keras!">
+<Aside type='caution' title='Peringatan Keras!'>
   **Menghapus user bersifat PERMANENT dan TIDAK BISA DI-UNDO!** Data yang akan
   terhapus: - Akun user - Riwayat login - Data profile - Permission custom
   **TAPI TIDAK MENGHAPUS:** - Riwayat presensi (tetap ada di log) - Data
@@ -438,13 +438,13 @@ Alih-alih menghapus, pertimbangkan untuk **archive** user:
     setiap 6 bulan - Tidak boleh reuse 5 password terakhir
   </Card>
 
-<Card title=" Monitoring" icon="warning">
+<Card title=' Monitoring' icon='warning'>
   Monitor aktivitas user secara berkala: - Failed login attempts - Login dari
   lokasi tidak biasa - Akses data sensitif - Perubahan settings penting -
   Multiple concurrent sessions
 </Card>
 
-<Card title="2FA Mandatory" icon="approve-check">
+<Card title='2FA Mandatory' icon='approve-check'>
   Wajibkan 2FA untuk role sensitif: - Super Admin: WAJIB - Operator: WAJIB -
   Wali Kelas: Direkomendasikan - Pegawai/Siswa: Opsional
 </Card>
@@ -568,7 +568,7 @@ Untuk sekolah dengan banyak user, gunakan fitur import Excel:
 
 </Steps>
 
-<Aside type="tip" title="Tips Import Sukses">
+<Aside type='tip' title='Tips Import Sukses'>
   - Start dengan batch kecil (50-100 user) untuk test - Gunakan username
   berbasis NIS/NIP untuk menghindari duplikasi - Set password default yang sama
   untuk semua, lalu force change password - Import per role untuk memudahkan
@@ -590,7 +590,7 @@ Export data user untuk backup atau reporting:
     Last Login
   </TabItem>
 
-<TabItem label="CSV (.csv)">
+<TabItem label='CSV (.csv)'>
   **Cocok untuk:** - Import ke sistem lain - Data processing - Lightweight
   backup **Format:** UTF-8 dengan comma delimiter
 </TabItem>
@@ -640,7 +640,7 @@ Export data user untuk backup atau reporting:
     failed login attempts
   </TabItem>
 
-<TabItem label="Email Duplicate">
+<TabItem label='Email Duplicate'>
   **Gejala:** Error "Email sudah terdaftar" saat tambah user baru **Penyebab:**
   Email sudah digunakan user lain (termasuk yang nonaktif) **Solusi:** 1. Search
   email tersebut di list user 2. Jika user lama nonaktif, ubah email-nya 3. Atau
@@ -706,7 +706,7 @@ User bisa login menggunakan email. Atau hubungi admin untuk cek username di sist
     →](/menu-data-master/instansi/)
   </Card>
 
-<Card title="Tahun Pelajaran" icon="calendar">
+<Card title='Tahun Pelajaran' icon='calendar'>
   Atur periode akademik aktif [Panduan Tahun Pelajaran
   →](/menu-data-master/tahun-pelajaran/)
 </Card>
@@ -718,7 +718,7 @@ User bisa login menggunakan email. Atau hubungi admin untuk cek username di sist
 
 ---
 
-<Aside type="tip" title="Pro Tips">
+<Aside type='tip' title='Pro Tips'>
   - Buat naming convention untuk username (contoh: NIS/NIP.nama) - Gunakan email
   institusi untuk user resmi - Review dan cleanup user tidak aktif setiap
   semester - Backup data user sebelum update massal - Dokumentasikan semua

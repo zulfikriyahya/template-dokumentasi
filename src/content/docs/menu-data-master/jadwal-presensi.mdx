@@ -1,6 +1,6 @@
 ---
-title: "Jadwal Presensi"
-description: "Atur waktu presensi masuk dan pulang untuk siswa dan pegawai"
+title: 'Jadwal Presensi'
+description: 'Atur waktu presensi masuk dan pulang untuk siswa dan pegawai'
 # template: splash
 # hero:
 #   image:
@@ -24,25 +24,25 @@ import {
   Tabs,
   TabItem,
   Aside,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Jadwal Presensi
 
 Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa serta pegawai. Sistem mendukung multiple jadwal untuk mengakomodasi berbagai kebutuhan seperti hari regular, hari khusus, atau shift kerja.
 
 <CardGrid>
-  <Card title="Fleksibel & Adaptif" icon="rocket">
+  <Card title='Fleksibel & Adaptif' icon='rocket'>
     Buat jadwal berbeda untuk hari biasa, hari Jumat, atau kondisi khusus
     lainnya
   </Card>
-  <Card title="Toleransi Otomatis" icon="setting">
+  <Card title='Toleransi Otomatis' icon='setting'>
     Sistem mendeteksi keterlambatan secara otomatis berdasarkan toleransi yang
     diatur
   </Card>
-  <Card title="Multi Jadwal" icon="puzzle">
+  <Card title='Multi Jadwal' icon='puzzle'>
     Dukung berbagai jadwal untuk pegawai shift, guru, siswa, dan staff
   </Card>
-  <Card title="Integrasi Libur" icon="approve-check">
+  <Card title='Integrasi Libur' icon='approve-check'>
     Otomatis menyesuaikan dengan hari libur nasional dan libur madrasah
   </Card>
 </CardGrid>
@@ -77,11 +77,11 @@ Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa se
     **Senin - Kamis** Jadwal normal sekolah Masuk: 07:00 | Pulang: 15:30
   </Card>
 
-<Card title="Hari Jumat" icon="star">
+<Card title='Hari Jumat' icon='star'>
   **Jumat** Jadwal khusus hari Jumat Masuk: 07:00 | Pulang: 11:30
 </Card>
 
-<Card title="Hari Sabtu" icon="information">
+<Card title='Hari Sabtu' icon='information'>
   **Sabtu (Swasta)** Untuk madrasah swasta Masuk: 07:00 | Pulang: 13:00
 </Card>
 
@@ -94,7 +94,7 @@ Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa se
 
 ## Penyesuaian Otomatis Berdasarkan Status Instansi
 
-<Aside type="note" title="Fitur Otomatis">
+<Aside type='note' title='Fitur Otomatis'>
   Sistem secara otomatis menyesuaikan jadwal presensi dan hari kerja berdasarkan
   status instansi yang dipilih.
 </Aside>
@@ -120,7 +120,7 @@ Jadwal Presensi adalah pengaturan waktu untuk presensi masuk dan pulang siswa se
 | Sabtu         | Wajib Presensi  | Masuk rekap       |
 | Ahad          | Libur           | Tidak masuk rekap |
 
-<Aside type="tip">
+<Aside type='tip'>
   Pengaturan status instansi (Negeri/Swasta) dilakukan di menu **Data Master →
   Instansi**. Perubahan status akan otomatis mempengaruhi jadwal presensi dan
   perhitungan laporan.
@@ -183,7 +183,7 @@ Sistem dapat mengakomodasi toleransi keterlambatan untuk menghindari sanksi yang
 | 07:16     | Terlambat   | Melebihi toleransi    |
 | 07:30     | Terlambat   | Terlambat 30 menit    |
 
-<Aside type="caution">
+<Aside type='caution'>
   Toleransi keterlambatan dapat diatur berbeda untuk: - Siswa: 0-15 menit (lebih
   ketat) - Pegawai: 15-30 menit (lebih fleksibel) - Shift Khusus: Custom sesuai
   kebutuhan
@@ -203,7 +203,7 @@ Hari Jumat biasanya memiliki jadwal yang lebih pendek karena ada Sholat Jumat.
     siang
   </TabItem>
 
-<TabItem label="Guru">
+<TabItem label='Guru'>
   **Jadwal Guru Hari Jumat** - Masuk: 07:00 - Pulang: 12:00 - Waktu untuk Sholat
   Jumat
 </TabItem>
@@ -222,7 +222,7 @@ Selama bulan Ramadan, jadwal dapat disesuaikan:
 - **Pulang**: Lebih awal (13:00 - 14:00)
 - **Durasi**: Lebih pendek untuk mengakomodasi puasa
 
-<Aside type="tip">
+<Aside type='tip'>
   Buat jadwal khusus dengan nama "Jadwal Ramadan" dan aktifkan hanya saat bulan
   Ramadan. Nonaktifkan jadwal regular selama periode tersebut.
 </Aside>
@@ -241,7 +241,7 @@ Selama bulan Ramadan, jadwal dapat disesuaikan:
 
 ### Dampak Perubahan Jadwal
 
-<Aside type="caution" title="Perhatian!">
+<Aside type='caution' title='Perhatian!'>
   Perubahan jadwal akan berlaku untuk presensi hari berikutnya. Data presensi
   yang sudah tercatat tidak akan berubah secara retroaktif.
 </Aside>
@@ -286,11 +286,11 @@ Jadwal nonaktif tidak akan digunakan untuk validasi presensi, tapi tetap tersimp
     **Status**: Otomatis libur
   </Card>
 
-<Card title="Libur Madrasah" icon="document">
+<Card title='Libur Madrasah' icon='document'>
   Libur khusus madrasah (study tour, acara internal) **Status**: Diatur manual
 </Card>
 
-<Card title="Cuti Bersama" icon="information">
+<Card title='Cuti Bersama' icon='information'>
   Cuti bersama yang diatur pemerintah **Status**: Otomatis libur
 </Card>
 
@@ -344,11 +344,11 @@ graph TD
     setiap tahun
   </Card>
 
-<Card title="Review Berkala" icon="star">
+<Card title='Review Berkala' icon='star'>
   Evaluasi jadwal setiap semester untuk menyesuaikan dengan kebijakan baru
 </Card>
 
-<Card title="Toleransi Wajar" icon="approve-check">
+<Card title='Toleransi Wajar' icon='approve-check'>
   Berikan toleransi yang realistis (10-15 menit) untuk menghindari sistem yang
   terlalu ketat
 </Card>
@@ -459,7 +459,7 @@ PRESENSI PULANG:
 
 ## Tips Keamanan
 
-<Aside type="tip">
+<Aside type='tip'>
   - Batasi akses edit jadwal hanya untuk **Super Admin** dan **Operator** -
   Lakukan backup jadwal sebelum melakukan perubahan besar - Informasikan
   perubahan jadwal ke seluruh pengguna minimal 1 hari sebelumnya - Pantau log

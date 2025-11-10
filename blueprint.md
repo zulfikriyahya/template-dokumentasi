@@ -75,21 +75,21 @@ description: deskripsi...
 
 ```mdx
 ---
-title: "..."
-description: "..."
+title: '...'
+description: '...'
 template: splash
 hero:
   image:
-    file: "..."
-  tagline: "..."
+    file: '...'
+  tagline: '...'
   actions:
-    - text: "..."
-      link: "..."
-      icon: "..."
+    - text: '...'
+      link: '...'
+      icon: '...'
       variant: primary
-    - text: "..."
-      link: "..."
-      icon: "..."
+    - text: '...'
+      link: '...'
+      icon: '...'
       variant: secondary
 ---
 ```
@@ -583,13 +583,13 @@ Berikut adalah file-file .mdx yang tersisa. Karena keterbatasan, saya berikan st
 
 ```mdx
 ---
-title: "Kelas"
-description: "Kelola rombongan belajar dan struktur kelas"
+title: 'Kelas'
+description: 'Kelola rombongan belajar dan struktur kelas'
 template: splash
 hero:
   image:
-    file: "../../../assets/kelas.svg"
-  tagline: "Organisasi siswa dalam rombongan belajar yang terstruktur"
+    file: '../../../assets/kelas.svg'
+  tagline: 'Organisasi siswa dalam rombongan belajar yang terstruktur'
 ---
 
 [Konten: Pengertian kelas, cara menambah kelas dengan format VII Unggulan, mengatur wali kelas, kapasitas siswa, memindahkan siswa antar kelas, menghapus kelas, hubungan dengan jurusan]
@@ -601,13 +601,13 @@ hero:
 
 ```mdx
 ---
-title: "Jabatan"
-description: "Kelola posisi dan jabatan pegawai"
+title: 'Jabatan'
+description: 'Kelola posisi dan jabatan pegawai'
 template: splash
 hero:
   image:
-    file: "../../../assets/jabatan.svg"
-  tagline: "Manajemen struktur kepegawaian madrasah"
+    file: '../../../assets/jabatan.svg'
+  tagline: 'Manajemen struktur kepegawaian madrasah'
 ---
 
 [Konten: Pengertian jabatan, jenis jabatan (Kepala Madrasah, Wakil, Guru, Staff TU, Satpam), menambah jabatan baru, hubungan dengan pegawai dan jadwal presensi]
@@ -619,13 +619,13 @@ hero:
 
 ```mdx
 ---
-title: "Jadwal Presensi"
-description: "Atur waktu presensi masuk dan pulang"
+title: 'Jadwal Presensi'
+description: 'Atur waktu presensi masuk dan pulang'
 template: splash
 hero:
   image:
-    file: "../../../assets/jadwal-presensi.svg"
-  tagline: "Konfigurasi jam operasional presensi harian"
+    file: '../../../assets/jadwal-presensi.svg'
+  tagline: 'Konfigurasi jam operasional presensi harian'
 ---
 
 [Konten: Pengertian jadwal presensi, jenis jadwal (masuk/pulang), menambah jadwal, toleransi keterlambatan, jadwal hari khusus (Jumat, Sabtu), hari libur, hubungan dengan status instansi]
@@ -637,13 +637,13 @@ hero:
 
 ```mdx
 ---
-title: "Mata Pelajaran"
-description: "Kelola daftar mata pelajaran yang diajarkan"
+title: 'Mata Pelajaran'
+description: 'Kelola daftar mata pelajaran yang diajarkan'
 template: splash
 hero:
   image:
-    file: "../../../assets/mata-pelajaran.svg"
-  tagline: "Database mata pelajaran untuk struktur kurikulum"
+    file: '../../../assets/mata-pelajaran.svg'
+  tagline: 'Database mata pelajaran untuk struktur kurikulum'
 ---
 
 [Konten: Pengertian mapel, menambah mapel dengan kode, kategori mapel (wajib/peminatan), guru pengampu, hubungan dengan jadwal pelajaran]
@@ -655,13 +655,13 @@ hero:
 
 ```mdx
 ---
-title: "Informasi & Pengumuman"
-description: "Kelola pengumuman dan broadcast sistem"
+title: 'Informasi & Pengumuman'
+description: 'Kelola pengumuman dan broadcast sistem'
 template: splash
 hero:
   image:
-    file: "../../../assets/informasi.svg"
-  tagline: "Broadcast informasi ke seluruh pengguna sistem"
+    file: '../../../assets/informasi.svg'
+  tagline: 'Broadcast informasi ke seluruh pengguna sistem'
 ---
 
 [Konten: Pengertian informasi, menambah pengumuman, status publish (draft/published), target audience, notifikasi WhatsApp otomatis jika status publish, menghapus informasi]
@@ -673,13 +673,13 @@ hero:
 
 ```mdx
 ---
-title: "Kartu Presensi RFID"
-description: "Kelola pengajuan dan distribusi kartu RFID"
+title: 'Kartu Presensi RFID'
+description: 'Kelola pengajuan dan distribusi kartu RFID'
 template: splash
 hero:
   image:
-    file: "../../../assets/index-kartu-presensi.svg"
-  tagline: "Manajemen kartu RFID untuk presensi otomatis"
+    file: '../../../assets/index-kartu-presensi.svg'
+  tagline: 'Manajemen kartu RFID untuk presensi otomatis'
 ---
 
 [Konten: Apa itu kartu presensi RFID, fungsi kartu, jenis kartu (siswa/pegawai), alur pengajuan kartu, biaya Rp 15.000]
@@ -691,13 +691,13 @@ hero:
 
 ```mdx
 ---
-title: "Pengajuan Kartu Presensi"
-description: "Proses pengajuan dan approval kartu RFID"
+title: 'Pengajuan Kartu Presensi'
+description: 'Proses pengajuan dan approval kartu RFID'
 template: splash
 hero:
   image:
-    file: "../../../assets/pengajuan-kartu-presensi.svg"
-  tagline: "Kelola siklus hidup kartu RFID dari pengajuan hingga distribusi"
+    file: '../../../assets/pengajuan-kartu-presensi.svg'
+  tagline: 'Kelola siklus hidup kartu RFID dari pengajuan hingga distribusi'
 ---
 
 [Konten detil:
@@ -723,13 +723,13 @@ hero:
 
 ```mdx
 ---
-title: "Menu Pegawai"
-description: "Manajemen data dan presensi pegawai"
+title: 'Menu Pegawai'
+description: 'Manajemen data dan presensi pegawai'
 template: splash
 hero:
   image:
-    file: "../../../assets/index-pegawai.svg"
-  tagline: "Kelola data pegawai dan monitoring kehadiran"
+    file: '../../../assets/index-pegawai.svg'
+  tagline: 'Kelola data pegawai dan monitoring kehadiran'
 ---
 
 [Konten: Pengertian menu pegawai, fungsi menu, sub-menu (data pegawai, riwayat presensi), siapa yang akses, alur kerja]
@@ -741,13 +741,13 @@ hero:
 
 ```mdx
 ---
-title: "Data Pegawai"
-description: "Kelola data guru dan staff madrasah"
+title: 'Data Pegawai'
+description: 'Kelola data guru dan staff madrasah'
 template: splash
 hero:
   image:
-    file: "../../../assets/pegawai.svg"
-  tagline: "Database lengkap pegawai madrasah"
+    file: '../../../assets/pegawai.svg'
+  tagline: 'Database lengkap pegawai madrasah'
 ---
 
 [Konten detil:
@@ -772,13 +772,13 @@ hero:
 
 ```mdx
 ---
-title: "Riwayat Presensi Pegawai"
-description: "Monitor dan kelola kehadiran pegawai"
+title: 'Riwayat Presensi Pegawai'
+description: 'Monitor dan kelola kehadiran pegawai'
 template: splash
 hero:
   image:
-    file: "../../../assets/riwayat-presensi-pegawai.svg"
-  tagline: "Tracking kehadiran pegawai secara real-time"
+    file: '../../../assets/riwayat-presensi-pegawai.svg'
+  tagline: 'Tracking kehadiran pegawai secara real-time'
 ---
 
 [Konten detil:
@@ -800,13 +800,13 @@ hero:
 
 ```mdx
 ---
-title: "Menu Siswa"
-description: "Manajemen data dan presensi siswa"
+title: 'Menu Siswa'
+description: 'Manajemen data dan presensi siswa'
 template: splash
 hero:
   image:
-    file: "../../../assets/index-siswa.svg"
-  tagline: "Kelola data siswa dan monitoring kehadiran"
+    file: '../../../assets/index-siswa.svg'
+  tagline: 'Kelola data siswa dan monitoring kehadiran'
 ---
 
 [Konten: Pengertian menu siswa, fungsi menu, sub-menu (data siswa, riwayat presensi), alur kerja]
@@ -818,13 +818,13 @@ hero:
 
 ```mdx
 ---
-title: "Data Siswa"
-description: "Kelola data siswa madrasah"
+title: 'Data Siswa'
+description: 'Kelola data siswa madrasah'
 template: splash
 hero:
   image:
-    file: "../../../assets/siswa.svg"
-  tagline: "Database lengkap siswa madrasah"
+    file: '../../../assets/siswa.svg'
+  tagline: 'Database lengkap siswa madrasah'
 ---
 
 [Konten detil:
@@ -850,13 +850,13 @@ hero:
 
 ```mdx
 ---
-title: "Riwayat Presensi Siswa"
-description: "Monitor dan kelola kehadiran siswa"
+title: 'Riwayat Presensi Siswa'
+description: 'Monitor dan kelola kehadiran siswa'
 template: splash
 hero:
   image:
-    file: "../../../assets/riwayat-presensi-siswa.svg"
-  tagline: "Tracking kehadiran siswa secara real-time"
+    file: '../../../assets/riwayat-presensi-siswa.svg'
+  tagline: 'Tracking kehadiran siswa secara real-time'
 ---
 
 [Konten detil:

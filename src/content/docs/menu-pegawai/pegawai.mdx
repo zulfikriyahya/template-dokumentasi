@@ -1,6 +1,6 @@
 ---
-title: "Data Pegawai"
-description: "Kelola data guru dan staff madrasah secara komprehensif"
+title: 'Data Pegawai'
+description: 'Kelola data guru dan staff madrasah secara komprehensif'
 # template: splash
 # hero:
 #   image:
@@ -24,23 +24,23 @@ import {
   Tabs,
   TabItem,
   Aside,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Data Pegawai
 
 Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staff TU, dan karyawan madrasah. Database ini mencakup data personal, jabatan, status kepegawaian, kontak, hingga dokumen pendukung.
 
 <CardGrid>
-  <Card title="Database Terpusat" icon="document">
+  <Card title='Database Terpusat' icon='document'>
     Satu sumber kebenaran untuk semua data kepegawaian madrasah
   </Card>
-  <Card title="Terintegrasi" icon="puzzle">
+  <Card title='Terintegrasi' icon='puzzle'>
     Terhubung dengan presensi, kartu RFID, penggajian, dan laporan
   </Card>
-  <Card title="Mudah Dikelola" icon="star">
+  <Card title='Mudah Dikelola' icon='star'>
     Interface user-friendly untuk CRUD (Create, Read, Update, Delete) data
   </Card>
-  <Card title="Scalable" icon="rocket">
+  <Card title='Scalable' icon='rocket'>
     Mampu menampung ribuan data pegawai dengan performa optimal
   </Card>
 </CardGrid>
@@ -104,7 +104,7 @@ Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staf
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Pastikan email dan nomor HP yang diinput **aktif dan valid** karena akan
   digunakan untuk kredensial login dan notifikasi sistem.
 </Aside>
@@ -120,7 +120,7 @@ Data Pegawai adalah database lengkap yang menyimpan informasi seluruh guru, staf
     - Nama lengkap - NIK (KTP) - Tempat & tanggal lahir - Jenis kelamin - Agama
   </Card>
 
-<Card title="Kontak" icon="document">
+<Card title='Kontak' icon='document'>
   - Email aktif - Nomor HP/WhatsApp - Alamat lengkap
 </Card>
 
@@ -164,7 +164,7 @@ Setiap pegawai harus memiliki jabatan yang menentukan:
     dulu di menu **Data Master → Jabatan**
   </TabItem>
 
-<TabItem label="Edit Pegawai Existing">
+<TabItem label='Edit Pegawai Existing'>
   **Ubah Jabatan** 1. Klik **Edit** pada row pegawai 2. Ubah field **"Jabatan"**
   3. Simpan perubahan Perubahan jabatan akan mempengaruhi jadwal presensi mulai
   hari berikutnya
@@ -212,7 +212,7 @@ Agar pegawai dapat presensi dengan sistem RFID, data pegawai harus di-link denga
 
 </Steps>
 
-<Aside type="caution">
+<Aside type='caution'>
   Satu nomor RFID hanya bisa di-link ke **satu pegawai**. Jika nomor sudah
   digunakan, sistem akan menolak dan menampilkan error.
 </Aside>
@@ -241,7 +241,7 @@ Agar pegawai dapat presensi dengan sistem RFID, data pegawai harus di-link denga
 - Email dan nomor HP
 - NIK dan NIP (hati-hati, harus sesuai dokumen resmi)
 
-<Aside type="note">
+<Aside type='note'>
   Perubahan data pegawai akan **langsung berlaku** dan mempengaruhi sistem
   presensi, login, dan notifikasi. Pastikan data yang diinput sudah benar.
 </Aside>
@@ -264,7 +264,7 @@ Foto pegawai digunakan untuk:
     ideal 600x800 px
   </Card>
 
-<Card title="Background" icon="star">
+<Card title='Background' icon='star'>
   - **Biru** untuk pegawai - Background polos, tidak bergambar - Lighting cukup,
   tidak gelap/silau
 </Card>
@@ -343,7 +343,7 @@ Untuk menambahkan banyak pegawai sekaligus, gunakan fitur import.
 
 </Steps>
 
-<Aside type="caution" title="Perhatian!">
+<Aside type='caution' title='Perhatian!'>
   - Data yang sudah ada (duplikat NIK/NIP) akan **dilewati** atau **di-update**
   sesuai pengaturan - Pastikan format tanggal sudah benar: **YYYY-MM-DD** - Kode
   jabatan harus sudah terdaftar di sistem, jika tidak akan error
@@ -384,7 +384,7 @@ Untuk upload banyak foto sekaligus:
 
 </Steps>
 
-<Aside type="tip">
+<Aside type='tip'>
   Foto yang tidak cocok dengan data pegawai akan dilewati. Cek log import untuk
   detail pegawai mana yang fotonya tidak ter-upload.
 </Aside>
@@ -404,7 +404,7 @@ Export data untuk keperluan pelaporan atau backup.
     **"Excel"**
   </TabItem>
 
-<TabItem label="PDF">
+<TabItem label='PDF'>
   **Portable Document Format** - Cocok untuk cetak dan arsip - Tidak dapat
   diedit (read-only) - Layout rapi dan profesional **Klik**: **"Export"** →
   **"PDF"**
@@ -457,7 +457,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 
 </Steps>
 
-<Aside type="note">
+<Aside type='note'>
   Pegawai yang dinonaktifkan **tidak akan dihapus** dari database. Data tetap
   ada untuk keperluan histori, laporan, dan audit.
 </Aside>
@@ -466,7 +466,7 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
 
 ## Menghapus Data Pegawai
 
-<Aside type="danger" title="Peringatan!">
+<Aside type='danger' title='Peringatan!'>
   Menghapus data pegawai adalah **tindakan permanen** dan **tidak dapat
   dibatalkan**. Pastikan Anda benar-benar yakin sebelum menghapus.
 </Aside>
@@ -568,11 +568,11 @@ Untuk pegawai yang resign, pensiun, atau cuti panjang:
     masalah administrasi
   </Card>
 
-<Card title="Update Berkala" icon="star">
+<Card title='Update Berkala' icon='star'>
   Review dan update data pegawai setiap semester, terutama kontak dan alamat
 </Card>
 
-<Card title="Backup Rutin" icon="warning">
+<Card title='Backup Rutin' icon='warning'>
   Export data pegawai setiap bulan sebagai backup, simpan di storage terpisah
 </Card>
 

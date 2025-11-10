@@ -1,6 +1,6 @@
 ---
-title: "Jurusan"
-description: "Kelola program studi dan jurusan di madrasah"
+title: 'Jurusan'
+description: 'Kelola program studi dan jurusan di madrasah'
 # template: splash
 # hero:
 #   image:
@@ -24,7 +24,7 @@ import {
   Aside,
   Tabs,
   TabItem,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Jurusan
 
@@ -38,12 +38,12 @@ import {
     Peminatan - Fisika - Kimia - Biologi
   </Card>
 
-<Card title="IPS (Ilmu Pengetahuan Sosial)" icon="open-book">
+<Card title='IPS (Ilmu Pengetahuan Sosial)' icon='open-book'>
   Fokus pada ilmu sosial dan humaniora **Mata Pelajaran Khas:** - Ekonomi -
   Sosiologi - Geografi - Sejarah Peminatan
 </Card>
 
-<Card title="🕌 Keagamaan (Khusus MA)" icon="star">
+<Card title='🕌 Keagamaan (Khusus MA)' icon='star'>
   Fokus pada studi agama Islam **Mata Pelajaran Khas:** - Tafsir-Ilmu Tafsir -
   Hadits-Ilmu Hadits - Fiqih-Ushul Fiqih - Bahasa Arab
 </Card>
@@ -114,7 +114,7 @@ import {
 
 </Steps>
 
-<Aside type="tip" title="Naming Convention">
+<Aside type='tip' title='Naming Convention'>
   **Format yang direkomendasikan:** - Kode: ALL CAPS, no space (contoh:
   Unggulan, IPS, AGM) - Nama: Title Case (contoh: Ilmu Pengetahuan Alam) -
   Singkatan: ALL CAPS (contoh: IPA)
@@ -135,7 +135,7 @@ import {
 
   </TabItem>
 
-<TabItem label="SMK/MAK">
+<TabItem label='SMK/MAK'>
   | Kode | Nama Lengkap | |------|-------------| | **TKJ** | Teknik Komputer &
   Jaringan | | **RPL** | Rekayasa Perangkat Lunak | | **AKL** | Akuntansi &
   Keuangan Lembaga | | **OTKP** | Otomatisasi Tata Kelola Perkantoran | |
@@ -192,7 +192,7 @@ import {
 
 </Steps>
 
-<Aside type="caution" title="Hati-hati Ubah Kode!">
+<Aside type='caution' title='Hati-hati Ubah Kode!'>
   **Mengubah kode jurusan** dapat mempengaruhi: - Relasi dengan kelas existing -
   Laporan historis - Filter dan pencarian Jika memungkinkan, **jangan ubah
   kode** jurusan yang sudah digunakan. Buat jurusan baru jika perlu kode
@@ -205,12 +205,12 @@ import {
 
 ### Kapan Boleh Dihapus?
 
-<Card title="Aman Dihapus Jika:" icon="approve-check">
+<Card title='Aman Dihapus Jika:' icon='approve-check'>
   - Belum ada kelas yang menggunakan - Belum ada siswa terdaftar - Belum
   digunakan di laporan - Jurusan duplikat atau salah input
 </Card>
 
-<Card title="Tidak Bisa Dihapus Jika:" icon="error">
+<Card title='Tidak Bisa Dihapus Jika:' icon='error'>
   - Sudah ada kelas aktif - Ada siswa terdaftar - Sudah digunakan di tahun
   ajaran sebelumnya - Ada data historis terkait
 </Card>
@@ -247,7 +247,7 @@ import {
 
 Jika tidak bisa dihapus, **nonaktifkan** jurusan:
 
-<Card title=" Menonaktifkan Jurusan" icon="information">
+<Card title=' Menonaktifkan Jurusan' icon='information'>
   **Keuntungan:** - Data historis tetap utuh - Tidak muncul di dropdown aktif -
   Bisa diaktifkan kembali - Laporan lama tetap valid **Cara:** 1. Edit jurusan
   2. Set status: Nonaktif 3. Simpan
@@ -277,7 +277,7 @@ graph TD
     IPS 1 VIII Unggulan1 VIII Unggulan2 XII IPS 1 ```
   </TabItem>
 
-<TabItem label="Format Alternatif">
+<TabItem label='Format Alternatif'>
   **Pattern:** `[Jurusan]-[Tingkat]-[Nomor]` **Contoh:** ``` IPA-10-1 IPA-10-2
   IPS-11-1 IPS-12-1 ```
 </TabItem>
@@ -290,7 +290,7 @@ graph TD
 
 ### One-to-Many Relationship
 
-<Card title="Relasi Jurusan-Kelas" icon="bars">
+<Card title='Relasi Jurusan-Kelas' icon='bars'>
   **1 Jurusan dapat memiliki banyak Kelas:** Contoh Jurusan **IPA**: - VII
   Unggulan (30 siswa) - X Unggulan2 (32 siswa) - VIII Unggulan1 (28 siswa) - XI
   Unggulan2 (30 siswa) - XII Unggulan1 (25 siswa) - XII Unggulan2 (27 siswa)
@@ -333,7 +333,7 @@ graph TD
 
 ### Visual Identity
 
-<Card title=" Branding Jurusan" icon="star">
+<Card title=' Branding Jurusan' icon='star'>
   **Untuk UI/UX yang lebih baik:** **Warna Identitas:** - IPA: Blue (#2563EB) -
   IPS: Green (#16A34A) - Keagamaan: Purple (#9333EA) - Bahasa: Yellow (#EAB308)
   **Icon/Logo:** - Upload icon khusus per jurusan - Muncul di dashboard, laporan
@@ -355,12 +355,12 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
     Statistik jurusan - Komunikasi broadcast
   </Card>
 
-<Card title="Laporan Presensi" icon="document">
+<Card title='Laporan Presensi' icon='document'>
   Generate laporan kehadiran: - Per jurusan - Perbandingan antar jurusan - Trend
   kehadiran per jurusan
 </Card>
 
-<Card title="Kelas" icon="graduation">
+<Card title='Kelas' icon='graduation'>
   Manajemen kelas: - List kelas per jurusan - Kapasitas per jurusan - Distribusi
   siswa
 </Card>
@@ -377,7 +377,7 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
 
 ### Statistik Jurusan
 
-<Card title="Data Statistik" icon="chart">
+<Card title='Data Statistik' icon='chart'>
   **Otomatis ter-generate:** **Per Jurusan:** - Total siswa - Jumlah kelas -
   Rata-rata siswa per kelas - Tingkat kehadiran - Tingkat keterlambatan
   **Perbandingan:** - Jurusan dengan kehadiran terbaik - Trend performa antar
@@ -393,7 +393,7 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
     (NIS, nama, kelas) - Kontak orang tua - Status aktif
   </TabItem>
 
-<TabItem label="Rekap Presensi per Jurusan">
+<TabItem label='Rekap Presensi per Jurusan'>
   **Format:** Excel/PDF **Konten:** - Persentase kehadiran - Total
   hadir/izin/sakit/alpha - Perbandingan antar bulan - Grafik trend
 </TabItem>
@@ -441,7 +441,7 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
 
 ### Export Data
 
-<Card title="Export Options" icon="hard-drive">
+<Card title='Export Options' icon='hard-drive'>
   **Format tersedia:** - Excel (.xlsx): Untuk edit massal - CSV (.csv): Untuk
   integrasi - PDF (.pdf): Untuk dokumentasi **Filter sebelum export:** - Status:
   Aktif/Nonaktif/Semua - Ada siswa: Ya/Tidak - Tahun ajaran tertentu
@@ -457,12 +457,12 @@ Jurusan dapat digunakan untuk filter di berbagai modul:
     guru - Analisis kebutuhan pasar - Persiapkan fasilitas - Budget planning
   </Card>
 
-<Card title="Konsistensi" icon="star">
+<Card title='Konsistensi' icon='star'>
   **Maintain standar:** - Naming convention konsisten - Kode unik dan jelas -
   Deskripsi informatif - Update berkala - Dokumentasi lengkap
 </Card>
 
-<Card title="Monitoring" icon="bars">
+<Card title='Monitoring' icon='bars'>
   **Review berkala:** - Kapasitas vs demand - Tingkat kehadiran - Performa
   akademik - Feedback siswa - Evaluasi kurikulum
 </Card>
@@ -537,7 +537,7 @@ Tetap gunakan fitur jurusan untuk kategorisasi ini.
     - Cek jurusan nonaktif (mungkin ada) - Atau edit jurusan existing
   </TabItem>
 
-<TabItem label="Tidak Bisa Hapus">
+<TabItem label='Tidak Bisa Hapus'>
   **Error:** "Jurusan sedang digunakan" **Solusi:** - Cek kelas yang masih aktif
   - Nonaktifkan jurusan daripada hapus - Atau move siswa ke jurusan lain dulu
 </TabItem>
@@ -558,7 +558,7 @@ Tetap gunakan fitur jurusan untuk kategorisasi ini.
     Buat kelas berdasarkan jurusan [Panduan Kelas →](/menu-data-master/kelas/)
   </Card>
 
-<Card title="Tambah Mata Pelajaran" icon="book">
+<Card title='Tambah Mata Pelajaran' icon='book'>
   Input mapel peminatan per jurusan [Panduan Mata Pelajaran
   →](/menu-data-master/mata-pelajaran/)
 </Card>
@@ -570,7 +570,7 @@ Tetap gunakan fitur jurusan untuk kategorisasi ini.
 
 ---
 
-<Aside type="tip" title="Pro Tips">
+<Aside type='tip' title='Pro Tips'>
   - Buat jurusan sebelum tahun ajaran dimulai - Konsultasi dengan kurikulum dan
   guru - Perhatikan tren dan kebutuhan industri - Survey minat siswa baru setiap
   tahun - Document rasionale setiap keputusan

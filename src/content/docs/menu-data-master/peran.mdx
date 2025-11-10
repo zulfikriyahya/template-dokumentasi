@@ -1,6 +1,6 @@
 ---
-title: "Peran (Roles)"
-description: "Kelola peran pengguna dan hak akses sistem dengan mudah"
+title: 'Peran (Roles)'
+description: 'Kelola peran pengguna dan hak akses sistem dengan mudah'
 # template: splash
 # hero:
 #   image:
@@ -24,7 +24,7 @@ import {
   Aside,
   Tabs,
   TabItem,
-} from "@astrojs/starlight/components";
+} from '@astrojs/starlight/components'
 
 ## Pengertian Peran
 
@@ -38,11 +38,11 @@ import {
     kebutuhan
   </Card>
 
-<Card title=" Efisiensi Manajemen" icon="rocket">
+<Card title=' Efisiensi Manajemen' icon='rocket'>
   Atur hak akses puluhan user sekaligus hanya dengan assign role yang sesuai
 </Card>
 
-<Card title="Audit Trail" icon="list-format">
+<Card title='Audit Trail' icon='list-format'>
   Lacak siapa yang mengakses apa, kapan, dan dengan peran apa
 </Card>
 
@@ -59,7 +59,7 @@ Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah
 
 ### 1. Super Admin
 
-<Card title="👑 Super Admin - Kontrol Penuh" icon="star">
+<Card title='👑 Super Admin - Kontrol Penuh' icon='star'>
   **Deskripsi:** Pengguna dengan hak akses tertinggi. Memiliki kontrol penuh
   terhadap seluruh fitur dan data sistem. **Hak Akses:** - Akses semua menu dan
   fitur - Kelola semua data master - Kelola user dan role management -
@@ -68,14 +68,14 @@ Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah
   Kepala Madrasah - Developer/Technical Support **Jumlah Ideal:** 1-2 orang
 </Card>
 
-<Aside type="caution" title="Peringatan!">
+<Aside type='caution' title='Peringatan!'>
   Batasi jumlah Super Admin karena memiliki akses unlimited. Hanya berikan role
   ini kepada orang yang sangat dipercaya.
 </Aside>
 
 ### 2. Operator
 
-<Card title="⚙️ Operator - Pengelola Harian" icon="setting">
+<Card title='⚙️ Operator - Pengelola Harian' icon='setting'>
   **Deskripsi:** Pengelola operasional harian sistem presensi. Fokus pada input
   dan maintenance data. **Hak Akses:** - Kelola data master (kecuali user
   management) - Input dan edit data siswa/pegawai - Proses pengajuan kartu RFID
@@ -87,7 +87,7 @@ Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah
 
 ### 3. Wali Kelas
 
-<Card title=" Wali Kelas - Monitor Kelas" icon="graduation">
+<Card title=' Wali Kelas - Monitor Kelas' icon='graduation'>
   **Deskripsi:** Guru yang bertanggung jawab mengawasi presensi dan data siswa
   di kelas tertentu. **Hak Akses:** - Lihat data siswa di kelas yang diampu -
   Lihat riwayat presensi siswa kelas sendiri - Input manual presensi kelas
@@ -99,7 +99,7 @@ Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah
 
 ### 4. Pegawai
 
-<Card title="Pegawai - User Standar" icon="user">
+<Card title='Pegawai - User Standar' icon='user'>
   **Deskripsi:** Guru dan staff yang menggunakan sistem untuk presensi pribadi.
   **Hak Akses:** - Lihat riwayat presensi pribadi - Update profile pribadi -
   Ajukan kartu RFID pribadi - Lihat pengumuman/informasi - Download slip
@@ -111,7 +111,7 @@ Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah
 
 ### 5. Siswa
 
-<Card title="Siswa - User Basic" icon="pencil">
+<Card title='Siswa - User Basic' icon='pencil'>
   **Deskripsi:** Siswa yang menggunakan sistem untuk melihat presensi dan
   mengajukan kartu. **Hak Akses:** - Lihat riwayat presensi pribadi - Update
   profile pribadi (terbatas) - Ajukan kartu RFID - Lihat pengumuman/informasi -
@@ -153,7 +153,7 @@ Sistem menyediakan 5 peran default yang dirancang khusus untuk kebutuhan sekolah
 
 </Steps>
 
-<Aside type="tip" title="Tips Penamaan Peran">
+<Aside type='tip' title='Tips Penamaan Peran'>
   - Gunakan nama yang jelas dan deskriptif - Hindari nama yang terlalu umum -
   Gunakan konvensi penamaan konsisten - Tambahkan deskripsi yang detail
 </Aside>
@@ -176,7 +176,7 @@ Permission dikelompokkan berdasarkan modul sistem:
     Pelajaran, Jurusan, Kelas, dll
   </TabItem>
 
-<TabItem label="Presensi">
+<TabItem label='Presensi'>
   **Permissions:** - `view_attendance` - Lihat data presensi -
   `create_attendance` - Input presensi manual - `edit_attendance` - Koreksi
   presensi - `delete_attendance` - Hapus data presensi - `view_own_attendance` -
@@ -184,21 +184,21 @@ Permission dikelompokkan berdasarkan modul sistem:
   presensi pribadi - Class: Presensi kelas yang diampu
 </TabItem>
 
-<TabItem label="Pegawai & Siswa">
+<TabItem label='Pegawai & Siswa'>
   **Permissions:** - `view_employees` - Lihat data pegawai - `create_employees`
   - Tambah pegawai - `edit_employees` - Edit pegawai - `delete_employees` -
   Hapus pegawai - `view_students` - Lihat data siswa - `create_students` -
   Tambah siswa - `edit_students` - Edit siswa - `delete_students` - Hapus siswa
 </TabItem>
 
-<TabItem label="Kartu RFID">
+<TabItem label='Kartu RFID'>
   **Permissions:** - `view_rfid_cards` - Lihat pengajuan kartu -
   `approve_rfid_cards` - Setujui pengajuan - `process_rfid_cards` - Proses
   pembuatan kartu - `complete_rfid_cards` - Selesaikan pengajuan -
   `apply_own_rfid_card` - Ajukan kartu pribadi
 </TabItem>
 
-<TabItem label="Laporan">
+<TabItem label='Laporan'>
   **Permissions:** - `view_reports` - Lihat laporan - `export_reports` - Export
   laporan - `view_statistics` - Lihat statistik - `view_all_reports` - Laporan
   semua data - `view_own_reports` - Laporan pribadi
@@ -243,7 +243,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 </Steps>
 
-<Aside type="note">
+<Aside type='note'>
   Perubahan permission akan langsung berlaku untuk semua user dengan role
   tersebut tanpa perlu logout-login.
 </Aside>
@@ -276,7 +276,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 </Steps>
 
-<Aside type="caution" title="Hati-hati!">
+<Aside type='caution' title='Hati-hati!'>
   Mengubah permission peran yang sedang digunakan banyak user dapat mempengaruhi
   akses mereka secara langsung. Pastikan melakukan perubahan di luar jam
   operasional atau beri notifikasi terlebih dahulu.
@@ -310,7 +310,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 </Steps>
 
-<Aside type="caution" title="Tidak Bisa Dihapus?">
+<Aside type='caution' title='Tidak Bisa Dihapus?'>
   **Peran default (Super Admin, Operator, Wali Kelas, Pegawai, Siswa) tidak
   dapat dihapus** karena merupakan bagian integral dari sistem. Anda hanya bisa
   memodifikasi permission-nya.
@@ -322,7 +322,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 ### 1. Principle of Least Privilege
 
-<Card title="Berikan Akses Minimum" icon="lock">
+<Card title='Berikan Akses Minimum' icon='lock'>
   Hanya berikan permission yang benar-benar dibutuhkan untuk menjalankan tugas.
   Jangan berikan akses berlebihan "untuk berjaga-jaga". **Contoh:** - **Salah:**
   Wali kelas diberi akses edit semua data siswa - **Benar:** Wali kelas hanya
@@ -331,7 +331,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 ### 2. Separation of Duties
 
-<Card title="⚖️ Pisahkan Tanggung Jawab" icon="bars">
+<Card title='⚖️ Pisahkan Tanggung Jawab' icon='bars'>
   Pisahkan fungsi kritis ke beberapa peran untuk mencegah fraud. **Contoh:** -
   Operator: Input data presensi - Super Admin: Approve dan hapus data - Wali
   Kelas: Monitor dan validasi
@@ -339,7 +339,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 ### 3. Regular Review
 
-<Card title="Review Berkala" icon="refresh">
+<Card title='Review Berkala' icon='refresh'>
   Tinjau permission secara berkala (minimal 6 bulan sekali). **Yang Perlu
   Dicek:** - Apakah ada permission yang tidak terpakai? - Apakah ada user dengan
   akses berlebihan? - Apakah ada peran yang bisa digabung? - Apakah ada
@@ -348,7 +348,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 ### 4. Dokumentasi
 
-<Card title="Catat Semua Perubahan" icon="document">
+<Card title='Catat Semua Perubahan' icon='document'>
   Dokumentasikan setiap perubahan role dan permission. **Informasi yang Perlu
   Dicatat:** - Tanggal perubahan - Siapa yang mengubah - Apa yang diubah -
   Alasan perubahan - User yang terpengaruh
@@ -356,7 +356,7 @@ Permission dikelompokkan berdasarkan modul sistem:
 
 ### 5. Testing
 
-<Card title="🧪 Test Sebelum Apply" icon="star">
+<Card title='🧪 Test Sebelum Apply' icon='star'>
   Test permission di environment test sebelum apply ke production. **Cara
   Test:** 1. Buat test user dengan role baru 2. Login dengan test user 3. Coba
   akses setiap menu 4. Verifikasi permission bekerja sesuai harapan 5. Baru
@@ -421,7 +421,7 @@ Tabel berikut menunjukkan permission default untuk setiap peran:
     logout dan login kembali 5. Jika masih error, clear cache sistem
   </TabItem>
 
-<TabItem label="Perubahan Permission Tidak Berlaku">
+<TabItem label='Perubahan Permission Tidak Berlaku'>
   **Gejala:** Sudah ubah permission tapi user masih tidak bisa akses
   **Penyebab:** - Cache belum clear - User belum refresh - Permission conflict
   **Solusi:** 1. Clear cache aplikasi 2. Minta user hard refresh (Ctrl+Shift+R)
@@ -441,7 +441,7 @@ Tabel berikut menunjukkan permission default untuk setiap peran:
 
 ## Security Checklist
 
-<Card title="Checklist Keamanan Peran" icon="approve-check">
+<Card title='Checklist Keamanan Peran' icon='approve-check'>
   Gunakan checklist ini untuk memastikan setup role Anda aman: - [ ] Super Admin
   hanya diberikan ke 1-2 orang terpercaya - [ ] Setiap user hanya punya 1 role
   (tidak multiple role) - [ ] Password Super Admin sangat kuat dan unik - [ ]
@@ -463,7 +463,7 @@ Tabel berikut menunjukkan permission default untuk setiap peran:
     →](/menu-data-master/pengguna/)
   </Card>
 
-<Card title="Setup Instansi" icon="home">
+<Card title='Setup Instansi' icon='home'>
   Lengkapi data instansi sebagai langkah berikutnya [Panduan Instansi
   →](/menu-data-master/instansi/)
 </Card>
@@ -475,7 +475,7 @@ Tabel berikut menunjukkan permission default untuk setiap peran:
 
 ---
 
-<Aside type="tip" title="Best Practice">
+<Aside type='tip' title='Best Practice'>
   Role yang baik adalah role yang memberikan akses cukup untuk user menjalankan
   tugasnya, tidak lebih dan tidak kurang. Review dan audit role secara berkala
   untuk keamanan optimal.
