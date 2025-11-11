@@ -98,33 +98,33 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/withastro/starlight',
+          href: 'https://github.com/zulfikriyahya',
         },
-        {
-          icon: 'linkedin',
-          label: 'Linkedin',
-          href: 'https://github.com/withastro/starlight',
-        },
-        {
-          icon: 'discord',
-          label: 'Discord',
-          href: 'https://astro.build/chat',
-        },
-        {
-          icon: 'instagram',
-          label: 'Instagram',
-          href: 'https://github.com/withastro/starlight',
-        },
-        {
-          icon: 'facebook',
-          label: 'Facebook',
-          href: 'https://github.com/withastro/starlight',
-        },
-        {
-          icon: 'twitter',
-          label: 'Twitter',
-          href: 'https://github.com/withastro/starlight',
-        },
+        // {
+        //   icon: 'linkedin',
+        //   label: 'Linkedin',
+        //   href: 'https://github.com/withastro/starlight',
+        // },
+        // {
+        //   icon: 'discord',
+        //   label: 'Discord',
+        //   href: 'https://astro.build/chat',
+        // },
+        // {
+        //   icon: 'instagram',
+        //   label: 'Instagram',
+        //   href: 'https://github.com/withastro/starlight',
+        // },
+        // {
+        //   icon: 'facebook',
+        //   label: 'Facebook',
+        //   href: 'https://github.com/withastro/starlight',
+        // },
+        // {
+        //   icon: 'twitter',
+        //   label: 'Twitter',
+        //   href: 'https://github.com/withastro/starlight',
+        // },
       ],
 
       sidebar: [
