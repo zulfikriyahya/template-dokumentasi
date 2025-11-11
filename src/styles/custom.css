@@ -1,3 +1,422 @@
+/* src/styles/custom.css - Enhanced with GSAP animations */
+
+/* ============================================
+GSAP Animation Optimizations
+============================================ */
+
+/* Optimasi performa animasi */
+.sl-markdown-content img,
+.expressive-code,
+.mermaid,
+table,
+.card {
+  will-change: transform, opacity;
+}
+
+/* Smooth transitions global */
 :root {
-  --sl-font: "Lexend", serif;
+  --transition-speed: 0.3s;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --sl-font: 'Lexend', serif;
+}
+
+* {
+  transition-timing-function: var(--transition-ease);
+}
+
+/* ============================================
+   Image Animations
+   ============================================ */
+
+/* Loading state untuk images */
+img {
+  transition:
+    transform var(--transition-speed) ease,
+    opacity var(--transition-speed) ease,
+    filter var(--transition-speed) ease;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+img[loading='lazy'] {
+  opacity: 0;
+  animation: fadeInImage 0.5s ease forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover effect untuk images */
+.sl-markdown-content img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+  cursor: zoom-in;
+}
+
+/* ============================================
+   Card & Container Animations
+   ============================================ */
+
+.card,
+.sl-link-card,
+.sl-container {
+  transition:
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
+}
+
+.card:hover,
+.sl-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   Navigation & Sidebar Enhancements
+   ============================================ */
+
+/* Active link indicator dengan animasi */
+nav a[aria-current='page'],
+.sidebar a[aria-current='page'] {
+  position: relative;
+  overflow: hidden;
+}
+
+nav a[aria-current='page']::before,
+.sidebar a[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--sl-color-accent);
+  animation: slideInLeft 0.3s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Hover effect untuk semua navigation links */
+nav a,
+.sidebar a,
+.toc a {
+  position: relative;
+  transition:
+    color var(--transition-speed) ease,
+    padding-left var(--transition-speed) ease;
+}
+
+nav a:hover,
+.sidebar a:hover,
+.toc a:hover {
+  padding-left: 8px;
+}
+
+/* ============================================
+   Code Block Enhancements
+   ============================================ */
+
+.expressive-code {
+  transform-origin: left center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.expressive-code:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Copy button animation */
+.expressive-code button {
+  transition: all 0.2s ease;
+}
+
+.expressive-code button:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   Mermaid Diagram Styling
+   ============================================ */
+
+.mermaid,
+.mermaid-diagram {
+  transform-origin: center;
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--sl-color-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   Table Enhancements
+   ============================================ */
+
+table {
+  transform-origin: top center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+table thead tr {
+  background: var(--sl-color-accent-low);
+  transition: background var(--transition-speed) ease;
+}
+
+table tbody tr {
+  transition: background var(--transition-speed) ease;
+}
+
+table tbody tr:hover {
+  background: var(--sl-color-gray-7);
+}
+
+/* ============================================
+   Headings Animation Enhancement
+   ============================================ */
+
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+  position: relative;
+  padding-left: 0;
+  transition: padding-left var(--transition-speed) ease;
+}
+
+.sl-markdown-content h2:hover,
+.sl-markdown-content h3:hover,
+.sl-markdown-content h4:hover {
+  padding-left: 8px;
+}
+
+.sl-markdown-content h2::before,
+.sl-markdown-content h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(0);
+  width: 4px;
+  height: 60%;
+  background: var(--sl-color-accent);
+  border-radius: 2px;
+  transition: transform var(--transition-speed) ease;
+  transform-origin: left;
+}
+
+.sl-markdown-content h2:hover::before,
+.sl-markdown-content h3:hover::before {
+  transform: translateY(-50%) scaleX(1);
+}
+
+/* ============================================
+   List Enhancements
+   ============================================ */
+
+.sl-markdown-content ul,
+.sl-markdown-content ol {
+  position: relative;
+}
+
+.sl-markdown-content li {
+  transition:
+    padding-left var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.sl-markdown-content li:hover {
+  /* padding-left: 2px; */
+  color: var(--sl-color-accent);
+}
+
+/* ============================================
+   Blockquote Styling
+   ============================================ */
+
+blockquote {
+  position: relative;
+  border-left: 4px solid var(--sl-color-accent);
+  padding-left: 1.5rem;
+  margin-left: 0;
+  font-style: italic;
+  opacity: 0.9;
+  transition:
+    opacity var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
+}
+
+blockquote:hover {
+  opacity: 1;
+  border-color: var(--sl-color-accent-high);
+}
+
+/* ============================================
+   Badge & Tag Styling
+   ============================================ */
+
+.badge,
+.tag,
+[data-badge] {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent-high);
+  transition: all var(--transition-speed) ease;
+}
+
+.badge:hover,
+.tag:hover {
+  transform: scale(1.05);
+  background: var(--sl-color-accent);
+  color: white;
+}
+
+/* ============================================
+   Parallax Container
+   ============================================ */
+
+[data-parallax] {
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+
+/* ============================================
+   Page Transitions
+   ============================================ */
+
+.page {
+  animation: fadeInPage 0.5s ease;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   Scroll Behavior
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sl-color-gray-6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sl-color-gray-4);
+  border-radius: 5px;
+  transition: background var(--transition-speed) ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sl-color-accent);
+}
+
+/* ============================================
+   Loading States
+   ============================================ */
+
+[data-loading] {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+[data-loading]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--sl-color-accent-low);
+  border-top-color: var(--sl-color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ============================================
+   Accessibility - Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page {
+    animation: none;
+  }
+}
+
+/* ============================================
+   Dark Mode Adjustments
+   ============================================ */
+
+:root[data-theme='dark'] {
+  --transition-speed: 0.2s;
+}
+
+:root[data-theme='dark'] .card:hover,
+:root[data-theme='dark'] .sl-link-card:hover {
+  box-shadow: 0 12px 28px rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
