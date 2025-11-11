@@ -18,12 +18,12 @@ description: 'Kelola pengumuman dan broadcast informasi ke seluruh pengguna sist
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Informasi & Pengumuman
@@ -31,18 +31,18 @@ import {
 Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau informasi penting kepada seluruh pengguna sistem. Informasi yang dipublikasikan dapat dilihat di dashboard dan otomatis dikirimkan melalui notifikasi WhatsApp.
 
 <CardGrid>
-  <Card title='Broadcast Otomatis' icon='rocket'>
-    Informasi yang dipublish otomatis tersebar ke seluruh pengguna sistem
-  </Card>
-  <Card title='Notifikasi WhatsApp' icon='external'>
-    Pengumuman penting langsung dikirim ke WhatsApp pengguna terdaftar
-  </Card>
-  <Card title='Target Audience' icon='star'>
-    Pilih penerima: Semua, Guru, Siswa, Kelas Tertentu, atau Custom
-  </Card>
-  <Card title='Status Publikasi' icon='document'>
-    Kelola dengan status: Draft, Published, Archived
-  </Card>
+    <Card title='Broadcast Otomatis' icon='rocket'>
+        Informasi yang dipublish otomatis tersebar ke seluruh pengguna sistem
+    </Card>
+    <Card title='Notifikasi WhatsApp' icon='external'>
+        Pengumuman penting langsung dikirim ke WhatsApp pengguna terdaftar
+    </Card>
+    <Card title='Target Audience' icon='star'>
+        Pilih penerima: Semua, Guru, Siswa, Kelas Tertentu, atau Custom
+    </Card>
+    <Card title='Status Publikasi' icon='document'>
+        Kelola dengan status: Draft, Published, Archived
+    </Card>
 </CardGrid>
 
 ---
@@ -59,14 +59,14 @@ Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau infor
   </TabItem>
 
 <TabItem label='Pengumuman Akademik'>
-  **Informasi Pembelajaran** - Jadwal ujian/ulangan - Pengumpulan tugas -
-  Perubahan jadwal pelajaran - Rapat guru **Target**: Guru dan/atau siswa
-  tertentu
+    **Informasi Pembelajaran** - Jadwal ujian/ulangan - Pengumpulan tugas -
+    Perubahan jadwal pelajaran - Rapat guru **Target**: Guru dan/atau siswa
+    tertentu
 </TabItem>
 
 <TabItem label='Pengumuman Administratif'>
-  **Informasi Administrasi** - Pembayaran SPP - Pengambilan rapor - Verifikasi
-  data siswa - Update kartu presensi **Target**: Siswa/orang tua dan staff TU
+    **Informasi Administrasi** - Pembayaran SPP - Pengambilan rapor - Verifikasi
+    data siswa - Update kartu presensi **Target**: Siswa/orang tua dan staff TU
 </TabItem>
 
   <TabItem label="Pengumuman Darurat">
@@ -92,49 +92,49 @@ Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau infor
 
 1. **Buka Menu Informasi**
 
-   Navigasi ke **Data Master → Informasi** dari sidebar
+    Navigasi ke **Data Master → Informasi** dari sidebar
 
 2. **Klik Tombol Tambah**
 
-   Klik **"+ Buat Pengumuman"** di pojok kanan atas
+    Klik **"+ Buat Pengumuman"** di pojok kanan atas
 
 3. **Isi Detail Informasi**
 
-   Lengkapi form dengan informasi berikut:
-   - **Judul** (wajib) - Judul pengumuman yang menarik
-   - **Konten** (wajib) - Isi pengumuman lengkap (mendukung rich text)
-   - **Kategori** (wajib) - Pilih: Umum / Akademik / Administratif / Darurat
-   - **Prioritas** (wajib) - Pilih: Urgent / High / Medium / Low
-   - **Target Audience** (wajib) - Pilih penerima informasi
-   - **Tanggal Mulai** (wajib) - Kapan informasi ditampilkan
-   - **Tanggal Berakhir** (opsional) - Kapan informasi tidak ditampilkan lagi
-   - **Lampiran** (opsional) - Upload file pendukung (PDF, gambar)
+    Lengkapi form dengan informasi berikut:
+    - **Judul** (wajib) - Judul pengumuman yang menarik
+    - **Konten** (wajib) - Isi pengumuman lengkap (mendukung rich text)
+    - **Kategori** (wajib) - Pilih: Umum / Akademik / Administratif / Darurat
+    - **Prioritas** (wajib) - Pilih: Urgent / High / Medium / Low
+    - **Target Audience** (wajib) - Pilih penerima informasi
+    - **Tanggal Mulai** (wajib) - Kapan informasi ditampilkan
+    - **Tanggal Berakhir** (opsional) - Kapan informasi tidak ditampilkan lagi
+    - **Lampiran** (opsional) - Upload file pendukung (PDF, gambar)
 
 4. **Pilih Target Audience**
 
-   Tentukan siapa yang akan menerima informasi:
-   - Semua Pengguna
-   - Guru/Pegawai
-   - Siswa (semua atau kelas tertentu)
-   - Staff TU
-   - Wali Kelas
-   - Custom (pilih manual)
+    Tentukan siapa yang akan menerima informasi:
+    - Semua Pengguna
+    - Guru/Pegawai
+    - Siswa (semua atau kelas tertentu)
+    - Staff TU
+    - Wali Kelas
+    - Custom (pilih manual)
 
 5. **Tentukan Status Publikasi**
-   - **Draft**: Belum dipublikasikan, hanya terlihat oleh pembuat
-   - **Published**: Langsung dipublikasikan dan dikirim notifikasi WhatsApp
-   - **Scheduled**: Dijadwalkan untuk dipublikasikan di waktu tertentu
+    - **Draft**: Belum dipublikasikan, hanya terlihat oleh pembuat
+    - **Published**: Langsung dipublikasikan dan dikirim notifikasi WhatsApp
+    - **Scheduled**: Dijadwalkan untuk dipublikasikan di waktu tertentu
 
 6. **Simpan atau Publish**
-   - Klik **"Simpan sebagai Draft"** untuk menyimpan tanpa publish
-   - Klik **"Publish Sekarang"** untuk langsung mempublikasikan
+    - Klik **"Simpan sebagai Draft"** untuk menyimpan tanpa publish
+    - Klik **"Publish Sekarang"** untuk langsung mempublikasikan
 
 </Steps>
 
 <Aside type='caution' title='Perhatian!'>
-  Setelah klik **"Publish"**, informasi akan **langsung dikirim ke WhatsApp**
-  semua pengguna yang menjadi target. Pastikan konten sudah benar sebelum
-  publish!
+    Setelah klik **"Publish"**, informasi akan **langsung dikirim ke WhatsApp**
+    semua pengguna yang menjadi target. Pastikan konten sudah benar sebelum
+    publish!
 </Aside>
 
 ---
@@ -191,8 +191,8 @@ Modul Informasi adalah fitur untuk membuat dan menyebarkan pengumuman atau infor
 ## Notifikasi WhatsApp
 
 <Aside type='tip' title='Fitur Unggulan!'>
-  Setiap informasi yang statusnya diubah menjadi **Published** akan **otomatis
-  dikirimkan** ke WhatsApp pengguna yang menjadi target audience.
+    Setiap informasi yang statusnya diubah menjadi **Published** akan **otomatis
+    dikirimkan** ke WhatsApp pengguna yang menjadi target audience.
 </Aside>
 
 ### Cara Kerja Notifikasi WhatsApp
@@ -263,11 +263,11 @@ MTs Negeri 1 Pandeglang
   </Card>
 
 <Card title='Status Published' icon='rocket'>
-  Informasi harus berstatus **Published** (bukan Draft)
+    Informasi harus berstatus **Published** (bukan Draft)
 </Card>
 
 <Card title='Target Valid' icon='star'>
-  Pengguna termasuk dalam target audience yang dipilih
+    Pengguna termasuk dalam target audience yang dipilih
 </Card>
 
   <Card title="Koneksi Aktif" icon="setting">
@@ -291,15 +291,15 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
   </TabItem>
 
 <TabItem label='Per Role'>
-  **Filter Berdasarkan Peran** - **Guru/Pegawai**: Rapat guru, update mengajar -
-  **Siswa**: Jadwal ujian, tugas - **Staff TU**: Administrasi, pembayaran -
-  **Wali Kelas**: Koordinasi kelas - **Orang Tua** (jika ada): Info kesiswaan
+    **Filter Berdasarkan Peran** - **Guru/Pegawai**: Rapat guru, update mengajar
+    - **Siswa**: Jadwal ujian, tugas - **Staff TU**: Administrasi, pembayaran -
+    **Wali Kelas**: Koordinasi kelas - **Orang Tua** (jika ada): Info kesiswaan
 </TabItem>
 
 <TabItem label='Per Kelas'>
-  **Target Kelas Tertentu** Cocok untuk: - Pengumuman khusus Kelas VIII I
-  (kelulusan) - Info jurusan tertentu - Acara kelas **Contoh**: Hanya siswa X
-  Unggulan1, 2, 3
+    **Target Kelas Tertentu** Cocok untuk: - Pengumuman khusus Kelas VIII I
+    (kelulusan) - Info jurusan tertentu - Acara kelas **Contoh**: Hanya siswa X
+    Unggulan1, 2, 3
 </TabItem>
 
   <TabItem label="Custom">
@@ -321,9 +321,9 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
 </Steps>
 
 <Aside type='caution' title='Catatan Penting!'>
-  - Mengedit informasi yang sudah **Published** **TIDAK** akan mengirim
-  notifikasi WhatsApp ulang - Jika perlu kirim notifikasi baru, buat pengumuman
-  baru - Perubahan akan langsung terlihat di dashboard pengguna
+    - Mengedit informasi yang sudah **Published** **TIDAK** akan mengirim
+    notifikasi WhatsApp ulang - Jika perlu kirim notifikasi baru, buat
+    pengumuman baru - Perubahan akan langsung terlihat di dashboard pengguna
 </Aside>
 
 ---
@@ -346,8 +346,8 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
 </Tabs>
 
 <Aside type='danger'>
-  Informasi yang sudah dikirim ke WhatsApp **tidak dapat ditarik kembali**
-  meskipun dihapus dari sistem. WhatsApp sudah terkirim ke device pengguna.
+    Informasi yang sudah dikirim ke WhatsApp **tidak dapat ditarik kembali**
+    meskipun dihapus dari sistem. WhatsApp sudah terkirim ke device pengguna.
 </Aside>
 
 ---
@@ -361,12 +361,12 @@ Tentukan siapa yang akan menerima informasi untuk memastikan pesan sampai ke pen
   </Card>
 
 <Card title='Konten Terstruktur' icon='document'>
-  Gunakan bullet points, numbering, dan paragraph pendek agar mudah dibaca
+    Gunakan bullet points, numbering, dan paragraph pendek agar mudah dibaca
 </Card>
 
 <Card title='Review Sebelum Publish' icon='approve-check'>
-  Simpan sebagai Draft dulu, minta review atasan, baru publish untuk menghindari
-  kesalahan
+    Simpan sebagai Draft dulu, minta review atasan, baru publish untuk
+    menghindari kesalahan
 </Card>
 
   <Card title="Target Tepat" icon="rocket">
@@ -510,10 +510,10 @@ Terima kasih atas perhatiannya.
 ## Tips Keamanan
 
 <Aside type='tip'>
-  - Batasi akses pembuatan informasi hanya untuk **Super Admin**, **Operator**,
-  dan **Kepala Madrasah** - Aktifkan fitur approval untuk pengumuman prioritas
-  **Urgent** - Log semua aktivitas publikasi untuk audit - Backup database
-  secara berkala untuk recovery
+    - Batasi akses pembuatan informasi hanya untuk **Super Admin**,
+    **Operator**, dan **Kepala Madrasah** - Aktifkan fitur approval untuk
+    pengumuman prioritas **Urgent** - Log semua aktivitas publikasi untuk audit
+    - Backup database secara berkala untuk recovery
 </Aside>
 
 ---

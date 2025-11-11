@@ -3,27 +3,27 @@ title: 'Menu Siswa'
 description: 'Manajemen data dan presensi siswa madrasah'
 template: splash
 hero:
-  image:
-    file: '../../../assets/index-siswa.svg'
-  tagline: 'Kelola data siswa dan monitoring kehadiran secara komprehensif'
-  # actions:
-  #   - text: "Kelola Data Siswa"
-  #     link: "./siswa"
-  #     icon: "star"
-  #     variant: primary
-  #   - text: "Lihat Riwayat Presensi"
-  #     link: "./riwayat-presensi-siswa"
-  #     icon: "document"
-  #     variant: secondary
+    image:
+        file: '../../../assets/index-siswa.svg'
+    tagline: 'Kelola data siswa dan monitoring kehadiran secara komprehensif'
+    # actions:
+    #   - text: "Kelola Data Siswa"
+    #     link: "./siswa"
+    #     icon: "star"
+    #     variant: primary
+    #   - text: "Lihat Riwayat Presensi"
+    #     link: "./riwayat-presensi-siswa"
+    #     icon: "document"
+    #     variant: secondary
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Menu Siswa
@@ -31,18 +31,19 @@ import {
 Menu Siswa adalah modul lengkap untuk mengelola data kesiswaan dan monitoring kehadiran seluruh siswa madrasah. Modul ini mencakup pengelolaan data personal, akademik, hingga analisis kehadiran per kelas atau individu.
 
 <CardGrid>
-  <Card title='Database Siswa Terpusat' icon='document'>
-    Kelola ribuan data siswa dari berbagai tingkat dan jurusan dalam satu sistem
-  </Card>
-  <Card title='Presensi Real-time' icon='rocket'>
-    Monitor kehadiran siswa secara langsung dengan sistem RFID otomatis
-  </Card>
-  <Card title='Notifikasi Orang Tua' icon='star'>
-    Kirim notifikasi kehadiran anak ke WhatsApp orang tua secara otomatis
-  </Card>
-  <Card title='Laporan Lengkap' icon='puzzle'>
-    Generate laporan kehadiran untuk wali kelas, BK, dan kepala madrasah
-  </Card>
+    <Card title='Database Siswa Terpusat' icon='document'>
+        Kelola ribuan data siswa dari berbagai tingkat dan jurusan dalam satu
+        sistem
+    </Card>
+    <Card title='Presensi Real-time' icon='rocket'>
+        Monitor kehadiran siswa secara langsung dengan sistem RFID otomatis
+    </Card>
+    <Card title='Notifikasi Orang Tua' icon='star'>
+        Kirim notifikasi kehadiran anak ke WhatsApp orang tua secara otomatis
+    </Card>
+    <Card title='Laporan Lengkap' icon='puzzle'>
+        Generate laporan kehadiran untuk wali kelas, BK, dan kepala madrasah
+    </Card>
 </CardGrid>
 
 ---
@@ -89,18 +90,18 @@ Menu Siswa adalah modul lengkap untuk mengelola data kesiswaan dan monitoring ke
 **Pengelolaan Database Siswa**
 
 <CardGrid>
-  <Card title='CRUD Lengkap' icon='star'>
-    Tambah, edit, hapus data siswa dengan interface yang mudah digunakan
-  </Card>
-  <Card title='Upload Foto' icon='document'>
-    Upload foto siswa untuk ID card dan profil sistem
-  </Card>
-  <Card title='Import Massal' icon='rocket'>
-    Import ratusan data siswa baru sekaligus via Excel atau ZIP file
-  </Card>
-  <Card title='Naik Tingkat/Lulus' icon='approve-check'>
-    Proses kenaikan kelas atau kelulusan siswa secara massal
-  </Card>
+    <Card title='CRUD Lengkap' icon='star'>
+        Tambah, edit, hapus data siswa dengan interface yang mudah digunakan
+    </Card>
+    <Card title='Upload Foto' icon='document'>
+        Upload foto siswa untuk ID card dan profil sistem
+    </Card>
+    <Card title='Import Massal' icon='rocket'>
+        Import ratusan data siswa baru sekaligus via Excel atau ZIP file
+    </Card>
+    <Card title='Naik Tingkat/Lulus' icon='approve-check'>
+        Proses kenaikan kelas atau kelulusan siswa secara massal
+    </Card>
 </CardGrid>
 
 **Fitur Utama**:
@@ -125,18 +126,18 @@ Menu Siswa adalah modul lengkap untuk mengelola data kesiswaan dan monitoring ke
 **Monitoring dan Analisis Kehadiran Siswa**
 
 <CardGrid>
-  <Card title='Rekap Real-time' icon='rocket'>
-    Lihat rekap kehadiran siswa yang ter-update secara real-time
-  </Card>
-  <Card title='Filter Multi Dimensi' icon='setting'>
-    Filter berdasarkan periode, kelas, siswa, atau status kehadiran
-  </Card>
-  <Card title='Input Manual' icon='star'>
-    Input presensi manual untuk siswa yang lupa tap kartu
-  </Card>
-  <Card title='Notifikasi Orang Tua' icon='document'>
-    Kirim notifikasi otomatis ke WhatsApp orang tua saat anak presensi
-  </Card>
+    <Card title='Rekap Real-time' icon='rocket'>
+        Lihat rekap kehadiran siswa yang ter-update secara real-time
+    </Card>
+    <Card title='Filter Multi Dimensi' icon='setting'>
+        Filter berdasarkan periode, kelas, siswa, atau status kehadiran
+    </Card>
+    <Card title='Input Manual' icon='star'>
+        Input presensi manual untuk siswa yang lupa tap kartu
+    </Card>
+    <Card title='Notifikasi Orang Tua' icon='document'>
+        Kirim notifikasi otomatis ke WhatsApp orang tua saat anak presensi
+    </Card>
 </CardGrid>
 
 **Fitur Utama**:
@@ -170,28 +171,28 @@ Menu Siswa adalah modul lengkap untuk mengelola data kesiswaan dan monitoring ke
   </TabItem>
 
 <TabItem label='Operator'>
-  **Akses Operasional** Tambah/edit data siswa Upload foto siswa Import/export
-  data Lihat riwayat presensi Koreksi data presensi Generate laporan Input
-  manual presensi Tidak bisa hapus siswa Tidak bisa proses kelulusan
+    **Akses Operasional** Tambah/edit data siswa Upload foto siswa Import/export
+    data Lihat riwayat presensi Koreksi data presensi Generate laporan Input
+    manual presensi Tidak bisa hapus siswa Tidak bisa proses kelulusan
 </TabItem>
 
 <TabItem label='Wali Kelas'>
-  **Akses Per Kelas** Lihat data siswa kelas binaannya Edit data siswa kelasnya
-  (terbatas) Lihat presensi siswa kelasnya Koreksi presensi kelasnya Input
-  manual presensi Generate laporan kelasnya Tidak bisa lihat kelas lain Tidak
-  bisa hapus siswa
+    **Akses Per Kelas** Lihat data siswa kelas binaannya Edit data siswa
+    kelasnya (terbatas) Lihat presensi siswa kelasnya Koreksi presensi kelasnya
+    Input manual presensi Generate laporan kelasnya Tidak bisa lihat kelas lain
+    Tidak bisa hapus siswa
 </TabItem>
 
 <TabItem label='Guru BK'>
-  **Akses Monitoring** Lihat semua data siswa Lihat semua riwayat presensi
-  Generate laporan kehadiran Identifikasi siswa bermasalah Hanya baca, tidak
-  bisa edit
+    **Akses Monitoring** Lihat semua data siswa Lihat semua riwayat presensi
+    Generate laporan kehadiran Identifikasi siswa bermasalah Hanya baca, tidak
+    bisa edit
 </TabItem>
 
 <TabItem label='Siswa'>
-  **Akses Personal** Lihat data pribadi sendiri Update profil sendiri (terbatas)
-  Lihat riwayat presensi sendiri Ajukan izin/dispensasi Tidak bisa lihat data
-  siswa lain Tidak bisa edit data akademik
+    **Akses Personal** Lihat data pribadi sendiri Update profil sendiri
+    (terbatas) Lihat riwayat presensi sendiri Ajukan izin/dispensasi Tidak bisa
+    lihat data siswa lain Tidak bisa edit data akademik
 </TabItem>
 
   <TabItem label="Orang Tua">
@@ -239,30 +240,30 @@ graph TD
 <Steps>
 
 1. **Setup Awal (Pendaftaran Siswa Baru)**
-   - Admin input data siswa baru
-   - Upload foto untuk ID card
-   - Atur kelas dan jurusan
-   - Input data orang tua/wali
-   - Link dengan kartu presensi RFID
+    - Admin input data siswa baru
+    - Upload foto untuk ID card
+    - Atur kelas dan jurusan
+    - Input data orang tua/wali
+    - Link dengan kartu presensi RFID
 
 2. **Operasional Harian**
-   - Siswa tap kartu RFID saat masuk sekolah
-   - Data presensi otomatis tercatat
-   - Notifikasi otomatis terkirim ke WhatsApp orang tua
-   - Wali kelas monitoring presensi kelasnya real-time
-   - Admin/operator monitoring dashboard
+    - Siswa tap kartu RFID saat masuk sekolah
+    - Data presensi otomatis tercatat
+    - Notifikasi otomatis terkirim ke WhatsApp orang tua
+    - Wali kelas monitoring presensi kelasnya real-time
+    - Admin/operator monitoring dashboard
 
 3. **Monitoring & Koreksi**
-   - Wali kelas cek rekap presensi harian
-   - Koreksi manual jika ada siswa lupa tap
-   - Input manual untuk izin/sakit/dispensasi
-   - Follow up siswa yang sering alpha
+    - Wali kelas cek rekap presensi harian
+    - Koreksi manual jika ada siswa lupa tap
+    - Input manual untuk izin/sakit/dispensasi
+    - Follow up siswa yang sering alpha
 
 4. **Akhir Periode (Naik Tingkat/Lulus)**
-   - Admin proses kenaikan kelas (X→XI, XI→XII)
-   - Proses kelulusan siswa Kelas VIII I
-   - Update status siswa (Lulus/Tidak Lulus)
-   - Generate laporan akhir tahun
+    - Admin proses kenaikan kelas (X→XI, XI→XII)
+    - Proses kelulusan siswa Kelas VIII I
+    - Update status siswa (Lulus/Tidak Lulus)
+    - Generate laporan akhir tahun
 
 </Steps>
 
@@ -279,13 +280,13 @@ graph TD
   </Card>
 
 <Card title='Siswa Lulus' icon='approve-check'>
-  **Status: Sudah Lulus** - Lulus ujian akhir - Status berubah "Lulus" - Tidak
-  dapat presensi lagi - Data tersimpan untuk alumni
+    **Status: Sudah Lulus** - Lulus ujian akhir - Status berubah "Lulus" - Tidak
+    dapat presensi lagi - Data tersimpan untuk alumni
 </Card>
 
 <Card title='Siswa Keluar' icon='warning'>
-  **Status: Drop Out** - Keluar sebelum lulus (DO) - Pindah sekolah (mutasi
-  keluar) - Alasan pribadi/keluarga - Data diarsipkan
+    **Status: Drop Out** - Keluar sebelum lulus (DO) - Pindah sekolah (mutasi
+    keluar) - Alasan pribadi/keluarga - Data diarsipkan
 </Card>
 
   <Card title="Siswa Mutasi" icon="document">
@@ -342,15 +343,15 @@ graph LR
   </Card>
 
 <Card title='Naik Tingkat Massal' icon='star'>
-  **Proses Kenaikan Kelas Otomatis** - Pilih semua siswa kelas VII - Klik "Naik
-  ke Kelas VIII " - Sistem otomatis update kelas - Generate laporan kenaikan
-  Cocok untuk: Akhir tahun ajaran
+    **Proses Kenaikan Kelas Otomatis** - Pilih semua siswa kelas VII - Klik
+    "Naik ke Kelas VIII " - Sistem otomatis update kelas - Generate laporan
+    kenaikan Cocok untuk: Akhir tahun ajaran
 </Card>
 
 <Card title='Notifikasi Orang Tua' icon='document'>
-  **WhatsApp Real-time** - Siswa tap → Notifikasi terkirim - Informasi: Nama,
-  waktu, status - Orang tua tenang, tahu anak sampai sekolah - Gratis, tidak ada
-  biaya SMS Cocok untuk: Keamanan dan monitoring orang tua
+    **WhatsApp Real-time** - Siswa tap → Notifikasi terkirim - Informasi: Nama,
+    waktu, status - Orang tua tenang, tahu anak sampai sekolah - Gratis, tidak
+    ada biaya SMS Cocok untuk: Keamanan dan monitoring orang tua
 </Card>
 
   <Card title="Export Laporan Fleksibel" icon="approve-check">
@@ -371,33 +372,33 @@ graph LR
 <Steps>
 
 1. **Persiapan Data**
-   - Kumpulkan data siswa baru dari formulir PPDB
-   - Scan dokumen (ijazah, KK, akta)
-   - Foto siswa dengan background merah
+    - Kumpulkan data siswa baru dari formulir PPDB
+    - Scan dokumen (ijazah, KK, akta)
+    - Foto siswa dengan background merah
 
 2. **Import Massal**
-   - Format data di Excel sesuai template
-   - Upload Excel via sistem
-   - Review preview, cek error
-   - Proses import (sistem assign kelas otomatis)
+    - Format data di Excel sesuai template
+    - Upload Excel via sistem
+    - Review preview, cek error
+    - Proses import (sistem assign kelas otomatis)
 
 3. **Upload Foto Massal**
-   - Rename foto sesuai NIS/NISN
-   - Zip semua foto
-   - Upload ZIP file
-   - Sistem match foto dengan data siswa
+    - Rename foto sesuai NIS/NISN
+    - Zip semua foto
+    - Upload ZIP file
+    - Sistem match foto dengan data siswa
 
 4. **Registrasi Kartu RFID**
-   - Scan kartu RFID kosong
-   - Link dengan data siswa
-   - Test tap untuk validasi
-   - Cetak kartu fisik
+    - Scan kartu RFID kosong
+    - Link dengan data siswa
+    - Test tap untuk validasi
+    - Cetak kartu fisik
 
 5. **Orientasi Siswa**
-   - Serahkan kartu RFID + lanyard
-   - Edukasi cara presensi
-   - Aktivasi akun login siswa
-   - Beri username/password
+    - Serahkan kartu RFID + lanyard
+    - Edukasi cara presensi
+    - Aktivasi akun login siswa
+    - Beri username/password
 
 </Steps>
 
@@ -408,26 +409,26 @@ graph LR
 <Steps>
 
 1. **Evaluasi & Seleksi**
-   - Tentukan siswa yang naik kelas
-   - Identifikasi siswa tidak naik (tinggal kelas)
-   - Tentukan kelas tujuan (Unggulan/Reguler)
+    - Tentukan siswa yang naik kelas
+    - Identifikasi siswa tidak naik (tinggal kelas)
+    - Tentukan kelas tujuan (Unggulan/Reguler)
 
 2. **Proses Naik Tingkat**
-   - Filter siswa kelas VII yang naik
-   - Pilih "Naik ke Kelas VIII "
-   - Sistem otomatis update kelas
-   - Assign ke rombel baru (VIII Unggulan1, 2, dst)
+    - Filter siswa kelas VII yang naik
+    - Pilih "Naik ke Kelas VIII "
+    - Sistem otomatis update kelas
+    - Assign ke rombel baru (VIII Unggulan1, 2, dst)
 
 3. **Update Data**
-   - Update wali kelas baru
-   - Update jadwal pelajaran
-   - Notifikasi ke siswa & orang tua
-   - Generate laporan kenaikan
+    - Update wali kelas baru
+    - Update jadwal pelajaran
+    - Notifikasi ke siswa & orang tua
+    - Generate laporan kenaikan
 
 4. **Verifikasi**
-   - Cek apakah semua siswa sudah di kelas baru
-   - Cek siswa tinggal kelas tetap di kelas lama
-   - Backup data untuk arsip
+    - Cek apakah semua siswa sudah di kelas baru
+    - Cek siswa tinggal kelas tetap di kelas lama
+    - Backup data untuk arsip
 
 </Steps>
 
@@ -442,13 +443,13 @@ graph LR
   </Card>
 
 <Card title='Update Kontak Orang Tua' icon='star'>
-  Verifikasi nomor WhatsApp orang tua setiap semester agar notifikasi terkirim
-  dengan baik
+    Verifikasi nomor WhatsApp orang tua setiap semester agar notifikasi terkirim
+    dengan baik
 </Card>
 
 <Card title='Backup Rutin' icon='warning'>
-  Export data siswa setiap bulan sebagai backup, terutama sebelum proses naik
-  tingkat
+    Export data siswa setiap bulan sebagai backup, terutama sebelum proses naik
+    tingkat
 </Card>
 
   <Card title="Edukasi Siswa" icon="document">
@@ -462,11 +463,11 @@ graph LR
 ## Tips Keamanan
 
 <Aside type='tip'>
-  - Batasi akses edit data siswa hanya untuk **Super Admin** dan **Operator**
-  terpercaya - Data NISN dan NIK bersifat sensitif, jangan tampilkan di laporan
-  publik - Aktifkan log aktivitas untuk audit trail semua perubahan data siswa -
-  Enkripsi data orang tua (nomor HP, alamat) untuk privasi - Review hak akses
-  secara berkala, nonaktifkan siswa yang sudah lulus/keluar
+    - Batasi akses edit data siswa hanya untuk **Super Admin** dan **Operator**
+    terpercaya - Data NISN dan NIK bersifat sensitif, jangan tampilkan di
+    laporan publik - Aktifkan log aktivitas untuk audit trail semua perubahan
+    data siswa - Enkripsi data orang tua (nomor HP, alamat) untuk privasi -
+    Review hak akses secara berkala, nonaktifkan siswa yang sudah lulus/keluar
 </Aside>
 
 ---

@@ -18,12 +18,12 @@ description: 'Proses pengajuan dan approval kartu RFID dari awal hingga distribu
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Pengajuan Kartu
@@ -31,19 +31,19 @@ import {
 Pengajuan Kartu adalah proses formal untuk mendapatkan kartu presensi RFID baru. Setiap pengajuan akan melalui tahapan review, persetujuan, pembuatan, hingga distribusi kartu kepada pemohon.
 
 <CardGrid>
-  <Card title='Proses Digital' icon='rocket'>
-    Ajukan kartu online tanpa perlu datang ke TU, cukup melalui sistem
-  </Card>
-  <Card title='Tracking Real-time' icon='approve-check'>
-    Pantau status pengajuan kapan saja melalui dashboard atau notifikasi
-    WhatsApp
-  </Card>
-  <Card title='Transparan' icon='document'>
-    Timeline dan biaya jelas, tidak ada biaya tersembunyi
-  </Card>
-  <Card title='Notifikasi Otomatis' icon='star'>
-    Terima update setiap perubahan status via WhatsApp
-  </Card>
+    <Card title='Proses Digital' icon='rocket'>
+        Ajukan kartu online tanpa perlu datang ke TU, cukup melalui sistem
+    </Card>
+    <Card title='Tracking Real-time' icon='approve-check'>
+        Pantau status pengajuan kapan saja melalui dashboard atau notifikasi
+        WhatsApp
+    </Card>
+    <Card title='Transparan' icon='document'>
+        Timeline dan biaya jelas, tidak ada biaya tersembunyi
+    </Card>
+    <Card title='Notifikasi Otomatis' icon='star'>
+        Terima update setiap perubahan status via WhatsApp
+    </Card>
 </CardGrid>
 
 ---
@@ -54,58 +54,58 @@ Pengajuan Kartu adalah proses formal untuk mendapatkan kartu presensi RFID baru.
 
 1. **Login ke Sistem**
 
-   Masuk menggunakan username dan password Anda
+    Masuk menggunakan username dan password Anda
 
 2. **Buka Menu Pengajuan Kartu**
 
-   Navigasi ke **Kartu Presensi → Pengajuan Kartu Presensi**
+    Navigasi ke **Kartu Presensi → Pengajuan Kartu Presensi**
 
 3. **Klik Tombol Ajukan**
 
-   Klik **"+ Ajukan Kartu Baru"** di pojok kanan atas
+    Klik **"+ Ajukan Kartu Baru"** di pojok kanan atas
 
 4. **Isi Form Pengajuan**
 
-   Lengkapi informasi berikut:
-   - **Jenis Pengajuan** (wajib)
-     - ○ Kartu Baru (pertama kali)
-     - ○ Pengganti Hilang
-     - ○ Pengganti Rusak
+    Lengkapi informasi berikut:
+    - **Jenis Pengajuan** (wajib)
+        - ○ Kartu Baru (pertama kali)
+        - ○ Pengganti Hilang
+        - ○ Pengganti Rusak
 
-   - **Alasan Pengajuan** (wajib jika pengganti)
-     - Jelaskan kronologi kehilangan/kerusakan
+    - **Alasan Pengajuan** (wajib jika pengganti)
+        - Jelaskan kronologi kehilangan/kerusakan
 
-   - **Upload Foto** (wajib untuk kartu baru)
-     - Format: JPG/PNG
-     - Ukuran: Maksimal 2 MB
-     - Background: Merah untuk siswa, Biru untuk pegawai
-     - Pas foto formal (tidak selfie)
+    - **Upload Foto** (wajib untuk kartu baru)
+        - Format: JPG/PNG
+        - Ukuran: Maksimal 2 MB
+        - Background: Merah untuk siswa, Biru untuk pegawai
+        - Pas foto formal (tidak selfie)
 
-   - **Konfirmasi Data Diri**
-     - Nama, NIS/NIP, Kelas/Jabatan (auto-filled)
-     - Nomor WhatsApp aktif
-     - Alamat lengkap
+    - **Konfirmasi Data Diri**
+        - Nama, NIS/NIP, Kelas/Jabatan (auto-filled)
+        - Nomor WhatsApp aktif
+        - Alamat lengkap
 
 5. **Review & Konfirmasi**
-   - Periksa kembali semua data
-   - Baca syarat dan ketentuan
-   - Centang "Saya setuju dengan biaya Rp 15.000"
+    - Periksa kembali semua data
+    - Baca syarat dan ketentuan
+    - Centang "Saya setuju dengan biaya Rp 15.000"
 
 6. **Submit Pengajuan**
 
-   Klik **"Kirim Pengajuan"**
+    Klik **"Kirim Pengajuan"**
 
-   **Status**: Pending
+    **Status**: Pending
 
 7. **Tunggu Persetujuan**
-   - Admin akan mereview dalam 1x24 jam
-   - Anda akan menerima notifikasi via WhatsApp dan sistem
+    - Admin akan mereview dalam 1x24 jam
+    - Anda akan menerima notifikasi via WhatsApp dan sistem
 
 </Steps>
 
 <Aside type='note'>
-  Pastikan foto yang diupload sudah sesuai ketentuan. Pengajuan dengan foto
-  tidak sesuai akan **ditolak** dan harus mengajukan ulang.
+    Pastikan foto yang diupload sudah sesuai ketentuan. Pengajuan dengan foto
+    tidak sesuai akan **ditolak** dan harus mengajukan ulang.
 </Aside>
 
 ---
@@ -120,29 +120,29 @@ Setelah pengajuan disetujui, admin akan meregistrasi nomor RFID unik untuk kartu
 
 1. **Scan Kartu Kosong**
 
-   Admin scan kartu RFID kosong dengan reader
+    Admin scan kartu RFID kosong dengan reader
 
 2. **Sistem Baca Nomor Unik**
 
-   Nomor RFID otomatis terbaca (contoh: 0AB3D5E7F1)
+    Nomor RFID otomatis terbaca (contoh: 0AB3D5E7F1)
 
 3. **Link dengan Data User**
 
-   Nomor RFID dihubungkan dengan data siswa/pegawai di database
+    Nomor RFID dihubungkan dengan data siswa/pegawai di database
 
 4. **Aktivasi Kartu**
 
-   Kartu diaktifkan dan siap digunakan setelah cetak
+    Kartu diaktifkan dan siap digunakan setelah cetak
 
 5. **Validasi**
 
-   Admin test tap kartu untuk memastikan sudah terhubung
+    Admin test tap kartu untuk memastikan sudah terhubung
 
 </Steps>
 
 <Aside type='tip' title='Untuk Admin'>
-  Gunakan fitur **"Registrasi RFID Massal"** untuk meregistrasi banyak kartu
-  sekaligus, misalnya untuk siswa baru angkatan baru.
+    Gunakan fitur **"Registrasi RFID Massal"** untuk meregistrasi banyak kartu
+    sekaligus, misalnya untuk siswa baru angkatan baru.
 </Aside>
 
 ---
@@ -162,10 +162,10 @@ Administrator akan mereview setiap pengajuan sebelum diproses.
   </TabItem>
 
 <TabItem label='Ditolak '>
-  **Pengajuan Tidak Memenuhi Syarat** - Foto tidak sesuai (selfie, background
-  salah) - Data tidak lengkap - Alasan tidak jelas - Sudah ada pengajuan aktif -
-  Nomor WhatsApp tidak valid **Aksi**: Status → **Ditolak** + Alasan penolakan
-  **Notifikasi**: User diminta mengajukan ulang
+    **Pengajuan Tidak Memenuhi Syarat** - Foto tidak sesuai (selfie, background
+    salah) - Data tidak lengkap - Alasan tidak jelas - Sudah ada pengajuan aktif
+    - Nomor WhatsApp tidak valid **Aksi**: Status → **Ditolak** + Alasan
+    penolakan **Notifikasi**: User diminta mengajukan ulang
 </TabItem>
 
   <TabItem label="Pending Review">
@@ -418,9 +418,9 @@ MTs Negeri 1 Pandeglang
   </TabItem>
 
 <TabItem label='Via Menu'>
-  **Melalui Menu Kartu Presensi** 1. Navigasi ke **Kartu Presensi → Pengajuan
-  Kartu** 2. Lihat daftar pengajuan Anda 3. Klik **"Detail"** untuk info lengkap
-  4. Timeline perubahan status tersedia
+    **Melalui Menu Kartu Presensi** 1. Navigasi ke **Kartu Presensi → Pengajuan
+    Kartu** 2. Lihat daftar pengajuan Anda 3. Klik **"Detail"** untuk info
+    lengkap 4. Timeline perubahan status tersedia
 </TabItem>
 
   <TabItem label="Via WhatsApp">
@@ -444,13 +444,13 @@ Sistem menyimpan histori lengkap semua pengajuan Anda.
   </Card>
 
 <Card title='Timeline Status' icon='rocket'>
-  - Pending: 10 Jan 2025, 09:00 - Diproses: 10 Jan 2025, 14:00 - Selesai: 13 Jan
-  2025, 16:00 - Diserahkan: 15 Jan 2025, 10:30
+    - Pending: 10 Jan 2025, 09:00 - Diproses: 10 Jan 2025, 14:00 - Selesai: 13
+    Jan 2025, 16:00 - Diserahkan: 15 Jan 2025, 10:30
 </Card>
 
 <Card title='Data Kartu' icon='star'>
-  - Nomor RFID teregistrasi - Tanggal aktivasi - Status kartu (Aktif/Nonaktif) -
-  Lokasi reader terakhir tap
+    - Nomor RFID teregistrasi - Tanggal aktivasi - Status kartu (Aktif/Nonaktif)
+    - Lokasi reader terakhir tap
 </Card>
 
   <Card title="Pembayaran" icon="approve-check">
@@ -469,32 +469,32 @@ Sistem menyimpan histori lengkap semua pengajuan Anda.
 
 1. **Lapor Kehilangan/Kerusakan**
 
-   Segera lapor ke bagian TU atau operator
+    Segera lapor ke bagian TU atau operator
 
 2. **Admin Nonaktifkan Kartu Lama**
 
-   Kartu lama dinonaktifkan untuk mencegah penyalahgunaan
+    Kartu lama dinonaktifkan untuk mencegah penyalahgunaan
 
 3. **Ajukan Kartu Pengganti**
-   - Pilih jenis: **"Pengganti Hilang"** atau **"Pengganti Rusak"**
-   - Jelaskan kronologi kehilangan/kerusakan
-   - Upload bukti (jika ada): foto kartu rusak, surat kehilangan, dll
+    - Pilih jenis: **"Pengganti Hilang"** atau **"Pengganti Rusak"**
+    - Jelaskan kronologi kehilangan/kerusakan
+    - Upload bukti (jika ada): foto kartu rusak, surat kehilangan, dll
 
 4. **Upload Foto Baru**
 
-   Foto yang sama dengan kartu sebelumnya (sudah tersimpan di sistem)
+    Foto yang sama dengan kartu sebelumnya (sudah tersimpan di sistem)
 
 5. **Proses Sama dengan Kartu Baru**
-   - Review → Diproses → Selesai → Diserahkan
-   - Biaya sama: **Rp 15.000**
-   - Nomor RFID baru akan diregistrasi
+    - Review → Diproses → Selesai → Diserahkan
+    - Biaya sama: **Rp 15.000**
+    - Nomor RFID baru akan diregistrasi
 
 </Steps>
 
 <Aside type='caution'>
-  **Penting**: Kartu lama yang hilang akan **langsung dinonaktifkan** begitu
-  Anda lapor. Jika kemudian ketemu, kartu lama **tidak dapat diaktifkan
-  kembali**. Anda tetap harus menggunakan kartu pengganti yang baru.
+    **Penting**: Kartu lama yang hilang akan **langsung dinonaktifkan** begitu
+    Anda lapor. Jika kemudian ketemu, kartu lama **tidak dapat diaktifkan
+    kembali**. Anda tetap harus menggunakan kartu pengganti yang baru.
 </Aside>
 
 ---
@@ -542,8 +542,9 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
   </TabItem>
 
 <TabItem label='Transfer'>
-  **Transfer Bank** - Transfer ke rekening madrasah - Screenshot bukti transfer
-  - Tunjukkan saat pengambilan kartu - Biaya transfer ditanggung pengirim
+    **Transfer Bank** - Transfer ke rekening madrasah - Screenshot bukti
+    transfer - Tunjukkan saat pengambilan kartu - Biaya transfer ditanggung
+    pengirim
 </TabItem>
 
   <TabItem label="Akumulasi Tagihan">
@@ -563,13 +564,13 @@ Kartu dapat dinonaktifkan dalam kondisi tertentu:
   </Card>
 
 <Card title='Data Lengkap' icon='approve-check'>
-  Pastikan nomor WhatsApp aktif agar notifikasi terkirim dan Anda tidak
-  ketinggalan update
+    Pastikan nomor WhatsApp aktif agar notifikasi terkirim dan Anda tidak
+    ketinggalan update
 </Card>
 
 <Card title='Jaga Kartu' icon='warning'>
-  Pasang lanyard, simpan di tempat aman, hindari tekukan dan air untuk
-  memperpanjang umur kartu
+    Pasang lanyard, simpan di tempat aman, hindari tekukan dan air untuk
+    memperpanjang umur kartu
 </Card>
 
   <Card title="Lapor Cepat" icon="rocket">

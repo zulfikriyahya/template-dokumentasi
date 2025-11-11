@@ -18,12 +18,12 @@ description: 'Kelola data dan identitas sekolah/madrasah'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Aside,
-  Tabs,
-  TabItem,
+    Card,
+    CardGrid,
+    Steps,
+    Aside,
+    Tabs,
+    TabItem,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Instansi
@@ -38,11 +38,11 @@ import {
   </Card>
 
 <Card title='Jadwal Operasional' icon='clock'>
-  Menentukan hari kerja dan jadwal presensi otomatis berdasarkan status
+    Menentukan hari kerja dan jadwal presensi otomatis berdasarkan status
 </Card>
 
 <Card title='Laporan Profesional' icon='document'>
-  Data lengkap untuk header laporan, surat, dan dokumen resmi
+    Data lengkap untuk header laporan, surat, dan dokumen resmi
 </Card>
 
   <Card title=" Branding Konsisten" icon="star">
@@ -58,63 +58,63 @@ import {
 
 1. **Akses Menu Instansi**
 
-   Dashboard → Data Master → Instansi
+    Dashboard → Data Master → Instansi
 
 2. **Klik "Tambah Instansi"**
 
-   Jika belum ada data, atau klik "+ Tambah" untuk instansi baru
+    Jika belum ada data, atau klik "+ Tambah" untuk instansi baru
 
 3. **Isi Informasi Dasar**
 
-   ```
-   Nama Instansi: MTs Negeri 1 Pandeglang
-   NSS/NPSN: 121232010001
-   Akreditasi: A
-   Status: ● Negeri / ○ Swasta
-   ```
+    ```
+    Nama Instansi: MTs Negeri 1 Pandeglang
+    NSS/NPSN: 121232010001
+    Akreditasi: A
+    Status: ● Negeri / ○ Swasta
+    ```
 
-   <Aside type='note'>
-     Status instansi sangat penting karena mempengaruhi jadwal operasional!
-   </Aside>
+    <Aside type='note'>
+        Status instansi sangat penting karena mempengaruhi jadwal operasional!
+    </Aside>
 
 4. **Alamat Lengkap**
 
-   ```
-   Alamat: Jl. Raya Labuan KM. 7
-   Desa/Kelurahan: Sukaratu
-   Kecamatan: Cadasari
-   Kabupaten/Kota: Pandeglang
-   Provinsi: Banten
-   Kode Pos: 42281
-   ```
+    ```
+    Alamat: Jl. Raya Labuan KM. 7
+    Desa/Kelurahan: Sukaratu
+    Kecamatan: Cadasari
+    Kabupaten/Kota: Pandeglang
+    Provinsi: Banten
+    Kode Pos: 42281
+    ```
 
 5. **Kontak Instansi**
 
-   ```
-   Telepon: (0253) 801234
-   Email: info@mtsn1pandeglang.sch.id
-   Website: https://mtsn1pandeglang.sch.id
-   Fax: (0253) 801235 (opsional)
-   ```
+    ```
+    Telepon: (0253) 801234
+    Email: info@mtsn1pandeglang.sch.id
+    Website: https://mtsn1pandeglang.sch.id
+    Fax: (0253) 801235 (opsional)
+    ```
 
 6. **Upload Logo**
-   - Format: PNG dengan background transparan (recommended)
-   - Ukuran: 500x500px (1:1 ratio)
-   - Max size: 2MB
-   - Logo akan muncul di: Header sistem, laporan, kartu RFID
+    - Format: PNG dengan background transparan (recommended)
+    - Ukuran: 500x500px (1:1 ratio)
+    - Max size: 2MB
+    - Logo akan muncul di: Header sistem, laporan, kartu RFID
 
 7. **Kepala Instansi**
 
-   ```
-   Nama: Drs. H. Ahmad Yani, M.Pd.I
-   NIP: 196505121990031003
-   Jabatan: Kepala Madrasah
-   Periode: 2020 - 2024
-   ```
+    ```
+    Nama: Drs. H. Ahmad Yani, M.Pd.I
+    NIP: 196505121990031003
+    Jabatan: Kepala Madrasah
+    Periode: 2020 - 2024
+    ```
 
 8. **Simpan Data**
 
-   Klik "Simpan" untuk menyimpan data instansi
+    Klik "Simpan" untuk menyimpan data instansi
 
 </Steps>
 
@@ -125,20 +125,20 @@ import {
 ### Data Wajib
 
 <Card title='Field Required' icon='approve-check'>
-  Field yang wajib diisi: - **Nama Instansi** - Nama resmi sekolah/madrasah -
-  **NSS/NPSN** - Nomor Statistik Sekolah/Nomor Pokok Sekolah Nasional -
-  **Status** - Negeri atau Swasta (sangat penting!) - **Alamat Lengkap** -
-  Minimal jalan, kelurahan, kecamatan, kota - **Kontak** - Minimal telepon atau
-  email - **Kepala Instansi** - Nama dan NIP kepala sekolah
+    Field yang wajib diisi: - **Nama Instansi** - Nama resmi sekolah/madrasah -
+    **NSS/NPSN** - Nomor Statistik Sekolah/Nomor Pokok Sekolah Nasional -
+    **Status** - Negeri atau Swasta (sangat penting!) - **Alamat Lengkap** -
+    Minimal jalan, kelurahan, kecamatan, kota - **Kontak** - Minimal telepon
+    atau email - **Kepala Instansi** - Nama dan NIP kepala sekolah
 </Card>
 
 ### Data Opsional
 
 <Card title='Field Optional' icon='information'>
-  Field yang direkomendasikan diisi: - **Logo** - Untuk branding profesional -
-  **Akreditasi** - A, B, C, atau Belum Terakreditasi - **Website** - URL website
-  resmi - **Fax** - Jika ada - **Visi Misi** - Untuk dokumen lengkap - **Sejarah
-  Singkat** - Untuk profil institusi
+    Field yang direkomendasikan diisi: - **Logo** - Untuk branding profesional -
+    **Akreditasi** - A, B, C, atau Belum Terakreditasi - **Website** - URL
+    website resmi - **Fax** - Jika ada - **Visi Misi** - Untuk dokumen lengkap -
+    **Sejarah Singkat** - Untuk profil institusi
 </Card>
 
 ---
@@ -149,30 +149,30 @@ import {
 
 1. **Buka Detail Instansi**
 
-   Klik nama instansi atau tombol "Edit"
+    Klik nama instansi atau tombol "Edit"
 
 2. **Ubah Data yang Diperlukan**
 
-   Edit field yang ingin diperbarui
+    Edit field yang ingin diperbarui
 
 3. **Update Logo (Opsional)**
 
-   Jika ada perubahan logo atau branding
+    Jika ada perubahan logo atau branding
 
 4. **Review Perubahan**
 
-   Pastikan semua data sudah benar
+    Pastikan semua data sudah benar
 
 5. **Simpan Update**
 
-   Klik "Update" untuk menyimpan
+    Klik "Update" untuk menyimpan
 
 </Steps>
 
 <Aside type='tip' title='Kapan Update Data Instansi?'>
-  Update data instansi saat: - Pergantian kepala sekolah - Perubahan
-  alamat/kontak - Update akreditasi - Rebranding logo - Perubahan status (sangat
-  jarang)
+    Update data instansi saat: - Pergantian kepala sekolah - Perubahan
+    alamat/kontak - Update akreditasi - Rebranding logo - Perubahan status
+    (sangat jarang)
 </Aside>
 
 ---
@@ -208,13 +208,13 @@ Logo instansi akan muncul di:
   </TabItem>
 
 <TabItem label='Dokumen & Laporan'>
-  - Header laporan presensi - Surat keterangan - Rekap bulanan - Export
-  PDF/Excel - Sertifikat (jika ada)
+    - Header laporan presensi - Surat keterangan - Rekap bulanan - Export
+    PDF/Excel - Sertifikat (jika ada)
 </TabItem>
 
 <TabItem label='Kartu & Fisik'>
-  - Kartu RFID presensi - ID Card pegawai/siswa - Banner sistem (di sekolah) -
-  Stiker/poster
+    - Kartu RFID presensi - ID Card pegawai/siswa - Banner sistem (di sekolah) -
+    Stiker/poster
 </TabItem>
 
   <TabItem label="Notifikasi">
@@ -232,12 +232,12 @@ Status instansi (Negeri/Swasta) memiliki dampak signifikan pada sistem:
 ### Status: Negeri
 
 <Card title='Instansi Negeri' icon='home'>
-  **Karakteristik:** - Hari kerja: **Senin - Jumat** - Weekend: Sabtu & Minggu
-  libur - Mengikuti kalender pemerintah **Otomatis di Sistem:** - Jadwal
-  presensi Senin-Jumat - Laporan presensi 5 hari kerja - Sabtu-Minggu otomatis
-  libur - Statistik berdasarkan 5 hari - Hari libur nasional berlaku **Contoh
-  Perhitungan:** ``` 1 Bulan = ±20-22 hari kerja 1 Semester = ±100 hari kerja
-  Persentase = (Hadir / Total Hari Kerja) x 100% ```
+    **Karakteristik:** - Hari kerja: **Senin - Jumat** - Weekend: Sabtu & Minggu
+    libur - Mengikuti kalender pemerintah **Otomatis di Sistem:** - Jadwal
+    presensi Senin-Jumat - Laporan presensi 5 hari kerja - Sabtu-Minggu otomatis
+    libur - Statistik berdasarkan 5 hari - Hari libur nasional berlaku **Contoh
+    Perhitungan:** ``` 1 Bulan = ±20-22 hari kerja 1 Semester = ±100 hari kerja
+    Persentase = (Hadir / Total Hari Kerja) x 100% ```
 </Card>
 
 ### Status: Swasta
@@ -414,10 +414,10 @@ Tambahkan narasi singkat tentang:
   </Card>
 
 <Card title='Data Akurat' icon='approve-check'>
-  **Verifikasi:** - NSS/NPSN valid (cek di Dapodik) - Alamat sesuai Google Maps
-  - Kontak aktif dan responsif - Email bukan personal - Website accessible
-  **Update Berkala:** - Review setiap awal semester - Update saat ada perubahan
-  - Backup data lama
+    **Verifikasi:** - NSS/NPSN valid (cek di Dapodik) - Alamat sesuai Google
+    Maps - Kontak aktif dan responsif - Email bukan personal - Website
+    accessible **Update Berkala:** - Review setiap awal semester - Update saat
+    ada perubahan - Backup data lama
 </Card>
 
   <Card title="Keamanan Data" icon="lock">
@@ -488,17 +488,17 @@ Tambahkan narasi singkat tentang:
 ## Checklist Setup Instansi
 
 <Card title='Checklist Lengkap' icon='approve-check'>
-  Gunakan checklist ini untuk memastikan data instansi lengkap: **Identitas
-  Dasar:** - [ ] Nama instansi lengkap - [ ] NSS/NPSN valid - [ ] Akreditasi
-  (jika ada) - [ ] Status Negeri/Swasta (pastikan benar!) **Alamat & Kontak:** -
-  [ ] Alamat lengkap dengan kode pos - [ ] Telepon aktif - [ ] Email resmi
-  institusi - [ ] Website (jika ada) **Visual & Branding:** - [ ] Logo HD dengan
-  background transparan - [ ] Logo tampil normal di semua ukuran - [ ] Test logo
-  di laporan PDF **Kepemimpinan:** - [ ] Nama kepala instansi - [ ] NIP/NIDN
-  lengkap - [ ] Periode jabatan **Konten Tambahan:** - [ ] Visi Misi institusi -
-  [ ] Sejarah singkat - [ ] Prestasi/pencapaian (opsional) **Testing:** - [ ]
-  Generate laporan test - [ ] Cek logo di kartu RFID - [ ] Verifikasi jadwal
-  sesuai status - [ ] Test email dengan logo
+    Gunakan checklist ini untuk memastikan data instansi lengkap: **Identitas
+    Dasar:** - [ ] Nama instansi lengkap - [ ] NSS/NPSN valid - [ ] Akreditasi
+    (jika ada) - [ ] Status Negeri/Swasta (pastikan benar!) **Alamat & Kontak:**
+    - [ ] Alamat lengkap dengan kode pos - [ ] Telepon aktif - [ ] Email resmi
+    institusi - [ ] Website (jika ada) **Visual & Branding:** - [ ] Logo HD
+    dengan background transparan - [ ] Logo tampil normal di semua ukuran - [ ]
+    Test logo di laporan PDF **Kepemimpinan:** - [ ] Nama kepala instansi - [ ]
+    NIP/NIDN lengkap - [ ] Periode jabatan **Konten Tambahan:** - [ ] Visi Misi
+    institusi - [ ] Sejarah singkat - [ ] Prestasi/pencapaian (opsional)
+    **Testing:** - [ ] Generate laporan test - [ ] Cek logo di kartu RFID - [ ]
+    Verifikasi jadwal sesuai status - [ ] Test email dengan logo
 </Card>
 
 ---
@@ -514,11 +514,11 @@ Data instansi terintegrasi dengan:
   </Card>
 
 <Card title='Kartu RFID' icon='approve-check'>
-  - Logo di kartu - Nama institusi - Alamat singkat - Kontak support
+    - Logo di kartu - Nama institusi - Alamat singkat - Kontak support
 </Card>
 
 <Card title='Notifikasi' icon='bell'>
-  - Email sender name - Signature email - WhatsApp template - SMS sender ID
+    - Email sender name - Signature email - WhatsApp template - SMS sender ID
 </Card>
 
   <Card title="Sistem" icon="setting">
@@ -537,7 +537,7 @@ Data instansi terintegrasi dengan:
   </Card>
 
 <Card title='Tambah Jabatan' icon='briefcase'>
-  Setup jabatan untuk pegawai [Panduan Jabatan →](/menu-data-master/jabatan/)
+    Setup jabatan untuk pegawai [Panduan Jabatan →](/menu-data-master/jabatan/)
 </Card>
 
   <Card title=" Kembali ke Data Master" icon="left-arrow">

@@ -18,12 +18,12 @@ description: 'Kelola posisi dan jabatan pegawai di lingkungan madrasah'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Jabatan
@@ -31,19 +31,19 @@ import {
 Jabatan adalah posisi struktural atau fungsional yang dimiliki pegawai dalam organisasi madrasah. Setiap jabatan memiliki tanggung jawab dan hak akses yang berbeda dalam sistem presensi.
 
 <CardGrid>
-  <Card title='Struktur Organisasi Jelas' icon='document'>
-    Definisikan hirarki dan struktur kepegawaian madrasah secara sistematis
-  </Card>
-  <Card title='Hak Akses Terhubung' icon='setting'>
-    Jabatan dapat dikaitkan dengan jadwal presensi dan hak akses sistem yang
-    berbeda
-  </Card>
-  <Card title='Fleksibel & Customizable' icon='puzzle'>
-    Tambahkan jabatan custom sesuai kebutuhan organisasi madrasah Anda
-  </Card>
-  <Card title='Pelaporan Terstruktur' icon='information'>
-    Laporan kehadiran dapat dikelompokkan berdasarkan jabatan untuk analisis
-  </Card>
+    <Card title='Struktur Organisasi Jelas' icon='document'>
+        Definisikan hirarki dan struktur kepegawaian madrasah secara sistematis
+    </Card>
+    <Card title='Hak Akses Terhubung' icon='setting'>
+        Jabatan dapat dikaitkan dengan jadwal presensi dan hak akses sistem yang
+        berbeda
+    </Card>
+    <Card title='Fleksibel & Customizable' icon='puzzle'>
+        Tambahkan jabatan custom sesuai kebutuhan organisasi madrasah Anda
+    </Card>
+    <Card title='Pelaporan Terstruktur' icon='information'>
+        Laporan kehadiran dapat dikelompokkan berdasarkan jabatan untuk analisis
+    </Card>
 </CardGrid>
 
 ---
@@ -63,8 +63,8 @@ Jabatan yang memiliki tanggung jawab manajerial dan pengambilan keputusan.
   </TabItem>
 
 <TabItem label='Koordinator'>
-  **Koordinator Program** - Ketua Program Keahlian - Koordinator BK -
-  Koordinator Perpustakaan - Koordinator Laboratorium
+    **Koordinator Program** - Ketua Program Keahlian - Koordinator BK -
+    Koordinator Perpustakaan - Koordinator Laboratorium
 </TabItem>
 
   <TabItem label="Staff TU">
@@ -122,31 +122,31 @@ graph TD
 
 1. **Buka Menu Jabatan**
 
-   Navigasi ke **Data Master → Jabatan** dari sidebar
+    Navigasi ke **Data Master → Jabatan** dari sidebar
 
 2. **Klik Tombol Tambah**
 
-   Klik tombol **"+ Tambah Jabatan"** di pojok kanan atas
+    Klik tombol **"+ Tambah Jabatan"** di pojok kanan atas
 
 3. **Isi Data Jabatan**
 
-   Lengkapi form dengan informasi berikut:
-   - **Nama Jabatan** (wajib) - Contoh: Wakil Kepala Kurikulum
-   - **Kode Jabatan** (opsional) - Contoh: WAKA-KUR
-   - **Kategori** (wajib) - Pilih: Struktural / Fungsional / Pendukung
-   - **Deskripsi** (opsional) - Penjelasan singkat tugas dan tanggung jawab
-   - **Jadwal Presensi** (wajib) - Pilih jadwal yang berlaku untuk jabatan ini
-   - **Status** (wajib) - Aktif / Nonaktif
+    Lengkapi form dengan informasi berikut:
+    - **Nama Jabatan** (wajib) - Contoh: Wakil Kepala Kurikulum
+    - **Kode Jabatan** (opsional) - Contoh: WAKA-KUR
+    - **Kategori** (wajib) - Pilih: Struktural / Fungsional / Pendukung
+    - **Deskripsi** (opsional) - Penjelasan singkat tugas dan tanggung jawab
+    - **Jadwal Presensi** (wajib) - Pilih jadwal yang berlaku untuk jabatan ini
+    - **Status** (wajib) - Aktif / Nonaktif
 
 4. **Simpan Data**
 
-   Klik tombol **"Simpan"** untuk menyimpan data jabatan
+    Klik tombol **"Simpan"** untuk menyimpan data jabatan
 
 </Steps>
 
 <Aside type='tip'>
-  Gunakan **kode jabatan** yang singkat dan mudah diingat untuk mempercepat
-  pencarian dan pelaporan.
+    Gunakan **kode jabatan** yang singkat dan mudah diingat untuk mempercepat
+    pencarian dan pelaporan.
 </Aside>
 
 ---
@@ -163,11 +163,12 @@ Setiap jabatan dapat memiliki jadwal presensi yang berbeda sesuai dengan jam ker
   </Card>
 
 <Card title='Staff TU' icon='document'>
-  **Jadwal**: 07:30 - 16:00 Jam kerja administrasi reguler
+    **Jadwal**: 07:30 - 16:00 Jam kerja administrasi reguler
 </Card>
 
 <Card title='Satpam' icon='warning'>
-  **Jadwal**: Shift (06:00 - 14:00 / 14:00 - 22:00) Bekerja dengan sistem shift
+    **Jadwal**: Shift (06:00 - 14:00 / 14:00 - 22:00) Bekerja dengan sistem
+    shift
 </Card>
 
   <Card title="Kepala Madrasah" icon="rocket">
@@ -176,8 +177,8 @@ Setiap jabatan dapat memiliki jadwal presensi yang berbeda sesuai dengan jam ker
 </CardGrid>
 
 <Aside type='note'>
-  Jadwal presensi harus sudah dibuat terlebih dahulu di menu **Data Master →
-  Jadwal Presensi** sebelum dihubungkan dengan jabatan.
+    Jadwal presensi harus sudah dibuat terlebih dahulu di menu **Data Master →
+    Jadwal Presensi** sebelum dihubungkan dengan jabatan.
 </Aside>
 
 ---
@@ -191,9 +192,9 @@ Setiap jabatan dapat memiliki jadwal presensi yang berbeda sesuai dengan jam ker
   </TabItem>
 
 <TabItem label='Nonaktifkan Jabatan'>
-  Untuk jabatan yang sudah tidak digunakan: 1. Edit jabatan tersebut 2. Ubah
-  **Status** menjadi **"Nonaktif"** 3. Simpan perubahan Jabatan nonaktif tidak
-  akan muncul di dropdown saat menambah pegawai baru.
+    Untuk jabatan yang sudah tidak digunakan: 1. Edit jabatan tersebut 2. Ubah
+    **Status** menjadi **"Nonaktif"** 3. Simpan perubahan Jabatan nonaktif tidak
+    akan muncul di dropdown saat menambah pegawai baru.
 </TabItem>
 
   <TabItem label="Ubah Jadwal Presensi">
@@ -257,12 +258,13 @@ graph LR
   </Card>
 
 <Card title='Dokumentasi Lengkap' icon='document'>
-  Isi deskripsi jabatan dengan jelas untuk referensi dan onboarding pegawai baru
+    Isi deskripsi jabatan dengan jelas untuk referensi dan onboarding pegawai
+    baru
 </Card>
 
 <Card title='Review Berkala' icon='star'>
-  Evaluasi struktur jabatan setiap tahun ajaran untuk menyesuaikan dengan
-  kebutuhan
+    Evaluasi struktur jabatan setiap tahun ajaran untuk menyesuaikan dengan
+    kebutuhan
 </Card>
 
   <Card title="Jangan Hapus Sembarangan" icon="warning">
@@ -304,11 +306,11 @@ Di sistem, pegawai dapat memiliki jabatan utama dan jabatan tambahan. Jadwal pre
 **Solusi**:
 
 1. Buat 2 jadwal presensi berbeda:
-   - Shift Pagi: 06:00 - 14:00
-   - Shift Siang: 14:00 - 22:00
+    - Shift Pagi: 06:00 - 14:00
+    - Shift Siang: 14:00 - 22:00
 2. Buat 2 jabatan:
-   - Satpam Shift Pagi
-   - Satpam Shift Siang
+    - Satpam Shift Pagi
+    - Satpam Shift Siang
 3. Atau gunakan fitur manual override jadwal per pegawai
 
 ---
@@ -349,10 +351,10 @@ Di sistem, pegawai dapat memiliki jabatan utama dan jabatan tambahan. Jadwal pre
 ## Tips Keamanan
 
 <Aside type='tip'>
-  - Batasi akses pengeditan jabatan hanya untuk **Super Admin** dan **Kepala
-  TU** - Dokumentasikan setiap perubahan struktur organisasi untuk keperluan
-  audit - Lakukan sinkronisasi dengan SK Kepala Madrasah terkait jabatan -
-  Review hak akses sistem setiap kali ada perubahan jabatan penting
+    - Batasi akses pengeditan jabatan hanya untuk **Super Admin** dan **Kepala
+    TU** - Dokumentasikan setiap perubahan struktur organisasi untuk keperluan
+    audit - Lakukan sinkronisasi dengan SK Kepala Madrasah terkait jabatan -
+    Review hak akses sistem setiap kali ada perubahan jabatan penting
 </Aside>
 
 ---

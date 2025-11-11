@@ -18,12 +18,12 @@ description: 'Monitor dan kelola kehadiran siswa dengan notifikasi real-time ke 
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Riwayat Presensi Siswa
@@ -31,18 +31,18 @@ import {
 Riwayat Presensi Siswa adalah modul untuk monitoring, analisis, dan pelaporan kehadiran seluruh siswa madrasah. Modul ini menampilkan data presensi real-time yang tercatat melalui sistem RFID dan **otomatis mengirim notifikasi ke orang tua** melalui WhatsApp.
 
 <CardGrid>
-  <Card title='Real-time Monitoring' icon='rocket'>
-    Pantau kehadiran siswa secara langsung saat tap kartu RFID
-  </Card>
-  <Card title='Notifikasi Orang Tua' icon='star'>
-    Kirim notifikasi WhatsApp otomatis ke orang tua saat anak tap kartu
-  </Card>
-  <Card title='Multi Filter' icon='setting'>
-    Filter berdasarkan periode, kelas, siswa, atau status kehadiran
-  </Card>
-  <Card title='Input Manual' icon='document'>
-    Input presensi manual untuk siswa yang lupa tap atau kondisi khusus
-  </Card>
+    <Card title='Real-time Monitoring' icon='rocket'>
+        Pantau kehadiran siswa secara langsung saat tap kartu RFID
+    </Card>
+    <Card title='Notifikasi Orang Tua' icon='star'>
+        Kirim notifikasi WhatsApp otomatis ke orang tua saat anak tap kartu
+    </Card>
+    <Card title='Multi Filter' icon='setting'>
+        Filter berdasarkan periode, kelas, siswa, atau status kehadiran
+    </Card>
+    <Card title='Input Manual' icon='document'>
+        Input presensi manual untuk siswa yang lupa tap atau kondisi khusus
+    </Card>
 </CardGrid>
 
 ---
@@ -57,31 +57,31 @@ Riwayat Presensi Siswa adalah modul untuk monitoring, analisis, dan pelaporan ke
 
 1. **Buka Menu Riwayat Presensi**
 
-   Navigasi ke **Menu Siswa → Riwayat Presensi Siswa**
+    Navigasi ke **Menu Siswa → Riwayat Presensi Siswa**
 
 2. **Dashboard Real-time**
 
-   Dashboard akan menampilkan:
-   - Total siswa aktif
-   - Sudah presensi: X siswa
-   - Belum presensi: Y siswa
-   - Terlambat: Z siswa
-   - Alpha: A siswa
-   - Izin/Sakit: B siswa
+    Dashboard akan menampilkan:
+    - Total siswa aktif
+    - Sudah presensi: X siswa
+    - Belum presensi: Y siswa
+    - Terlambat: Z siswa
+    - Alpha: A siswa
+    - Izin/Sakit: B siswa
 
 3. **Lihat Detail Per Kelas**
 
-   Pilih kelas dari dropdown untuk melihat:
-   - Daftar siswa per kelas
-   - Status kehadiran masing-masing
-   - Waktu tap masuk dan pulang
-   - Foto siswa (opsional)
+    Pilih kelas dari dropdown untuk melihat:
+    - Daftar siswa per kelas
+    - Status kehadiran masing-masing
+    - Waktu tap masuk dan pulang
+    - Foto siswa (opsional)
 
 </Steps>
 
 <Aside type='tip'>
-  Dashboard akan **auto-refresh** setiap 30 detik untuk menampilkan data
-  presensi terbaru secara real-time.
+    Dashboard akan **auto-refresh** setiap 30 detik untuk menampilkan data
+    presensi terbaru secara real-time.
 </Aside>
 
 ---
@@ -98,15 +98,15 @@ Sistem mendukung berbagai filter periode untuk analisis kehadiran.
   </TabItem>
 
 <TabItem label='Minggu Ini'>
-  **Rekap 7 Hari Terakhir** - Senin - Sabtu (untuk madrasah swasta) atau Senin -
-  Jumat (negeri) - Tampilkan tren kehadiran mingguan - Identifikasi pola
-  keterlambatan siswa **Klik**: Tab **"Minggu Ini"**
+    **Rekap 7 Hari Terakhir** - Senin - Sabtu (untuk madrasah swasta) atau Senin
+    - Jumat (negeri) - Tampilkan tren kehadiran mingguan - Identifikasi pola
+    keterlambatan siswa **Klik**: Tab **"Minggu Ini"**
 </TabItem>
 
 <TabItem label='Bulan Ini'>
-  **Rekap Bulan Berjalan** - Dari tanggal 1 sampai hari ini - Summary: total
-  hadir, izin, sakit, alpha per siswa - Persentase kehadiran per siswa - Ranking
-  kelas berdasarkan kehadiran **Klik**: Tab **"Bulan Ini"**
+    **Rekap Bulan Berjalan** - Dari tanggal 1 sampai hari ini - Summary: total
+    hadir, izin, sakit, alpha per siswa - Persentase kehadiran per siswa -
+    Ranking kelas berdasarkan kehadiran **Klik**: Tab **"Bulan Ini"**
 </TabItem>
 
   <TabItem label="Custom Range">
@@ -139,13 +139,13 @@ Wali kelas atau admin dapat memfilter presensi berdasarkan kelas.
 1. Centang beberapa kelas (contoh: VII Unggulan, X Unggulan2, X Unggulan3)
 2. Klik **"Bandingkan"**
 3. Sistem tampilkan:
-   - Persentase kehadiran per kelas
-   - Grafik komparasi
-   - Kelas dengan kehadiran terbaik/terburuk
+    - Persentase kehadiran per kelas
+    - Grafik komparasi
+    - Kelas dengan kehadiran terbaik/terburuk
 
 <Aside type='note'>
-  **Untuk Wali Kelas**: Anda hanya dapat melihat data presensi kelas binaan
-  Anda. Untuk melihat kelas lain, hubungi admin atau kepala madrasah.
+    **Untuk Wali Kelas**: Anda hanya dapat melihat data presensi kelas binaan
+    Anda. Untuk melihat kelas lain, hubungi admin atau kepala madrasah.
 </Aside>
 
 ---
@@ -206,16 +206,16 @@ Sistem mencatat berbagai status kehadiran siswa yang lebih lengkap dibanding peg
   </TabItem>
 
 <TabItem label='Izin & Dispensasi'>
-  **Tidak Hadir dengan Izin** **Izin** : - Tidak masuk dengan alasan yang jelas
-  - Harus ada surat izin dari orang tua - Upload surat izin ke sistem (opsional)
-  - Tidak mengurangi nilai sikap **Contoh**: - Urusan keluarga (kondangan, acara
-  keluarga) - Keperluan pribadi penting - Sakit ringan (tanpa surat dokter)
-  **Proses**: 1. Siswa/orang tua mengajukan izin via sistem atau manual 2. Wali
-  kelas approve 3. Status berubah dari "Alpha" → "Izin" --- **Dispensasi** : -
-  Izin khusus untuk kegiatan resmi - Tidak perlu surat orang tua - Approval dari
-  madrasah - Tetap dianggap "Hadir" **Contoh**: - Mewakili madrasah dalam lomba
-  - Sakit di UKS saat jam pelajaran - Dipanggil kepala madrasah - Mengikuti
-  kegiatan ekstrakurikuler
+    **Tidak Hadir dengan Izin** **Izin** : - Tidak masuk dengan alasan yang
+    jelas - Harus ada surat izin dari orang tua - Upload surat izin ke sistem
+    (opsional) - Tidak mengurangi nilai sikap **Contoh**: - Urusan keluarga
+    (kondangan, acara keluarga) - Keperluan pribadi penting - Sakit ringan
+    (tanpa surat dokter) **Proses**: 1. Siswa/orang tua mengajukan izin via
+    sistem atau manual 2. Wali kelas approve 3. Status berubah dari "Alpha" →
+    "Izin" --- **Dispensasi** : - Izin khusus untuk kegiatan resmi - Tidak perlu
+    surat orang tua - Approval dari madrasah - Tetap dianggap "Hadir"
+    **Contoh**: - Mewakili madrasah dalam lomba - Sakit di UKS saat jam
+    pelajaran - Dipanggil kepala madrasah - Mengikuti kegiatan ekstrakurikuler
 </TabItem>
 
   <TabItem label="Sakit & Alpha">
@@ -239,9 +239,9 @@ Sistem mencatat berbagai status kehadiran siswa yang lebih lengkap dibanding peg
 ## Notifikasi ke Orang Tua
 
 <Aside type='tip' title='Fitur Unggulan!'>
-  Setiap kali siswa tap kartu RFID, sistem **otomatis mengirim notifikasi
-  WhatsApp** ke nomor HP orang tua yang terdaftar. Orang tua dapat memantau
-  kehadiran anak secara real-time.
+    Setiap kali siswa tap kartu RFID, sistem **otomatis mengirim notifikasi
+    WhatsApp** ke nomor HP orang tua yang terdaftar. Orang tua dapat memantau
+    kehadiran anak secara real-time.
 </Aside>
 
 ### Kapan Notifikasi Terkirim?
@@ -390,11 +390,11 @@ MTs Negeri 1 Pandeglang
   </Card>
 
 <Card title='Nomor Aktif' icon='star'>
-  Nomor WhatsApp harus aktif dan tidak diblokir
+    Nomor WhatsApp harus aktif dan tidak diblokir
 </Card>
 
 <Card title='Koneksi Gateway' icon='rocket'>
-  Sistem WhatsApp Gateway madrasah dalam kondisi online
+    Sistem WhatsApp Gateway madrasah dalam kondisi online
 </Card>
 
   <Card title="Siswa Tap" icon="document">
@@ -416,11 +416,11 @@ Untuk kasus lupa tap, error sistem, atau kondisi khusus, wali kelas/admin dapat 
   </Card>
 
 <Card title='Kartu Rusak' icon='star'>
-  Kartu RFID tidak berfungsi, siswa tidak bisa tap
+    Kartu RFID tidak berfungsi, siswa tidak bisa tap
 </Card>
 
 <Card title='Dispensasi' icon='rocket'>
-  Siswa mewakili madrasah dalam lomba/kegiatan
+    Siswa mewakili madrasah dalam lomba/kegiatan
 </Card>
 
   <Card title="Sakit di UKS" icon="document">
@@ -498,39 +498,39 @@ Untuk siswa yang tidak bisa tap kartu (lupa/kartu rusak), wali kelas dapat input
 
 1. **Buka Form Input Manual**
 
-   Klik button **"+ Input Manual"** di halaman Riwayat Presensi
+    Klik button **"+ Input Manual"** di halaman Riwayat Presensi
 
 2. **Pilih Siswa**
-   - Pilih kelas terlebih dahulu
-   - Pilih siswa dari dropdown
-   - Atau ketik nama siswa di search
+    - Pilih kelas terlebih dahulu
+    - Pilih siswa dari dropdown
+    - Atau ketik nama siswa di search
 
 3. **Pilih Status Presensi**
-   - **Hadir**: Input waktu masuk & pulang manual
-   - **Izin**: Upload surat izin dari orang tua
-   - **Sakit**: Upload surat keterangan sakit
-   - **Dispensasi**: Pilih alasan dispensasi
+    - **Hadir**: Input waktu masuk & pulang manual
+    - **Izin**: Upload surat izin dari orang tua
+    - **Sakit**: Upload surat keterangan sakit
+    - **Dispensasi**: Pilih alasan dispensasi
 
 4. **Isi Detail**
-   - Tanggal presensi
-   - Waktu masuk (jika status Hadir)
-   - Waktu pulang (jika status Hadir)
-   - Alasan/keterangan (wajib)
-   - Upload bukti (opsional)
+    - Tanggal presensi
+    - Waktu masuk (jika status Hadir)
+    - Waktu pulang (jika status Hadir)
+    - Alasan/keterangan (wajib)
+    - Upload bukti (opsional)
 
 5. **Simpan**
 
-   Klik **"Simpan"**, sistem akan:
-   - Catat presensi manual di database
-   - Tandai sebagai "Input Manual" (bukan dari RFID)
-   - Log aktivitas
-   - Notifikasi ke orang tua (opsional)
+    Klik **"Simpan"**, sistem akan:
+    - Catat presensi manual di database
+    - Tandai sebagai "Input Manual" (bukan dari RFID)
+    - Log aktivitas
+    - Notifikasi ke orang tua (opsional)
 
 </Steps>
 
 <Aside type='note'>
-  Presensi yang di-input manual akan ditandai dengan icon (pensil) di tabel
-  untuk membedakan dengan presensi RFID otomatis.
+    Presensi yang di-input manual akan ditandai dengan icon (pensil) di tabel
+    untuk membedakan dengan presensi RFID otomatis.
 </Aside>
 
 ---
@@ -551,11 +551,11 @@ Generate laporan kehadiran siswa untuk keperluan rapor, orang tua, atau kepala m
   </TabItem>
 
 <TabItem label='PDF'>
-  **Portable Document Format** **Kelebihan**: - Siap cetak dan distribusi ke
-  orang tua - Layout rapi dan profesional - Tidak dapat diedit (final) **Isi
-  Laporan**: - Header: Logo, judul, periode, kelas - Body: Tabel presensi per
-  siswa - Summary: Persentase kehadiran - Footer: Tanda tangan wali kelas **Use
-  Case**: Laporan ke orang tua, arsip, dokumentasi resmi
+    **Portable Document Format** **Kelebihan**: - Siap cetak dan distribusi ke
+    orang tua - Layout rapi dan profesional - Tidak dapat diedit (final) **Isi
+    Laporan**: - Header: Logo, judul, periode, kelas - Body: Tabel presensi per
+    siswa - Summary: Persentase kehadiran - Footer: Tanda tangan wali kelas
+    **Use Case**: Laporan ke orang tua, arsip, dokumentasi resmi
 </TabItem>
 
   <TabItem label="CSV">
@@ -572,38 +572,39 @@ Generate laporan kehadiran siswa untuk keperluan rapor, orang tua, atau kepala m
 
 1. **Pilih Filter**
 
-   Tentukan data yang akan di-export:
-   - Periode waktu (harian/mingguan/bulanan/semester)
-   - Kelas (satu kelas atau semua kelas)
-   - Siswa (semua atau pilihan)
-   - Status kehadiran (semua atau filter tertentu)
+    Tentukan data yang akan di-export:
+    - Periode waktu (harian/mingguan/bulanan/semester)
+    - Kelas (satu kelas atau semua kelas)
+    - Siswa (semua atau pilihan)
+    - Status kehadiran (semua atau filter tertentu)
 
 2. **Klik Tombol Export**
 
-   Klik button **"Export Laporan"** di pojok kanan atas
+    Klik button **"Export Laporan"** di pojok kanan atas
 
 3. **Pilih Format**
 
-   Pilih format yang diinginkan:
-   - Excel (recommended untuk analisis)
-   - PDF (untuk distribusi ke orang tua)
-   - CSV (untuk integrasi e-Raport)
+    Pilih format yang diinginkan:
+    - Excel (recommended untuk analisis)
+    - PDF (untuk distribusi ke orang tua)
+    - CSV (untuk integrasi e-Raport)
 
 4. **Customize Layout** (Untuk PDF)
-   - Pilih orientasi: Portrait / Landscape
-   - Tampilkan/sembunyikan kolom tertentu
-   - Include grafik kehadiran atau tidak
-   - Include foto siswa atau tidak
+    - Pilih orientasi: Portrait / Landscape
+    - Tampilkan/sembunyikan kolom tertentu
+    - Include grafik kehadiran atau tidak
+    - Include foto siswa atau tidak
 
 5. **Generate & Download**
 
-   Klik **"Generate"**, tunggu proses selesai, lalu **Download**
+    Klik **"Generate"**, tunggu proses selesai, lalu **Download**
 
 </Steps>
 
 <Aside type='tip'>
-  Untuk laporan bulanan yang dikirim ke orang tua, Anda dapat membuat **Template
-  Laporan** yang tersimpan sehingga tidak perlu setting ulang setiap bulan.
+    Untuk laporan bulanan yang dikirim ke orang tua, Anda dapat membuat
+    **Template Laporan** yang tersimpan sehingga tidak perlu setting ulang
+    setiap bulan.
 </Aside>
 
 ---
@@ -786,39 +787,39 @@ Sistem otomatis mendeteksi siswa dengan pola kehadiran bermasalah untuk tindak l
 
 1. **Buka Menu Laporan Bermasalah**
 
-   Klik tab **"Siswa Bermasalah"** di dashboard Riwayat Presensi
+    Klik tab **"Siswa Bermasalah"** di dashboard Riwayat Presensi
 
 2. **Filter Berdasarkan Kategori**
-   - Kehadiran Rendah
-   - Sering Terlambat
-   - Alpha Tinggi
-   - Pola Mencurigakan
-   - Semua Kategori
+    - Kehadiran Rendah
+    - Sering Terlambat
+    - Alpha Tinggi
+    - Pola Mencurigakan
+    - Semua Kategori
 
 3. **Lihat Detail Siswa**
 
-   Tabel akan menampilkan:
-   - Nama siswa & kelas
-   - Kategori masalah
-   - Statistik detail (% kehadiran, jumlah alpha, dll)
-   - Status follow up (sudah ditindak lanjuti atau belum)
-   - Tanggal terakhir update
+    Tabel akan menampilkan:
+    - Nama siswa & kelas
+    - Kategori masalah
+    - Statistik detail (% kehadiran, jumlah alpha, dll)
+    - Status follow up (sudah ditindak lanjuti atau belum)
+    - Tanggal terakhir update
 
 4. **Tandai Tindak Lanjut**
-   - Klik tombol **"Tindak Lanjut"** pada row siswa
-   - Isi form tindakan yang sudah dilakukan:
-     - Konseling tanggal X
-     - Panggilan orang tua tanggal Y
-     - Kesepakatan: siswa berjanji X, Y, Z
-   - Upload dokumen pendukung (berita acara, foto pertemuan)
-   - Simpan
+    - Klik tombol **"Tindak Lanjut"** pada row siswa
+    - Isi form tindakan yang sudah dilakukan:
+        - Konseling tanggal X
+        - Panggilan orang tua tanggal Y
+        - Kesepakatan: siswa berjanji X, Y, Z
+    - Upload dokumen pendukung (berita acara, foto pertemuan)
+    - Simpan
 
 5. **Export Laporan**
 
-   Export laporan siswa bermasalah untuk:
-   - Kepala madrasah (evaluasi bulanan)
-   - Rapat wali kelas
-   - Dokumentasi BK
+    Export laporan siswa bermasalah untuk:
+    - Kepala madrasah (evaluasi bulanan)
+    - Rapat wali kelas
+    - Dokumentasi BK
 
 </Steps>
 
@@ -845,23 +846,23 @@ Untuk guru mata pelajaran, sistem juga menyediakan rekap kehadiran siswa per map
 
 1. **Login sebagai Guru Mapel**
 
-   Sistem akan menampilkan menu khusus guru
+    Sistem akan menampilkan menu khusus guru
 
 2. **Pilih Mata Pelajaran**
 
-   Dropdown: Pilih mapel yang Anda ajar (contoh: Matematika)
+    Dropdown: Pilih mapel yang Anda ajar (contoh: Matematika)
 
 3. **Pilih Kelas**
 
-   Pilih kelas yang Anda ajar mapel tersebut (contoh: VII Unggulan)
+    Pilih kelas yang Anda ajar mapel tersebut (contoh: VII Unggulan)
 
 4. **Lihat Rekap**
 
-   Sistem akan menampilkan:
-   - Total pertemuan (misal: 12 pertemuan)
-   - Kehadiran per siswa per pertemuan
-   - Persentase kehadiran per siswa khusus mapel ini
-   - Siswa dengan kehadiran < 75% (tidak boleh ikut ujian)
+    Sistem akan menampilkan:
+    - Total pertemuan (misal: 12 pertemuan)
+    - Kehadiran per siswa per pertemuan
+    - Persentase kehadiran per siswa khusus mapel ini
+    - Siswa dengan kehadiran < 75% (tidak boleh ikut ujian)
 
 </Steps>
 
@@ -1118,16 +1119,16 @@ Jadi, data presensi **terlindungi** dan **accountable**.
   </Card>
 
 <Card title='Notifikasi Tidak Masuk' icon='star'>
-  **Penyebab**: Nomor salah, WA Gateway offline, atau internet HP mati
-  **Solusi**: - Cek nomor WA di data siswa - Test notifikasi via Portal Orang
-  Tua - Hubungi admin untuk cek Gateway - Pastikan HP terkoneksi internet
+    **Penyebab**: Nomor salah, WA Gateway offline, atau internet HP mati
+    **Solusi**: - Cek nomor WA di data siswa - Test notifikasi via Portal Orang
+    Tua - Hubungi admin untuk cek Gateway - Pastikan HP terkoneksi internet
 </Card>
 
 <Card title='Data Presensi Salah' icon='document'>
-  **Penyebab**: Double tap, tap tidak sengaja, atau siswa tukar kartu
-  **Solusi**: - Wali kelas edit/hapus data yang salah - Isi alasan koreksi
-  dengan jelas - Log akan tercatat untuk audit - Edukasi siswa untuk tidak tukar
-  kartu
+    **Penyebab**: Double tap, tap tidak sengaja, atau siswa tukar kartu
+    **Solusi**: - Wali kelas edit/hapus data yang salah - Isi alasan koreksi
+    dengan jelas - Log akan tercatat untuk audit - Edukasi siswa untuk tidak
+    tukar kartu
 </Card>
 
   <Card title="Export Laporan Error" icon="rocket">

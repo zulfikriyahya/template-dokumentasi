@@ -3,27 +3,27 @@ title: 'Kartu Presensi RFID'
 description: 'Kelola pengajuan dan distribusi kartu RFID untuk presensi otomatis'
 template: splash
 hero:
-  image:
-    file: '../../../assets/index-kartu-presensi.webp'
-  tagline: 'Manajemen kartu RFID untuk presensi otomatis siswa dan pegawai'
-  # actions:
-  #   - text: "Ajukan Kartu Baru"
-  #     link: "./pengajuan-kartu-presensi"
-  #     icon: "add-circle"
-  #     variant: primary
-  #   - text: "Lihat Panduan"
-  #     link: "#alur-pengajuan"
-  #     icon: "document"
-  #     variant: secondary
+    image:
+        file: '../../../assets/index-kartu-presensi.webp'
+    tagline: 'Manajemen kartu RFID untuk presensi otomatis siswa dan pegawai'
+    # actions:
+    #   - text: "Ajukan Kartu Baru"
+    #     link: "./pengajuan-kartu-presensi"
+    #     icon: "add-circle"
+    #     variant: primary
+    #   - text: "Lihat Panduan"
+    #     link: "#alur-pengajuan"
+    #     icon: "document"
+    #     variant: secondary
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Apa itu Kartu Presensi RFID?
@@ -31,18 +31,21 @@ import {
 Kartu Presensi RFID adalah kartu identitas yang dilengkapi dengan chip RFID (Radio Frequency Identification) untuk melakukan presensi secara otomatis dengan sistem tap. Setiap kartu memiliki nomor unik yang terhubung dengan data siswa atau pegawai di sistem.
 
 <CardGrid>
-  <Card title='Presensi Cepat' icon='rocket'>
-    Tap kartu di reader RFID, presensi langsung tercatat dalam hitungan detik
-  </Card>
-  <Card title='Akurat & Real-time' icon='approve-check'>
-    Data presensi langsung masuk ke sistem dan dapat dipantau secara real-time
-  </Card>
-  <Card title='Anti Manipulasi' icon='warning'>
-    Setiap kartu memiliki ID unik yang tidak dapat diduplikasi atau dipalsukan
-  </Card>
-  <Card title='Terintegrasi Penuh' icon='puzzle'>
-    Terhubung dengan sistem laporan, notifikasi, dan dashboard monitoring
-  </Card>
+    <Card title='Presensi Cepat' icon='rocket'>
+        Tap kartu di reader RFID, presensi langsung tercatat dalam hitungan
+        detik
+    </Card>
+    <Card title='Akurat & Real-time' icon='approve-check'>
+        Data presensi langsung masuk ke sistem dan dapat dipantau secara
+        real-time
+    </Card>
+    <Card title='Anti Manipulasi' icon='warning'>
+        Setiap kartu memiliki ID unik yang tidak dapat diduplikasi atau
+        dipalsukan
+    </Card>
+    <Card title='Terintegrasi Penuh' icon='puzzle'>
+        Terhubung dengan sistem laporan, notifikasi, dan dashboard monitoring
+    </Card>
 </CardGrid>
 
 ---
@@ -79,9 +82,9 @@ Kartu Presensi RFID adalah kartu identitas yang dilengkapi dengan chip RFID (Rad
   </TabItem>
 
 <TabItem label='Kartu Pegawai'>
-  **ID Card Guru/Staff** **Informasi di Kartu**: - Foto pegawai - Nama lengkap -
-  NIP / NIK - Jabatan - Logo madrasah - Nomor RFID (barcode) **Desain**:
-  Horizontal, full color **Biaya**: Rp 15.000 per kartu
+    **ID Card Guru/Staff** **Informasi di Kartu**: - Foto pegawai - Nama lengkap
+    - NIP / NIK - Jabatan - Logo madrasah - Nomor RFID (barcode) **Desain**:
+    Horizontal, full color **Biaya**: Rp 15.000 per kartu
 </TabItem>
 
   <TabItem label="Kartu Tamu">
@@ -119,41 +122,41 @@ graph TD
 
 1. **Pengajuan (User)**
 
-   Siswa/pegawai mengajukan pembuatan kartu baru melalui sistem
+    Siswa/pegawai mengajukan pembuatan kartu baru melalui sistem
 
-   **Status**: Pending
+    **Status**: Pending
 
 2. **Review & Persetujuan (Admin)**
 
-   Administrator mereview dan menyetujui pengajuan
+    Administrator mereview dan menyetujui pengajuan
 
-   **Status**: Diproses ⚙️
+    **Status**: Diproses ⚙️
 
-   **Notifikasi**: WhatsApp ke user "Kartu sedang diproses"
+    **Notifikasi**: WhatsApp ke user "Kartu sedang diproses"
 
 3. **Registrasi RFID (Admin)**
 
-   Admin meregistrasi nomor RFID unik untuk kartu tersebut
+    Admin meregistrasi nomor RFID unik untuk kartu tersebut
 
-   **Status**: Diproses ⚙️
+    **Status**: Diproses ⚙️
 
 4. **Cetak Kartu (Admin)**
 
-   Kartu fisik dicetak dengan desain dan informasi lengkap
+    Kartu fisik dicetak dengan desain dan informasi lengkap
 
-   **Status**: Selesai
+    **Status**: Selesai
 
-   **Notifikasi**: WhatsApp ke user "Kartu sudah siap diambil"
+    **Notifikasi**: WhatsApp ke user "Kartu sudah siap diambil"
 
 5. **Pengambilan Kartu (User)**
 
-   User mengambil kartu di loket TU/operator
+    User mengambil kartu di loket TU/operator
 
-   Admin ceklis status "Diserahkan"
+    Admin ceklis status "Diserahkan"
 
-   **Biaya**: Rp 15.000 ditagihkan/dibayar
+    **Biaya**: Rp 15.000 ditagihkan/dibayar
 
-   **Notifikasi**: WhatsApp ke user "Kartu telah diserahkan"
+    **Notifikasi**: WhatsApp ke user "Kartu telah diserahkan"
 
 </Steps>
 
@@ -162,8 +165,8 @@ graph TD
 ## Biaya Pengajuan Kartu
 
 <Aside type='note' title='Informasi Biaya'>
-  Setiap pengajuan kartu presensi dikenakan biaya pembuatan sebesar **Rp
-  15.000** per kartu.
+    Setiap pengajuan kartu presensi dikenakan biaya pembuatan sebesar **Rp
+    15.000** per kartu.
 </Aside>
 
 ### Rincian Biaya
@@ -186,7 +189,7 @@ graph TD
   </Card>
 
 <Card title='Akumulasi Otomatis' icon='rocket'>
-  Sistem otomatis menambahkan biaya ke tagihan SPP/pembayaran user
+    Sistem otomatis menambahkan biaya ke tagihan SPP/pembayaran user
 </Card>
 
   <Card title="Bukti Pembayaran" icon="document">
@@ -217,8 +220,8 @@ graph TD
 - **Notifikasi WhatsApp otomatis terkirim**: "Kartu Anda sedang diproses"
 
 <Aside type='tip'>
-  Proses pembuatan kartu biasanya memakan waktu 2-3 hari kerja tergantung
-  antrian.
+    Proses pembuatan kartu biasanya memakan waktu 2-3 hari kerja tergantung
+    antrian.
 </Aside>
 
 ### Status: Selesai
@@ -330,23 +333,23 @@ Sistem Presensi RFID
 
 1. **Lapor ke Operator/TU**
 
-   Segera laporkan kehilangan kartu ke bagian TU atau operator sistem
+    Segera laporkan kehilangan kartu ke bagian TU atau operator sistem
 
 2. **Nonaktifkan Kartu Lama**
 
-   Admin akan menonaktifkan kartu yang hilang untuk mencegah penyalahgunaan
+    Admin akan menonaktifkan kartu yang hilang untuk mencegah penyalahgunaan
 
 3. **Ajukan Kartu Pengganti**
 
-   Buat pengajuan kartu baru dengan alasan "Pengganti kartu hilang"
+    Buat pengajuan kartu baru dengan alasan "Pengganti kartu hilang"
 
 4. **Bayar Biaya Pengganti**
 
-   Dikenakan biaya yang sama: **Rp 15.000**
+    Dikenakan biaya yang sama: **Rp 15.000**
 
 5. **Terima Kartu Baru**
 
-   Proses sama seperti pengajuan kartu baru (2-3 hari kerja)
+    Proses sama seperti pengajuan kartu baru (2-3 hari kerja)
 
 </Steps>
 
@@ -367,9 +370,9 @@ Sistem Presensi RFID
 </Tabs>
 
 <Aside type='caution' title='Tips Merawat Kartu'>
-  - Simpan di tempat yang aman (dompet, card holder) - Jangan ditekuk, direndam
-  air, atau terkena panas - Pasang lanyard agar tidak mudah hilang - Hindari
-  kontak dengan magnet atau benda tajam
+    - Simpan di tempat yang aman (dompet, card holder) - Jangan ditekuk,
+    direndam air, atau terkena panas - Pasang lanyard agar tidak mudah hilang -
+    Hindari kontak dengan magnet atau benda tajam
 </Aside>
 
 ---
@@ -429,11 +432,12 @@ Sistem menyimpan histori lengkap semua pengajuan kartu untuk setiap user.
   </Card>
 
 <Card title='Unique ID' icon='approve-check'>
-  Setiap kartu memiliki ID unik yang terdaftar di sistem, tidak bisa diduplikasi
+    Setiap kartu memiliki ID unik yang terdaftar di sistem, tidak bisa
+    diduplikasi
 </Card>
 
 <Card title='Monitoring Real-time' icon='rocket'>
-  Setiap tap kartu tercatat dengan lokasi dan waktu yang akurat
+    Setiap tap kartu tercatat dengan lokasi dan waktu yang akurat
 </Card>
 
   <Card title="Alert System" icon="star">

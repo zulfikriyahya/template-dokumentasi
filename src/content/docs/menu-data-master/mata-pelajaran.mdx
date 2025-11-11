@@ -18,12 +18,12 @@ description: 'Kelola daftar mata pelajaran yang diajarkan di madrasah'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Mata Pelajaran
@@ -31,18 +31,18 @@ import {
 Mata Pelajaran adalah database seluruh mata pelajaran yang diajarkan di madrasah. Data ini digunakan sebagai acuan untuk penyusunan jadwal pelajaran dan penugasan guru pengampu.
 
 <CardGrid>
-  <Card title='Terorganisir' icon='document'>
-    Kelola seluruh mata pelajaran dengan kode dan kategori yang jelas
-  </Card>
-  <Card title='Guru Pengampu' icon='star'>
-    Hubungkan mata pelajaran dengan guru yang mengampu
-  </Card>
-  <Card title='Kategori Fleksibel' icon='puzzle'>
-    Kelompokkan mapel: Wajib, Peminatan, Muatan Lokal, Ekstrakurikuler
-  </Card>
-  <Card title='Integrasi Jadwal' icon='rocket'>
-    Data mapel terintegrasi dengan sistem jadwal pelajaran
-  </Card>
+    <Card title='Terorganisir' icon='document'>
+        Kelola seluruh mata pelajaran dengan kode dan kategori yang jelas
+    </Card>
+    <Card title='Guru Pengampu' icon='star'>
+        Hubungkan mata pelajaran dengan guru yang mengampu
+    </Card>
+    <Card title='Kategori Fleksibel' icon='puzzle'>
+        Kelompokkan mapel: Wajib, Peminatan, Muatan Lokal, Ekstrakurikuler
+    </Card>
+    <Card title='Integrasi Jadwal' icon='rocket'>
+        Data mapel terintegrasi dengan sistem jadwal pelajaran
+    </Card>
 </CardGrid>
 
 ---
@@ -61,8 +61,8 @@ Mata pelajaran yang wajib diikuti oleh seluruh siswa sesuai kurikulum nasional.
   </TabItem>
 
 <TabItem label='Kelompok B (Umum)'>
-  **Mata Pelajaran Penunjang** - Seni Budaya - Pendidikan Jasmani, Olahraga, dan
-  Kesehatan - Prakarya dan Kewirausahaan
+    **Mata Pelajaran Penunjang** - Seni Budaya - Pendidikan Jasmani, Olahraga,
+    dan Kesehatan - Prakarya dan Kewirausahaan
 </TabItem>
 
   <TabItem label="Kelompok C (Peminatan)">
@@ -98,10 +98,10 @@ Setiap mata pelajaran memiliki kode unik untuk memudahkan identifikasi dan penca
 **[KATEGORI]-[SINGKATAN]**
 
 <Aside type='tip' title='Contoh Kode'>
-  - **PAI-QH** → Pendidikan Agama Islam - Al-Qur'an Hadits - **MTK-01** →
-  Matematika Wajib - **IPA-FIS** → Unggulan- Fisika - **BHS-ING** → Bahasa
-  Inggris - **MUL-BJW** → Muatan Lokal - Bahasa Jawa - **EKSKUL-THF** →
-  Ekstrakurikuler - Tahfidz
+    - **PAI-QH** → Pendidikan Agama Islam - Al-Qur'an Hadits - **MTK-01** →
+    Matematika Wajib - **IPA-FIS** → Unggulan- Fisika - **BHS-ING** → Bahasa
+    Inggris - **MUL-BJW** → Muatan Lokal - Bahasa Jawa - **EKSKUL-THF** →
+    Ekstrakurikuler - Tahfidz
 </Aside>
 
 ### Manfaat Kode
@@ -119,37 +119,37 @@ Setiap mata pelajaran memiliki kode unik untuk memudahkan identifikasi dan penca
 
 1. **Buka Menu Mata Pelajaran**
 
-   Navigasi ke **Data Master → Mata Pelajaran**
+    Navigasi ke **Data Master → Mata Pelajaran**
 
 2. **Klik Tombol Tambah**
 
-   Klik **"+ Tambah Mata Pelajaran"** di pojok kanan atas
+    Klik **"+ Tambah Mata Pelajaran"** di pojok kanan atas
 
 3. **Isi Data Mata Pelajaran**
 
-   Lengkapi form dengan informasi berikut:
-   - **Kode Mapel** (wajib) - Contoh: MTK-01
-   - **Nama Mata Pelajaran** (wajib) - Contoh: Matematika Wajib
-   - **Nama Singkat** (opsional) - Contoh: MTK
-   - **Kategori** (wajib) - Pilih: Wajib / Peminatan / Muatan Lokal / Ekstrakurikuler
-   - **Kelompok** (wajib) - Pilih: A / B / C
-   - **Rumpun** (opsional) - Contoh: MUnggulan, IPS, Bahasa
-   - **Beban SKS/Jam** (wajib) - Contoh: 4 jam/minggu
-   - **Status** (wajib) - Aktif / Nonaktif
+    Lengkapi form dengan informasi berikut:
+    - **Kode Mapel** (wajib) - Contoh: MTK-01
+    - **Nama Mata Pelajaran** (wajib) - Contoh: Matematika Wajib
+    - **Nama Singkat** (opsional) - Contoh: MTK
+    - **Kategori** (wajib) - Pilih: Wajib / Peminatan / Muatan Lokal / Ekstrakurikuler
+    - **Kelompok** (wajib) - Pilih: A / B / C
+    - **Rumpun** (opsional) - Contoh: MUnggulan, IPS, Bahasa
+    - **Beban SKS/Jam** (wajib) - Contoh: 4 jam/minggu
+    - **Status** (wajib) - Aktif / Nonaktif
 
 4. **Atur Guru Pengampu** (Opsional)
-   - Pilih guru dari dropdown
-   - Satu mapel dapat memiliki beberapa guru pengampu
+    - Pilih guru dari dropdown
+    - Satu mapel dapat memiliki beberapa guru pengampu
 
 5. **Simpan Data**
 
-   Klik **"Simpan"** untuk menyimpan data mata pelajaran
+    Klik **"Simpan"** untuk menyimpan data mata pelajaran
 
 </Steps>
 
 <Aside type='note'>
-  Pastikan data guru sudah lengkap di menu **Data Master → Pegawai** sebelum
-  menambahkan guru pengampu.
+    Pastikan data guru sudah lengkap di menu **Data Master → Pegawai** sebelum
+    menambahkan guru pengampu.
 </Aside>
 
 ---
@@ -166,9 +166,9 @@ Setiap mata pelajaran dapat memiliki satu atau lebih guru pengampu.
   </TabItem>
 
 <TabItem label='Multiple Pengampu'>
-  **Beberapa Guru untuk Kelas Berbeda** Cocok untuk: - Mapel dengan banyak
-  rombel - Pembagian beban mengajar Contoh: - Guru A: Matematika VII Unggulan, 2
-  - Guru B: Matematika X Unggulan3, 4
+    **Beberapa Guru untuk Kelas Berbeda** Cocok untuk: - Mapel dengan banyak
+    rombel - Pembagian beban mengajar Contoh: - Guru A: Matematika VII Unggulan,
+    2 - Guru B: Matematika X Unggulan3, 4
 </TabItem>
 
   <TabItem label="Team Teaching">
@@ -208,8 +208,8 @@ Setiap mata pelajaran memiliki alokasi waktu (beban jam) sesuai kurikulum.
 | **Ekstrakurikuler** | 2-4 jam          | Tahfidz, Pramuka, dll                |
 
 <Aside type='note'>
-  Total beban belajar siswa dalam seminggu disesuaikan dengan struktur kurikulum
-  yang berlaku (Kurikulum 2013 atau Kurikulum Merdeka).
+    Total beban belajar siswa dalam seminggu disesuaikan dengan struktur
+    kurikulum yang berlaku (Kurikulum 2013 atau Kurikulum Merdeka).
 </Aside>
 
 ---
@@ -233,8 +233,8 @@ Setiap mata pelajaran memiliki alokasi waktu (beban jam) sesuai kurikulum.
 - Kode (hati-hati, akan mempengaruhi jadwal existing)
 
 <Aside type='caution'>
-  Perubahan kode mata pelajaran dapat mempengaruhi jadwal pelajaran yang sudah
-  dibuat. Pastikan melakukan sinkronisasi setelah mengubah kode.
+    Perubahan kode mata pelajaran dapat mempengaruhi jadwal pelajaran yang sudah
+    dibuat. Pastikan melakukan sinkronisasi setelah mengubah kode.
 </Aside>
 
 ---
@@ -295,31 +295,31 @@ Untuk menambahkan banyak mata pelajaran sekaligus:
 
 1. **Download Template Excel**
 
-   Klik tombol **"Download Template"** di halaman Mata Pelajaran
+    Klik tombol **"Download Template"** di halaman Mata Pelajaran
 
 2. **Isi Data di Excel**
 
-   Lengkapi kolom:
-   - Kode Mapel
-   - Nama Mata Pelajaran
-   - Kategori
-   - Kelompok
-   - Beban Jam
-   - Status
+    Lengkapi kolom:
+    - Kode Mapel
+    - Nama Mata Pelajaran
+    - Kategori
+    - Kelompok
+    - Beban Jam
+    - Status
 
 3. **Upload File Excel**
 
-   Klik **"Import Data"** dan pilih file Excel yang sudah diisi
+    Klik **"Import Data"** dan pilih file Excel yang sudah diisi
 
 4. **Validasi & Simpan**
 
-   Sistem akan memvalidasi data, jika tidak ada error klik **"Proses Import"**
+    Sistem akan memvalidasi data, jika tidak ada error klik **"Proses Import"**
 
 </Steps>
 
 <Aside type='tip'>
-  Gunakan fitur import untuk setup awal atau saat pergantian kurikulum agar
-  lebih efisien.
+    Gunakan fitur import untuk setup awal atau saat pergantian kurikulum agar
+    lebih efisien.
 </Aside>
 
 ### Export Data Mata Pelajaran
@@ -343,12 +343,12 @@ Export data untuk:
   </Card>
 
 <Card title='Update Guru Pengampu' icon='star'>
-  Pastikan data guru pengampu selalu update, terutama di awal tahun ajaran
+    Pastikan data guru pengampu selalu update, terutama di awal tahun ajaran
 </Card>
 
 <Card title='Sesuai Kurikulum' icon='document'>
-  Sinkronkan mata pelajaran dengan struktur kurikulum yang berlaku
-  (K13/Kurikulum Merdeka)
+    Sinkronkan mata pelajaran dengan struktur kurikulum yang berlaku
+    (K13/Kurikulum Merdeka)
 </Card>
 
   <Card title="Review Berkala" icon="information">
@@ -445,11 +445,11 @@ Status: Aktif
 ## Tips Manajemen Kurikulum
 
 <Aside type='tip'>
-  - **Awal Tahun Ajaran**: Review dan update seluruh daftar mata pelajaran -
-  **Pergantian Kurikulum**: Siapkan mata pelajaran baru sebelum tahun ajaran
-  dimulai - **Dokumentasi**: Simpan struktur kurikulum dalam bentuk dokumen
-  terpisah untuk referensi - **Koordinasi**: Libatkan Wakil Kepala Kurikulum
-  dalam pengelolaan mata pelajaran
+    - **Awal Tahun Ajaran**: Review dan update seluruh daftar mata pelajaran -
+    **Pergantian Kurikulum**: Siapkan mata pelajaran baru sebelum tahun ajaran
+    dimulai - **Dokumentasi**: Simpan struktur kurikulum dalam bentuk dokumen
+    terpisah untuk referensi - **Koordinasi**: Libatkan Wakil Kepala Kurikulum
+    dalam pengelolaan mata pelajaran
 </Aside>
 
 ---

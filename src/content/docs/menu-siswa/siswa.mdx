@@ -18,12 +18,12 @@ description: 'Kelola data siswa madrasah secara komprehensif'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Data Siswa
@@ -31,18 +31,19 @@ import {
 Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madrasah dari berbagai tingkat dan jurusan. Database ini mencakup data personal, akademik, data orang tua, hingga dokumen pendukung yang terintegrasi dengan sistem presensi.
 
 <CardGrid>
-  <Card title='Database Terpusat' icon='document'>
-    Satu sumber data untuk ribuan siswa dari kelas VII sampai IX
-  </Card>
-  <Card title='Terintegrasi' icon='puzzle'>
-    Terhubung dengan presensi, kartu RFID, kelas, dan notifikasi orang tua
-  </Card>
-  <Card title='Mudah Dikelola' icon='star'>
-    Interface user-friendly untuk CRUD dan operasi massal (naik tingkat, lulus)
-  </Card>
-  <Card title='Scalable' icon='rocket'>
-    Mampu menampung ribuan data siswa dengan performa optimal
-  </Card>
+    <Card title='Database Terpusat' icon='document'>
+        Satu sumber data untuk ribuan siswa dari kelas VII sampai IX
+    </Card>
+    <Card title='Terintegrasi' icon='puzzle'>
+        Terhubung dengan presensi, kartu RFID, kelas, dan notifikasi orang tua
+    </Card>
+    <Card title='Mudah Dikelola' icon='star'>
+        Interface user-friendly untuk CRUD dan operasi massal (naik tingkat,
+        lulus)
+    </Card>
+    <Card title='Scalable' icon='rocket'>
+        Mampu menampung ribuan data siswa dengan performa optimal
+    </Card>
 </CardGrid>
 
 ---
@@ -53,84 +54,84 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
 
 1. **Buka Menu Data Siswa**
 
-   Navigasi ke **Menu Siswa → Siswa** dari sidebar
+    Navigasi ke **Menu Siswa → Siswa** dari sidebar
 
 2. **Klik Tombol Tambah**
 
-   Klik **"+ Tambah Siswa"** di pojok kanan atas
+    Klik **"+ Tambah Siswa"** di pojok kanan atas
 
 3. **Isi Data Personal**
 
-   **Identitas Siswa**:
-   - **Nama Lengkap** (wajib) - Sesuai akta lahir
-   - **NIS** (wajib) - Nomor Induk Siswa madrasah
-   - **NISN** (wajib) - Nomor Induk Siswa Nasional
-   - **NIK** (wajib) - Nomor KTP/KK
-   - **Tempat Lahir** (wajib)
-   - **Tanggal Lahir** (wajib)
-   - **Jenis Kelamin** (wajib) - L/P
-   - **Agama** (wajib) - Islam (default)
-   - **Anak ke-** (opsional) - Urutan dalam keluarga
+    **Identitas Siswa**:
+    - **Nama Lengkap** (wajib) - Sesuai akta lahir
+    - **NIS** (wajib) - Nomor Induk Siswa madrasah
+    - **NISN** (wajib) - Nomor Induk Siswa Nasional
+    - **NIK** (wajib) - Nomor KTP/KK
+    - **Tempat Lahir** (wajib)
+    - **Tanggal Lahir** (wajib)
+    - **Jenis Kelamin** (wajib) - L/P
+    - **Agama** (wajib) - Islam (default)
+    - **Anak ke-** (opsional) - Urutan dalam keluarga
 
-   **Kontak**:
-   - **No. HP Siswa** (opsional) - WhatsApp siswa
-   - **Email Siswa** (opsional) - Email aktif
-   - **Alamat Lengkap** (wajib)
-   - **RT/RW** (opsional)
-   - **Kelurahan/Desa** (wajib)
-   - **Kecamatan** (wajib)
-   - **Kabupaten/Kota** (wajib)
-   - **Kode Pos** (opsional)
+    **Kontak**:
+    - **No. HP Siswa** (opsional) - WhatsApp siswa
+    - **Email Siswa** (opsional) - Email aktif
+    - **Alamat Lengkap** (wajib)
+    - **RT/RW** (opsional)
+    - **Kelurahan/Desa** (wajib)
+    - **Kecamatan** (wajib)
+    - **Kabupaten/Kota** (wajib)
+    - **Kode Pos** (opsional)
 
 4. **Isi Data Akademik**
-   - **Tahun Masuk** (wajib) - Contoh: 2024
-   - **Kelas** (wajib) - Pilih dari dropdown
-   - **Jurusan** (wajib) - Otomatis sesuai kelas
-   - **Tahun Pelajaran** (wajib) - Otomatis tahun aktif
-   - **Asal Sekolah** (opsional) - SMP/MTs asal
-   - **No. Ijazah Sebelumnya** (opsional)
-   - **Status Siswa** (wajib) - Aktif (default)
+    - **Tahun Masuk** (wajib) - Contoh: 2024
+    - **Kelas** (wajib) - Pilih dari dropdown
+    - **Jurusan** (wajib) - Otomatis sesuai kelas
+    - **Tahun Pelajaran** (wajib) - Otomatis tahun aktif
+    - **Asal Sekolah** (opsional) - SMP/MTs asal
+    - **No. Ijazah Sebelumnya** (opsional)
+    - **Status Siswa** (wajib) - Aktif (default)
 
 5. **Isi Data Orang Tua/Wali**
 
-   **Data Ayah**:
-   - Nama Ayah (wajib)
-   - NIK Ayah (opsional)
-   - Pekerjaan Ayah (wajib)
-   - Penghasilan Ayah (opsional)
-   - No. HP Ayah (wajib) - WhatsApp aktif
+    **Data Ayah**:
+    - Nama Ayah (wajib)
+    - NIK Ayah (opsional)
+    - Pekerjaan Ayah (wajib)
+    - Penghasilan Ayah (opsional)
+    - No. HP Ayah (wajib) - WhatsApp aktif
 
-   **Data Ibu**:
-   - Nama Ibu (wajib)
-   - NIK Ibu (opsional)
-   - Pekerjaan Ibu (wajib)
-   - Penghasilan Ibu (opsional)
-   - No. HP Ibu (wajib) - WhatsApp aktif
+    **Data Ibu**:
+    - Nama Ibu (wajib)
+    - NIK Ibu (opsional)
+    - Pekerjaan Ibu (wajib)
+    - Penghasilan Ibu (opsional)
+    - No. HP Ibu (wajib) - WhatsApp aktif
 
-   **Data Wali** (jika ada):
-   - Nama Wali (opsional)
-   - Hubungan dengan siswa
-   - No. HP Wali (opsional)
+    **Data Wali** (jika ada):
+    - Nama Wali (opsional)
+    - Hubungan dengan siswa
+    - No. HP Wali (opsional)
 
 6. **Upload Foto Siswa**
-   - Klik **"Upload Foto"**
-   - Pilih file foto (JPG/PNG, max 2MB)
-   - Background: Merah untuk siswa
-   - Crop dan sesuaikan jika perlu
+    - Klik **"Upload Foto"**
+    - Pilih file foto (JPG/PNG, max 2MB)
+    - Background: Merah untuk siswa
+    - Crop dan sesuaikan jika perlu
 
 7. **Link Kartu RFID** (Opsional)
-   - Jika sudah ada kartu RFID, input nomor RFID
-   - Atau skip, akan diisi nanti saat kartu ready
+    - Jika sudah ada kartu RFID, input nomor RFID
+    - Atau skip, akan diisi nanti saat kartu ready
 
 8. **Simpan Data**
 
-   Klik **"Simpan"** untuk menyimpan data siswa
+    Klik **"Simpan"** untuk menyimpan data siswa
 
 </Steps>
 
 <Aside type='tip'>
-  Pastikan **nomor HP orang tua** yang diinput **aktif WhatsApp** karena akan
-  digunakan untuk notifikasi kehadiran anak secara real-time.
+    Pastikan **nomor HP orang tua** yang diinput **aktif WhatsApp** karena akan
+    digunakan untuk notifikasi kehadiran anak secara real-time.
 </Aside>
 
 ---
@@ -146,8 +147,8 @@ Data Siswa adalah database lengkap yang menyimpan informasi seluruh siswa madras
   </Card>
 
 <Card title='Data Akademik' icon='document'>
-  - Tahun masuk - Kelas (VII, VIII, IX) - Jurusan (Unggulan/Reguler) - Tahun
-  pelajaran - Status siswa (Aktif)
+    - Tahun masuk - Kelas (VII, VIII, IX) - Jurusan (Unggulan/Reguler) - Tahun
+    pelajaran - Status siswa (Aktif)
 </Card>
 
   <Card title="Data Orang Tua" icon="approve-check">
@@ -185,8 +186,8 @@ Setiap siswa harus terdaftar dalam satu kelas aktif.
   </TabItem>
 
 <TabItem label='Pindah Kelas'>
-  **Ubah Kelas Siswa** 1. Edit data siswa 2. Ubah field **"Kelas"** 3. Simpan
-  perubahan Siswa akan berpindah ke kelas baru mulai hari berikutnya
+    **Ubah Kelas Siswa** 1. Edit data siswa 2. Ubah field **"Kelas"** 3. Simpan
+    perubahan Siswa akan berpindah ke kelas baru mulai hari berikutnya
 </TabItem>
 
   <TabItem label="Naik Tingkat">
@@ -209,32 +210,32 @@ Agar siswa dapat presensi dengan sistem RFID, data siswa harus di-link dengan ka
 
 1. **Siapkan Kartu RFID**
 
-   Pastikan siswa sudah memiliki kartu RFID aktif (sudah ajukan dan selesai)
+    Pastikan siswa sudah memiliki kartu RFID aktif (sudah ajukan dan selesai)
 
 2. **Buka Data Siswa**
 
-   Klik **Edit** pada siswa yang akan di-link
+    Klik **Edit** pada siswa yang akan di-link
 
 3. **Scan Nomor RFID**
-   - Gunakan RFID reader untuk scan kartu
-   - Atau input manual nomor RFID (10 digit integer)
-   - Contoh: 1365289563
+    - Gunakan RFID reader untuk scan kartu
+    - Atau input manual nomor RFID (10 digit integer)
+    - Contoh: 1365289563
 
 4. **Simpan**
 
-   Klik **"Simpan"**, sistem akan validasi:
-   - Apakah nomor RFID sudah terdaftar?
-   - Apakah sudah digunakan siswa lain?
+    Klik **"Simpan"**, sistem akan validasi:
+    - Apakah nomor RFID sudah terdaftar?
+    - Apakah sudah digunakan siswa lain?
 
 5. **Test Tap**
 
-   Minta siswa test tap kartu di reader untuk konfirmasi
+    Minta siswa test tap kartu di reader untuk konfirmasi
 
 </Steps>
 
 <Aside type='caution'>
-  Satu nomor RFID hanya bisa di-link ke **satu siswa**. Jika nomor sudah
-  digunakan, sistem akan menolak dan menampilkan error.
+    Satu nomor RFID hanya bisa di-link ke **satu siswa**. Jika nomor sudah
+    digunakan, sistem akan menolak dan menampilkan error.
 </Aside>
 
 ---
@@ -262,8 +263,8 @@ Agar siswa dapat presensi dengan sistem RFID, data siswa harus di-link dengan ka
 - NIS, NISN, NIK (hati-hati, harus sesuai dokumen resmi)
 
 <Aside type='note'>
-  Perubahan kelas siswa akan **langsung berlaku** dan mempengaruhi wali kelas,
-  laporan, dan notifikasi. Pastikan data yang diinput sudah benar.
+    Perubahan kelas siswa akan **langsung berlaku** dan mempengaruhi wali kelas,
+    laporan, dan notifikasi. Pastikan data yang diinput sudah benar.
 </Aside>
 
 ---
@@ -286,8 +287,8 @@ Foto siswa digunakan untuk:
   </Card>
 
 <Card title='Background' icon='star'>
-  - **Merah** untuk siswa - Background polos, tidak bergambar - Lighting cukup,
-  tidak gelap/silau
+    - **Merah** untuk siswa - Background polos, tidak bergambar - Lighting
+    cukup, tidak gelap/silau
 </Card>
 
   <Card title="Pose" icon="approve-check">
@@ -325,61 +326,61 @@ Untuk menambahkan banyak siswa sekaligus (misalnya siswa baru PPDB), gunakan fit
 
 1. **Download Template Excel**
 
-   Klik button **"Download Template"** di halaman Data Siswa
+    Klik button **"Download Template"** di halaman Data Siswa
 
 2. **Isi Data di Excel**
 
-   Lengkapi kolom-kolom berikut:
+    Lengkapi kolom-kolom berikut:
 
-   | Kolom          | Wajib | Contoh             |
-   | -------------- | ----- | ------------------ |
-   | nama_lengkap   | Ya    | Ahmad Zainuddin    |
-   | nis            | Ya    | 2024001            |
-   | nisn           | Ya    | 0012345678         |
-   | nik            | Ya    | 3601012010010001   |
-   | tempat_lahir   | Ya    | Pandeglang         |
-   | tanggal_lahir  | Ya    | 2010-01-01         |
-   | jenis_kelamin  | Ya    | L / P              |
-   | agama          | Ya    | Islam              |
-   | alamat         | Ya    | Jl. Merdeka No. 10 |
-   | kelas_kode     | Ya    | VII-Unggulan-1     |
-   | tahun_masuk    | Ya    | 2024               |
-   | nama_ayah      | Ya    | Ahmad Dahlan       |
-   | hp_ayah        | Ya    | 081234567890       |
-   | pekerjaan_ayah | Ya    | Petani             |
-   | nama_ibu       | Ya    | Siti Aminah        |
-   | hp_ibu         | Ya    | 081298765432       |
-   | pekerjaan_ibu  | Ya    | Ibu Rumah Tangga   |
-   | status_siswa   | Ya    | Aktif              |
+    | Kolom          | Wajib | Contoh             |
+    | -------------- | ----- | ------------------ |
+    | nama_lengkap   | Ya    | Ahmad Zainuddin    |
+    | nis            | Ya    | 2024001            |
+    | nisn           | Ya    | 0012345678         |
+    | nik            | Ya    | 3601012010010001   |
+    | tempat_lahir   | Ya    | Pandeglang         |
+    | tanggal_lahir  | Ya    | 2010-01-01         |
+    | jenis_kelamin  | Ya    | L / P              |
+    | agama          | Ya    | Islam              |
+    | alamat         | Ya    | Jl. Merdeka No. 10 |
+    | kelas_kode     | Ya    | VII-Unggulan-1     |
+    | tahun_masuk    | Ya    | 2024               |
+    | nama_ayah      | Ya    | Ahmad Dahlan       |
+    | hp_ayah        | Ya    | 081234567890       |
+    | pekerjaan_ayah | Ya    | Petani             |
+    | nama_ibu       | Ya    | Siti Aminah        |
+    | hp_ibu         | Ya    | 081298765432       |
+    | pekerjaan_ibu  | Ya    | Ibu Rumah Tangga   |
+    | status_siswa   | Ya    | Aktif              |
 
 3. **Upload File Excel**
-   - Klik **"Import Data Siswa"**
-   - Pilih file Excel yang sudah diisi
-   - Klik **"Upload"**
+    - Klik **"Import Data Siswa"**
+    - Pilih file Excel yang sudah diisi
+    - Klik **"Upload"**
 
 4. **Preview & Validasi**
-   - Sistem akan tampilkan preview data
-   - Cek apakah ada error atau warning:
-     - NIS/NISN duplikat
-     - Format tanggal salah
-     - Kode kelas tidak ditemukan
-   - Perbaiki jika ada yang salah
+    - Sistem akan tampilkan preview data
+    - Cek apakah ada error atau warning:
+        - NIS/NISN duplikat
+        - Format tanggal salah
+        - Kode kelas tidak ditemukan
+    - Perbaiki jika ada yang salah
 
 5. **Proses Import**
-   - Jika tidak ada error, klik **"Proses Import"**
-   - Tunggu hingga selesai (bisa 1-5 menit untuk ratusan data)
-   - Sistem akan tampilkan summary:
-     - Berhasil: X siswa
-     - Gagal: Y siswa (dengan detail error)
+    - Jika tidak ada error, klik **"Proses Import"**
+    - Tunggu hingga selesai (bisa 1-5 menit untuk ratusan data)
+    - Sistem akan tampilkan summary:
+        - Berhasil: X siswa
+        - Gagal: Y siswa (dengan detail error)
 
 </Steps>
 
 <Aside type='caution' title='Perhatian!'>
-  - Data yang sudah ada (duplikat NIS/NISN) akan **dilewati** atau **di-update**
-  sesuai pengaturan - Pastikan format tanggal sudah benar: **YYYY-MM-DD**
-  (contoh: 2010-01-15) - Kode kelas harus sudah terdaftar di sistem (format:
-  VII-Unggulan-1), jika tidak akan error - Nomor HP harus format Indonesia
-  (08xxx atau 62xxx)
+    - Data yang sudah ada (duplikat NIS/NISN) akan **dilewati** atau
+    **di-update** sesuai pengaturan - Pastikan format tanggal sudah benar:
+    **YYYY-MM-DD** (contoh: 2010-01-15) - Kode kelas harus sudah terdaftar di
+    sistem (format: VII-Unggulan-1), jika tidak akan error - Nomor HP harus
+    format Indonesia (08xxx atau 62xxx)
 </Aside>
 
 ---
@@ -392,36 +393,36 @@ Untuk upload banyak foto sekaligus:
 
 1. **Siapkan Folder Foto**
 
-   Kumpulkan semua foto siswa dalam satu folder
+    Kumpulkan semua foto siswa dalam satu folder
 
 2. **Rename File Foto**
 
-   Nama file harus sesuai NIS atau NISN:
-   - `2024001.jpg` (NIS)
-   - `0012345678.jpg` (NISN)
-   - Ekstensi: `.jpg`, `.jpeg`, `.png`
+    Nama file harus sesuai NIS atau NISN:
+    - `2024001.jpg` (NIS)
+    - `0012345678.jpg` (NISN)
+    - Ekstensi: `.jpg`, `.jpeg`, `.png`
 
 3. **Compress ke ZIP**
-   - Zip folder tersebut
-   - Nama ZIP bebas, contoh: `foto_siswa_x_2024.zip`
+    - Zip folder tersebut
+    - Nama ZIP bebas, contoh: `foto_siswa_x_2024.zip`
 
 4. **Upload ZIP**
-   - Klik **"Import Foto Siswa"**
-   - Pilih file ZIP
-   - Upload
+    - Klik **"Import Foto Siswa"**
+    - Pilih file ZIP
+    - Upload
 
 5. **Proses Import**
-   - Sistem extract ZIP
-   - Match foto dengan data siswa berdasarkan nama file
-   - Tampilkan summary:
-     - Berhasil: X foto
-     - Tidak cocok: Y foto (siswa tidak ditemukan)
+    - Sistem extract ZIP
+    - Match foto dengan data siswa berdasarkan nama file
+    - Tampilkan summary:
+        - Berhasil: X foto
+        - Tidak cocok: Y foto (siswa tidak ditemukan)
 
 </Steps>
 
 <Aside type='tip'>
-  Foto yang tidak cocok dengan data siswa akan dilewati. Cek log import untuk
-  detail siswa mana yang fotonya tidak ter-upload.
+    Foto yang tidak cocok dengan data siswa akan dilewati. Cek log import untuk
+    detail siswa mana yang fotonya tidak ter-upload.
 </Aside>
 
 ---
@@ -441,10 +442,10 @@ Export data untuk keperluan pelaporan, backup, atau integrasi sistem lain.
   </TabItem>
 
 <TabItem label='PDF'>
-  **Portable Document Format** **Kelebihan**: - Siap cetak, layout rapi - Tidak
-  dapat diedit (final) - Professional look **Isi Export**: - Header: Logo,
-  judul, tanggal - Body: Tabel data siswa - Footer: Tanda tangan kepala madrasah
-  **Use Case**: Arsip resmi, lampiran SK, dokumentasi
+    **Portable Document Format** **Kelebihan**: - Siap cetak, layout rapi -
+    Tidak dapat diedit (final) - Professional look **Isi Export**: - Header:
+    Logo, judul, tanggal - Body: Tabel data siswa - Footer: Tanda tangan kepala
+    madrasah **Use Case**: Arsip resmi, lampiran SK, dokumentasi
 </TabItem>
 
   <TabItem label="CSV">
@@ -489,54 +490,54 @@ Anda dapat memfilter data sebelum export:
 <Steps>
 
 1. **Filter Siswa**
-   - Klik tab **"kelas VII"** (atau XI)
-   - Centang **"Pilih Semua"** atau pilih siswa tertentu yang naik
+    - Klik tab **"kelas VII"** (atau XI)
+    - Centang **"Pilih Semua"** atau pilih siswa tertentu yang naik
 
 2. **Klik Naik Tingkat**
 
-   Klik button **"Naik ke Kelas VIII "** (atau XII)
+    Klik button **"Naik ke Kelas VIII "** (atau XII)
 
 3. **Pilih Rombel Tujuan**
 
-   Sistem akan tampilkan pilihan:
-   - **Otomatis**: Sistem distribusi siswa merata ke semua rombel
-   - **Manual**: Anda pilih rombel tujuan untuk setiap siswa
+    Sistem akan tampilkan pilihan:
+    - **Otomatis**: Sistem distribusi siswa merata ke semua rombel
+    - **Manual**: Anda pilih rombel tujuan untuk setiap siswa
 
-   Untuk mode otomatis:
-   - Siswa X Unggulan→ VIII Unggulan(dipisah ke rombel 1, 2, 3 otomatis)
-   - Siswa X IPS → XI IPS (dipisah ke rombel 1, 2 otomatis)
+    Untuk mode otomatis:
+    - Siswa X Unggulan→ VIII Unggulan(dipisah ke rombel 1, 2, 3 otomatis)
+    - Siswa X IPS → XI IPS (dipisah ke rombel 1, 2 otomatis)
 
 4. **Preview Perubahan**
 
-   Sistem tampilkan preview:
-   - Siswa A: VII Unggulan → VIII Unggulan1
-   - Siswa B: VII Unggulan → VIII Unggulan2
-   - dst...
+    Sistem tampilkan preview:
+    - Siswa A: VII Unggulan → VIII Unggulan1
+    - Siswa B: VII Unggulan → VIII Unggulan2
+    - dst...
 
-   Review dan pastikan sudah benar
+    Review dan pastikan sudah benar
 
 5. **Konfirmasi & Proses**
 
-   Klik **"Proses Naik Tingkat"**
+    Klik **"Proses Naik Tingkat"**
 
-   Sistem akan:
-   - Update kelas semua siswa terpilih
-   - Update tahun pelajaran
-   - Log aktivitas
-   - Generate laporan kenaikan kelas
+    Sistem akan:
+    - Update kelas semua siswa terpilih
+    - Update tahun pelajaran
+    - Log aktivitas
+    - Generate laporan kenaikan kelas
 
 6. **Notifikasi**
 
-   Sistem otomatis kirim notifikasi ke:
-   - Siswa: "Selamat, Anda naik ke Kelas VIII Unggulan1"
-   - Orang tua: "Anak Anda naik ke Kelas VIII Unggulan1"
-   - Wali kelas baru: "Siswa baru di kelas Anda: ..."
+    Sistem otomatis kirim notifikasi ke:
+    - Siswa: "Selamat, Anda naik ke Kelas VIII Unggulan1"
+    - Orang tua: "Anak Anda naik ke Kelas VIII Unggulan1"
+    - Wali kelas baru: "Siswa baru di kelas Anda: ..."
 
 </Steps>
 
 <Aside type='tip'>
-  Lakukan backup data sebelum proses naik tingkat massal untuk berjaga-jaga jika
-  ada kesalahan dan perlu rollback.
+    Lakukan backup data sebelum proses naik tingkat massal untuk berjaga-jaga
+    jika ada kesalahan dan perlu rollback.
 </Aside>
 
 ---
@@ -551,30 +552,30 @@ Anda dapat memfilter data sebelum export:
 
 1. **Filter Siswa Kelas VIII I**
 
-   Pilih semua siswa Kelas VIII I yang lulus
+    Pilih semua siswa Kelas VIII I yang lulus
 
 2. **Klik Proses Kelulusan**
 
-   Klik button **"Proses Kelulusan"**
+    Klik button **"Proses Kelulusan"**
 
 3. **Input Data Kelulusan**
-   - Tanggal lulus
-   - Nomor ijazah
-   - Rata-rata nilai (opsional)
-   - Upload scan ijazah (opsional)
+    - Tanggal lulus
+    - Nomor ijazah
+    - Rata-rata nilai (opsional)
+    - Upload scan ijazah (opsional)
 
 4. **Konfirmasi**
 
-   Sistem akan:
-   - Update status siswa → **"Lulus"**
-   - Nonaktifkan kartu RFID
-   - Nonaktifkan akun login
-   - Pindah data ke database alumni
-   - Generate sertifikat digital (opsional)
+    Sistem akan:
+    - Update status siswa → **"Lulus"**
+    - Nonaktifkan kartu RFID
+    - Nonaktifkan akun login
+    - Pindah data ke database alumni
+    - Generate sertifikat digital (opsional)
 
 5. **Notifikasi**
 
-   Kirim notifikasi kelulusan ke siswa & orang tua via WhatsApp
+    Kirim notifikasi kelulusan ke siswa & orang tua via WhatsApp
 
 </Steps>
 
@@ -587,9 +588,9 @@ Anda dapat memfilter data sebelum export:
 1. Edit data siswa yang keluar
 2. Ubah **Status Siswa** menjadi **"Keluar"**
 3. Isi **Alasan Keluar**:
-   - Drop Out (DO)
-   - Mutasi keluar (pindah sekolah)
-   - Alasan pribadi/keluarga
+    - Drop Out (DO)
+    - Mutasi keluar (pindah sekolah)
+    - Alasan pribadi/keluarga
 4. Isi **Tanggal Keluar**
 5. Simpan
 
@@ -607,8 +608,8 @@ Sistem akan:
 ## Menghapus Data Siswa
 
 <Aside type='danger' title='Peringatan!'>
-  Menghapus data siswa adalah **tindakan permanen** dan **tidak dapat
-  dibatalkan**. Hanya lakukan jika benar-benar yakin.
+    Menghapus data siswa adalah **tindakan permanen** dan **tidak dapat
+    dibatalkan**. Hanya lakukan jika benar-benar yakin.
 </Aside>
 
 ### Kapan Boleh Hapus?
@@ -712,12 +713,12 @@ Sistem akan:
   </Card>
 
 <Card title='Update Kontak Orang Tua' icon='star'>
-  Verifikasi nomor WhatsApp orang tua setiap semester agar notifikasi lancar
+    Verifikasi nomor WhatsApp orang tua setiap semester agar notifikasi lancar
 </Card>
 
 <Card title='Backup Rutin' icon='warning'>
-  Export data siswa setiap bulan sebagai backup, terutama sebelum naik
-  tingkat/kelulusan
+    Export data siswa setiap bulan sebagai backup, terutama sebelum naik
+    tingkat/kelulusan
 </Card>
 
   <Card title="Validasi Import" icon="document">

@@ -18,12 +18,12 @@ description: 'Monitor dan kelola kehadiran pegawai secara komprehensif'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Riwayat Presensi
@@ -31,18 +31,18 @@ import {
 Riwayat Presensi Pegawai adalah modul untuk monitoring, analisis, dan pelaporan kehadiran seluruh pegawai madrasah. Modul ini menampilkan data presensi real-time yang tercatat melalui sistem RFID dan dapat dikoreksi secara manual jika diperlukan.
 
 <CardGrid>
-  <Card title='Real-time Monitoring' icon='rocket'>
-    Pantau kehadiran pegawai secara langsung saat tap kartu RFID
-  </Card>
-  <Card title='Multi Filter' icon='setting'>
-    Filter berdasarkan periode, pegawai, jabatan, atau status kehadiran
-  </Card>
-  <Card title='Koreksi Manual' icon='star'>
-    Edit data presensi untuk kasus lupa tap atau kondisi khusus
-  </Card>
-  <Card title='Export Fleksibel' icon='document'>
-    Generate laporan dalam berbagai format (Excel, PDF, CSV)
-  </Card>
+    <Card title='Real-time Monitoring' icon='rocket'>
+        Pantau kehadiran pegawai secara langsung saat tap kartu RFID
+    </Card>
+    <Card title='Multi Filter' icon='setting'>
+        Filter berdasarkan periode, pegawai, jabatan, atau status kehadiran
+    </Card>
+    <Card title='Koreksi Manual' icon='star'>
+        Edit data presensi untuk kasus lupa tap atau kondisi khusus
+    </Card>
+    <Card title='Export Fleksibel' icon='document'>
+        Generate laporan dalam berbagai format (Excel, PDF, CSV)
+    </Card>
 </CardGrid>
 
 ---
@@ -57,33 +57,33 @@ Riwayat Presensi Pegawai adalah modul untuk monitoring, analisis, dan pelaporan 
 
 1. **Buka Menu Riwayat Presensi**
 
-   Navigasi ke **Menu Pegawai → Riwayat Presensi Pegawai**
+    Navigasi ke **Menu Pegawai → Riwayat Presensi Pegawai**
 
 2. **Dashboard Real-time**
 
-   Dashboard akan menampilkan:
-   - Total pegawai aktif
-   - Sudah presensi: X pegawai
-   - Belum presensi: Y pegawai
-   - Terlambat: Z pegawai
-   - Alpha: A pegawai
+    Dashboard akan menampilkan:
+    - Total pegawai aktif
+    - Sudah presensi: X pegawai
+    - Belum presensi: Y pegawai
+    - Terlambat: Z pegawai
+    - Alpha: A pegawai
 
 3. **Lihat Detail**
 
-   Tabel akan menampilkan daftar pegawai dengan kolom:
-   - Foto pegawai
-   - Nama & NIP
-   - Jabatan
-   - Waktu Masuk
-   - Waktu Pulang
-   - Status Kehadiran
-   - Aksi (Detail/Edit)
+    Tabel akan menampilkan daftar pegawai dengan kolom:
+    - Foto pegawai
+    - Nama & NIP
+    - Jabatan
+    - Waktu Masuk
+    - Waktu Pulang
+    - Status Kehadiran
+    - Aksi (Detail/Edit)
 
 </Steps>
 
 <Aside type='tip'>
-  Dashboard akan **auto-refresh** setiap 30 detik untuk menampilkan data terbaru
-  secara real-time.
+    Dashboard akan **auto-refresh** setiap 30 detik untuk menampilkan data
+    terbaru secara real-time.
 </Aside>
 
 ---
@@ -100,15 +100,15 @@ Sistem mendukung berbagai filter periode untuk analisis kehadiran.
   </TabItem>
 
 <TabItem label='Minggu Ini'>
-  **Rekap 7 Hari Terakhir** - Senin - Ahad (atau Senin - Sabtu untuk swasta) -
-  Tampilkan tren kehadiran mingguan - Identifikasi pola keterlambatan **Klik**:
-  Tab **"Minggu Ini"**
+    **Rekap 7 Hari Terakhir** - Senin - Ahad (atau Senin - Sabtu untuk swasta) -
+    Tampilkan tren kehadiran mingguan - Identifikasi pola keterlambatan
+    **Klik**: Tab **"Minggu Ini"**
 </TabItem>
 
 <TabItem label='Bulan Ini'>
-  **Rekap Bulan Berjalan** - Dari tanggal 1 sampai hari ini - Summary: total
-  hadir, izin, sakit, alpha - Persentase kehadiran per pegawai **Klik**: Tab
-  **"Bulan Ini"**
+    **Rekap Bulan Berjalan** - Dari tanggal 1 sampai hari ini - Summary: total
+    hadir, izin, sakit, alpha - Persentase kehadiran per pegawai **Klik**: Tab
+    **"Bulan Ini"**
 </TabItem>
 
   <TabItem label="Custom Range">
@@ -126,11 +126,11 @@ Sistem mendukung berbagai filter periode untuk analisis kehadiran.
   </Card>
 
 <Card title='7 Hari Terakhir' icon='document'>
-  Analisis tren seminggu untuk evaluasi cepat
+    Analisis tren seminggu untuk evaluasi cepat
 </Card>
 
 <Card title='30 Hari Terakhir' icon='rocket'>
-  Overview kehadiran sebulan penuh
+    Overview kehadiran sebulan penuh
 </Card>
 
   <Card title="Bulan Lalu" icon="approve-check">
@@ -182,7 +182,7 @@ Analisis kehadiran berdasarkan jabatan untuk evaluasi kinerja per unit kerja.
 <TabItem label='Staff TU'>Filter hanya pegawai TU, bendahara, operator</TabItem>
 
 <TabItem label='Struktural'>
-  Filter hanya kepala madrasah dan wakil kepala
+    Filter hanya kepala madrasah dan wakil kepala
 </TabItem>
 
   <TabItem label="Staff Pendukung">
@@ -226,19 +226,19 @@ Sistem mencatat berbagai status kehadiran pegawai.
   </TabItem>
 
 <TabItem label='Terlambat'>
-  **Keterlambatan** **Kriteria**: - Tap masuk melebihi toleransi - Masih dalam
-  batas maksimal tap **Contoh**: - Jadwal masuk: 07:00 - Toleransi: 15 menit -
-  Pegawai tap: 07:20 → **Terlambat** (5 menit lebih) **Sistem Mencatat**: -
-  Durasi keterlambatan - Frekuensi terlambat per bulan - Alert jika >3x
-  terlambat dalam sebulan
+    **Keterlambatan** **Kriteria**: - Tap masuk melebihi toleransi - Masih dalam
+    batas maksimal tap **Contoh**: - Jadwal masuk: 07:00 - Toleransi: 15 menit -
+    Pegawai tap: 07:20 → **Terlambat** (5 menit lebih) **Sistem Mencatat**: -
+    Durasi keterlambatan - Frekuensi terlambat per bulan - Alert jika >3x
+    terlambat dalam sebulan
 </TabItem>
 
 <TabItem label='Izin/Sakit/Cuti'>
-  **Tidak Hadir dengan Alasan** **Izin**: - Urusan keluarga, acara penting -
-  Perlu approval atasan - Input manual oleh admin/atasan **Sakit**: - Tidak
-  masuk karena sakit - Perlu surat dokter (>3 hari) - Dapat di-input sendiri
-  (max 2 hari) **Cuti**: - Cuti tahunan (12 hari/tahun) - Cuti melahirkan (3
-  bulan) - Cuti besar, dll - Harus approval kepala madrasah
+    **Tidak Hadir dengan Alasan** **Izin**: - Urusan keluarga, acara penting -
+    Perlu approval atasan - Input manual oleh admin/atasan **Sakit**: - Tidak
+    masuk karena sakit - Perlu surat dokter (>3 hari) - Dapat di-input sendiri
+    (max 2 hari) **Cuti**: - Cuti tahunan (12 hari/tahun) - Cuti melahirkan (3
+    bulan) - Cuti besar, dll - Harus approval kepala madrasah
 </TabItem>
 
   <TabItem label="Alpha">
@@ -264,11 +264,11 @@ Untuk kasus lupa tap, error sistem, atau kondisi khusus, admin dapat melakukan k
   </Card>
 
 <Card title='Tugas Luar' icon='rocket'>
-  Pegawai dinas/tugas di luar madrasah seharian
+    Pegawai dinas/tugas di luar madrasah seharian
 </Card>
 
 <Card title='Error Sistem' icon='star'>
-  Reader RFID error, data tidak tercatat
+    Reader RFID error, data tidak tercatat
 </Card>
 
   <Card title="Kondisi Khusus" icon="document">
@@ -293,9 +293,9 @@ Untuk kasus lupa tap, error sistem, atau kondisi khusus, admin dapat melakukan k
            <Tabs>
 
     <TabItem label='Input Waktu Manual'>
-      **Input Jam Masuk/Pulang** - Pilih: "Input Manual" - Isi waktu masuk
-      (contoh: 07:00) - Isi waktu pulang (contoh: 15:30) - Isi alasan koreksi
-      (wajib)
+        **Input Jam Masuk/Pulang** - Pilih: "Input Manual" - Isi waktu masuk
+        (contoh: 07:00) - Isi waktu pulang (contoh: 15:30) - Isi alasan koreksi
+        (wajib)
     </TabItem>
 
         <TabItem label="Ubah Status">
@@ -357,10 +357,10 @@ Generate laporan kehadiran untuk keperluan administrasi dan evaluasi.
   </TabItem>
 
 <TabItem label='PDF'>
-  **Portable Document Format** **Kelebihan**: - Siap cetak, layout rapi - Tidak
-  dapat diedit (final) - Professional look **Isi Laporan**: - Header: Logo,
-  judul, periode - Body: Tabel presensi - Footer: Tanda tangan digital **Use
-  Case**: Arsip resmi, lampiran SK, dokumentasi
+    **Portable Document Format** **Kelebihan**: - Siap cetak, layout rapi -
+    Tidak dapat diedit (final) - Professional look **Isi Laporan**: - Header:
+    Logo, judul, periode - Body: Tabel presensi - Footer: Tanda tangan digital
+    **Use Case**: Arsip resmi, lampiran SK, dokumentasi
 </TabItem>
 
   <TabItem label="CSV">
@@ -377,39 +377,39 @@ Generate laporan kehadiran untuk keperluan administrasi dan evaluasi.
 
 1. **Pilih Filter**
 
-   Tentukan data yang akan di-export:
-   - Periode waktu
-   - Pegawai (semua atau pilihan)
-   - Jabatan (semua atau filter)
-   - Status kehadiran (semua atau tertentu)
+    Tentukan data yang akan di-export:
+    - Periode waktu
+    - Pegawai (semua atau pilihan)
+    - Jabatan (semua atau filter)
+    - Status kehadiran (semua atau tertentu)
 
 2. **Klik Tombol Export**
 
-   Klik button **"Export Laporan"** di pojok kanan atas
+    Klik button **"Export Laporan"** di pojok kanan atas
 
 3. **Pilih Format**
 
-   Pilih format yang diinginkan:
-   - Excel (recommended)
-   - PDF
-   - CSV
+    Pilih format yang diinginkan:
+    - Excel (recommended)
+    - PDF
+    - CSV
 
 4. **Customize Layout** (Opsional)
 
-   Untuk PDF, Anda dapat:
-   - Pilih orientasi: Portrait / Landscape
-   - Tampilkan/sembunyikan kolom tertentu
-   - Include grafik atau tidak
+    Untuk PDF, Anda dapat:
+    - Pilih orientasi: Portrait / Landscape
+    - Tampilkan/sembunyikan kolom tertentu
+    - Include grafik atau tidak
 
 5. **Generate & Download**
 
-   Klik **"Generate"**, tunggu proses selesai, lalu **Download**
+    Klik **"Generate"**, tunggu proses selesai, lalu **Download**
 
 </Steps>
 
 <Aside type='tip'>
-  Untuk laporan bulanan rutin, Anda dapat membuat **Template Laporan** yang
-  tersimpan sehingga tidak perlu setting ulang setiap bulan.
+    Untuk laporan bulanan rutin, Anda dapat membuat **Template Laporan** yang
+    tersimpan sehingga tidak perlu setting ulang setiap bulan.
 </Aside>
 
 ---
@@ -482,14 +482,14 @@ Visualisasi data kehadiran untuk memudahkan analisis tren.
   </TabItem>
 
 <TabItem label='Bar Chart'>
-  **Grafik Batang - Perbandingan** Membandingkan kehadiran antar pegawai atau
-  antar jabatan **X-axis**: Nama pegawai/Jabatan **Y-axis**: Jumlah hari hadir
-  Cocok untuk: Ranking, komparasi antar unit
+    **Grafik Batang - Perbandingan** Membandingkan kehadiran antar pegawai atau
+    antar jabatan **X-axis**: Nama pegawai/Jabatan **Y-axis**: Jumlah hari hadir
+    Cocok untuk: Ranking, komparasi antar unit
 </TabItem>
 
 <TabItem label='Pie Chart'>
-  **Grafik Lingkaran - Proporsi** Menampilkan proporsi status kehadiran (Hadir,
-  Izin, Sakit, Alpha) Cocok untuk: Summary cepat, presentasi ke atasan
+    **Grafik Lingkaran - Proporsi** Menampilkan proporsi status kehadiran
+    (Hadir, Izin, Sakit, Alpha) Cocok untuk: Summary cepat, presentasi ke atasan
 </TabItem>
 
   <TabItem label="Heatmap">
@@ -515,14 +515,14 @@ Sistem dapat mengirim notifikasi otomatis untuk berbagai kondisi.
   </Card>
 
 <Card title='Keterlambatan Berulang' icon='star'>
-  **Warning Kedisiplinan** Jika pegawai terlambat >3x dalam sebulan: - Alert ke
-  admin - Notifikasi ke pegawai terkait - Recommend surat peringatan
+    **Warning Kedisiplinan** Jika pegawai terlambat >3x dalam sebulan: - Alert
+    ke admin - Notifikasi ke pegawai terkait - Recommend surat peringatan
 </Card>
 
 <Card title='Rekap Bulanan' icon='document'>
-  **Otomatis Setiap Akhir Bulan** Sistem auto-generate dan kirim rekap ke: -
-  Kepala Madrasah (semua pegawai) - Setiap pegawai (data pribadi) - Staff TU
-  (untuk arsip)
+    **Otomatis Setiap Akhir Bulan** Sistem auto-generate dan kirim rekap ke: -
+    Kepala Madrasah (semua pegawai) - Setiap pegawai (data pribadi) - Staff TU
+    (untuk arsip)
 </Card>
 
   <Card title="Reminder Cuti" icon="approve-check">
@@ -641,11 +641,11 @@ Mencakup:
   </Card>
 
 <Card title='Koreksi Cepat' icon='rocket'>
-  Lakukan koreksi manual maksimal 2 hari setelah kejadian agar data akurat
+    Lakukan koreksi manual maksimal 2 hari setelah kejadian agar data akurat
 </Card>
 
 <Card title='Backup Laporan' icon='approve-check'>
-  Export dan simpan laporan bulanan sebagai arsip dan backup
+    Export dan simpan laporan bulanan sebagai arsip dan backup
 </Card>
 
   <Card title="Evaluasi Rutin" icon="document">

@@ -18,12 +18,12 @@ description: 'Kelola rombongan belajar dan struktur kelas siswa di madrasah'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Tabs,
-  TabItem,
-  Aside,
+    Card,
+    CardGrid,
+    Steps,
+    Tabs,
+    TabItem,
+    Aside,
 } from '@astrojs/starlight/components'
 
 ## Pengertian Kelas
@@ -31,20 +31,21 @@ import {
 Kelas adalah rombongan belajar yang mengelompokkan siswa berdasarkan tingkat dan jurusan. Setiap kelas memiliki wali kelas yang bertanggung jawab terhadap siswa dalam kelasnya.
 
 <CardGrid>
-  <Card title='Struktur Terorganisir' icon='document'>
-    Kelompokkan siswa berdasarkan tingkat dan jurusan untuk memudahkan manajemen
-  </Card>
-  <Card title='Wali Kelas' icon='star'>
-    Setiap kelas memiliki wali kelas yang mengawasi kehadiran dan perkembangan
-    siswa
-  </Card>
-  <Card title='Kapasitas Fleksibel' icon='rocket'>
-    Atur kapasitas maksimal siswa per kelas sesuai standar pendidikan
-  </Card>
-  <Card title='Mudah Dipindah' icon='puzzle'>
-    Transfer siswa antar kelas dengan mudah untuk kenaikan tingkat atau
-    penjurusan ulang
-  </Card>
+    <Card title='Struktur Terorganisir' icon='document'>
+        Kelompokkan siswa berdasarkan tingkat dan jurusan untuk memudahkan
+        manajemen
+    </Card>
+    <Card title='Wali Kelas' icon='star'>
+        Setiap kelas memiliki wali kelas yang mengawasi kehadiran dan
+        perkembangan siswa
+    </Card>
+    <Card title='Kapasitas Fleksibel' icon='rocket'>
+        Atur kapasitas maksimal siswa per kelas sesuai standar pendidikan
+    </Card>
+    <Card title='Mudah Dipindah' icon='puzzle'>
+        Transfer siswa antar kelas dengan mudah untuk kenaikan tingkat atau
+        penjurusan ulang
+    </Card>
 </CardGrid>
 
 ---
@@ -54,8 +55,8 @@ Kelas adalah rombongan belajar yang mengelompokkan siswa berdasarkan tingkat dan
 Format penamaan kelas mengikuti standar: **[Tingkat] [Jurusan] [Nomor Rombel]**
 
 <Aside type='tip' title='Contoh Penamaan'>
-  - **VII Unggulan** → Kelas 10 UnggulanRombel 1 - **XI TKJ 2** → Kelas 11
-  Teknik Komputer Jaringan Rombel 2 - **XII IPS 3** → Kelas 12 IPS Rombel 3
+    - **VII Unggulan** → Kelas 10 UnggulanRombel 1 - **XI TKJ 2** → Kelas 11
+    Teknik Komputer Jaringan Rombel 2 - **XII IPS 3** → Kelas 12 IPS Rombel 3
 </Aside>
 
 ### Komponen Penamaan
@@ -74,31 +75,31 @@ Format penamaan kelas mengikuti standar: **[Tingkat] [Jurusan] [Nomor Rombel]**
 
 1. **Buka Menu Kelas**
 
-   Navigasi ke **Data Master → Kelas** dari sidebar
+    Navigasi ke **Data Master → Kelas** dari sidebar
 
 2. **Klik Tombol Tambah**
 
-   Klik tombol **"+ Tambah Kelas"** di pojok kanan atas
+    Klik tombol **"+ Tambah Kelas"** di pojok kanan atas
 
 3. **Isi Data Kelas**
 
-   Lengkapi form dengan informasi berikut:
-   - **Nama Kelas** (wajib) - Format: VII Unggulan
-   - **Tingkat** (wajib) - Pilih X, XI, atau XII
-   - **Jurusan** (wajib) - Pilih dari daftar jurusan
-   - **Wali Kelas** (opsional) - Pilih pegawai sebagai wali kelas
-   - **Kapasitas Maksimal** (wajib) - Contoh: 36 siswa
-   - **Tahun Pelajaran** (wajib) - Otomatis tahun aktif
+    Lengkapi form dengan informasi berikut:
+    - **Nama Kelas** (wajib) - Format: VII Unggulan
+    - **Tingkat** (wajib) - Pilih X, XI, atau XII
+    - **Jurusan** (wajib) - Pilih dari daftar jurusan
+    - **Wali Kelas** (opsional) - Pilih pegawai sebagai wali kelas
+    - **Kapasitas Maksimal** (wajib) - Contoh: 36 siswa
+    - **Tahun Pelajaran** (wajib) - Otomatis tahun aktif
 
 4. **Simpan Data**
 
-   Klik tombol **"Simpan"** untuk menyimpan data kelas
+    Klik tombol **"Simpan"** untuk menyimpan data kelas
 
 </Steps>
 
 <Aside type='note'>
-  Pastikan jurusan sudah dibuat terlebih dahulu di menu **Data Master →
-  Jurusan** sebelum menambah kelas.
+    Pastikan jurusan sudah dibuat terlebih dahulu di menu **Data Master →
+    Jurusan** sebelum menambah kelas.
 </Aside>
 
 ---
@@ -114,8 +115,8 @@ Setiap kelas sebaiknya memiliki wali kelas yang bertanggung jawab.
   </TabItem>
 
 <TabItem label='Edit Kelas Existing'>
-  1. Klik ikon **Edit** pada kelas yang ingin diubah 2. Pilih pegawai dari
-  dropdown **Wali Kelas** 3. Klik **Simpan**
+    1. Klik ikon **Edit** pada kelas yang ingin diubah 2. Pilih pegawai dari
+    dropdown **Wali Kelas** 3. Klik **Simpan**
 </TabItem>
 
   <TabItem label="Ganti Wali Kelas">
@@ -125,8 +126,8 @@ Setiap kelas sebaiknya memiliki wali kelas yang bertanggung jawab.
 </Tabs>
 
 <Aside type='caution' title='Batasan Wali Kelas'>
-  Satu pegawai dapat menjadi wali kelas di lebih dari satu kelas, namun
-  disarankan maksimal 2 kelas untuk efektivitas pengawasan.
+    Satu pegawai dapat menjadi wali kelas di lebih dari satu kelas, namun
+    disarankan maksimal 2 kelas untuk efektivitas pengawasan.
 </Aside>
 
 ---
@@ -142,8 +143,8 @@ Atur batas maksimal siswa per kelas untuk menjaga kualitas pembelajaran.
 - **Kapasitas Maksimum**: 40 siswa (sesuai Permendikbud)
 
 <Aside type='tip'>
-  Sistem akan memberikan **warning** jika jumlah siswa melebihi kapasitas yang
-  ditetapkan, namun tetap dapat menambah siswa dalam kondisi darurat.
+    Sistem akan memberikan **warning** jika jumlah siswa melebihi kapasitas yang
+    ditetapkan, namun tetap dapat menambah siswa dalam kondisi darurat.
 </Aside>
 
 ---
@@ -154,44 +155,44 @@ Atur batas maksimal siswa per kelas untuk menjaga kualitas pembelajaran.
 
 1. **Buka Data Siswa**
 
-   Navigasi ke **Menu Siswa → Siswa**
+    Navigasi ke **Menu Siswa → Siswa**
 
 2. **Pilih Siswa**
 
-   Centang siswa yang akan dipindahkan (dapat multiple selection)
+    Centang siswa yang akan dipindahkan (dapat multiple selection)
 
 3. **Pilih Aksi Bulk**
 
-   Klik dropdown **"Aksi"** dan pilih **"Pindah Kelas"**
+    Klik dropdown **"Aksi"** dan pilih **"Pindah Kelas"**
 
 4. **Pilih Kelas Tujuan**
 
-   Pilih kelas tujuan dari dropdown yang tersedia
+    Pilih kelas tujuan dari dropdown yang tersedia
 
 5. **Konfirmasi Perpindahan**
 
-   Klik **"Proses"** dan konfirmasi perpindahan
+    Klik **"Proses"** dan konfirmasi perpindahan
 
 </Steps>
 
 <Aside type='note'>
-  Riwayat perpindahan kelas akan tercatat dalam log sistem untuk keperluan
-  audit.
+    Riwayat perpindahan kelas akan tercatat dalam log sistem untuk keperluan
+    audit.
 </Aside>
 
 ### Skenario Perpindahan Kelas
 
 <CardGrid>
-  <Card title='Kenaikan Tingkat' icon='rocket'>
-    Perpindahan massal siswa dari kelas VII ke XI, atau XI ke XII di akhir tahun
-    ajaran
-  </Card>
-  <Card title='Penjurusan Ulang' icon='puzzle'>
-    Siswa pindah jurusan karena minat atau prestasi akademik
-  </Card>
-  <Card title='Pemerataan Kelas' icon='setting'>
-    Redistribusi siswa untuk menyeimbangkan jumlah per kelas
-  </Card>
+    <Card title='Kenaikan Tingkat' icon='rocket'>
+        Perpindahan massal siswa dari kelas VII ke XI, atau XI ke XII di akhir
+        tahun ajaran
+    </Card>
+    <Card title='Penjurusan Ulang' icon='puzzle'>
+        Siswa pindah jurusan karena minat atau prestasi akademik
+    </Card>
+    <Card title='Pemerataan Kelas' icon='setting'>
+        Redistribusi siswa untuk menyeimbangkan jumlah per kelas
+    </Card>
 </CardGrid>
 
 ---
@@ -214,8 +215,8 @@ Atur batas maksimal siswa per kelas untuk menjaga kualitas pembelajaran.
 - Tingkat dan jurusan (harus buat kelas baru)
 
 <Aside type='caution'>
-  Perubahan data kelas akan mempengaruhi laporan presensi dan statistik yang
-  sudah ada.
+    Perubahan data kelas akan mempengaruhi laporan presensi dan statistik yang
+    sudah ada.
 </Aside>
 
 ---
@@ -266,21 +267,21 @@ graph LR
 ## Best Practice
 
 <CardGrid>
-  <Card title='Penamaan Konsisten' icon='approve-check'>
-    Gunakan format penamaan yang konsisten untuk semua kelas agar mudah dicari
-    dan dikelola
-  </Card>
-  <Card title='Update Wali Kelas' icon='star'>
-    Pastikan setiap kelas memiliki wali kelas yang aktif dan dapat dihubungi
-  </Card>
-  <Card title='Monitoring Kapasitas' icon='warning'>
-    Pantau jumlah siswa per kelas secara berkala agar tidak melebihi kapasitas
-    ideal
-  </Card>
-  <Card title='Arsip Kelas Lama' icon='document'>
-    Jangan hapus kelas lama, biarkan untuk keperluan histori dan laporan
-    retrospektif
-  </Card>
+    <Card title='Penamaan Konsisten' icon='approve-check'>
+        Gunakan format penamaan yang konsisten untuk semua kelas agar mudah
+        dicari dan dikelola
+    </Card>
+    <Card title='Update Wali Kelas' icon='star'>
+        Pastikan setiap kelas memiliki wali kelas yang aktif dan dapat dihubungi
+    </Card>
+    <Card title='Monitoring Kapasitas' icon='warning'>
+        Pantau jumlah siswa per kelas secara berkala agar tidak melebihi
+        kapasitas ideal
+    </Card>
+    <Card title='Arsip Kelas Lama' icon='document'>
+        Jangan hapus kelas lama, biarkan untuk keperluan histori dan laporan
+        retrospektif
+    </Card>
 </CardGrid>
 
 ---
@@ -319,9 +320,9 @@ graph LR
 ## Tips Keamanan
 
 <Aside type='tip'>
-  - Batasi akses pengeditan kelas hanya untuk **Super Admin** dan **Operator** -
-  Lakukan backup data sebelum melakukan perpindahan kelas massal - Catat setiap
-  perubahan struktur kelas untuk dokumentasi internal
+    - Batasi akses pengeditan kelas hanya untuk **Super Admin** dan **Operator**
+    - Lakukan backup data sebelum melakukan perpindahan kelas massal - Catat
+    setiap perubahan struktur kelas untuk dokumentasi internal
 </Aside>
 
 ---

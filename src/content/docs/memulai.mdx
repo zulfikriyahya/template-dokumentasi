@@ -19,12 +19,12 @@ description: 'Panduan lengkap untuk memulai menggunakan Attendance Systems'
 ---
 
 import {
-  Card,
-  CardGrid,
-  Steps,
-  Aside,
-  Tabs,
-  TabItem,
+    Card,
+    CardGrid,
+    Steps,
+    Aside,
+    Tabs,
+    TabItem,
 } from '@astrojs/starlight/components'
 
 ## Pengenalan Sistem
@@ -62,15 +62,15 @@ Sistem ini dapat digunakan oleh:
 
 2. **Masukkan Kredensial**
 
-   ```
-   Email/Username: email@example.com
-   Password: ********
-   ```
+    ```
+    Email/Username: email@example.com
+    Password: ********
+    ```
 
-   <Aside type='caution'>
-     Jangan bagikan password Anda kepada siapapun. Gunakan password yang kuat
-     dengan kombinasi huruf, angka, dan simbol.
-   </Aside>
+    <Aside type='caution'>
+        Jangan bagikan password Anda kepada siapapun. Gunakan password yang kuat
+        dengan kombinasi huruf, angka, dan simbol.
+    </Aside>
 
 3. **Klik Tombol "Masuk"**
    Setelah kredensial valid, Anda akan diarahkan ke dashboard utama sesuai dengan peran akun Anda.
@@ -81,8 +81,8 @@ Sistem ini dapat digunakan oleh:
 </Steps>
 
 <Aside type='note' title='Lupa Password?'>
-  Klik link **"Lupa Password?"** di halaman login, masukkan email terdaftar, dan
-  ikuti instruksi reset password yang dikirim ke email Anda.
+    Klik link **"Lupa Password?"** di halaman login, masukkan email terdaftar,
+    dan ikuti instruksi reset password yang dikirim ke email Anda.
 </Aside>
 
 ---
@@ -233,23 +233,23 @@ title="Tips Navigasi"
 
 1. **Tap Kartu**
 
-   Siswa/pegawai menempelkan kartu RFID ke reader
+    Siswa/pegawai menempelkan kartu RFID ke reader
 
 2. **Pembacaan ID**
 
-   Reader menangkap ID unik dari kartu dan mengirim ke sistem
+    Reader menangkap ID unik dari kartu dan mengirim ke sistem
 
 3. **Validasi Data**
 
-   Sistem memvalidasi ID kartu dengan database pengguna
+    Sistem memvalidasi ID kartu dengan database pengguna
 
 4. **Pencatatan Presensi**
 
-   Jika valid, sistem mencatat waktu presensi secara otomatis
+    Jika valid, sistem mencatat waktu presensi secara otomatis
 
 5. **Notifikasi**
 
-   Notifikasi dikirim ke sistem dan WhatsApp orang tua (khusus siswa)
+    Notifikasi dikirim ke sistem dan WhatsApp orang tua (khusus siswa)
 
 </Steps>
 
@@ -261,19 +261,19 @@ Tap kartu dalam rentang waktu yang ditentukan
 </Card>
 
 <Card title='Terlambat' icon='warning'>
-  Tap kartu melebihi batas waktu toleransi
+    Tap kartu melebihi batas waktu toleransi
 </Card>
 
 <Card title='Izin' icon='document'>
-  Tidak hadir dengan surat izin yang disetujui
+    Tidak hadir dengan surat izin yang disetujui
 </Card>
 
 <Card title=' Sakit' icon='heart'>
-  Tidak hadir karena sakit dengan surat keterangan
+    Tidak hadir karena sakit dengan surat keterangan
 </Card>
 
 <Card title='Dispensasi' icon='star'>
-  Izin meninggalkan kelas untuk keperluan sekolah
+    Izin meninggalkan kelas untuk keperluan sekolah
 </Card>
 
 <Card title="Alpha" icon="error">
@@ -325,8 +325,8 @@ Sistem menggunakan **Role-Based Access Control (RBAC)** untuk mengatur hak akses
 | **Siswa**       | Profile, Presensi Pribadi      | Read riwayat pribadi, update profile, ajukan kartu  |
 
 <Aside type='caution' title='Keamanan Akses'>
-  Setiap peran hanya dapat mengakses menu dan data sesuai dengan haknya.
-  Percobaan akses ilegal akan tercatat dalam sistem log.
+    Setiap peran hanya dapat mengakses menu dan data sesuai dengan haknya.
+    Percobaan akses ilegal akan tercatat dalam sistem log.
 </Aside>
 
 ---
@@ -342,14 +342,14 @@ Sistem menggunakan **Role-Based Access Control (RBAC)** untuk mengatur hak akses
 </Card>
 
 <Card title=' Efisiensi' icon='rocket'>
-  - Gunakan fitur pencarian untuk akses cepat - Manfaatkan filter dan sorting
-  data - Export data secara berkala untuk backup - Gunakan keyboard shortcuts
+    - Gunakan fitur pencarian untuk akses cepat - Manfaatkan filter dan sorting
+    data - Export data secara berkala untuk backup - Gunakan keyboard shortcuts
 </Card>
 
 <Card title=' Notifikasi' icon='bell'>
-  - Pastikan nomor WhatsApp aktif dan valid - Periksa notifikasi sistem secara
-  rutin - Simpan nomor kontak admin untuk emergency - Enable push notification
-  di browser
+    - Pastikan nomor WhatsApp aktif dan valid - Periksa notifikasi sistem secara
+    rutin - Simpan nomor kontak admin untuk emergency - Enable push notification
+    di browser
 </Card>
 
 <Card title="Laporan" icon="document">
@@ -364,8 +364,8 @@ final
 ## Video Tutorial
 
 <Aside type='note'>
-  Video tutorial akan segera ditambahkan. Sementara waktu, ikuti panduan
-  text-based di dokumentasi ini.
+    Video tutorial akan segera ditambahkan. Sementara waktu, ikuti panduan
+    text-based di dokumentasi ini.
 </Aside>
 
 ---
@@ -381,7 +381,7 @@ Pelajari cara mengelola profil dan keamanan akun [Baca Panduan
 </Card>
 
 <Card title=' Data Master' icon='list-format'>
-  Pahami cara mengelola data dasar sistem [Baca Panduan →](/menu-data-master/)
+    Pahami cara mengelola data dasar sistem [Baca Panduan →](/menu-data-master/)
 </Card>
 
 <Card title=" Kartu Presensi" icon="approve-check">
@@ -392,6 +392,6 @@ Pelajari proses pengajuan kartu RFID [Baca Panduan →](/menu-kartu-presensi/)
 ---
 
 <Aside type='tip' title='Butuh Bantuan?'>
-  Jika mengalami kesulitan, hubungi administrator sistem atau baca FAQ di menu
-  bantuan.
+    Jika mengalami kesulitan, hubungi administrator sistem atau baca FAQ di menu
+    bantuan.
 </Aside>
